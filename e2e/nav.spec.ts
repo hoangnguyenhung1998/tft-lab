@@ -28,11 +28,11 @@ test("search palette opens with Ctrl K and navigates", async ({ page }) => {
 test("phone: bottom bar and menu sheet", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/set/comps/", { waitUntil: "networkidle" });
-  const bar = page.getByRole("navigation", { name: "Quick navigation" });
+  const bar = page.getByRole("navigation", { name: "Điều hướng nhanh" });
   await expect(bar).toBeVisible();
-  await expect(bar.getByRole("link", { name: /Comps/ })).toHaveAttribute("aria-current", "page");
+  await expect(bar.getByRole("link", { name: /Đội hình/ })).toHaveAttribute("aria-current", "page");
   await page.getByRole("button", { name: "Open menu" }).click();
-  await expect(page.getByRole("link", { name: /Trainer/ }).last()).toBeVisible();
+  await expect(page.getByRole("link", { name: /Luyện tập/ }).last()).toBeVisible();
   await page.getByRole("button", { name: "Close menu" }).click();
   await expect(page.getByRole("button", { name: "Open menu" })).toBeVisible();
 });
