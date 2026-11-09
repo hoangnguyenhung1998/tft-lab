@@ -16,15 +16,15 @@ export interface NavItem {
 }
 
 export const NAV: readonly NavItem[] = [
-  { href: "/set/comps", label: "Comps", hot: true, short: "Comps", glyph: "comps" },
-  { href: "/set", label: "Set", short: "Set", glyph: "set" },
-  { href: "/trainer", label: "Trainer", short: "Trainer", glyph: "trainer" },
-  { href: "/lab", label: "Lab", short: "Lab", glyph: "lab" },
-  { href: "/guides", label: "Guides", glyph: "guides" },
-  { href: "/tracker", label: "Tracker", glyph: "tracker" },
-  { href: "/routine", label: "Routine", glyph: "routine", secondary: true },
-  { href: "/compete", label: "Compete", glyph: "compete", secondary: true },
-  { href: "/resources", label: "Resources", glyph: "resources", secondary: true },
+  { href: "/set/comps", label: "Đội hình", hot: true, short: "Đội hình", glyph: "comps" },
+  { href: "/set", label: "Mùa giải", short: "Mùa", glyph: "set" },
+  { href: "/trainer", label: "Luyện tập", short: "Luyện", glyph: "trainer" },
+  { href: "/lab", label: "Công cụ", short: "Công cụ", glyph: "lab" },
+  { href: "/guides", label: "Hướng dẫn", glyph: "guides" },
+  { href: "/tracker", label: "Nhật ký trận", glyph: "tracker" },
+  { href: "/routine", label: "Lộ trình", glyph: "routine", secondary: true },
+  { href: "/compete", label: "Thi đấu", glyph: "compete", secondary: true },
+  { href: "/resources", label: "Tài nguyên", glyph: "resources", secondary: true },
 ];
 
 /** The item whose href is the longest prefix of the path, so /set/comps lights Comps, not Set. */
