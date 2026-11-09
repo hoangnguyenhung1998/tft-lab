@@ -14,7 +14,7 @@ export function Header() {
     <header className="site-header no-print">
       <div className="gold-rule gold-rule-shine absolute inset-x-0 bottom-0 opacity-40" aria-hidden />
       <div className="site-header-inner">
-        <Link href="/" className="brand" aria-label="TFT Lab home">
+        <Link href="/" className="brand" aria-label="TFT Lab — Trang chủ">
           <LogoMark />
           <span>TFT LAB</span>
         </Link>

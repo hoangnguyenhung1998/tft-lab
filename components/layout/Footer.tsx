@@ -9,37 +9,37 @@ export const RIOT_DISCLAIMER =
 
 const COLUMNS: { title: string; links: { href: string; label: string }[] }[] = [
   {
-    title: "Live set",
+    title: "Mùa giải",
     links: [
-      { href: "/set/comps", label: "Comps tier list" },
-      { href: "/set/champions", label: "Champions" },
-      { href: "/set/traits", label: "Traits" },
-      { href: "/set/items", label: "Items" },
-      { href: "/set/augments", label: "Augments" },
-      { href: "/set/wisps", label: "Wisps" },
-      { href: "/set/patch-notes", label: "Patch notes" },
+      { href: "/set/comps", label: "Xếp hạng đội hình" },
+      { href: "/set/champions", label: "Tướng" },
+      { href: "/set/traits", label: "Tộc hệ" },
+      { href: "/set/items", label: "Trang bị" },
+      { href: "/set/augments", label: "Lõi nâng cấp" },
+      { href: "/set/wisps", label: "Bùa" },
+      { href: "/set/patch-notes", label: "Bản cập nhật" },
     ],
   },
   {
-    title: "Improve",
+    title: "Luyện kỹ năng",
     links: [
-      { href: "/guides", label: "Guides" },
-      { href: "/trainer", label: "Trainer" },
-      { href: "/trainer/daily", label: "Daily 10" },
-      { href: "/trainer/puzzles", label: "Puzzles" },
-      { href: "/routine", label: "Routine" },
-      { href: "/tracker", label: "Tracker" },
+      { href: "/guides", label: "Hướng dẫn" },
+      { href: "/trainer", label: "Luyện tập" },
+      { href: "/trainer/daily", label: "10 bài mỗi ngày" },
+      { href: "/trainer/puzzles", label: "Câu đố" },
+      { href: "/routine", label: "Lộ trình" },
+      { href: "/tracker", label: "Nhật ký trận" },
     ],
   },
   {
-    title: "Tools",
+    title: "Công cụ",
     links: [
-      { href: "/lab/board", label: "Team planner" },
-      { href: "/lab/odds", label: "Roll odds" },
-      { href: "/lab/econ", label: "Econ simulator" },
-      { href: "/lab/cheatsheet", label: "Cheat sheet" },
-      { href: "/compete", label: "Compete" },
-      { href: "/resources", label: "Resources" },
+      { href: "/lab/board", label: "Xếp đội hình" },
+      { href: "/lab/odds", label: "Tỷ lệ roll" },
+      { href: "/lab/econ", label: "Mô phỏng kinh tế" },
+      { href: "/lab/cheatsheet", label: "Bảng ghi nhớ" },
+      { href: "/compete", label: "Thi đấu" },
+      { href: "/resources", label: "Tài nguyên" },
     ],
   },
 ];
@@ -58,21 +58,21 @@ export function Footer() {
               <LogoMark />
               TFT LAB
             </Link>
-            <p className="mt-3 max-w-xs text-sm text-dim">Comps, live set data, patch notes, drills and tools for Teamfight Tactics. Updated on its own every patch.</p>
+            <p className="mt-3 max-w-xs text-sm text-dim">Đội hình, dữ liệu mùa giải, bản cập nhật, bài luyện và công cụ TFT. Dữ liệu được đồng bộ theo bản vá.</p>
             {synced ? (
               <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs text-dim">
-                <dt className="display uppercase tracking-[0.15em] text-gold">Set</dt>
+                <dt className="display uppercase tracking-[0.15em] text-gold">Mùa</dt>
                 <dd>
                   {CURRENT_SET.setNumber} · {setName}
                 </dd>
-                <dt className="display uppercase tracking-[0.15em] text-gold">Patch</dt>
+                <dt className="display uppercase tracking-[0.15em] text-gold">Bản vá</dt>
                 <dd>
                   {patch.label}
                   {patch.publishedAt ? ` · notes ${patch.publishedAt.slice(0, 10)}` : ""}
                 </dd>
-                <dt className="display uppercase tracking-[0.15em] text-gold">Data</dt>
+                <dt className="display uppercase tracking-[0.15em] text-gold">Dữ liệu</dt>
                 <dd>
-                  <time dateTime={synced.toISOString()}>{synced.toISOString().slice(0, 10)}</time> from CommunityDragon
+                  <time dateTime={synced.toISOString()}>{synced.toISOString().slice(0, 10)}</time> · CommunityDragon
                 </dd>
               </dl>
             ) : null}
@@ -95,19 +95,19 @@ export function Footer() {
         <div className="mt-10 border-t border-[var(--gold-dim)] pt-5 text-xs text-dim">
           <p className="max-w-3xl">{RIOT_DISCLAIMER}</p>
           <p className="mt-3">
-            Game data via{" "}
+            Dữ liệu trò chơi từ{" "}
             <a href="https://communitydragon.org" rel="noopener noreferrer" target="_blank">
               CommunityDragon
             </a>{" "}
-            and{" "}
+            và{" "}
             <a href="https://developer.riotgames.com/docs/lol#data-dragon" rel="noopener noreferrer" target="_blank">
               Riot Data Dragon
             </a>
-            ; patch notes mirrored from{" "}
+            ; ghi chú bản vá từ{" "}
             <a href="https://teamfighttactics.leagueoflegends.com/en-us/news/game-updates/" rel="noopener noreferrer" target="_blank">
               Riot&apos;s game updates
             </a>
-            ; Little Legend art via CommunityDragon. Credits on <Link href="/resources">Resources</Link>.
+            ; hình ảnh Linh Thú từ CommunityDragon. Nguồn tham khảo tại <Link href="/resources">Tài nguyên</Link>.
           </p>
         </div>
       </div>

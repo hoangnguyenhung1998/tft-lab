@@ -1,23 +1,23 @@
 ---
-title: "Positioning"
-description: "Frontline and backline defaults, spread vs clump against AoE, and counter-positioning against the threats actually in your lobby."
+title: "Xếp vị trí đội hình"
+description: "Bố trí hàng trước, hàng sau, chống sát thương diện rộng và khắc chế vị trí đối thủ."
 pillar: "board"
 order: 6
 trainerCategory: "positioning"
-updated: "2026-09-20"
+updated: "2026-11-09"
 ---
 
-Positioning is the one decision you make every single round that costs no gold, and it is the one that Emerald players change the least. A default layout that was right at 2-5 sits untouched until 5-1 while the lobby around it fills with assassins, hooks and area damage. The habit to build is not "know the perfect layout"; it is *move something every round after scouting*, even if only by one hex.
+Xếp vị trí là quyết định có thể điều chỉnh gần như mỗi vòng mà **không tốn vàng**. Một bàn mạnh vẫn có thể thua vì chủ lực đứng sai phía, chống chịu bị đánh lệch hoặc cả hàng sau trúng cùng một kỹ năng. Mục tiêu không phải học thuộc một sơ đồ, mà là **scout rồi điều chỉnh theo đối thủ**.
 
 ## Frontline and backline defaults
 
-The board is four rows of seven, with row 0 nearest the enemy and row 3 at the back. The default layout is about three things: who gets hit first, who gets to attack, and how far the enemy has to walk.
+**Cách bố trí hàng trước và hàng sau.**
 
-**Frontline (row 0, sometimes row 1).** Your tanks sit in row 0 in the centre columns (2 to 4), because enemies target the closest unit and the centre is closest to the most enemies. The bruisers flank them in columns 1 and 5. The itemised tank goes in the exact hex you want the fight to happen on; see [who gets the tank item](/guides/items#who-gets-the-tank-item). A unit you *want* to die last should not be the unit that is hit first.
+Bàn có bốn hàng, mỗi hàng bảy ô. Hàng 0 gần đối thủ nhất, hàng 3 ở phía sau.
 
-**Backline (row 3, sometimes row 2).** Ranged carries go in row 3; the default is a corner hex (column 0 or 6) because it is the farthest point from most enemy frontlines and gives the carry the most time before anything reaches it. Casters that need to survive the first cast go beside the carry, not in the other corner, so your utility (shields, heals) covers both.
-
-**The middle rows.** Row 1 holds units that should engage a second late (a second tank, a bruiser that jumps). Row 2 holds bodyguards for the carry: a cheap unit in row 2 directly in front of a corner carry intercepts anything that walks in.
+- **Hàng trước:** thường đặt chống chịu mạnh ở giữa hoặc nơi muốn giao tranh bắt đầu. Các quân phụ có thể đứng hai cánh để phân tán sát thương.
+- **Hàng sau:** chủ lực đánh xa cần đủ thời gian gây sát thương. Góc bàn thường an toàn trước nhiều đội hình, nhưng có thể nguy hiểm khi đối thủ có tướng áp sát hoặc kỹ năng nhắm vào góc.
+- **Hai hàng giữa:** dùng cho quân hỗ trợ, chống chịu phụ, bảo kê chủ lực hoặc những tướng cần vào giao tranh muộn hơn.
 
 <BoardExample
   board={[
@@ -30,34 +30,38 @@ The board is four rows of seven, with row 0 nearest the enemy and row 3 at the b
     { championId: "generic:carry-4", row: 3, col: 6, star: 2, items: ["generic:item:carry-completed", "generic:item:carry-completed"] },
     { championId: "generic:caster-3", row: 3, col: 5, star: 2, items: [] }
   ]}
-  caption="The default: itemised tank centre-front, bruisers on the flanks, carry in the corner with a bodyguard one row in front and the caster beside it."
+  caption="Sơ đồ tham khảo: chống chịu chính ở giữa hàng trước, các quân phụ hai bên, chủ lực ở góc sau có quân bảo vệ."
 />
 
-Two default rules that are worth more than any layout diagram: **the carry never shares a column with the tank** (when the tank dies, the enemy frontline walks straight down the column), and **never leave row 0 empty on one side** (an empty flank is a lane).
+Không có quy tắc “chủ lực tuyệt đối không được cùng cột với chống chịu” cho mọi mùa. Cần xem cách tướng di chuyển, phạm vi đánh và kỹ năng của đối thủ.
 
 ### Melee carries
 
-A melee carry is a frontliner who must not be hit first. Put it in row 1 behind the tank, or on a flank in row 0 opposite the enemy's strongest unit, so it engages a second later than the tank and against a weaker part of the enemy line. Melee carries in the centre of row 0 die before they cast.
+**Chủ lực cận chiến.**
+
+Chủ lực cận chiến cần tiếp cận mục tiêu nhưng không nên bị toàn bộ đối thủ tập trung ngay khi bắt đầu. Có thể đặt ở hàng 1 phía sau chống chịu, hoặc lệch cánh để vào giao tranh muộn hơn. Vị trí tốt phụ thuộc cơ chế kỹ năng và tầm đánh từng tướng.
 
 ## Spread vs clump
 
-Clumping (units adjacent) is the default because adjacency is how auras, shields and heals reach the units that need them. Spreading is the counter to area damage, and the whole decision is *which threat is bigger this round*.
+**Dàn trải hay đứng gần nhau?**
 
-**Clump when** the enemy has single-target damage (a hyper-carry, an assassin), or your board depends on adjacency effects (shields that hit neighbours, traits that buff adjacent units), or the enemy has a pull or hook that punishes isolated units.
+**Đứng gần nhau** khi đội hình cần hiệu ứng hỗ trợ trong phạm vi, lá chắn, hồi máu hoặc bảo vệ trước các quân lao vào hàng sau.
 
-**Spread when** the enemy has area damage that hits a radius (a caster with a splash ult, a frontline that explodes, chain effects). Spread the *backline* first: two carries side by side is how one ability kills your whole damage output. One empty hex between backline units is usually enough; a full spread across the row costs you your utility coverage.
+**Dàn trải** khi đối thủ có kỹ năng diện rộng có thể đánh trúng nhiều quân cùng lúc. Thường chỉ cần tách các chủ lực hoặc quân hỗ trợ quan trọng, không nhất thiết rải toàn bộ bàn.
 
-<Callout type="math" title="One hex of spread">
-Most area abilities in the current set hit a radius of one hex around the target. Two carries adjacent means one cast hits both. Two carries with a gap of one hex means one cast hits one. That is the entire calculation, and it is free.
+<Callout type="math" title="Một ô trống có thể thay đổi giao tranh">
+Nếu một kỹ năng đánh trúng các ô liền kề mục tiêu, hai chủ lực đứng sát nhau có thể cùng chịu sát thương. Tách chúng bằng một ô có thể giúp giảm nguy cơ, nhưng phải kiểm tra phạm vi thực tế của kỹ năng theo mùa.
 </Callout>
 
-The mistake is treating this as a global setting. It is per-opponent. Against the AoE board you spread; against the assassin board next round you clump the backline around a bodyguard. If you are not changing between those two layouts across a stage, you are not positioning.
+Vị trí tốt trước một đối thủ có thể không tốt trước người khác. Vì vậy, cần scout lại mỗi vòng, đặc biệt khi sảnh còn ít người.
 
 ## Counter-positioning
 
-Counter-positioning means moving units because of what a specific opponent has. It only works after scouting (see the [scout routine](/guides/scouting#the-scout-routine)), and it is the concrete output of that scouting.
+**Xếp vị trí để khắc chế đối thủ.**
 
-**Against assassins and dives.** Units that jump land on the hex farthest from their start, which in practice is your back corners. A corner carry is a corner target. Move the carry to the centre of row 3 (or row 2), put bruisers in the corners of row 2 or 3 as landing pads, and let the assassin jump onto a 2-star bruiser instead of your damage. If you scouted two assassin boards among your likely opponents, the centre is your default this stage.
+Đây là bước tiếp theo sau [quy trình scout](/guides/scouting#the-scout-routine): xác định tướng nào quyết định giao tranh của đối thủ và chọn cách hạn chế tướng đó.
+
+**Gặp tướng nhảy hoặc lao vào tuyến sau:** cân nhắc đưa chủ lực khỏi góc bị nhắm tới, đặt quân chống chịu hoặc quân mồi ở vị trí đối thủ dễ tiếp cận.
 
 <BoardExample
   board={[
@@ -77,23 +81,27 @@ Counter-positioning means moving units because of what a specific opponent has. 
     { championId: "generic:bruiser-2", row: 0, col: 2, star: 2, items: [] }
   ]}
   highlight={[{ row: 3, col: 3 }]}
-  caption="Against two assassins: carry moved to the centre of the back row, bruisers parked in the corners as landing pads."
+  caption="Ví dụ khắc chế quân áp sát: chuyển chủ lực vào giữa hàng sau, dùng hai quân phụ ở góc làm mục tiêu mồi. Cần kiểm tra cơ chế nhảy của tướng trong mùa hiện tại."
 />
 
-**Against hooks and pulls.** A hook pulls whichever of your units is closest along its line. Bait it with a unit you do not mind losing, placed one hex closer to the hook than your carry, on the same side. Do not put the carry on the hook's side of the board at all if you can help it.
+**Gặp kỹ năng kéo:** đặt quân mồi vào đường kéo nếu cơ chế cho phép, tránh để chủ lực là mục tiêu dễ bị kéo nhất.
 
-**Against area damage.** Spread the backline as above, and consider moving the itemised tank off the exact centre so the splash on it does not also hit the support behind it.
+**Gặp sát thương diện rộng:** tách các quân quan trọng, tránh để kỹ năng đánh vào chống chịu chính rồi lan sang hàng sau.
 
-**Against a hyper-carry with a single target.** Mirror it: put your itemised tank in the column opposite that carry so it wastes its first seconds on the unit that can take it. If the carry is in a corner, that means your tank goes to the same side, not the centre.
+**Gặp chủ lực đơn mục tiêu:** đưa chống chịu phù hợp vào hướng giao tranh để câu thêm thời gian cho chủ lực của mình.
 
-**Against your own mirror.** When another player is on your comp, they have your positioning. Position *for* the mirror: swap sides so their carry faces your tank and their tank faces your carry, and expect them to do the same next round.
+**Gặp đội hình giống mình:** so sánh vị trí chủ lực và chống chịu, thử đảo cánh để tạo lợi thế trong giao tranh đối đầu.
 
-The general form of every counter-position: identify the enemy unit that decides the fight, work out which of your hexes it will interact with first, and make sure the unit on that hex is the one you chose.
+Không nên áp dụng máy móc vì cơ chế chọn mục tiêu, di chuyển và kỹ năng thay đổi theo từng mùa.
 
-<Callout type="leak" title="Positioning for last round's opponent">
-The Emerald pattern is adjusting after losing, so the board is always set up for the player you just fought, who you will not see again for three rounds. Position for the *next* opponent; the scouting guide covers how to know who that is.
+<Callout type="leak" title="Xếp vị trí để khắc chế người vừa gặp">
+Một lỗi phổ biến là thua xong mới đảo bàn để khắc chế người vừa đánh, trong khi vòng tới có thể gặp người khác. Hãy ưu tiên đối thủ sắp gặp hoặc nhóm đối thủ có khả năng gặp cao nhất.
 </Callout>
+
+### Bài tập trong một trận
+
+Từ vòng 4-1, mỗi vòng hãy thực hiện ba bước: **scout đối thủ → xác định mối đe dọa chính → thay đổi ít nhất một vị trí nếu có lý do**. Sau giao tranh, ghi lại thay đổi đó giúp hay làm hại kết quả. Không cần đảo quân nếu bố trí hiện tại đã phù hợp.
 
 <DrillThis category="positioning" />
 
-<CheckYourself items={["Did I move my carry after scouting, or leave it in the corner by habit?", "Against AoE boards, did I spread the backline?", "Did I position against the opponent I was about to face or the one I fought last?", "Was my itemised tank on the hex I wanted the fight to happen on?", "Did my carry ever share a column with my main tank?"]} />
+<CheckYourself items={["Mình có scout trước khi quyết định vị trí chủ lực không?", "Gặp sát thương diện rộng, mình có tách các quân quan trọng không?", "Mình đang khắc chế đối thủ sắp gặp hay người vừa đánh?", "Chống chịu chính có đứng ở nơi mình muốn giao tranh bắt đầu không?", "Mình có thay đổi vị trí dựa trên thông tin thay vì đảo quân ngẫu nhiên không?"]} />

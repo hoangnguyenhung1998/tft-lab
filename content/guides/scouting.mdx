@@ -1,39 +1,41 @@
 ---
-title: "Scouting"
-description: "What to look for, when, and what to do with it. Scouting is worthless unless it changes a decision."
+title: "Scout — Đọc sảnh và đối thủ"
+description: "Quan sát đúng thông tin, đúng thời điểm và biến thông tin thành quyết định thực tế."
 pillar: "game"
 order: 7
 trainerCategory: "scouting"
-updated: "2026-09-20"
+updated: "2026-11-09"
 ---
 
-Every player above Gold "scouts". Most of them click through the seven boards, look at them, and click back to their own board having decided nothing. That is sightseeing. Scouting is looking at the specific things that change a specific decision you are about to make, in the order those decisions come due, and stopping as soon as the timer is at risk.
+Scout không phải là bấm xem đủ bảy bàn rồi quay lại mà không thay đổi gì. Scout tốt là **quan sát có mục đích**: tìm thông tin giúp anh quyết định xếp vị trí, lên cấp, roll, xoay bài hoặc giữ máu.
 
 ## The scout routine
 
-The routine is built backwards from what you are about to decide. Positioning is decided before the timer runs out this round; rolling and leveling are decided before next combat; tempo (how aggressive to be over the next stage) is decided at the augment rounds. So the order is always the same, and you go as far down the list as the timer allows.
+**Quy trình scout nhanh.**
 
-1. **Your next opponent.** Their frontline shape, where their carry sits, and whether they have a jump, a hook, or area damage. This is the only information that changes something you cannot undo after the timer, so it comes first. If you only have ten seconds, this is the ten seconds.
-2. **Your contest.** Every board holding a copy of the units you are rolling for, and how many. This changes whether you roll at all, at what level, and when to pivot. Do this before every rolldown without exception.
-3. **The strongest board in the lobby.** Not to admire it: to measure how many rounds you have before that board is the one you face and how much HP you lose when it is.
-4. **The augments of the top two or three players.** Context for stage 4 onward: who is scaling, who is a tempo board that will fall off, who has an item augment and will out-item you at 5-1.
+Hãy ưu tiên theo quyết định sắp phải thực hiện:
 
-Rounds where the routine is mandatory: **2-1** (contest for openers; who took what augment), **3-2** (contest before you commit; strongest board), **4-2** (everything above before the rolldown), and **every round from 5-1 on**, because with four or five players left, the next-opponent check is nearly deterministic and the positioning it drives decides 3rd versus 5th.
+1. **Đối thủ có thể gặp:** chủ lực ở đâu, hàng trước ra sao, có tướng lao vào tuyến sau hoặc kỹ năng diện rộng không?
+2. **Người tranh bài:** ai giữ chủ lực anh định roll, đã có mấy bản sao?
+3. **Bàn mạnh nhất sảnh:** nếu gặp họ, anh có thể mất bao nhiêu máu?
+4. **Lõi và hướng tăng tiến:** đối thủ nào đang mạnh ngay, đối thủ nào có thể bùng nổ về cuối trận?
 
-<Callout type="tip" title="Know who you fight next">
-In the current set the client shows your next opponent or a short list of possible opponents during the planning phase. If it shows one, scout that one. If it shows two or three, scout the two most dangerous and position for both; the [positioning guide](/guides/positioning#counter-positioning) covers how.
+Các mốc nên scout kỹ: **2-1** để nhận diện mở bài; **3-2** trước khi chốt hướng; **trước rolldown giai đoạn 4**; và **mỗi vòng cuối trận** khi số đối thủ còn lại ít.
+
+<Callout type="tip" title="Ưu tiên đối thủ sắp gặp">
+Nếu giao diện cho biết đối thủ kế tiếp hoặc danh sách đối thủ có thể gặp, hãy xem họ trước. Nếu không biết chắc, đừng xếp bàn chỉ để khắc chế một người mà bỏ qua những người khác.
 </Callout>
 
 ## What to look for
 
-On any board, in about four seconds, you can read:
+**Cần nhìn gì trên một bàn đối thủ?**
 
-- **Frontline shape.** Two tanks centre? A wall of five? An empty flank? That tells you where their fight happens and which of your hexes gets pressure.
-- **Carry position and range.** Corner or centre, row 3 or row 2. Long-range carries in the corner mean your assassins have a target; centre carries mean their board expects assassins.
-- **Threat units.** Anything that jumps, hooks, pulls, or explodes. One glance at the traits row usually tells you.
-- **Items on the carry.** Three completed items on a 2-star 4-cost is a board that wins now; three components on the bench is a board that wins later.
-- **Level and gold** (shown next to the board). A level-8 player with 60 gold at 4-1 is about to roll; a level-7 with 10 gold is not a contest threat this round even if they hold your carry.
-- **Copies of your units.** Count them. Board plus bench. Two copies on a bench at 3-2 is a player who is going to roll for the third.
+- **Hàng trước:** dồn giữa hay lệch cánh, có khoảng trống để tướng anh tiếp cận không?
+- **Vị trí chủ lực:** ở góc, giữa hay hàng thứ hai?
+- **Mối đe dọa:** tướng nhảy, kéo, khống chế hoặc gây sát thương diện rộng.
+- **Trang bị:** chủ lực và chống chịu đã hoàn thiện đồ chưa?
+- **Cấp và kinh tế:** đối thủ đang chuẩn bị lên cấp hay roll mạnh?
+- **Số bản sao tướng:** đặc biệt là những quân anh định tìm trong đợt roll.
 
 <BoardExample
   board={[
@@ -45,29 +47,31 @@ On any board, in about four seconds, you can read:
     { championId: "generic:caster-3", row: 3, col: 3, star: 2, items: ["generic:item:carry-completed"] },
     { championId: "generic:support-2", row: 2, col: 3, star: 1, items: [] }
   ]}
-  caption="An opponent board read in four seconds: three-unit frontline, two assassins in the back corners (they will land in yours), an itemised caster in the centre. Decision: move your carry off the corner, spread the backline."
+  caption="Ví dụ đọc bàn trong vài giây: ba quân hàng trước, hai quân áp sát từ hai góc và chủ lực phép ở giữa. Cân nhắc đưa chủ lực ra khỏi góc, tách tuyến sau."
 />
 
-What you do *not* need to look at: their bench units that are not your contest, their exact item components, their placement history. If it does not feed a decision on the list above, skip it.
+Không cần phân tích mọi thứ trên mọi bàn. Nếu thông tin không giúp quyết định sắp tới, hãy bỏ qua để dành thời gian thao tác.
 
 ## Scouting must change a decision
 
-The test of a scout is whether you did something differently because of it. Write down, for one game, every scout and the decision it changed. Most players discover that the honest list is short: a couple of positioning adjustments and one "oh, they're also on my comp". The point of the routine is to make the list long.
+**Scout phải tạo ra một quyết định.**
 
-Decisions that scouting should feed, by round:
+Sau khi quan sát, tự hỏi: “Mình sẽ làm gì khác đi?”
 
-- **2-1:** which pairs to hold (contest), which augment to take (if a trait augment is offered, who else is on the trait).
-- **3-2:** commit or pivot on your line (contest), how urgently to stabilise (strongest board), and the augment.
-- **3-5 to 4-1:** the level timing, based on how strong the lobby is and how much damage you will take by waiting.
-- **4-2:** the rolldown (contest, again, freshly counted), the augment, and the positioning for your first fight at level 8.
-- **Stage 5+:** positioning every round for a known opponent; whether to play for 1st or lock top 4 based on the two boards above you.
+- **2-1:** giữ cặp tướng nào, có nên lấy lõi hướng tộc hệ hay không?
+- **3-2:** có bị tranh bài không, bàn mình cần ổn định sớm đến mức nào?
+- **3-5 đến 4-1:** sảnh mạnh đến đâu, còn chịu được bao nhiêu trận thua?
+- **Trước rolldown:** có nên roll chủ lực dự kiến hay chuyển hướng?
+- **Giai đoạn 5+:** đảo vị trí chủ lực, chống chịu và quân khắc chế cho từng đối thủ có thể gặp.
 
-If you scout and change nothing, one of two things happened: your board was already correct, which is rare, or you looked at the wrong things. It is almost always the second.
-
-<Callout type="leak" title="The 30-second tour">
-The Emerald pattern is a full tour of all seven boards at 3-2, spending the whole planning phase, then rushing your own board with two seconds left and changing nothing. Scout three boards with purpose in fifteen seconds, then spend the rest on your own board acting on what you saw.
+<Callout type="leak" title="Xem hết bảy bàn nhưng không kịp sửa bàn mình">
+Dành toàn bộ thời gian chuẩn bị để đi xem đối thủ rồi quay về với vài giây còn lại là scout không hiệu quả. Hãy ưu tiên vài bàn có liên quan, sau đó trở về đủ sớm để mua quân, ghép đồ và xếp vị trí.
 </Callout>
+
+### Bài tập cho trận tiếp theo
+
+Ở 3-2, ghi nhớ **hai đối thủ mạnh nhất** và **số người tranh chủ lực dự kiến**. Trước khi roll, scout lại. Sau trận, tự đánh giá một quyết định đã thay đổi nhờ thông tin scout: lên cấp sớm, đổi chủ lực hay chuyển vị trí.
 
 <DrillThis category="scouting" />
 
-<CheckYourself items={["Did I scout at 2-1, 3-2 and 4-2 at minimum?", "Did I check my next opponent before the timer ran out?", "Name one decision this game that scouting changed.", "Before my rolldown, had I counted the copies of my carry on other boards?", "Did I scout every round from 5-1 on?"]} />
+<CheckYourself items={["Mình có scout ít nhất ở 2-1, 3-2 và trước rolldown không?", "Mình có xem đối thủ có thể gặp trước khi hết thời gian không?", "Kể tên một quyết định mình đã thay đổi nhờ scout?", "Trước khi roll, mình có đếm số bản sao chủ lực trên bàn đối thủ không?", "Từ giai đoạn 5, mình có scout và điều chỉnh vị trí thường xuyên không?"]} />
