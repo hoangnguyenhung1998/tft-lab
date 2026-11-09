@@ -27,15 +27,15 @@ const inter = localFont({
   display: "optional",
 });
 
-const DESCRIPTION = "Comps tier list for the current patch, live set data (champions, traits, items, augments), mirrored patch notes, decision drills, a team planner with a fight simulator and a match tracker for Teamfight Tactics.";
+const DESCRIPTION = "TFT Lab tiếng Việt: đội hình theo bản cập nhật, dữ liệu mùa giải, hướng dẫn, bài luyện ra quyết định, công cụ xếp đội hình và nhật ký trận đấu.";
 
 export const metadata: Metadata = {
   ...(SITE_URL ? { metadataBase: new URL(SITE_URL) } : {}),
-  title: { default: "TFT Lab · Comps, set data and drills for Teamfight Tactics", template: "%s · TFT Lab" },
+  title: { default: "TFT Lab · Hướng dẫn, đội hình và luyện tập TFT", template: "%s · TFT Lab" },
   description: DESCRIPTION,
   applicationName: "TFT Lab",
   keywords: ["TFT", "Teamfight Tactics", "comps", "tier list", "meta", "patch notes", "augments", "items", "champions", "team planner"],
-  openGraph: { type: "website", siteName: "TFT Lab", title: "TFT Lab", description: DESCRIPTION, locale: "en_US" },
+  openGraph: { type: "website", siteName: "TFT Lab", title: "TFT Lab", description: DESCRIPTION, locale: "vi_VN" },
   twitter: { card: "summary_large_image", title: "TFT Lab", description: DESCRIPTION },
   robots: { index: true, follow: true },
   appleWebApp: { capable: true, title: "TFT Lab", statusBarStyle: "black-translucent" },
@@ -53,10 +53,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${inter.variable}`}>
+    <html lang="vi" className={`${cinzel.variable} ${inter.variable}`}>
       <body className="antialiased flex min-h-dvh flex-col">
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:bg-panel focus:px-3 focus:py-2">
-          Skip to content
+          Chuyển đến nội dung
         </a>
         <Backdrop />
         <Header />
