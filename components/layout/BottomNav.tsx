@@ -16,7 +16,7 @@ export function BottomNav() {
   const active = activeNavHref(pathname);
   const items = NAV.filter((n) => n.short);
   return (
-    <nav className="bottom-nav no-print" aria-label="Quick navigation">
+    <nav className="bottom-nav no-print" aria-label="Điều hướng nhanh">
       {items.map((it) => (
         <Link key={it.href} href={it.href} className={`bottom-nav-item ${active === it.href ? "bottom-nav-active" : ""} ${it.hot ? "bottom-nav-hot" : ""}`} aria-current={active === it.href ? "page" : undefined}>
           {it.glyph ? <Glyph name={it.glyph} size={20} /> : null}
@@ -25,7 +25,7 @@ export function BottomNav() {
       ))}
       <button type="button" className="bottom-nav-item" onClick={openSearch}>
         <Glyph name="search" size={20} />
-        <span>Search</span>
+        <span>Tìm kiếm</span>
       </button>
     </nav>
   );
