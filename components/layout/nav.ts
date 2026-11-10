@@ -20,6 +20,7 @@ export const NAV: readonly NavItem[] = [
   { href: "/set", label: "Mùa giải", short: "Mùa", glyph: "set" },
   { href: "/trainer", label: "Luyện tập", short: "Luyện", glyph: "trainer" },
   { href: "/lab", label: "Công cụ", short: "Công cụ", glyph: "lab" },
+  { href: "/decision-lab", label: "Ghép đồ & chuyển carry", glyph: "lab", secondary: true },
   { href: "/guides", label: "Hướng dẫn", glyph: "guides" },
   { href: "/tracker", label: "Nhật ký trận", glyph: "tracker" },
   { href: "/routine", label: "Lộ trình", glyph: "routine", secondary: true },
