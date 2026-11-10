@@ -109,6 +109,10 @@ export default function HomePage() {
                 <Glyph name="trainer" size={16} />
                 Trainer
               </Link>
+              <Link href="/decision-lab" className="btn btn-lg">
+                <Glyph name="lab" size={16} />
+                Ghép đồ & chuyển carry
+              </Link>
             </div>
             <div className="rise mt-6 flex flex-wrap items-center gap-3 text-xs text-dim" style={{ ["--i" as string]: 4 } as React.CSSProperties}>
               <span className="display uppercase tracking-[0.2em] text-gold">Puzzle ladder</span>
