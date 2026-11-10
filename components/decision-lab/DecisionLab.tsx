@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { Champion, Item } from "@/lib/types";
-import { adviseItems, remainingComponents, type BoardState } from "@/lib/decision/item-advisor";
+import { adviseItems, recipesForComponents, remainingComponents, type BoardState } from "@/lib/decision/item-advisor";
 
 type Props = { champions: Champion[]; items: Item[] };
 
@@ -30,12 +30,15 @@ export function DecisionLab({ champions, items }: Props) {
   const remainingItems = remaining.map((id) => lookup.get(id)).filter((i): i is Item => !!i);
 
   const componentLabels = Object.fromEntries(components.map((component) => [component.id, component.name]));
-  const targetItems = selected ? items.filter((i) => i.kind === "completed" && i.composition.length === 2 && i.composition.some((x) => remaining.includes(x))) : [];
-  const carouselChoices = [...new Set(targetItems.flatMap((i) => i.composition.filter((x) => !remaining.includes(x))))];
-  const shopping = carouselChoices.map((id) => {
-    const matches = targetItems.filter((i) => i.composition.includes(id) && i.composition.some((x) => remaining.includes(x)));
-    return { component: lookup.get(id), matches };
-  }).filter((x) => x.component).sort((a, b) => b.matches.length - a.matches.length).slice(0, 6);
+  const existing = new Set(recipesForComponents(items, remaining).map((r) => r.item.id));
+  const shopping = selected ? components.map((component) => {
+    const possible = recipesForComponents(items, [...remaining, component.id])
+      .filter((r) => !existing.has(r.item.id))
+      .map((r) => r.item);
+    return { component, matches: possible };
+  }).filter((x) => x.matches.length > 0)
+    .sort((a, b) => b.matches.length - a.matches.length || a.component.name.localeCompare(b.component.name))
+    .slice(0, 6) : [];
 
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
@@ -47,7 +50,7 @@ export function DecisionLab({ champions, items }: Props) {
         <div className="grid grid-cols-4 gap-2 sm:grid-cols-5">
           {components.map((c) => (
             <button type="button" key={c.id} disabled={selection.length >= 8} onClick={() => setSelection((prev) => [...prev, c.id])}
-              title={"Thêm " + c.name} className="flex min-w-0 flex-col items-center gap-1 rounded-lg border border-line p-2 transition hover:border-gold disabled:opacity-40">
+              title={"Thêm " + c.name} className="flex min-w-0 flex-col items-center gap-1 rounded-lg border border-gold/25 p-2 transition hover:border-gold disabled:opacity-40">
               <Icon src={c.icon} alt="" /><span className="line-clamp-2 text-center text-[0.65rem] leading-tight">{c.name}</span>
             </button>
           ))}
@@ -67,7 +70,7 @@ export function DecisionLab({ champions, items }: Props) {
         <div>
           <label htmlFor="decision-holder" className="mb-2 block text-sm font-medium">2. Tướng đang giữ đồ (không bắt buộc)</label>
           <select id="decision-holder" value={holderId} onChange={(e) => setHolderId(e.target.value)}
-            className="w-full rounded-lg border border-line bg-panel p-3 text-sm">
+            className="w-full rounded-lg border border-gold/25 bg-panel p-3 text-sm">
             <option value="">Chưa có tướng giữ đồ</option>
             {[1, 2, 3, 4, 5].map((tier) => (
               <optgroup label={tier + " vàng"} key={tier}>
@@ -78,7 +81,7 @@ export function DecisionLab({ champions, items }: Props) {
         </div>
         <div>
           <label htmlFor="decision-board" className="mb-2 block text-sm font-medium">3. Sức mạnh board</label>
-          <select id="decision-board" className="w-full rounded-lg border border-line bg-panel p-3 text-sm"
+          <select id="decision-board" className="w-full rounded-lg border border-gold/25 bg-panel p-3 text-sm"
             value={boardState} onChange={(e) => setBoardState(e.target.value as BoardState)}>
             <option value="strong">Mạnh — có thể giữ chuỗi thắng</option>
             <option value="even">Trung bình — thắng thua xen kẽ</option>
@@ -99,7 +102,7 @@ export function DecisionLab({ champions, items }: Props) {
               {options.map((o) => (
                 <button type="button" key={o.item.id} onClick={() => { setActiveItem(o.item.id); setCost(0); setQuery(""); }}
                   aria-pressed={selected?.item.id === o.item.id}
-                  className={"flex items-center gap-3 rounded-xl border p-3 text-left transition " + (selected?.item.id === o.item.id ? "border-gold bg-gold/10" : "border-line hover:border-gold/40")}>
+                  className={"flex items-center gap-3 rounded-xl border p-3 text-left transition " + (selected?.item.id === o.item.id ? "border-gold bg-gold/10" : "border-gold/25 hover:border-gold/40")}>
                   <Icon src={o.item.icon} alt="" />
                   <span className="min-w-0 flex-1"><span className="block text-sm font-semibold">{o.item.name}</span>
                     <span className="block text-[0.7rem] text-dim">{o.transfers.length} hướng carry · {o.confidence === "medium" ? "cần kiểm chứng" : "chưa đủ dữ liệu"}</span>
@@ -119,19 +122,19 @@ export function DecisionLab({ champions, items }: Props) {
               {selected.holderFit !== null ? <p className="text-xs text-dim">Mức tương thích người giữ đồ (ước lượng theo vai trò): {selected.holderFit >= 65 ? "Khá phù hợp" : selected.holderFit >= 45 ? "Có thể dùng tạm" : "Chưa phù hợp"}.</p> : null}
               <div className="flex flex-wrap gap-2">
                 <label className="sr-only" htmlFor="decision-tier">Lọc bậc tướng</label>
-                <select id="decision-tier" value={cost} onChange={(e) => setCost(Number(e.target.value))} className="rounded-lg border border-line bg-panel p-2 text-sm">
+                <select id="decision-tier" value={cost} onChange={(e) => setCost(Number(e.target.value))} className="rounded-lg border border-gold/25 bg-panel p-2 text-sm">
                   <option value={0}>Tất cả 3–5 vàng</option>
                   <option value={3}>3 vàng</option><option value={4}>4 vàng</option><option value={5}>5 vàng</option>
                 </select>
                 <label className="sr-only" htmlFor="decision-query">Tìm tướng</label>
                 <input id="decision-query" value={query} onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Tìm carry..." className="min-w-0 flex-1 rounded-lg border border-line bg-panel px-3 py-2 text-sm" />
+                  placeholder="Tìm carry..." className="min-w-0 flex-1 rounded-lg border border-gold/25 bg-panel px-3 py-2 text-sm" />
               </div>
               {grouped.map(({ tier, matches }) => matches.length ? <div key={tier}>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gold">Carry {tier} vàng</p>
                 <div className="grid gap-2 sm:grid-cols-2">
                   {matches.map((m) => (
-                    <div key={m.champion.id} className="flex items-start gap-2 rounded-lg border border-line p-2">
+                    <div key={m.champion.id} className="flex items-start gap-2 rounded-lg border border-gold/25 p-2">
                       <Icon src={m.champion.icon} alt="" />
                       <div><p className="text-sm font-semibold">{m.champion.name}</p><p className="text-xs text-dim">{m.reason}</p></div>
                     </div>
@@ -145,20 +148,20 @@ export function DecisionLab({ champions, items }: Props) {
             <div className="space-y-2">
               <h3 className="text-sm font-semibold">Đi chợ: mảnh để hoàn thiện đồ tiếp theo</h3>
               <p className="text-xs text-dim">Sau khi ghép {selected?.item.name}, còn {remainingItems.length} mảnh. Các mảnh dưới đây mở ra nhiều công thức nhất với đồ còn lại; chưa xét đội hình và đối thủ.</p>
-              {remainingItems.length ? <div className="flex flex-wrap gap-2">{remainingItems.map((i, idx) => <span key={idx} className="rounded border border-line px-2 py-1 text-xs">{i.name}</span>)}</div> : <p className="text-xs text-dim">Chưa còn mảnh để ghép. Ưu tiên chọn đồ phù hợp với vai trò đang thiếu.</p>}
+              {remainingItems.length ? <div className="flex flex-wrap gap-2">{remainingItems.map((i, idx) => <span key={idx} className="rounded border border-gold/25 px-2 py-1 text-xs">{i.name}</span>)}</div> : <p className="text-xs text-dim">Chưa còn mảnh để ghép. Ưu tiên chọn đồ phù hợp với vai trò đang thiếu.</p>}
               {shopping.length ? <div className="grid gap-2 sm:grid-cols-2">
-                {shopping.map(({ component, matches }) => component ? <div key={component.id} className="flex items-start gap-2 rounded-lg border border-line p-2">
+                {shopping.map(({ component, matches }) => component ? <div key={component.id} className="flex items-start gap-2 rounded-lg border border-gold/25 p-2">
                   <Icon src={component.icon} alt="" />
                   <div><p className="text-sm font-semibold">{component.name}</p><p className="text-xs text-dim">{matches.slice(0, 3).map((m) => m.name).join(" · ")}</p></div>
                 </div> : null)}
               </div> : null}
             </div>
           </>
-        ) : <div className="rounded-xl border border-line p-4 text-sm text-dim">
+        ) : <div className="rounded-xl border border-gold/25 p-4 text-sm text-dim">
           Chọn ít nhất hai mảnh để xem công thức. Nếu có hai mảnh giống nhau, hãy chọn cùng mảnh hai lần.
         </div>}
-        <div className="rounded-lg border border-line p-3 text-xs text-dim">
-          <strong className="text-foreground">Lưu ý:</strong> Hướng chuyển 3–5 vàng chỉ là danh sách tướng có cơ chế tương thích theo dữ liệu và quy tắc hiện tại, chưa xác nhận tướng có đang mạnh, bị tranh, đủ bản sao hay có điều kiện mở khóa. Hãy kiểm tra kỹ năng, lõi và lobby trước khi quyết định reroll/Fast 8/9.
+        <div className="rounded-lg border border-gold/25 p-3 text-xs text-dim">
+          <strong className="text-ink">Lưu ý:</strong> Hướng chuyển 3–5 vàng chỉ là danh sách tướng có cơ chế tương thích theo dữ liệu và quy tắc hiện tại, chưa xác nhận tướng có đang mạnh, bị tranh, đủ bản sao hay có điều kiện mở khóa. Hãy kiểm tra kỹ năng, lõi và lobby trước khi quyết định reroll/Fast 8/9.
         </div>
       </section>
     </div>
