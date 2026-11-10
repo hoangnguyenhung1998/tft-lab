@@ -47,7 +47,7 @@ export function championStyles(champion: Champion): DamageStyle[] {
   const melee = champion.stats.range <= 1;
   const description = champion.ability.desc.toLowerCase();
 
-  if (melee) styles.push("fighter", "tank");
+  if (melee) styles.push("fighter");
   else styles.push("attack", "caster");
   if (ad) styles.push("physical");
   if (ap) styles.push("spell");
@@ -57,6 +57,15 @@ export function championStyles(champion: Champion): DamageStyle[] {
   // Explicit, limited overrides for common Set 18 carriers. Names are case-insensitive.
   // These refine the broad heuristic, but are still not authoritative build statistics.
   const overrides: Record<string, DamageStyle[]> = {
+    rakan: ["tank"],
+    kobuko: ["tank"],
+    sejuani: ["tank"],
+    shen: ["tank"],
+    yorick: ["tank"],
+    hecarim: ["tank"],
+    krug: ["tank"],
+    malphite: ["tank"],
+    sentinel: ["tank"],
     varus: ["physical", "attack", "caster"],
     xayah: ["physical", "attack"],
     caitlyn: ["physical", "attack"],
