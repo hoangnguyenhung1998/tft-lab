@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { Augment, Champion, Item } from "@/lib/types";
+import { augmentName, augmentDescription, matchesAugmentSearch } from "@/lib/augment-locale";
 import type { BoardState } from "@/lib/decision/item-advisor";
 import { compareAugments, type AugmentStage } from "@/lib/decision/augment-advisor";
 
@@ -82,6 +83,7 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
     gold: gold === "" ? undefined : Number(gold), previous,
   });
   const incomplete = picked.length < 3;
+  const localized = augments.filter((a) => !!a.viName).length;
   const maxScore = assessments[0]?.score ?? 0;
   const secondScore = assessments[1]?.score ?? 0;
   const close = assessments.length > 1 && maxScore - secondScore < 8;
@@ -119,11 +121,12 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
         <p className="text-xs uppercase tracking-[0.2em] text-gold">V2.0 · Không gọi AI</p>
         <h2 id="augment-advisor-title" className="mt-1 text-xl font-semibold">Tư vấn lõi nâng cấp</h2>
         <p className="mt-2 text-sm text-dim">
-          Nhập đúng 3 lõi xuất hiện trong game ở từng mốc. Công cụ giải thích theo mô tả lõi,
+          Nhập đúng 3 lõi xuất hiện trong game ở từng mốc. Tìm bằng tên tiếng Việt hoặc tiếng Anh. Công cụ giải thích theo mô tả lõi,
           đồ hiện có, tướng giữ đồ và sức mạnh board — không phải tỷ lệ thắng.
         </p>
       </div>
 
+      <p className="text-xs text-dim">Bản dịch lõi từ dữ liệu game vi_VN: {localized}/{augments.length}. {localized < augments.length ? "Các lõi chưa có bản dịch được ghi nguyên văn tiếng Anh, không dịch đoán." : "Tên và mô tả lõi đã có tiếng Việt."}</p>
       <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Mốc chọn lõi">
         {STAGES.map((value) => (
           <button key={value} type="button" aria-pressed={stage === value}
@@ -161,9 +164,9 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
         {[0, 1, 2].map((index) => {
           const selected = byId.get(record.offers[index]);
           const results = augments.filter((augment) => (!tier || augment.tier === tier)
-            && (!search[index] || (augment.name + " " + augment.desc).toLowerCase().includes(search[index].toLowerCase())))
+            && (!search[index] || matchesAugmentSearch(augment, search[index])))
             .filter((augment) => augment.id === record.offers[index] || !record.offers.some((id, idx) => idx !== index && id === augment.id))
-            .sort((a, b) => a.name.localeCompare(b.name)).slice(0, 100);
+            .sort((a, b) => augmentName(a).localeCompare(augmentName(b), "vi")).slice(0, 100);
           return (
             <div key={index} className="rounded-xl border border-gold/30 p-3">
               <p className="mb-2 text-sm font-semibold text-gold">Lõi {index + 1}</p>
@@ -175,13 +178,13 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
                 value={record.offers[index]} onChange={(e) => offerChange(index, e.target.value)}>
                 <option value="">Chọn lõi...</option>
                 {selected && !results.some((a) => a.id === selected.id) ? (
-                  <option value={selected.id}>{selected.name} ({tierName[selected.tier]})</option>
+                  <option value={selected.id}>{augmentName(selected)} ({tierName[selected.tier]})</option>
                 ) : null}
-                {results.map((a) => <option key={a.id} value={a.id}>{a.name} · {tierName[a.tier]}</option>)}
+                {results.map((a) => <option key={a.id} value={a.id}>{augmentName(a)} · {tierName[a.tier]}</option>)}
               </select>
               {selected ? <div className="mt-3 flex gap-2">
                 {selected.icon ? <Image src={asset(selected.icon)} alt="" width={40} height={40} unoptimized className="h-10 w-10 rounded object-contain" /> : null}
-                <div className="min-w-0"><p className="text-sm font-semibold">{selected.name}</p><p className="mt-1 text-xs leading-relaxed text-dim">{selected.desc}</p></div>
+                <div className="min-w-0"><p className="text-sm font-semibold">{augmentName(selected)}</p>{selected.viName ? <p className="text-xs text-dim">EN: {selected.name}</p> : null}<p className="mt-1 text-xs leading-relaxed text-dim">{augmentDescription(selected)}</p></div>
               </div> : null}
             </div>
           );
@@ -196,7 +199,7 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
         {assessments.map((result, index) => (
           <div key={result.augment.id} className="rounded-xl border border-gold/30 p-3 sm:p-4">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <p className="font-semibold">{result.augment.name} <span className="text-xs text-dim">· {tierName[result.augment.tier]}</span></p>
+              <p className="font-semibold">{augmentName(result.augment)} <span className="text-xs text-dim">· {tierName[result.augment.tier]}</span></p>
               <span className="text-xs text-gold">{result.categoryLabel} · {index === 0 && !cannotRank ? "Ưu tiên xem xét" : "Phương án"}</span>
             </div>
             <p className="mt-2 text-sm">{result.benefits.join(" ")}</p>
@@ -213,7 +216,7 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
 
       <div className="rounded-lg border border-gold/25 p-3 text-xs text-dim">
         <p className="font-semibold text-ink">Lịch sử lõi trong trận</p>
-        {STAGES.map((s) => <p key={s} className="mt-1">{s}: {byId.get(history[s].chosen)?.name ?? "Chưa chọn"}</p>)}
+        {STAGES.map((s) => <p key={s} className="mt-1">{s}: {byId.get(history[s].chosen) ? augmentName(byId.get(history[s].chosen)!) : "Chưa chọn"}</p>)}
         <p className="mt-2">Lưu trên trình duyệt hiện tại theo phiên bản dữ liệu. Không đồng bộ giữa máy hoặc tài khoản. Quy tắc chỉ tư vấn, không tự suy luận chuỗi thắng/thua theo loại lõi.</p>
       </div>
     </section>
