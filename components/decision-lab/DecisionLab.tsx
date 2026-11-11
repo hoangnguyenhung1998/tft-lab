@@ -94,7 +94,7 @@ export function DecisionLab({ champions, items }: Props) {
       <section className="panel min-w-0 space-y-4 p-4 sm:p-5" aria-label="Khuyến nghị">
         <div>
           <h2 className="text-lg font-semibold">Công thức & đường chuyển</h2>
-          <p className="text-xs text-dim">Chỉ số sắp xếp là heuristic theo vai trò, không phải thống kê thắng hay đồ tối ưu.</p>
+          <p className="text-xs text-dim">Công thức ghép từ dữ liệu game; đường chuyển chỉ hiện các carry có hồ sơ cơ chế. Không phải bảng đồ BIS.</p>
         </div>
         {options.length ? (
           <>
@@ -105,7 +105,7 @@ export function DecisionLab({ champions, items }: Props) {
                   className={"flex items-center gap-3 rounded-xl border p-3 text-left transition " + (selected?.item.id === o.item.id ? "border-gold bg-gold/10" : "border-gold/25 hover:border-gold/40")}>
                   <Icon src={o.item.icon} alt="" />
                   <span className="min-w-0 flex-1"><span className="block text-sm font-semibold">{o.item.name}</span>
-                    <span className="block text-[0.7rem] text-dim">{o.transfers.length} hướng carry · {o.confidence === "medium" ? "cần kiểm chứng" : "chưa đủ dữ liệu"}</span>
+                    <span className="block text-[0.7rem] text-dim">{o.transfers.filter((t) => t.fit >= 80).length} carry phù hợp rõ · {o.advice === "slam" ? "Có thể ghép" : o.advice === "hold" ? "Nên giữ mảnh" : "Cân nhắc"}</span>
                   </span>
                 </button>
               ))}
@@ -118,8 +118,8 @@ export function DecisionLab({ champions, items }: Props) {
                   <p className="text-xs text-dim">{selected.using.map((id) => componentLabels[id] ?? id).join(" + ")}</p>
                 </div>
               </div>
-              <p className="text-sm">{selected.reason}</p>
-              {selected.holderFit !== null ? <p className="text-xs text-dim">Mức tương thích người giữ đồ (ước lượng theo vai trò): {selected.holderFit >= 65 ? "Khá phù hợp" : selected.holderFit >= 45 ? "Có thể dùng tạm" : "Chưa phù hợp"}.</p> : null}
+              <div className="space-y-1"><p className="text-xs font-semibold uppercase tracking-wide text-gold">{selected.advice === "slam" ? "Có thể ghép để giữ máu" : selected.advice === "hold" ? "Chưa nên ghép cho holder này" : "Cân nhắc theo sức mạnh board"}</p><p className="text-sm">{selected.reason}</p></div>
+              {selected.holderFit !== null ? <p className="text-xs text-dim">Mức tương thích người giữ đồ (ước lượng theo vai trò): {selected.holderFit >= 80 ? "Có cơ chế phù hợp" : selected.holderFit >= 55 ? "Có thể dùng tạm" : selected.holderFit === 0 ? "Chưa đủ dữ liệu" : "Không phù hợp theo hồ sơ hiện có"}.</p> : null}
               <div className="flex flex-wrap gap-2">
                 <label className="sr-only" htmlFor="decision-tier">Lọc bậc tướng</label>
                 <select id="decision-tier" value={cost} onChange={(e) => setCost(Number(e.target.value))} className="rounded-lg border border-gold/25 bg-panel p-2 text-sm">
@@ -136,7 +136,7 @@ export function DecisionLab({ champions, items }: Props) {
                   {matches.map((m) => (
                     <div key={m.champion.id} className="flex items-start gap-2 rounded-lg border border-gold/25 p-2">
                       <Icon src={m.champion.icon} alt="" />
-                      <div><p className="text-sm font-semibold">{m.champion.name}</p><p className="text-xs text-dim">{m.reason}</p></div>
+                      <div><p className="text-sm font-semibold">{m.champion.name}</p><p className="text-xs text-dim">{m.fit >= 80 ? "Hợp cơ chế · " : "Tùy tình huống · "}{m.reason}</p></div>
                     </div>
                   ))}
                 </div>
@@ -161,7 +161,7 @@ export function DecisionLab({ champions, items }: Props) {
           Chọn ít nhất hai mảnh để xem công thức. Nếu có hai mảnh giống nhau, hãy chọn cùng mảnh hai lần.
         </div>}
         <div className="rounded-lg border border-gold/25 p-3 text-xs text-dim">
-          <strong className="text-ink">Lưu ý:</strong> Hướng chuyển 3–5 vàng chỉ là danh sách tướng có cơ chế tương thích theo dữ liệu và quy tắc hiện tại, chưa xác nhận tướng có đang mạnh, bị tranh, đủ bản sao hay có điều kiện mở khóa. Hãy kiểm tra kỹ năng, lõi và lobby trước khi quyết định reroll/Fast 8/9.
+          <strong className="text-ink">Lưu ý:</strong> Những carry chưa được thẩm định sẽ không được đề xuất, thay vì tự động suy luận theo tầm đánh hoặc AP phụ. Đường chuyển chưa phản ánh tỷ lệ thắng, độ tranh bài, điều kiện mở khóa hay sức mạnh của patch. Hãy kiểm tra kỹ năng, lõi và lobby trước khi quyết định reroll/Fast 8/9.
         </div>
       </section>
     </div>
