@@ -166,13 +166,14 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
           const results = augments.filter((augment) => (!tier || augment.tier === tier)
             && (!search[index] || matchesAugmentSearch(augment, search[index])))
             .filter((augment) => augment.id === record.offers[index] || !record.offers.some((id, idx) => idx !== index && id === augment.id))
-            .sort((a, b) => augmentName(a).localeCompare(augmentName(b), "vi")).slice(0, 100);
+            .sort((a, b) => augmentName(a).localeCompare(augmentName(b), "vi"));
           return (
             <div key={index} className="rounded-xl border border-gold/30 p-3">
               <p className="mb-2 text-sm font-semibold text-gold">Lõi {index + 1}</p>
               <label htmlFor={"augment-search-" + index} className="sr-only">Tìm lõi {index + 1}</label>
               <input id={"augment-search-" + index} value={search[index]} onChange={(e) => setSearch((prev) => prev.map((v,i) => i === index ? e.target.value : v))}
                 className={inputClass + " mb-2"} placeholder="Tìm tên lõi..." />
+              <p className="mb-2 text-xs text-dim">{results.length} lõi phù hợp bộ lọc{!search[index] ? " · gõ tên để tìm nhanh" : ""}.</p>
               <label htmlFor={"augment-choice-" + index} className="sr-only">Lõi {index + 1} trong game</label>
               <select id={"augment-choice-" + index} className={inputClass}
                 value={record.offers[index]} onChange={(e) => offerChange(index, e.target.value)}>
