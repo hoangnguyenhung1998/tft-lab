@@ -18,7 +18,6 @@ export interface ItemOption {
 }
 
 const clean = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, "");
-const has = (text: string, values: string[]) => values.some((value) => clean(text).includes(clean(value)));
 
 /**
  * Set 18: deliberately reviewed roles only. Do not infer AP caster from
@@ -143,13 +142,13 @@ export function adviseItems(input: {
     if (!known) reason = "Ghép được nhưng chưa có đánh giá cơ chế được kiểm tra; không nên dựa vào điểm số để quyết định.";
     else if (!holder) reason = "Chưa chọn người giữ đồ. Đây là các hướng chuyển tiềm năng, chưa phải đề xuất ghép ngay.";
     else if (holderFit === 0) reason = "Chưa đủ dữ liệu về tướng hoặc trang bị để kết luận.";
-    else if (holderFit < 55) reason = holder.name + " chưa phù hợp với " + item.name + " theo cơ chế đã kiểm tra. Có thể giữ mảnh hoặc tìm người giữ đồ khác.";
-    else if (holderFit < 80) reason = holder.name + " có thể dùng tạm, nhưng chưa phải hướng ưu tiên. Hãy xem đường chuyển và lượng máu trước khi ghép.";
+    else if (holderFit !== null && holderFit < 55) reason = holder.name + " chưa phù hợp với " + item.name + " theo cơ chế đã kiểm tra. Có thể giữ mảnh hoặc tìm người giữ đồ khác.";
+    else if (holderFit !== null && holderFit < 80) reason = holder.name + " có thể dùng tạm, nhưng chưa phải hướng ưu tiên. Hãy xem đường chuyển và lượng máu trước khi ghép.";
     else if (input.boardState === "strong") reason = holder.name + " sử dụng được món này. Board mạnh: cân nhắc ghép để giữ chuỗi hoặc để dành nếu đã đủ lực.";
     else reason = holder.name + " có cơ chế phù hợp và có đường chuyển. Có thể ghép để tăng sức mạnh ngay nếu cần giữ máu.";
     return {
       item, using, holderFit, transfers, score, advice,
-      confidence: known && holderFit !== null && holderFit >= 55 ? "medium" : "low",
+      confidence: (known && holderFit !== null && holderFit >= 55 ? "medium" : "low") as Confidence,
       reason,
       caution:"Các hướng chuyển được kiểm tra theo nhóm cơ chế, KHÔNG phải BIS hay tỷ lệ thắng bản hiện tại. Lõi, lobby và đội hình có thể thay đổi quyết định.",
     };
