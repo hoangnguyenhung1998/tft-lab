@@ -12,7 +12,7 @@ import { extractAugmentLocale } from "../lib/augment-locale";
 
 const root = process.cwd();
 const output = path.join(root, "data", "generated");
-const strict = process.argv.includes("--strict");
+const strict = process.argv.includes("--strict") || process.env.TFT_REQUIRE_VI_LOCALE === "1";
 const current = JSON.parse(fs.readFileSync(path.join(output, "current.json"), "utf8")) as CurrentSet;
 const data = JSON.parse(fs.readFileSync(path.join(output, "set-" + current.setNumber + ".json"), "utf8")) as SetData;
 const url = "https://raw.communitydragon.org/latest/cdragon/tft/vi_vn.json";
