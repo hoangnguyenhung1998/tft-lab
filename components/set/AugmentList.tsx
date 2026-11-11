@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { augmentName, augmentDescription, matchesAugmentSearch } from "@/lib/augment-locale";
 import { TAG_LABEL, TAGS, type Tag } from "@/lib/tags";
 import type { Augment, AugmentTier } from "@/lib/types";
 import { TagChips, tagsFor } from "./hovers";
@@ -21,20 +22,20 @@ export function AugmentList({ augments, traits, ranks = {} }: { augments: Augmen
   const traitName = new Map(traits.map((t) => [t.id, t.name]));
   const tagged = useMemo(() => {
     const rankOf = (id: string) => (ranks[id] ? RANK_ORDER[ranks[id]!] : 9);
-    return [...augments].sort((a, b) => rankOf(a.id) - rankOf(b.id) || a.name.localeCompare(b.name)).map((a) => ({ a, tags: tagsFor(a) }));
+    return [...augments].sort((a, b) => rankOf(a.id) - rankOf(b.id) || augmentName(a).localeCompare(augmentName(b), "vi")).map((a) => ({ a, tags: tagsFor(a) }));
   }, [augments, ranks]);
   const list = tagged.filter(
     ({ a, tags }) =>
       (!tier || a.tier === tier) &&
       (!tag || tags.includes(tag)) &&
       (!trait || a.associatedTraits.includes(trait)) &&
-      (!q || a.name.toLowerCase().includes(q.toLowerCase()) || a.desc.toLowerCase().includes(q.toLowerCase())),
+      (!q || matchesAugmentSearch(a, q)),
   );
   const count = (t: Tag) => tagged.filter((x) => x.tags.includes(t)).length;
   return (
     <div>
       <div className="mb-4 flex flex-wrap items-center gap-2">
-        <input className="input max-w-xs" placeholder="Search augments" aria-label="Search augments" value={q} onChange={(e) => setQ(e.target.value)} />
+        <input className="input max-w-xs" placeholder="Tìm lõi bằng tiếng Việt hoặc tiếng Anh" aria-label="Tìm kiếm lõi" value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="flex gap-1" role="group" aria-label="Tier">
           {TIERS.map((t) => (
             <button key={t} type="button" className={`chip ${tier === t ? "chip-active" : ""}`} aria-pressed={tier === t} onClick={() => setTier(tier === t ? "" : t)}>
@@ -67,16 +68,17 @@ export function AugmentList({ augments, traits, ranks = {} }: { augments: Augmen
             <ItemIcon icon={a.icon} name={a.name} size={40} />
             <div className="min-w-0 text-sm">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-gold-bright">{a.name}</span>
+                <span className="text-gold-bright">{augmentName(a)}</span>
                 <TierBadge tier={a.tier} />
                 <RankBadge rank={ranks[a.id]} size={16} />
               </div>
+              {a.viName ? <p className="text-[0.65rem] text-dim">EN: {a.name}</p> : null}
               <div className="mt-1">
                 <TagChips tags={tags} size="xs" />
               </div>
               {a.associatedTraits.length ? <div className="mt-0.5 text-xs text-gold">{a.associatedTraits.map((t) => traitName.get(t) ?? t).join(", ")}</div> : null}
               <p className="mt-1 text-xs text-dim">
-                <RichText text={a.desc} words />
+                <RichText text={augmentDescription(a)} words />
               </p>
             </div>
           </li>
