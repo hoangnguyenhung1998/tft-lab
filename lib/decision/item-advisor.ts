@@ -20,29 +20,6 @@ export interface ItemOption {
 const clean = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, "");
 const has = (text: string, values: string[]) => values.some((value) => clean(text).includes(clean(value)));
 
-const ATTACK_ITEMS = ["Guinsoo", "Kraken", "Red Buff", "Nashor", "Rapid Fire", "Last Whisper"];
-const PHYSICAL_ITEMS = ["Infinity Edge", "Deathblade", "Last Whisper", "Giant Slayer", "Kraken", "Red Buff"];
-const SPELL_ITEMS = ["Jeweled Gauntlet", "Rabadon", "Archangel", "Void Staff", "Morellonomicon"];
-const CASTER_ITEMS = ["Spear of Shojin", "Blue Buff", "Adaptive Helm"];
-const FIGHTER_ITEMS = ["Bloodthirster", "Hand of Justice", "Titan", "Edge of Night", "Quicksilver", "Sterak", "Striker"];
-const TANK_ITEMS = ["Gargoyle", "Warmog", "Bramble Vest", "Dragon's Claw", "Spirit Visage", "Protector's Vow", "Steadfast", "Sunfire", "Ionic Spark", "Evenshroud", "Crownguard"];
-
-export function itemStyles(item: Pick<Item, "name">): DamageStyle[] {
-  const name = item.name;
-  const styles: DamageStyle[] = [];
-  if (has(name, TANK_ITEMS)) styles.push("tank");
-  if (has(name, FIGHTER_ITEMS)) styles.push("fighter");
-  if (has(name, ATTACK_ITEMS)) styles.push("attack");
-  if (has(name, PHYSICAL_ITEMS)) styles.push("physical");
-  if (has(name, SPELL_ITEMS)) styles.push("spell");
-  if (has(name, CASTER_ITEMS)) styles.push("caster");
-  if (has(name, ["Hextech Gunblade", "Giant Slayer", "Hand of Justice"])) styles.push("hybrid");
-  return styles.length ? [...new Set(styles)] : ["hybrid"];
-}
-
-/** Riot data includes ability scaling and range, but not a reliable carry role.
- * This is a conservative heuristic, NOT a claim of best-in-slot or live win rate.
- */
 /**
  * Set 18: deliberately reviewed roles only. Do not infer AP caster from
  * having a ranged attack or from an incidental AP coefficient.
@@ -93,7 +70,20 @@ const gear: GearRule[] = [
   {pattern:/hand of justice/i,primary:["melee-ad","melee-ap"],secondary:["ad-caster","ap-caster"],why:"Đồ linh hoạt sát thương/hồi phục."},
   {pattern:/gargoyle|warmog|bramble vest|dragon.s claw|spirit visage|protector.s vow|steadfast heart|sunfire cape|ionic spark|evenshroud|crownguard|adaptive helm/i,primary:["tank"],secondary:["melee-ap"],why:"Ưu tiên tuyến trước, tùy đối thủ và cách xếp cờ."},
 ];
-const ruleOf = (item: Item): GearRule | undefined => gear.find((r) => r.pattern.test(item.name));
+const ruleOf = (item: Pick<Item, "name">): GearRule | undefined => gear.find((r) => r.pattern.test(item.name));
+
+export function itemStyles(item: Pick<Item, "name">): DamageStyle[] {
+  const rule = ruleOf(item);
+  if (!rule) return [];
+  const styles: DamageStyle[] = [];
+  for (const role of rule.primary) {
+    if (role === "tank") styles.push("tank");
+    if (role === "auto") styles.push("attack");
+    if (role === "ad-caster" || role === "melee-ad") styles.push("physical");
+    if (role === "ap-caster" || role === "ap-sustain" || role === "melee-ap") styles.push("spell");
+  }
+  return [...new Set(styles)];
+}
 
 export function championStyles(champion: Champion): DamageStyle[] {
   const styles: DamageStyle[] = [];
@@ -159,7 +149,7 @@ export function adviseItems(input: {
     else reason = holder.name + " có cơ chế phù hợp và có đường chuyển. Có thể ghép để tăng sức mạnh ngay nếu cần giữ máu.";
     return {
       item, using, holderFit, transfers, score, advice,
-      confidence: known && holderFit !== 0 ? "medium" : "low",
+      confidence: known && holderFit !== null && holderFit >= 55 ? "medium" : "low",
       reason,
       caution:"Các hướng chuyển được kiểm tra theo nhóm cơ chế, KHÔNG phải BIS hay tỷ lệ thắng bản hiện tại. Lõi, lobby và đội hình có thể thay đổi quyết định.",
     };
