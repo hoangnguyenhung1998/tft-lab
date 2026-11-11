@@ -3,16 +3,17 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
-import type { Champion, Item } from "@/lib/types";
+import type { Augment, Champion, Item } from "@/lib/types";
+import { AugmentAdvisor } from "./AugmentAdvisor";
 import { adviseItems, recipesForComponents, remainingComponents, type BoardState } from "@/lib/decision/item-advisor";
 
-type Props = { champions: Champion[]; items: Item[] };
+type Props = { champions: Champion[]; items: Item[]; augments: Augment[]; patch: string };
 
 function Icon({ src, alt }: { src: string; alt: string }) {
   return src ? <Image src={asset(src)} width={38} height={38} alt={alt} className="h-9 w-9 shrink-0 rounded object-contain" unoptimized /> : null;
 }
 
-export function DecisionLab({ champions, items }: Props) {
+export function DecisionLab({ champions, items, augments, patch }: Props) {
   const components = useMemo(() => items.filter((i) => i.kind === "component").sort((a, b) => a.name.localeCompare(b.name)), [items]);
   const [selection, setSelection] = useState<string[]>([]);
   const [holderId, setHolderId] = useState("");
@@ -41,7 +42,8 @@ export function DecisionLab({ champions, items }: Props) {
     .slice(0, 6) : [];
 
   return (
-    <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+    <div className="space-y-6">
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
       <section className="panel space-y-5 p-4 sm:p-5" aria-label="Nhập tình huống">
         <div>
           <h2 className="text-lg font-semibold">1. Mảnh đồ đang có</h2>
@@ -164,6 +166,8 @@ export function DecisionLab({ champions, items }: Props) {
           <strong className="text-ink">Lưu ý:</strong> Những carry chưa được thẩm định sẽ không được đề xuất, thay vì tự động suy luận theo tầm đánh hoặc AP phụ. Đường chuyển chưa phản ánh tỷ lệ thắng, độ tranh bài, điều kiện mở khóa hay sức mạnh của patch. Hãy kiểm tra kỹ năng, lõi và lobby trước khi quyết định reroll/Fast 8/9.
         </div>
       </section>
+      </div>
+      <AugmentAdvisor augments={augments} patch={patch} board={boardState} holder={champions.find((c) => c.id === holderId)} equipped={selected?.item} components={remainingItems} />
     </div>
   );
 }
