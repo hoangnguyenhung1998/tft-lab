@@ -5,7 +5,7 @@ import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { Augment, Champion, Item } from "@/lib/types";
 import { augmentName, augmentDescription } from "@/lib/augment-locale";
-import { matchingAugments } from "@/lib/decision/augment-picker";
+import { matchingAugments, uniqueAugments, augmentDisplayKey } from "@/lib/decision/augment-picker";
 import type { BoardState } from "@/lib/decision/item-advisor";
 import { compareAugments, type AugmentStage } from "@/lib/decision/augment-advisor";
 
@@ -29,7 +29,7 @@ const blank = (): MatchState => ({
 const tierName = { silver: "Bạc", gold: "Vàng", prismatic: "Kim Cương" };
 const isStage = (value: unknown): value is AugmentStage => STAGES.includes(value as AugmentStage);
 
-function validateHistory(raw: unknown, validIds: Set<string>): MatchState {
+function validateHistory(raw: unknown, idToCanonical: Map<string, string>): MatchState {
   const result = blank();
   if (!raw || typeof raw !== "object") return result;
   for (const stage of STAGES) {
@@ -40,7 +40,7 @@ function validateHistory(raw: unknown, validIds: Set<string>): MatchState {
     if (Array.isArray(offers)) {
       result[stage].offers = [0, 1, 2].map((index) => {
         const value: unknown = offers[index];
-        return typeof value === "string" && validIds.has(value) ? value : "";
+        return typeof value === "string" ? idToCanonical.get(value) ?? "" : "";
       });
     }
     if (typeof obj.chosen === "string" && result[stage].offers.includes(obj.chosen)) result[stage].chosen = obj.chosen;
@@ -57,17 +57,22 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
   const [gold, setGold] = useState("");
   const [tier, setTier] = useState("");
   const storageKey = "tft-decision-augments-v2-" + patch;
-  const byId = useMemo(() => new Map(augments.map((a) => [a.id, a])), [augments]);
+  const canonical = useMemo(() => uniqueAugments(augments), [augments]);
+  const byId = useMemo(() => new Map(canonical.map((a) => [a.id, a])), [canonical]);
+  const idToCanonical = useMemo(() => {
+    const canonicalByKey = new Map(canonical.map((a) => [augmentDisplayKey(a), a.id]));
+    return new Map(augments.map((a) => [a.id, canonicalByKey.get(augmentDisplayKey(a)) ?? a.id]));
+  }, [augments, canonical]);
 
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem(storageKey);
-      if (stored) setHistory(validateHistory(JSON.parse(stored) as unknown, new Set(augments.map((a) => a.id))));
+      if (stored) setHistory(validateHistory(JSON.parse(stored) as unknown, idToCanonical));
     } catch {
       // Local storage can be disabled; use an in-memory session instead.
     }
     setReady(true);
-  }, [storageKey, augments]);
+  }, [storageKey, idToCanonical]);
 
   useEffect(() => {
     if (!ready) return;
@@ -84,7 +89,7 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
     gold: gold === "" ? undefined : Number(gold), previous,
   });
   const incomplete = picked.length < 3;
-  const localized = augments.filter((a) => !!a.viName).length;
+  const localized = canonical.filter((a) => !!a.viName).length;
   const maxScore = assessments[0]?.score ?? 0;
   const secondScore = assessments[1]?.score ?? 0;
   const close = assessments.length > 1 && maxScore - secondScore < 8;
@@ -127,7 +132,7 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
         </p>
       </div>
 
-      <p className="text-xs text-dim">Bản dịch lõi từ dữ liệu game vi_VN: {localized}/{augments.length}. {localized < augments.length ? "Các lõi chưa có bản dịch được ghi nguyên văn tiếng Anh, không dịch đoán." : "Tên và mô tả lõi đã có tiếng Việt."}</p>
+      <p className="text-xs text-dim">Bản dịch lõi từ dữ liệu game vi_VN: {localized}/{canonical.length} lõi duy nhất (nguồn: {augments.length} bản ghi). {localized < canonical.length ? "Các lõi chưa có bản dịch được ghi nguyên văn tiếng Anh, không dịch đoán." : "Tên và mô tả lõi đã có tiếng Việt."}</p>
       <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Mốc chọn lõi">
         {STAGES.map((value) => (
           <button key={value} type="button" aria-pressed={stage === value}
