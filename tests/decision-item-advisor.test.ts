@@ -56,4 +56,40 @@ describe("Decision Lab item adviser", () => {
     expect(rageblade.transfers.map((c) => c.champion.name)).toEqual(expect.arrayContaining(["Tristana", "Aphelios", "Draven"]));
     expect(rageblade.caution).toContain("KHÔNG");
   });
+  it("does not recommend Archangel's Staff for Xayah and does not list AD carries as AP transfers", () => {
+    const archangel = completed("archangel", "Archangel's Staff", "rod", "tear");
+    const deathcap = completed("deathcap", "Rabadon's Deathcap", "rod", "rod");
+    const testItems = [...items, component("tear"), archangel, deathcap];
+    const champions = [
+      champion("Xayah", 1, 4), champion("Rengar", 3, 1),
+      champion("Aphelios", 4, 4), champion("Cassiopeia", 3, 4),
+      champion("Morgana", 4, 4), champion("Alune", 5, 4)
+    ];
+    const options = adviseItems({items:testItems,champions,components:["rod","rod","tear"],holderId:"Xayah",boardState:"even"});
+    const selected = options.find((o) => o.item.id === "archangel")!;
+    expect(selected.advice).toBe("hold");
+    expect(selected.holderFit).toBeLessThan(55);
+    expect(selected.transfers.map((t) => t.champion.name)).not.toContain("Aphelios");
+    expect(selected.transfers.map((t) => t.champion.name)).not.toContain("Rengar");
+    expect(selected.transfers.map((t) => t.champion.name)).toContain("Cassiopeia");
+    expect(selected.transfers.map((t) => t.champion.name)).toContain("Alune");
+    expect(options.map((o) => o.item.id).sort()).toEqual(["archangel","deathcap"]);
+  });
+
+  it("does not invent carry fit for unknown champion profiles", () => {
+    const unknown = champion("Unreviewed Champion", 4, 4);
+    const rageblade = items.find((i) => i.id === "rageblade")!;
+    expect(compatibility(rageblade, unknown).fit).toBe(0);
+    expect(championStyles(unknown)).toEqual([]);
+  });
+
+  it("accounts for board state without equating strong board with mandatory slamming", () => {
+    const champions = [champion("Varus", 1, 4), champion("Tristana", 3, 4)];
+    const base = {items,champions,components:["bow","rod"],holderId:"Varus"};
+    const strong = adviseItems({...base,boardState:"strong"}).find((o) => o.item.id === "rageblade")!;
+    const weak = adviseItems({...base,boardState:"weak"}).find((o) => o.item.id === "rageblade")!;
+    expect(strong.advice).toBe("consider");
+    expect(weak.advice).toBe("slam");
+  });
+
 });
