@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { CURRENT_SET, isSynced } from "./current-set";
 import type { Augment, Champion, Item, SetData, Trait } from "./types";
+import { applyAugmentLocale, type AugmentDictionary } from "./augment-locale";
 
 /**
  * Server-side loader for the synced set. Reads data/generated/set-<n>.json
@@ -21,7 +22,19 @@ export function loadSetData(): SetData | null {
     cached = null;
     return cached;
   }
-  cached = JSON.parse(fs.readFileSync(file, "utf8")) as SetData;
+  const data = JSON.parse(fs.readFileSync(file, "utf8")) as SetData;
+  const viFile = path.join(process.cwd(), "data", "generated", "augment-vi-" + CURRENT_SET.setNumber + ".json");
+  if (fs.existsSync(viFile)) {
+    try {
+      const locale = JSON.parse(fs.readFileSync(viFile, "utf8")) as { setNumber: number; patch: string; entries: AugmentDictionary };
+      if (locale.setNumber === CURRENT_SET.setNumber && locale.patch === CURRENT_SET.patch && locale.entries) {
+        data.augments = applyAugmentLocale(data.augments, locale.entries);
+      }
+    } catch {
+      // Keep the English source intact if the translation cache is malformed.
+    }
+  }
+  cached = data;
   return cached;
 }
 
