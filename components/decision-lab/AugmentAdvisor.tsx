@@ -4,7 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { Augment, Champion, Item } from "@/lib/types";
-import { augmentName, augmentDescription, matchesAugmentSearch } from "@/lib/augment-locale";
+import { augmentName, augmentDescription } from "@/lib/augment-locale";
+import { matchingAugments } from "@/lib/decision/augment-picker";
 import type { BoardState } from "@/lib/decision/item-advisor";
 import { compareAugments, type AugmentStage } from "@/lib/decision/augment-advisor";
 
@@ -163,10 +164,10 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
       <div className="grid gap-3 lg:grid-cols-3">
         {[0, 1, 2].map((index) => {
           const selected = byId.get(record.offers[index]);
-          const results = augments.filter((augment) => (!tier || augment.tier === tier)
-            && (!search[index] || matchesAugmentSearch(augment, search[index])))
-            .filter((augment) => augment.id === record.offers[index] || !record.offers.some((id, idx) => idx !== index && id === augment.id))
-            .sort((a, b) => augmentName(a).localeCompare(augmentName(b), "vi"));
+          const results = matchingAugments(
+            augments, search[index], tier,
+            record.offers.filter((_, idx) => idx !== index), record.offers[index],
+          );
           return (
             <div key={index} className="rounded-xl border border-gold/30 p-3">
               <p className="mb-2 text-sm font-semibold text-gold">Lõi {index + 1}</p>
