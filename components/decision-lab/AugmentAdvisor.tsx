@@ -34,9 +34,10 @@ function validateHistory(raw: unknown, validIds: Set<string>): MatchState {
     const entry = (raw as Record<string, unknown>)[stage];
     if (!entry || typeof entry !== "object") continue;
     const obj = entry as Record<string, unknown>;
-    if (Array.isArray(obj.offers)) {
+    const offers = obj.offers;
+    if (Array.isArray(offers)) {
       result[stage].offers = [0, 1, 2].map((index) => {
-        const value: unknown = obj.offers[index];
+        const value: unknown = offers[index];
         return typeof value === "string" && validIds.has(value) ? value : "";
       });
     }
