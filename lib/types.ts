@@ -76,6 +76,9 @@ export interface Item {
 export type AugmentTier = "silver" | "gold" | "prismatic";
 
 export interface Augment {
+  /** Optional Vietnamese display overlay; never used for tactical rule parsing. */
+  viName?: string;
+  viDesc?: string;
   id: string;
   name: string;
   desc: string;

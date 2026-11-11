@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "npm run build-search && next dev",
-    "build": "npm run validate && npm run sync-comps && npm run build-search && next build",
+    "build": "npm run validate && npm run sync-augment-vi && npm run sync-comps && npm run build-search && next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "sync-set": "tsx scripts/sync-set.ts",
+    "sync-augment-vi": "tsx scripts/sync-augment-vi.ts",
     "sync-patch-notes": "tsx scripts/sync-patch-notes.ts",
     "sync-meta": "tsx scripts/sync-meta.ts",
     "sync-wisps": "tsx scripts/sync-wisps.ts",

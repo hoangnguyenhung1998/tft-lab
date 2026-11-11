@@ -48,6 +48,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.url.outputs.base }}
           NEXT_PUBLIC_SITE_URL: ${{ steps.url.outputs.site }}
+          TFT_REQUIRE_VI_LOCALE: "1"
         run: npm run build
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
