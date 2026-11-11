@@ -36,7 +36,7 @@ const categoryLabels: Record<AugmentCategory, string> = {
 function classify(augment: Augment): AugmentCategory {
   const text = (augment.name + " " + augment.desc).toLowerCase();
   // A description may mention multiple features; treat special mechanisms first.
-  if (/\b(roll|reroll|shop refresh|shop reroll|free refresh|free reroll)\b/.test(text)) return "reroll";
+  if (/\b(rerolls?|rolls?|rolling|shop refresh(?:es)?|shop rerolls?|free refresh(?:es)?|free rerolls?)\b/.test(text)) return "reroll";
   if (/\b(level up|leveling|experience|\bxp\b|level 8|level 9)\b/.test(text)) return "levels";
   if (augment.associatedTraits.length || /\bemblem\b|trait breakpoint|trait count/.test(text)) return "traits";
   const tags: Tag[] = classifyTags(augment.name, augment.desc, augment.associatedTraits);
