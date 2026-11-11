@@ -43,7 +43,18 @@ function validateHistory(raw: unknown, idToCanonical: Map<string, string>): Matc
         return typeof value === "string" ? idToCanonical.get(value) ?? "" : "";
       });
     }
-    if (typeof obj.chosen === "string" && result[stage].offers.includes(obj.chosen)) result[stage].chosen = obj.chosen;
+    // Older saved matches may have chosen duplicate alias IDs.
+    // Normalize those IDs and clear repeat choices within a single stage.
+    const seen = new Set<string>();
+    result[stage].offers = result[stage].offers.map((id) => {
+      if (!id || seen.has(id)) return "";
+      seen.add(id);
+      return id;
+    });
+    if (typeof obj.chosen === "string") {
+      const chosenId = idToCanonical.get(obj.chosen) ?? "";
+      if (result[stage].offers.includes(chosenId)) result[stage].chosen = chosenId;
+    }
   }
   return result;
 }
