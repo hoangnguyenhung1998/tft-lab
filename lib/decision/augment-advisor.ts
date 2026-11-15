@@ -28,12 +28,12 @@ export interface AugmentAssessment {
   rationale: string;
 }
 
-const categoryLabels: Record<AugmentCategory, string> = {
+export const categoryLabels: Record<AugmentCategory, string> = {
   combat: "Giao tranh", economy: "Kinh tế", items: "Trang bị", reroll: "Reroll",
   levels: "Lên cấp", traits: "Tộc hệ", champions: "Tướng", flex: "Linh hoạt / chưa rõ"
 };
 
-function classify(augment: Augment): AugmentCategory {
+export function classify(augment: Augment): AugmentCategory {
   const text = (augment.name + " " + augment.desc).toLowerCase();
   // A description may mention multiple features; treat special mechanisms first.
   if (/\b(rerolls?|rolls?|rolling|shop refresh(?:es)?|shop rerolls?|free refresh(?:es)?|free rerolls?)\b/.test(text)) return "reroll";

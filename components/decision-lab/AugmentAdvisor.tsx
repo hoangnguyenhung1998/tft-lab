@@ -16,7 +16,7 @@ type Props = {
   patch: string;
   board: BoardState;
   holder?: Champion;
-  equipped?: Item;
+  equipped?: Item[];
   components: Item[];
 };
 
@@ -95,7 +95,7 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
   const previous = STAGES.slice(0, STAGES.indexOf(stage))
     .map((s) => byId.get(history[s].chosen)).filter((a): a is Augment => !!a);
   const assessments = compareAugments(picked, {
-    stage, board, holder, equipped: equipped ? [equipped] : [],
+    stage, board, holder, equipped: equipped ?? [],
     components, health: health === "" ? undefined : Number(health),
     gold: gold === "" ? undefined : Number(gold), previous,
   });
@@ -135,10 +135,10 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
   return (
     <section className="panel space-y-5 p-4 sm:p-5" aria-labelledby="augment-advisor-title">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-gold">V2.0 · Không gọi AI</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-gold">Bài tập so sánh · Không gọi AI</p>
         <h2 id="augment-advisor-title" className="mt-1 text-xl font-semibold">Tư vấn lõi nâng cấp</h2>
         <p className="mt-2 text-sm text-dim">
-          Nhập đúng 3 lõi xuất hiện trong game ở từng mốc. Tìm bằng tên tiếng Việt hoặc tiếng Anh. Công cụ giải thích theo mô tả lõi,
+          Tái hiện 3 lựa chọn lõi để luyện tập hoặc phân tích sau trận ở từng mốc. Tìm bằng tên tiếng Việt hoặc tiếng Anh. Công cụ giải thích theo mô tả lõi,
           đồ hiện có, tướng giữ đồ và sức mạnh board — không phải tỷ lệ thắng.
         </p>
       </div>
@@ -211,7 +211,7 @@ export function AugmentAdvisor({ augments, patch, board, holder, equipped, compo
 
       <div className="space-y-3">
         <h3 className="text-base font-semibold">So sánh theo tình huống ở {stage}</h3>
-        {incomplete ? <p className="text-xs text-dim">Anh có thể xem đánh giá từng lõi ngay. Nhập đủ ba lõi để so sánh trực tiếp.</p> : null}
+        {incomplete ? <p className="text-xs text-dim">Anh có thể xem đánh giá từng lõi ngay. Nhập đủ ba lõi để so sánh trong bài tập.</p> : null}
         {cannotRank && assessments.length > 1 ? <p className="text-xs text-gold">Chưa đủ độ chênh lệch hoặc tín hiệu để kết luận một lõi chắc chắn tốt nhất. Hãy đọc điều kiện và rủi ro của từng lõi.</p> : null}
         {!assessments.length ? <p className="rounded-lg border border-gold/25 p-3 text-sm text-dim">Chưa chọn lõi. Chọn mốc 2-1, 3-2 hoặc 4-2 và nhập ba lựa chọn trong game.</p> : null}
         {assessments.map((result, index) => (

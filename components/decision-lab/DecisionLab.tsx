@@ -19,6 +19,8 @@ export function DecisionLab({ champions, items, augments, patch }: Props) {
   const [holderId, setHolderId] = useState("");
   const [boardState, setBoardState] = useState<BoardState>("even");
   const [activeItem, setActiveItem] = useState("");
+  const [equippedIds, setEquippedIds] = useState<string[]>([]);
+  const equippedItems = items.filter((i) => equippedIds.includes(i.id));
   const [query, setQuery] = useState("");
   const [cost, setCost] = useState<number>(0);
   const [showAll, setShowAll] = useState(false);
@@ -43,7 +45,7 @@ export function DecisionLab({ champions, items, augments, patch }: Props) {
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+      <div id="decision-items" className="scroll-mt-24 grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
       <section className="panel space-y-5 p-4 sm:p-5" aria-label="Nhập tình huống">
         <div>
           <h2 className="text-lg font-semibold">1. Mảnh đồ đang có</h2>
@@ -167,7 +169,18 @@ export function DecisionLab({ champions, items, augments, patch }: Props) {
         </div>
       </section>
       </div>
-      <AugmentAdvisor augments={augments} patch={patch} board={boardState} holder={champions.find((c) => c.id === holderId)} equipped={selected?.item} components={remainingItems} />
+      <section id="decision-augments" className="scroll-mt-24 space-y-4">
+        <div className="panel space-y-2 p-4">
+          <h2 className="font-semibold">Trang bị thực tế đã ghép (tùy chọn)</h2>
+          <p className="text-xs text-dim">Dùng khi luyện tập so sánh lõi. Chọn đúng đồ đã có; công thức gợi ý không tự động được tính là đồ đã ghép. Mảnh đồ ở trên phải là mảnh chưa ghép.</p>
+          <select aria-label="Thêm trang bị đã ghép" className="w-full rounded-lg border border-gold/25 bg-panel p-2 text-sm" value="" onChange={(e) => { const id = e.target.value; if (id && !equippedIds.includes(id)) setEquippedIds((old) => [...old, id]); }}>
+            <option value="">Thêm trang bị...</option>
+            {items.filter((i) => i.kind === "completed" && !equippedIds.includes(i.id)).map((i) => <option key={i.id} value={i.id}>{i.name}</option>)}
+          </select>
+          <div className="flex flex-wrap gap-2">{equippedItems.map((i) => <button key={i.id} type="button" className="btn btn-sm" onClick={() => setEquippedIds((old) => old.filter((id) => id !== i.id))}>{i.name} ×</button>)}</div>
+        </div>
+        <AugmentAdvisor augments={augments} patch={patch} board={boardState} holder={champions.find((c) => c.id === holderId)} equipped={equippedItems} components={selection.map((id) => lookup.get(id)).filter((i): i is Item => !!i)} />
+      </section>
     </div>
   );
 }
