@@ -28,7 +28,7 @@ export function extractAugmentLocale(
     if (!allowed.has(row.apiName) || !source) continue;
     const name = row.name?.trim() ?? "";
     const desc = row.desc?.trim() ?? "";
-    if (!name || name === source.name) continue;
+    if (!name) continue;
     out[row.apiName] = { name, desc };
   }
   return out;

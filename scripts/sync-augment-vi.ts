@@ -15,7 +15,7 @@ const output = path.join(root, "data", "generated");
 const strict = process.argv.includes("--strict") || process.env.TFT_REQUIRE_VI_LOCALE === "1";
 const current = JSON.parse(fs.readFileSync(path.join(output, "current.json"), "utf8")) as CurrentSet;
 const data = JSON.parse(fs.readFileSync(path.join(output, "set-" + current.setNumber + ".json"), "utf8")) as SetData;
-const url = "https://raw.communitydragon.org/latest/cdragon/tft/vi_vn.json";
+const url = "https://raw.communitydragon.org/" + current.patch + "/cdragon/tft/vi_vn.json";
 const schema = z.object({
   items: z.array(z.object({
     apiName: z.string(), name: z.string().nullable(), desc: z.string().nullable(),
@@ -37,7 +37,7 @@ async function main() {
     if (!response.ok) throw new Error("CommunityDragon vi_vn HTTP " + response.status);
     const raw = schema.parse(await response.json());
     const entry = raw.setData.find((s) => s.number === current.setNumber && s.mutator === current.mutator)
-      ?? raw.setData.find((s) => s.number === current.setNumber);
+      ;
     if (!entry) throw new Error("Set " + current.setNumber + " absent from vi_vn");
     const allowed = new Set(entry.augments);
     const translated = raw.items
