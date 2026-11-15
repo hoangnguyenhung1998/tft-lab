@@ -24,7 +24,7 @@ export default function DecisionLabPage() {
         <p className="mt-2 text-xs text-dim">Set {CURRENT_SET.setNumber} · dữ liệu client {CURRENT_SET.patch} · patch ghi nhận {live.label} · đồng bộ {CURRENT_SET.syncedAt.slice(0,10)}.</p>
       </div>
       <nav aria-label="Khu vực Decision Lab" className="flex flex-wrap gap-2"><a className="btn btn-sm" href="#decision-items">Trợ lý trang bị</a><a className="btn btn-sm" href="#decision-augments">Bài tập chọn lõi</a><a className="btn btn-sm" href="#decision-library">Thư viện kiến thức</a></nav>
-      <DecisionLab champions={set.champions} items={set.items} augments={set.augments} patch={CURRENT_SET.patch} />
+      <DecisionLab champions={set.champions} items={set.items} augments={set.augments} patch={CURRENT_SET.patch} setNumber={CURRENT_SET.setNumber} />
       <StudyLibrary champions={set.champions} items={set.items} augments={set.augments} comps={loadComps()} tiers={tiers} ranks={ranksById(set.augments,tiers?.augments)} wisps={wisps} wispSource={wisp.source} wispDate={wisp.syncedAt??wisp.verifiedOn} live={live.label} fromNotes={live.fromNotes} setNumber={CURRENT_SET.setNumber}/>
     </div>
   );

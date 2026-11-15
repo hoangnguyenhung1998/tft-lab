@@ -9,7 +9,7 @@ import type { Rank, TiersFile } from "@/lib/tiers";
 import { augmentName, augmentDescription, normalizeAugmentSearch } from "@/lib/augment-locale";
 import { matchingAugments } from "@/lib/decision/augment-picker";
 import { classify, categoryLabels, type AugmentCategory } from "@/lib/decision/augment-advisor";
-import { carryStudy, earlyHolders, studyRole, exactPatch, plans, encounters, stageNotes, commitChecklist } from "@/lib/decision/study";
+import { carryStudy, earlyHolders, studyRole, exactPatch, PROFILE_SET_NUMBER, plans, encounters, stageNotes, commitChecklist } from "@/lib/decision/study";
 
 export type StudyWisp = { id:string; name:string; desc:string; icon:string; cost:number|null; stage:string|null };
 type Props = { champions:Champion[]; items:Item[]; augments:Augment[]; comps:CompsFile|null; tiers:TiersFile|null; ranks:Record<string,Rank>; wisps:StudyWisp[]; wispSource:string|null; wispDate:string|null; live:string; fromNotes:boolean; setNumber:number };
@@ -36,7 +36,7 @@ export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,w
   const tabs = [["carry","Carry & đồ"],["augments","Thư viện lõi"],["comps","Đội hình"],["wisps","Kỳ ngộ & Wisp"],["tempo","Tempo"],["guide","Cẩm nang"]];
   const byUnit = useMemo(() => new Map(champions.map(c=>[c.id,c])),[champions]);
   const byItem = useMemo(() => new Map(items.map(i=>[i.id,i])),[items]);
-  const carries = champions.filter(c=>c.cost>=3 && (!cost || c.cost===cost) && (!role || studyRole(c).includes(role)) && match(c.name,query)).sort((a,b)=>a.cost-b.cost || a.name.localeCompare(b.name));
+  const carries = champions.filter(c=>c.cost>=3 && (!cost || c.cost===cost) && (!role || (setNumber===PROFILE_SET_NUMBER ? studyRole(c) : "Chưa có hồ sơ").includes(role)) && match(c.name,query)).sort((a,b)=>a.cost-b.cost || a.name.localeCompare(b.name));
   const carry = carries.find(c=>c.id===carryId);
   const gear = carry ? carryStudy(carry,items) : [];
   const augList = useMemo(()=>matchingAugments(augments,query,rarity,[]).filter(a=>(!category || classify(a)===category) && (!rank || (fresh && ranks[a.id]===rank))),[augments,query,rarity,category,rank,fresh,ranks]);
@@ -52,12 +52,12 @@ export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,w
     <Heading title="Thư viện kiến thức Decision Lab">Tra cứu, nghiên cứu trước trận và luyện tập sau trận. Không phải bảng chỉ định nước đi theo thời gian thực.</Heading>
     <div className="flex flex-wrap gap-2" role="group" aria-label="Chủ đề kiến thức">{tabs.map(([id,label])=><button key={id} type="button" aria-pressed={tab===id} className={"btn btn-sm "+(tab===id?"btn-primary":"")} onClick={()=>selectTab(id!)}>{label}</button>)}</div>
     {tab==="carry" && <>
-      <Heading title="Carry 3–5 vàng và người giữ đồ">Mức tương thích dựa trên hồ sơ cơ chế Set 18, chưa phải BIS hay tỷ lệ thắng. Các tướng chưa có hồ sơ vẫn có mặt trong danh mục.</Heading>
-      {setNumber!==18 && <p className="text-sm text-gold">Hồ sơ cơ chế chưa được thẩm định cho mùa này; không hiển thị gợi ý tương thích.</p>}
+      <Heading title="Carry 3–5 vàng và người giữ đồ">Mức tương thích dựa trên hồ sơ cơ chế mùa {PROFILE_SET_NUMBER}, chưa phải BIS hay tỷ lệ thắng. Các tướng chưa có hồ sơ vẫn có mặt trong danh mục.</Heading>
+      {setNumber!==PROFILE_SET_NUMBER && <p className="text-sm text-gold">Hồ sơ cơ chế chưa được thẩm định cho mùa này; không hiển thị gợi ý tương thích.</p>}
       <div className="flex flex-wrap gap-2"><input aria-label="Tìm carry thư viện" className={field} placeholder="Tìm carry..." value={query} onChange={e=>setQuery(e.target.value)}/><select aria-label="Giá carry" className={field} value={cost} onChange={e=>setCost(Number(e.target.value))}><option value={0}>3–5 vàng</option>{[3,4,5].map(n=><option key={n} value={n}>{n} vàng</option>)}</select><select aria-label="Vai trò carry" className={field} value={role} onChange={e=>setRole(e.target.value)}><option value="">Mọi vai trò</option>{["AD","AP","Tank","Cận chiến","Chưa có hồ sơ"].map(n=><option key={n}>{n}</option>)}</select></div>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">{carries.map(c=><button key={c.id} type="button" aria-pressed={carry?.id===c.id} onClick={()=>setCarryId(c.id)} className={"flex items-center gap-2 rounded-lg border p-2 text-left "+(carry?.id===c.id?"border-gold bg-gold/10":"border-gold/25")}><Icon src={c.icon}/><span className="min-w-0 text-xs"><strong>{c.name}</strong><br/>{c.cost} vàng · {setNumber===18?studyRole(c):"Chưa thẩm định"}</span></button>)}</div>
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">{carries.map(c=><button key={c.id} type="button" aria-pressed={carry?.id===c.id} onClick={()=>setCarryId(c.id)} className={"flex items-center gap-2 rounded-lg border p-2 text-left "+(carry?.id===c.id?"border-gold bg-gold/10":"border-gold/25")}><Icon src={c.icon}/><span className="min-w-0 text-xs"><strong>{c.name}</strong><br/>{c.cost} vàng · {setNumber===PROFILE_SET_NUMBER?studyRole(c):"Chưa thẩm định"}</span></button>)}</div>
       {!carries.length && <p className="text-sm text-dim">Không tìm thấy tướng.</p>}
-      {carry && setNumber===18 && <div className="space-y-2"><h3 className="font-semibold">{carry.name} — đồ tương thích</h3>{!gear.length && <p className="text-xs text-dim">Chưa có quy tắc phù hợp; cần đọc kỹ năng và kiểm chứng.</p>}{gear.map(({item,fit,reason})=><article key={item.id} className="rounded border border-gold/25 p-3"><div className="flex items-center gap-2"><Icon src={item.icon}/><div><strong className="text-sm">{item.name}</strong><p className="text-xs text-dim">{fit>=80?"Hợp cơ chế":"Dùng tùy tình huống"} · {reason}</p></div></div><p className="mt-2 text-xs text-dim">Giữ đồ 1–2 vàng: {earlyHolders(item,champions).map(h=>h.champion.name).join(", ")||"Chưa có hồ sơ"}</p></article>)}</div>}
+      {carry && setNumber===PROFILE_SET_NUMBER && <div className="space-y-2"><h3 className="font-semibold">{carry.name} — đồ tương thích</h3>{!gear.length && <p className="text-xs text-dim">Chưa có quy tắc phù hợp; cần đọc kỹ năng và kiểm chứng.</p>}{gear.map(({item,fit,reason})=><article key={item.id} className="rounded border border-gold/25 p-3"><div className="flex items-center gap-2"><Icon src={item.icon}/><div><strong className="text-sm">{item.name}</strong><p className="text-xs text-dim">{fit>=80?"Hợp cơ chế":"Dùng tùy tình huống"} · {reason}</p></div></div><p className="mt-2 text-xs text-dim">Giữ đồ 1–2 vàng: {earlyHolders(item,champions).map(h=>h.champion.name).join(", ")||"Chưa có hồ sơ"}</p></article>)}</div>}
     </>}
     {tab==="augments" && <>
       <Heading title="Thư viện lõi nâng cấp">Tên Việt/Anh, phân loại theo mô tả và bậc lõi. Không xác nhận pool đang hoạt động ở từng vòng.</Heading>

@@ -1,6 +1,8 @@
 import type { Champion, Item } from "@/lib/types";
 import { championStyles, compatibility } from "./item-advisor";
 
+export const PROFILE_SET_NUMBER = 18;
+
 export function carryStudy(champion: Champion, items: Item[]) {
   return items.filter(i => i.kind === "completed")
     .map(item => ({ item, ...compatibility(item, champion) }))
