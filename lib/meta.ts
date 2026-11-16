@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import { CURRENT_SET } from "./current-set";
+import { usableMeta } from "./meta-guard";
 
 /**
  * data/generated/meta.json, written by scripts/sync-meta.ts from Riot match
@@ -38,6 +40,7 @@ export interface MetaComp {
   units: { id: string; freq: number; items: string[] }[];
 }
 export interface MetaFile {
+  schemaVersion?: number;
   syncedAt: string;
   set: number;
   patch: string;
@@ -53,7 +56,7 @@ let cached: MetaFile | null | undefined;
 export function loadMeta(): MetaFile | null {
   if (cached !== undefined) return cached;
   const f = path.join(process.cwd(), "data", "generated", "meta.json");
-  cached = fs.existsSync(f) ? (JSON.parse(fs.readFileSync(f, "utf8")) as MetaFile) : null;
+  try { cached = usableMeta(fs.existsSync(f) ? (JSON.parse(fs.readFileSync(f, "utf8")) as MetaFile) : null, CURRENT_SET.setNumber, CURRENT_SET.patch); } catch { cached = null; }
   return cached;
 }
 

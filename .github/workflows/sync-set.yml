@@ -65,9 +65,10 @@ jobs:
         continue-on-error: true
 
       - name: Sync item / unit / comp statistics from the Riot API
-        if: env.RIOT_API_KEY != ''
+        if: vars.RIOT_META_APPROVED == 'true' && env.RIOT_API_KEY != ''
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
+          RIOT_META_APPROVED: ${{ vars.RIOT_META_APPROVED }}
         run: npm run sync-meta
         continue-on-error: true
 

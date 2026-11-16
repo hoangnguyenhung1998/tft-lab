@@ -4,6 +4,10 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { Augment, Champion, Item } from "@/lib/types";
+import Link from "next/link";
+import { filterComps } from "@/lib/decision/comp-lookup";
+import { MetaExplorer } from "@/components/set/MetaExplorer";
+import type { MetaFile } from "@/lib/meta";
 import type { Comp, CompsFile } from "@/lib/comps";
 import type { Rank, TiersFile } from "@/lib/tiers";
 import { augmentName, augmentDescription, normalizeAugmentSearch } from "@/lib/augment-locale";
@@ -12,14 +16,14 @@ import { classify, categoryLabels, type AugmentCategory } from "@/lib/decision/a
 import { carryStudy, earlyHolders, studyRole, exactPatch, PROFILE_SET_NUMBER, plans, encounters, stageNotes, commitChecklist } from "@/lib/decision/study";
 
 export type StudyWisp = { id:string; name:string; desc:string; icon:string; cost:number|null; stage:string|null };
-type Props = { champions:Champion[]; items:Item[]; augments:Augment[]; comps:CompsFile|null; tiers:TiersFile|null; ranks:Record<string,Rank>; wisps:StudyWisp[]; wispSource:string|null; wispDate:string|null; live:string; fromNotes:boolean; setNumber:number };
+type Props = { meta:MetaFile|null; champions:Champion[]; items:Item[]; augments:Augment[]; comps:CompsFile|null; tiers:TiersFile|null; ranks:Record<string,Rank>; wisps:StudyWisp[]; wispSource:string|null; wispDate:string|null; live:string; fromNotes:boolean; setNumber:number };
 const field = "rounded-lg border border-gold/30 bg-panel px-3 py-2 text-sm";
 const tierLabels = { silver:"Bạc", gold:"Vàng", prismatic:"Kim Cương" };
 const match = (text:string, q:string) => normalizeAugmentSearch(text).includes(normalizeAugmentSearch(q.trim()));
 function Icon({src}:{src:string}) { return src ? <Image src={asset(src)} alt="" width={36} height={36} unoptimized className="h-9 w-9 shrink-0 rounded object-contain"/> : null; }
 function Heading({title,children}:{title:string;children:React.ReactNode}) { return <div><h2 className="text-xl font-semibold">{title}</h2><p className="mt-1 text-xs text-dim">{children}</p></div>; }
 
-export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,wispSource,wispDate,live,fromNotes,setNumber}:Props) {
+export function StudyLibrary({meta,champions,items,augments,comps,tiers,ranks,wisps,wispSource,wispDate,live,fromNotes,setNumber}:Props) {
   const [tab,setTab] = useState("carry");
   const [query,setQuery] = useState("");
   const [cost,setCost] = useState(0);
@@ -28,6 +32,10 @@ export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,w
   const [rarity,setRarity] = useState("");
   const [category,setCategory] = useState("");
   const [rank,setRank] = useState("");
+  const [compItem,setCompItem]=useState("");
+  const [compAugment,setCompAugment]=useState("");
+  const [compCarry,setCompCarry]=useState("");
+  const [compStyle,setCompStyle]=useState("");
   const [showArchive,setShowArchive] = useState(false);
   const [checked,setChecked] = useState<string[]>([]);
   const [limit,setLimit] = useState(30);
@@ -41,10 +49,14 @@ export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,w
   const gear = carry ? carryStudy(carry,items) : [];
   const augList = useMemo(()=>matchingAugments(augments,query,rarity,[]).filter(a=>(!category || classify(a)===category) && (!rank || (fresh && ranks[a.id]===rank))),[augments,query,rarity,category,rank,fresh,ranks]);
   function selectTab(next:string) { setTab(next);setQuery("");setLimit(30);setRank(""); }
+  const filteredComps=filterComps(comps?.comps??[],{item:compItem,augment:compAugment,carry:compCarry,style:compStyle}).filter(c=>match(c.name,query));
+  const compAugments=matchingAugments(augments,"","",[]);
   function compCard(c:Comp) {
     return <article key={c.id} className="rounded-lg border border-gold/25 p-3 space-y-2">
       <h3 className="font-semibold">{c.name} <span className="text-xs text-dim">· {c.style}{compFresh ? " · Tier "+c.tier : ""}</span></h3>
       <div className="flex flex-wrap gap-2">{c.carries.map(ref=>{ const u=byUnit.get(ref.championId);return <div key={ref.championId} className="flex items-center gap-2 rounded border border-gold/25 p-2"><Icon src={u?.icon??""}/><div><p className="text-sm">{u?.name??"Tướng không còn khớp ID"}</p><p className="text-xs text-dim">{ref.items.map(id=>byItem.get(id)?.name??"Đồ chưa khớp ID").join(" · ")}</p></div></div>;})}</div>
+      <p className="text-xs text-dim">Lõi trong hướng dẫn: {c.augments.map(a=>{const found=augments.find(x=>x.id===a.augmentId);return found?augmentName(found):"ID cũ chưa khớp";}).join(", ")||"Chưa ghi nhận"}</p>
+      <Link className="text-sm underline" href={"/set/comps/#comp-"+c.id}>Mở đội hình chi tiết</Link>
       <details className="text-sm"><summary className="cursor-pointer">Xem hướng dẫn nguồn gốc (EN)</summary><p className="mt-2 text-dim">{c.summary}</p><ul className="mt-2 list-disc pl-5 text-dim">{c.howToPlay.map((s,i)=><li key={i}>{s}</li>)}</ul></details>
     </article>;
   }
@@ -68,10 +80,16 @@ export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,w
       {augList.length>limit && <button className="btn btn-sm" onClick={()=>setLimit(n=>n+30)}>Xem thêm 30 lõi</button>}
     </>}
     {tab==="comps" && <>
+      <MetaExplorer meta={meta} champions={champions} items={items}/>
       <Heading title="Đội hình & điều kiện chốt bài">Đọc mẫu đội hình và kiểm tra điều kiện trước khi cam kết. Không dùng tier cũ như meta hiện tại.</Heading>
       <p className="text-sm text-dim">{comps?"Dữ liệu mẫu: "+comps.patch+" · "+comps.verifiedOn:"Chưa có dữ liệu đội hình."} {compFresh?"Cùng patch ghi nhận.":"Chưa xác minh đúng patch."}</p>
       {comps && !compFresh && <label className="flex gap-2 text-sm"><input type="checkbox" checked={showArchive} onChange={e=>setShowArchive(e.target.checked)}/> Xem đội hình cũ để nghiên cứu (không phải meta hiện tại)</label>}
-      {comps && (compFresh||showArchive) && <>{comps.sources.map(url=><a key={url} href={url} target="_blank" rel="noreferrer" className="mr-3 text-xs underline">{new URL(url).hostname}</a>)}<input className={field+" w-full"} aria-label="Tìm đội hình" placeholder="Tìm đội hình..." value={query} onChange={e=>setQuery(e.target.value)}/><div className="grid gap-3 sm:grid-cols-2">{comps.comps.filter(c=>match(c.name,query)).map(compCard)}</div></>}
+      {comps && (compFresh||showArchive) && <>{comps.sources.map(url=><a key={url} href={url} target="_blank" rel="noreferrer" className="mr-3 text-xs underline">{new URL(url).hostname}</a>)}<input className={field+" w-full"} aria-label="Tìm đội hình" placeholder="Tìm đội hình..." value={query} onChange={e=>setQuery(e.target.value)}/><div className="grid gap-2 sm:grid-cols-2">
+      <select className={field} aria-label="Lọc đồ đội hình" value={compItem} onChange={e=>setCompItem(e.target.value)}><option value="">Mọi trang bị</option>{items.filter(i=>i.kind==="completed").map(i=><option key={i.id} value={i.id}>{i.name}</option>)}</select>
+      <select className={field} aria-label="Lọc lõi đội hình" value={compAugment} onChange={e=>setCompAugment(e.target.value)}><option value="">Mọi lõi trong hướng dẫn</option>{compAugments.map(a=><option key={a.id} value={a.id}>{augmentName(a)}</option>)}</select>
+      <select className={field} aria-label="Lọc carry đội hình" value={compCarry} onChange={e=>setCompCarry(e.target.value)}><option value="">Mọi carry</option>{champions.filter(c=>c.cost>=3).map(c=><option key={c.id} value={c.id}>{c.name}</option>)}</select>
+      <select className={field} aria-label="Lọc lối chơi" value={compStyle} onChange={e=>setCompStyle(e.target.value)}><option value="">Mọi lối chơi</option><option value="standard">Standard</option><option value="fast-9">Fast 9</option><option value="reroll">Reroll</option><option value="emblem">Ấn / lõi</option></select>
+      </div><p className="text-xs text-dim">{filteredComps.length} mẫu khớp bộ lọc. Khớp chính xác dữ liệu hướng dẫn, không suy ra độ mạnh hay điều kiện bắt buộc.</p><div className="grid gap-3 sm:grid-cols-2">{filteredComps.map(compCard)}</div></>}
       <h3 className="font-semibold">Điều kiện chốt bài — tự kiểm tra</h3><div className="space-y-2">{commitChecklist.map(c=><label key={c} className="flex gap-2 text-sm"><input type="checkbox" checked={checked.includes(c)} onChange={e=>setChecked(old=>e.target.checked?[...old,c]:old.filter(x=>x!==c))}/>{c}</label>)}</div><p className="text-xs text-dim">Checklist luyện tập, không phải điểm đủ điều kiện tự động.</p>
     </>}
     {tab==="wisps" && <>

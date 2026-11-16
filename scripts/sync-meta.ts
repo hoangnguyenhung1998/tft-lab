@@ -19,11 +19,12 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { RiotClient, regionOf } from "../lib/riot/client";
+import { RiotClient, RiotError, regionOf } from "../lib/riot/client";
 import type { LeagueEntryDto, MatchDto, Platform } from "../lib/riot/types";
 import type { SetData } from "../lib/types";
 import type { MetaFile, MetaItem, MetaUnit, MetaComp, Rank } from "../lib/meta";
 import { rankByPlacement } from "../lib/meta";
+import { selectPatchMatches, clientPatch, MIN_MATCHES } from "../lib/meta-guard";
 
 const ROOT = process.cwd();
 const OUT = path.join(ROOT, "data", "generated", "meta.json");
@@ -53,7 +54,8 @@ async function ladder(client: RiotClient, platform: Platform): Promise<string[]>
       const d = await client.request<LadderDto>(platform, `/tft/league/v1/${tier}`);
       for (const e of d.entries) if (e.puuid) puuids.push(e.puuid);
     } catch (e) {
-      log(`  ! ${platform} ${tier}: ${e instanceof Error ? e.message : e}`);
+      if(e instanceof RiotError && [401,403,429].includes(e.status)) throw e;
+      log(`  ! ${platform} ${tier}: request failed`);
     }
     if (puuids.length >= PLAYERS) break;
   }
@@ -61,16 +63,17 @@ async function ladder(client: RiotClient, platform: Platform): Promise<string[]>
 }
 
 async function main() {
+  if (process.env.RIOT_META_APPROVED !== "true") throw new Error("Production meta not enabled");
   if (!KEY) throw new Error("RIOT_API_KEY is not set");
   const set = loadSet();
-  const componentIds = new Set(set.items.filter((i) => i.kind === "component").map((i) => i.id));
+  const allowedItems = new Set(set.items.filter(i => ["completed","artifact","radiant","emblem","support"].includes(i.kind)).map(i=>i.id.toLowerCase()));
   const itemById = new Map(set.items.map((i) => [i.id.toLowerCase(), i]));
   const unitById = new Map(set.champions.map((c) => [c.id.toLowerCase(), c]));
   const traitName = new Map(set.traits.map((t) => [t.id, t.name]));
 
   const matches = new Map<string, MatchDto>();
   for (const platform of PLATFORMS) {
-    const client = new RiotClient({ apiKey: KEY, platform });
+    const client = new RiotClient({ apiKey: KEY, platform, fetchImpl: (input, init) => { const url=new URL(String(input)); url.searchParams.delete("api_key"); return fetch(url, {...init, headers:{"X-Riot-Token":KEY}}); } });
     log(`→ ${platform}: reading the ladder`);
     const puuids = await ladder(client, platform);
     log(`  ${puuids.length} players; listing matches`);
@@ -79,7 +82,8 @@ async function main() {
       try {
         for (const id of await client.matchIds(p, MATCHES)) ids.add(id);
       } catch (e) {
-        log(`  ! ids ${p.slice(0, 8)}: ${e instanceof Error ? e.message : e}`);
+        if(e instanceof RiotError && [401,403,429].includes(e.status)) throw e;
+        log("  ! match listing failed");
       }
       await sleep(60);
     }
@@ -92,10 +96,11 @@ async function main() {
     if (failed.length) log(`  ! ${failed.length} failed`);
   }
 
-  const all = [...matches.values()].filter((m) => (m.info.queue_id ?? m.info.queueId) === 1100 && m.info.tft_set_number === set.meta.number);
+  const patch = clientPatch(set.meta.patch);
+  if (!patch) throw new Error("Missing verified client patch");
+  const all = selectPatchMatches([...matches.values()], set.meta.number, patch);
   log(`→ ${all.length} ranked set-${set.meta.number} matches`);
-  if (all.length < 30) throw new Error("too few matches to aggregate");
-  const patch = mostCommon(all.map((m) => (m.info.game_version ?? "").match(/(\d+\.\d+)/)?.[1] ?? "?"));
+  if (all.length < MIN_MATCHES) throw new Error("too few current-patch matches to aggregate");
 
   // --- items
   const itemAcc = new Map<string, { n: number; sum: number; top4: number }>();
@@ -107,15 +112,19 @@ async function main() {
       players++;
       const top = p.placement <= 4 ? 1 : 0;
       const seenItems = new Set<string>();
+      const countedUnits=new Set<string>();
       for (const u of p.units ?? []) {
-        const uid = u.character_id;
+        const uid = unitById.get(u.character_id.toLowerCase())?.id;
+        if (!uid || countedUnits.has(uid)) continue;
+        countedUnits.add(uid);
         const ua = unitAcc.get(uid) ?? { n: 0, sum: 0, top4: 0, three: 0, items: new Map() };
         ua.n++;
         ua.sum += p.placement;
         ua.top4 += top;
         if (u.tier >= 3) ua.three++;
-        for (const it of u.itemNames ?? []) {
-          if (componentIds.has(it) || /Component|Spatula|FryingPan|Consumable|Assist|Remover|Reforger|Duplicator/i.test(it)) continue;
+        for (const raw of u.itemNames ?? []) {
+          if (!allowedItems.has(raw.toLowerCase())) continue;
+          const it=itemById.get(raw.toLowerCase())!.id;
           ua.items.set(it, (ua.items.get(it) ?? 0) + 1);
           if (!seenItems.has(it)) {
             seenItems.add(it);
@@ -128,7 +137,7 @@ async function main() {
         }
         unitAcc.set(uid, ua);
       }
-      const active = (p.traits ?? []).filter((t) => t.style > 0).sort((a, b) => b.style * 100 + b.num_units - (a.style * 100 + a.num_units));
+      const active = (p.traits ?? []).filter((t) => t.style > 0 && traitName.has(t.name)).sort((a, b) => b.style * 100 + b.num_units - (a.style * 100 + a.num_units) || a.name.localeCompare(b.name));
       if (active.length < 2) continue;
       const key = active
         .slice(0, 2)
@@ -140,11 +149,15 @@ async function main() {
       ca.sum += p.placement;
       ca.top4 += top;
       if (p.placement === 1) ca.wins++;
+      const seenUnits = new Set<string>();
       for (const u of p.units ?? []) {
-        ca.units.set(u.character_id, (ca.units.get(u.character_id) ?? 0) + 1);
-        const im = ca.items.get(u.character_id) ?? new Map<string, number>();
-        for (const it of u.itemNames ?? []) if (!componentIds.has(it)) im.set(it, (im.get(it) ?? 0) + 1);
-        ca.items.set(u.character_id, im);
+        const uid=unitById.get(u.character_id.toLowerCase())?.id;
+        if(!uid || seenUnits.has(uid)) continue;
+        seenUnits.add(uid);
+        ca.units.set(uid, (ca.units.get(uid) ?? 0) + 1);
+        const im = ca.items.get(uid) ?? new Map<string, number>();
+        for (const it of u.itemNames ?? []) if (allowedItems.has(it.toLowerCase())) { const id=itemById.get(it.toLowerCase())!.id; im.set(id,(im.get(id)??0)+1); }
+        ca.items.set(uid, im);
       }
       for (const t of active) ca.traits.set(`${t.name}:${t.num_units}`, (ca.traits.get(`${t.name}:${t.num_units}`) ?? 0) + 1);
       compAcc.set(key, ca);
@@ -194,8 +207,9 @@ async function main() {
     })
     .sort((a, b) => a.avg - b.avg);
 
-  const file: MetaFile = { syncedAt: new Date().toISOString(), set: set.meta.number, patch, platforms: PLATFORMS, matches: all.length, players, items: ranked, units, comps };
-  fs.writeFileSync(OUT, JSON.stringify(file, null, 1));
+  const file: MetaFile = { schemaVersion: 2, syncedAt: new Date().toISOString(), set: set.meta.number, patch, platforms: PLATFORMS, matches: all.length, players, items: ranked, units, comps };
+  fs.writeFileSync(OUT + ".tmp", JSON.stringify(file, null, 1));
+  fs.renameSync(OUT + ".tmp", OUT);
   log(`✓ wrote data/generated/meta.json: ${ranked.length} items, ${units.length} units, ${comps.length} comps from ${all.length} matches (patch ${patch})`);
 }
 
@@ -203,13 +217,8 @@ function round(x: number, d = 2): number {
   const f = 10 ** d;
   return Math.round(x * f) / f;
 }
-function mostCommon(xs: string[]): string {
-  const m = new Map<string, number>();
-  for (const x of xs) m.set(x, (m.get(x) ?? 0) + 1);
-  return [...m].sort((a, b) => b[1] - a[1])[0]?.[0] ?? "?";
-}
 
 main().catch((e) => {
-  console.error(`\n✖ sync-meta failed: ${e instanceof Error ? e.message : e}\n`);
+  console.error("\n✖ sync-meta failed:", e instanceof RiotError ? "Riot HTTP "+e.status : e instanceof Error && !e.message.includes("https://") ? e.message : "request failed");
   process.exit(1);
 });

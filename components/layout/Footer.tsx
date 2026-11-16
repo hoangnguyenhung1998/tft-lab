@@ -94,6 +94,7 @@ export function Footer() {
         </div>
         <div className="mt-10 border-t border-[var(--gold-dim)] pt-5 text-xs text-dim">
           <p className="max-w-3xl">{RIOT_DISCLAIMER}</p>
+          <p className="mt-3"><Link href="/privacy">Chính sách bảo mật</Link> · <Link href="/terms">Điều khoản sử dụng</Link></p>
           <p className="mt-3">
             Dữ liệu trò chơi từ{" "}
             <a href="https://communitydragon.org" rel="noopener noreferrer" target="_blank">
