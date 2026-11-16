@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { Augment, Champion, Item } from "@/lib/types";
+import { MetaExplorer } from "@/components/set/MetaExplorer";
+import type { MetaFile } from "@/lib/meta";
 import type { Comp, CompsFile } from "@/lib/comps";
 import type { Rank, TiersFile } from "@/lib/tiers";
 import { augmentName, augmentDescription, normalizeAugmentSearch } from "@/lib/augment-locale";
@@ -12,14 +14,14 @@ import { classify, categoryLabels, type AugmentCategory } from "@/lib/decision/a
 import { carryStudy, earlyHolders, studyRole, exactPatch, PROFILE_SET_NUMBER, plans, encounters, stageNotes, commitChecklist } from "@/lib/decision/study";
 
 export type StudyWisp = { id:string; name:string; desc:string; icon:string; cost:number|null; stage:string|null };
-type Props = { champions:Champion[]; items:Item[]; augments:Augment[]; comps:CompsFile|null; tiers:TiersFile|null; ranks:Record<string,Rank>; wisps:StudyWisp[]; wispSource:string|null; wispDate:string|null; live:string; fromNotes:boolean; setNumber:number };
+type Props = { meta:MetaFile|null; champions:Champion[]; items:Item[]; augments:Augment[]; comps:CompsFile|null; tiers:TiersFile|null; ranks:Record<string,Rank>; wisps:StudyWisp[]; wispSource:string|null; wispDate:string|null; live:string; fromNotes:boolean; setNumber:number };
 const field = "rounded-lg border border-gold/30 bg-panel px-3 py-2 text-sm";
 const tierLabels = { silver:"Bạc", gold:"Vàng", prismatic:"Kim Cương" };
 const match = (text:string, q:string) => normalizeAugmentSearch(text).includes(normalizeAugmentSearch(q.trim()));
 function Icon({src}:{src:string}) { return src ? <Image src={asset(src)} alt="" width={36} height={36} unoptimized className="h-9 w-9 shrink-0 rounded object-contain"/> : null; }
 function Heading({title,children}:{title:string;children:React.ReactNode}) { return <div><h2 className="text-xl font-semibold">{title}</h2><p className="mt-1 text-xs text-dim">{children}</p></div>; }
 
-export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,wispSource,wispDate,live,fromNotes,setNumber}:Props) {
+export function StudyLibrary({meta,champions,items,augments,comps,tiers,ranks,wisps,wispSource,wispDate,live,fromNotes,setNumber}:Props) {
   const [tab,setTab] = useState("carry");
   const [query,setQuery] = useState("");
   const [cost,setCost] = useState(0);
@@ -68,6 +70,7 @@ export function StudyLibrary({champions,items,augments,comps,tiers,ranks,wisps,w
       {augList.length>limit && <button className="btn btn-sm" onClick={()=>setLimit(n=>n+30)}>Xem thêm 30 lõi</button>}
     </>}
     {tab==="comps" && <>
+      <MetaExplorer meta={meta} champions={champions} items={items}/>
       <Heading title="Đội hình & điều kiện chốt bài">Đọc mẫu đội hình và kiểm tra điều kiện trước khi cam kết. Không dùng tier cũ như meta hiện tại.</Heading>
       <p className="text-sm text-dim">{comps?"Dữ liệu mẫu: "+comps.patch+" · "+comps.verifiedOn:"Chưa có dữ liệu đội hình."} {compFresh?"Cùng patch ghi nhận.":"Chưa xác minh đúng patch."}</p>
       {comps && !compFresh && <label className="flex gap-2 text-sm"><input type="checkbox" checked={showArchive} onChange={e=>setShowArchive(e.target.checked)}/> Xem đội hình cũ để nghiên cứu (không phải meta hiện tại)</label>}
