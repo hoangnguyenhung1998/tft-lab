@@ -8,6 +8,7 @@ import path from "node:path";
 import { z } from "zod";
 import { renderDesc } from "../lib/text";
 import type { CurrentSet, SetData } from "../lib/types";
+import { RawCdragon } from "../lib/sync/schema";
 import { extractAugmentLocale } from "../lib/augment-locale";
 
 const root = process.cwd();
@@ -35,7 +36,8 @@ async function main() {
       headers: { "user-agent": "tft-lab-vi localization sync" },
     });
     if (!response.ok) throw new Error("CommunityDragon vi_vn HTTP " + response.status);
-    const raw = schema.parse(await response.json());
+    const payload:unknown=await response.json();
+    const raw = schema.parse(payload);
     const entry = raw.setData.find((s) => s.number === current.setNumber && s.mutator === current.mutator)
       ;
     if (!entry) throw new Error("Set " + current.setNumber + " absent from vi_vn");
@@ -57,6 +59,14 @@ async function main() {
       source: "communitydragon/vi_vn",
       entries,
     }, null, 2) + "\n");
+    const full=RawCdragon.parse(payload);
+    const localized=full.setData.find(s=>s.number===current.setNumber&&s.mutator===current.mutator);
+    if(!localized) throw new Error("Missing localized set");
+    const items=Object.fromEntries(full.items.filter(i=>data.items.some(x=>x.id===i.apiName)&&i.name).map(i=>[i.apiName,{name:i.name,desc:renderDesc(i.desc,i.effects??{})}]));
+    const champions=Object.fromEntries(localized.champions.filter(c=>data.champions.some(x=>x.id===c.apiName)&&c.name).map(c=>[c.apiName,{name:c.name}]));
+    const traits=Object.fromEntries(localized.traits.filter(t=>data.traits.some(x=>x.id===t.apiName)&&t.name).map(t=>[t.apiName,{name:t.name,desc:renderDesc(t.desc)}]));
+    fs.writeFileSync(path.join(output,"decision-vi-"+current.setNumber+".json"),JSON.stringify({setNumber:current.setNumber,patch:current.patch,items,champions,traits},null,2)+"\n");
+    console.log("✓ Decision locale: "+Object.keys(items).length+"/"+data.items.length+" items; "+Object.keys(champions).length+"/"+data.champions.length+" champions; "+Object.keys(traits).length+"/"+data.traits.length+" traits");
     console.log("✓ Augments vi_VN: " + count + "/" + data.augments.length + " (" + Math.round(ratio * 100) + "%); patch " + current.patch);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

@@ -4,6 +4,8 @@ export type { Cost, TraitStyle };
 /** Normalised, upstream-independent set data. The UI only ever sees these. */
 
 export interface Champion {
+  viName?: string;
+  viDesc?: string;
   id: string; // upstream apiName (prefix varies per set)
   name: string;
   cost: Cost;
@@ -41,6 +43,8 @@ export interface TraitBreakpoint {
 }
 
 export interface Trait {
+  viName?: string;
+  viDesc?: string;
   id: string;
   name: string;
   desc: string;
@@ -59,6 +63,8 @@ export type ItemKind =
   | "other";
 
 export interface Item {
+  viName?: string;
+  viDesc?: string;
   id: string;
   name: string;
   desc: string;

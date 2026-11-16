@@ -1,3 +1,4 @@
+import {applyNames,type DecisionLocale} from "./decision/locale";
 import fs from "node:fs";
 import path from "node:path";
 import { CURRENT_SET, isSynced } from "./current-set";
@@ -34,6 +35,10 @@ export function loadSetData(): SetData | null {
       // Keep the English source intact if the translation cache is malformed.
     }
   }
+  const decisionFile=path.join(process.cwd(),"data","generated","decision-vi-"+CURRENT_SET.setNumber+".json");
+  try {const vi=JSON.parse(fs.readFileSync(decisionFile,"utf8")) as DecisionLocale;
+    if(vi.setNumber===CURRENT_SET.setNumber&&vi.patch===CURRENT_SET.patch){data.items=applyNames(data.items,vi.items);data.champions=applyNames(data.champions,vi.champions);data.traits=applyNames(data.traits,vi.traits);}
+  }catch{/* Keep original source when locale unavailable. */}
   cached = data;
   return cached;
 }

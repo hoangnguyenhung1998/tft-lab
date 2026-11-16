@@ -48,6 +48,11 @@ jobs:
       - name: Sync live set from CommunityDragon
         run: npm run sync-set
 
+      - name: Sync Vietnamese game text
+        run: npm run sync-augment-vi
+        env:
+          TFT_REQUIRE_VI_LOCALE: "1"
+
       - name: Sync patch notes from Riot's news site
         run: npm run sync-patch-notes
         continue-on-error: true
