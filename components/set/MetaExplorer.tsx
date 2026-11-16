@@ -15,7 +15,7 @@ export function MetaExplorer({meta,champions,items}:{meta:MetaFile|null;champion
   const units=new Map(champions.map(c=>[c.id,c]));
   const gear=new Map(items.map(i=>[i.id,i]));
   const pct=(v:number)=>Math.round(v*100)+"%";
-  const rows=(meta?.comps??[]).filter(c=>normalizeAugmentSearch([c.name,...c.units.map(u=>units.get(u.id)?.name??"")].join(" ")).includes(normalizeAugmentSearch(query.trim())) && (!item||c.units.some(u=>u.items.includes(item)))).sort((a,b)=>sort==="avg"?a.avg-b.avg:sort==="top4"?b.top4-a.top4:b.games-a.games);
+  const rows=(meta?.comps??[]).filter(c=>normalizeAugmentSearch([c.name,...c.units.map(u=>units.get(u.id)?displayName(units.get(u.id)!):"")].join(" ")).includes(normalizeAugmentSearch(query.trim())) && (!item||c.units.some(u=>u.items.includes(item)))).sort((a,b)=>sort==="avg"?a.avg-b.avg:sort==="top4"?b.top4-a.top4:b.games-a.games);
   return <section className="panel space-y-3 p-4 mb-4">
     <h2 className="text-xl font-semibold">Thống kê theo bản vá — thống kê trận đã kết thúc</h2>
     {!meta?<p className="text-sm text-dim">Chưa có thống kê đạt điều kiện của bản vá hiện tại. Không dùng số liệu cũ thay thế. Sau khi Riot phê duyệt quyền API và đồng bộ thành công, dữ liệu sẽ xuất hiện tại đây.</p>:<>
