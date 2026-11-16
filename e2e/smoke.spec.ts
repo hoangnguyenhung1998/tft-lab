@@ -26,6 +26,9 @@ const ROUTES = [
   "/lab/cheatsheet/",
   "/routine/",
   "/tracker/",
+  "/decision-lab/",
+  "/privacy/",
+  "/terms/",
   "/compete/",
   "/resources/",
 ];

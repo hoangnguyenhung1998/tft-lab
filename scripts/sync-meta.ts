@@ -19,7 +19,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { RiotClient, regionOf } from "../lib/riot/client";
+import { RiotClient, RiotError, regionOf } from "../lib/riot/client";
 import type { LeagueEntryDto, MatchDto, Platform } from "../lib/riot/types";
 import type { SetData } from "../lib/types";
 import type { MetaFile, MetaItem, MetaUnit, MetaComp, Rank } from "../lib/meta";
@@ -54,7 +54,8 @@ async function ladder(client: RiotClient, platform: Platform): Promise<string[]>
       const d = await client.request<LadderDto>(platform, `/tft/league/v1/${tier}`);
       for (const e of d.entries) if (e.puuid) puuids.push(e.puuid);
     } catch (e) {
-      log(`  ! ${platform} ${tier}: ${e instanceof Error ? e.message : e}`);
+      if(e instanceof RiotError && [401,403,429].includes(e.status)) throw e;
+      log(`  ! ${platform} ${tier}: request failed`);
     }
     if (puuids.length >= PLAYERS) break;
   }
@@ -62,6 +63,7 @@ async function ladder(client: RiotClient, platform: Platform): Promise<string[]>
 }
 
 async function main() {
+  if (process.env.RIOT_META_APPROVED !== "true") throw new Error("Production meta not enabled");
   if (!KEY) throw new Error("RIOT_API_KEY is not set");
   const set = loadSet();
   const allowedItems = new Set(set.items.filter(i => ["completed","artifact","radiant","emblem","support"].includes(i.kind)).map(i=>i.id.toLowerCase()));
@@ -71,7 +73,7 @@ async function main() {
 
   const matches = new Map<string, MatchDto>();
   for (const platform of PLATFORMS) {
-    const client = new RiotClient({ apiKey: KEY, platform });
+    const client = new RiotClient({ apiKey: KEY, platform, fetchImpl: (input, init) => { const url=new URL(String(input)); url.searchParams.delete("api_key"); return fetch(url, {...init, headers:{"X-Riot-Token":KEY}}); } });
     log(`→ ${platform}: reading the ladder`);
     const puuids = await ladder(client, platform);
     log(`  ${puuids.length} players; listing matches`);
@@ -80,7 +82,8 @@ async function main() {
       try {
         for (const id of await client.matchIds(p, MATCHES)) ids.add(id);
       } catch (e) {
-        log(`  ! ids ${p.slice(0, 8)}: ${e instanceof Error ? e.message : e}`);
+        if(e instanceof RiotError && [401,403,429].includes(e.status)) throw e;
+        log("  ! match listing failed");
       }
       await sleep(60);
     }
@@ -109,16 +112,19 @@ async function main() {
       players++;
       const top = p.placement <= 4 ? 1 : 0;
       const seenItems = new Set<string>();
+      const countedUnits=new Set<string>();
       for (const u of p.units ?? []) {
         const uid = unitById.get(u.character_id.toLowerCase())?.id;
-        if (!uid) continue;
+        if (!uid || countedUnits.has(uid)) continue;
+        countedUnits.add(uid);
         const ua = unitAcc.get(uid) ?? { n: 0, sum: 0, top4: 0, three: 0, items: new Map() };
         ua.n++;
         ua.sum += p.placement;
         ua.top4 += top;
         if (u.tier >= 3) ua.three++;
-        for (const it of u.itemNames ?? []) {
-          if (!allowedItems.has(it.toLowerCase())) continue;
+        for (const raw of u.itemNames ?? []) {
+          if (!allowedItems.has(raw.toLowerCase())) continue;
+          const it=itemById.get(raw.toLowerCase())!.id;
           ua.items.set(it, (ua.items.get(it) ?? 0) + 1);
           if (!seenItems.has(it)) {
             seenItems.add(it);
@@ -150,7 +156,7 @@ async function main() {
         seenUnits.add(uid);
         ca.units.set(uid, (ca.units.get(uid) ?? 0) + 1);
         const im = ca.items.get(uid) ?? new Map<string, number>();
-        for (const it of u.itemNames ?? []) if (allowedItems.has(it.toLowerCase())) im.set(it, (im.get(it) ?? 0) + 1);
+        for (const it of u.itemNames ?? []) if (allowedItems.has(it.toLowerCase())) { const id=itemById.get(it.toLowerCase())!.id; im.set(id,(im.get(id)??0)+1); }
         ca.items.set(uid, im);
       }
       for (const t of active) ca.traits.set(`${t.name}:${t.num_units}`, (ca.traits.get(`${t.name}:${t.num_units}`) ?? 0) + 1);
@@ -213,6 +219,6 @@ function round(x: number, d = 2): number {
 }
 
 main().catch((e) => {
-  console.error(`\n✖ sync-meta failed: ${e instanceof Error ? e.message : e}\n`);
+  console.error("\n✖ sync-meta failed:", e instanceof RiotError ? "Riot HTTP "+e.status : e instanceof Error && !e.message.includes("https://") ? e.message : "request failed");
   process.exit(1);
 });

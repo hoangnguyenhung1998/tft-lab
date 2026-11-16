@@ -68,6 +68,7 @@ jobs:
         if: vars.RIOT_META_APPROVED == 'true' && env.RIOT_API_KEY != ''
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
+          RIOT_META_APPROVED: ${{ vars.RIOT_META_APPROVED }}
         run: npm run sync-meta
         continue-on-error: true
 

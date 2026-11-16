@@ -4,10 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Panel, SectionTitle } from "@/components/ui/Panel";
 import { CATEGORY_LABELS, SCENARIO_CATEGORIES, type ScenarioCategory } from "@/lib/scenario-categories";
-import { averagePlacement, leakFrequency, mergeRiotGames, placementDistribution, readTracker, rollingAverage, writeTracker, type GameLog, type TrackerData } from "@/lib/tracker-data";
+import { averagePlacement, leakFrequency, placementDistribution, readTracker, rollingAverage, writeTracker, type GameLog, type TrackerData } from "@/lib/tracker-data";
 import type { ItemLookup, UnitLookup } from "@/lib/set-data";
 import { PlacementBars, LeakBars, RollingLine } from "./charts";
-import { RiotSync } from "./RiotSync";
 
 export interface TrackerProps {
   units: Record<string, UnitLookup>;
@@ -18,7 +17,7 @@ export interface TrackerProps {
 
 const PLACEMENTS = [1, 2, 3, 4, 5, 6, 7, 8] as const;
 
-export function Tracker({ units, items, traitNames, componentIds }: TrackerProps) {
+export function Tracker() {
   const [data, setData] = useState<TrackerData | null>(null);
   const [placement, setPlacement] = useState<GameLog["placement"]>(4);
   const [comp, setComp] = useState("");
@@ -47,14 +46,6 @@ export function Tracker({ units, items, traitNames, componentIds }: TrackerProps
 
   const remove = (id: string) => data && save({ ...data, games: data.games.filter((g) => g.id !== id) });
   const tagLeak = (id: string, leak: GameLog["leak"]) => data && save({ ...data, games: data.games.map((g) => (g.id === id ? { ...g, leak } : g)) });
-  const importRiot = (games: { matchId: string; at: string; placement: number; comp: string }[]) => {
-    if (!data) return;
-    const next = mergeRiotGames(data, games);
-    if (next !== data) {
-      save(next);
-      setMsg(`${next.games.length - data.games.length} games added to the log from Riot.`);
-    }
-  };
 
   const exportJson = () => {
     if (!data) return;
@@ -89,7 +80,7 @@ export function Tracker({ units, items, traitNames, componentIds }: TrackerProps
 
   return (
     <div className="space-y-8">
-      <RiotSync units={units} items={items} traitNames={traitNames} componentIds={componentIds} onImport={importRiot} />
+      <p className="panel p-4 text-sm text-dim">Nhập trận thủ công hoặc import JSON. Kết nối lịch sử Riot cá nhân tạm khóa cho đến khi có cơ chế xác thực được phê duyệt.</p>
 
       <Panel as="section" aria-label="Log a game">
         <form onSubmit={add} className="grid gap-3 md:grid-cols-[auto_1fr_1fr_auto]">
