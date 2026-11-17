@@ -9,5 +9,5 @@ test("unified study restores component picker and reset",async({page})=>{
  await section.getByRole("button",{name:"Xóa hết",exact:true}).click();
  await expect(section.getByRole("heading",{name:"2. Mảnh trang bị (0/8)"})).toBeVisible();
  await section.getByRole("combobox",{name:"Nhóm kỳ ngộ"}).selectOption("Nhiều trang bị");
- await expect(section.getByText(/lobby cũng có thêm sức mạnh/)).toBeVisible();
+ await expect(section.getByText(/phòng đấu cũng có thêm sức mạnh/)).toBeVisible();
 });

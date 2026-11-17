@@ -29,7 +29,7 @@ export interface AugmentAssessment {
 }
 
 export const categoryLabels: Record<AugmentCategory, string> = {
-  combat: "Giao tranh", economy: "Kinh tế", items: "Trang bị", reroll: "Reroll",
+  combat: "Giao tranh", economy: "Kinh tế", items: "Trang bị", reroll: "Đổi cửa hàng",
   levels: "Lên cấp", traits: "Tộc hệ", champions: "Tướng", flex: "Linh hoạt / chưa rõ"
 };
 
