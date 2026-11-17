@@ -1,0 +1,2252 @@
+{
+  "setNumber": 18,
+  "patch": "16.22",
+  "items": {
+    "TFT16_Consumable_GwensScissors": {
+      "name": "Lưỡi Kéo Của Gwen",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT16_Consumable_GwensScissors_2": {
+      "name": "Kéo Của Gwen <rules>(còn 2 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT16_Consumable_GwensScissors_3": {
+      "name": "Kéo Của Gwen <rules>(còn 3 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT16_Consumable_GwensScissors_4": {
+      "name": "Kéo Của Gwen <rules>(còn 4 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT16_Consumable_GwensScissors_5": {
+      "name": "Kéo Của Gwen <rules>(còn 5 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT5_Item_ZzRotPortalRadiant": {
+      "name": "Thông Đạo Zz'rot",
+      "desc": "Triệu hồi 1 Bọ Hư Không. Sức mạnh của nó tăng theo mỗi Giai Đoạn.\n\n[Trang Bị Hỗ Trợ]\n[Duy nhất - chỉ 1 mỗi tướng]"
+    },
+    "TFT_Assist_Gold_34": {
+      "name": "34 vàng",
+      "desc": "34 vàng"
+    },
+    "TFT_Assist_Gold_30": {
+      "name": "30 vàng",
+      "desc": "30 vàng"
+    },
+    "TFT_Assist_Gold_15": {
+      "name": "15 vàng",
+      "desc": "15 vàng"
+    },
+    "TFT_Assist_Gold_55": {
+      "name": "55 vàng",
+      "desc": "55 vàng"
+    },
+    "TFT_Assist_Gold_20": {
+      "name": "20 Vàng",
+      "desc": "20 Vàng"
+    },
+    "TFT_Item_Artifact_LesserMirroredPersona": {
+      "name": "Hiện Thân Phản Chiếu Cỡ Nhỏ",
+      "desc": "Chia sẻ 15% Sức Mạnh Công Kích, Sức Mạnh Phép Thuật, Tốc Độ Đánh, Giáp, Kháng Phép và Máu cộng thêm của chủ sở hữu cho các tướng khác cũng có Hiện Thân Phản Chiếu.\n\nKhông thể Rèn\n\nDuy nhất: 1 mỗi tướng"
+    },
+    "TFT_Item_Artifact_InnervatingLocket": {
+      "name": "Dây Chuyền Tự Lực",
+      "desc": "Chủ sở hữu tăng 1% tổng Năng Lượng mỗi khi bị trúng một đòn đánh.\n\nMỗi lần thi triển kỹ năng hồi 20% Máu tối đa của chủ sở hữu trong 3 giây."
+    },
+    "TFT14_CypherArmoryItem_Specific5Costs": {
+      "name": "Zac, Aurora, Urgot và Samira 2 sao",
+      "desc": "Zac, Aurora, Urgot và Samira 2 sao"
+    },
+    "TFT14_CypherArmoryItem_SpecificRadiantItems": {
+      "name": "12 trang bị ánh sáng",
+      "desc": "Nỏ Sét Ánh Sáng, Jak'Sho Vỏ Bọc Thích Nghi, Thệ Ước Bảo Hộ, Ngọn Giáo Hirana, Mũ Thăng Hoa Rabadon, Găng Ngọc Thạch, Phán Quyết Đao Guinsoo, Bão Tố Runaan, Quang Kiếm Tử Thần, Thiên Cực Kiếm, Găng Tay Thần Thánh, Cung Xanh Vĩnh Hằng"
+    },
+    "TFT_Assist_TacticiansCape_2": {
+      "name": "2 Áo Choàng Chiến Thuật",
+      "desc": "2 Áo Choàng Chiến Thuật"
+    },
+    "TFT_Assist_Dummy_Shroud": {
+      "name": "Hình Nhân với Áo Choàng",
+      "desc": "Hình nhân mang Áo Choàng Tĩnh Lặng, trang bị làm tăng năng lượng tiêu hao của kẻ địch."
+    },
+    "TFT_Assist_Dummy_2xZekes": {
+      "name": "Hình nộm mang 2 Zeke",
+      "desc": "Hình nhân mang 2 Tụ Bão Zeke, cung cấp Tốc Độ Đánh cho đồng minh ở gần."
+    },
+    "TFT_Assist_2x3cost": {
+      "name": "2 tướng 3 vàng",
+      "desc": "2 tướng 3 vàng"
+    },
+    "TFT_Assist_5x4cost": {
+      "name": "5 tướng 4 vàng",
+      "desc": "5 tướng 4 vàng"
+    },
+    "TFT_Assist_6x5cost": {
+      "name": "6 tướng 5 vàng",
+      "desc": "6 tướng 5 vàng"
+    },
+    "TFT_Assist_1x2star2cost": {
+      "name": "Tướng 2 vàng 2 sao",
+      "desc": "Tướng 2 vàng 2 sao"
+    },
+    "TFT_Assist_1x3star5cost": {
+      "name": "Tướng 5 vàng 3 sao",
+      "desc": "Tướng 5 vàng 3 sao"
+    },
+    "TFT_Assist_7x5cost": {
+      "name": "7 tướng 5 vàng",
+      "desc": "7 tướng 5 vàng"
+    },
+    "TFT_Assist_Dummy_2xLocked": {
+      "name": "Hình nộm mang 2 Dây Chuyền",
+      "desc": "Hình nhân mang 2 Dây Chuyền Iron Solari, trang bị ban lá chắn cho đồng minh khi bắt đầu giao tranh."
+    },
+    "TFT_Assist_3x2cost": {
+      "name": "3 tướng 2 vàng",
+      "desc": "3 tướng 2 vàng"
+    },
+    "TFT_Assist_AllDoubleNonSpatItems": {
+      "name": "Tất cả trang bị thành phần kép",
+      "desc": "Kiếm Tử Thần, Mũ Phù Thủy Rabadon, Bùa Đỏ, Áo Choàng Gai, Vuốt Rồng, Giáp Máu Warmog, Bùa Xanh, Găng Đạo Tặc."
+    },
+    "TFT_Assist_2x4cost": {
+      "name": "2 tướng 4 vàng",
+      "desc": "2 tướng 4 vàng"
+    },
+    "TFT_Assist_Deathblade_2": {
+      "name": "2 Kiếm Tử Thần",
+      "desc": "2 Kiếm Tử Thần"
+    },
+    "TFT_Assist_Reforger_2": {
+      "name": "2 Búa Rèn",
+      "desc": "2 Búa Rèn"
+    },
+    "TFT_Assist_5x1cost": {
+      "name": "5 tướng 1 vàng",
+      "desc": "5 tướng 1 vàng"
+    },
+    "TFT_Assist_MasterworkUpgrade_3": {
+      "name": "3 Nâng Cấp Tuyệt Phẩm",
+      "desc": "3 Nâng Cấp Tuyệt Phẩm"
+    },
+    "TFT_Assist_1x3cost": {
+      "name": "Tướng 3 vàng",
+      "desc": "Tướng 3 vàng"
+    },
+    "TFT_Assist_Remover_2": {
+      "name": "2 Nam Châm Ma Thuật",
+      "desc": "2 Nam Châm Ma Thuật"
+    },
+    "TFT_Assist_1x2star3cost": {
+      "name": "Tướng 3 vàng 2 sao",
+      "desc": "Tướng 3 vàng 2 sao"
+    },
+    "TFT_Assist_1x2cost": {
+      "name": "Tướng 2 vàng",
+      "desc": "Tướng 2 vàng"
+    },
+    "TFT_Assist_3x3cost": {
+      "name": "3 tướng 3 vàng",
+      "desc": "3 tướng 3 vàng"
+    },
+    "TFT_Assist_RandomRadiantItem_3": {
+      "name": "3 Trang Bị Ánh Sáng",
+      "desc": "3 Trang Bị Ánh Sáng"
+    },
+    "TFT_Assist_RandomRadiantItem_2": {
+      "name": "2 Trang Bị Ánh Sáng",
+      "desc": "2 Trang Bị Ánh Sáng"
+    },
+    "TFT_Assist_Golem_2xAegis": {
+      "name": "Người đá với 2 Lá Chắn",
+      "desc": "Người đá mang 2 Lá Chắn Quân Đoàn, trang bị cung cấp Giáp, Kháng Phép và Tốc Độ Đánh cho các đồng minh ở phía sau."
+    },
+    "TFT_Assist_1x2star5cost": {
+      "name": "Tướng 5 vàng 2 sao",
+      "desc": "Tướng 5 vàng 2 sao"
+    },
+    "TFT_Assist_3x4cost": {
+      "name": "3 tướng 4 vàng",
+      "desc": "3 tướng 4 vàng"
+    },
+    "TFT_Assist_LesserDuplicator_6": {
+      "name": "6 Máy Sao Chép Tướng Cỡ Nhỏ",
+      "desc": "6 Máy Sao Chép Tướng Cỡ Nhỏ"
+    },
+    "TFT_Assist_1x4cost": {
+      "name": "Tướng 4 vàng 1 sao",
+      "desc": "Tướng 4 vàng 1 sao"
+    },
+    "TFT_Assist_RandomComponent_4": {
+      "name": "4 trang bị thành phần",
+      "desc": "4 trang bị thành phần"
+    },
+    "TFT_Assist_1x5cost": {
+      "name": "Tướng 5 vàng 1 sao",
+      "desc": "Tướng 5 vàng 1 sao"
+    },
+    "TFT_Assist_2x2star2cost": {
+      "name": "2 tướng 2 vàng 2 sao",
+      "desc": "2 tướng 2 vàng 2 sao"
+    },
+    "TFT_Assist_RandomComponent_9": {
+      "name": "9 thành phần",
+      "desc": "9 thành phần"
+    },
+    "TFT_Assist_1x2star4cost": {
+      "name": "Tướng 4 vàng 2 sao",
+      "desc": "Tướng 4 vàng 2 sao"
+    },
+    "TFT_Assist_3x5cost": {
+      "name": "3 tướng 5 vàng",
+      "desc": "3 tướng 5 vàng"
+    },
+    "TFT_Assist_4x2cost": {
+      "name": "4 tướng 2 vàng",
+      "desc": "4 tướng 2 vàng"
+    },
+    "TFT_Assist_4x5cost": {
+      "name": "4 tướng 5 vàng",
+      "desc": "4 tướng 5 vàng"
+    },
+    "TFT_Assist_2x5cost": {
+      "name": "2 tướng 5 vàng",
+      "desc": ""
+    },
+    "TFT_Assist_ChampionDuplicator_2": {
+      "name": "2 Máy Sao Chép Tướng",
+      "desc": "2 Máy Sao Chép Tướng"
+    },
+    "TFT_Assist_Spatula_3": {
+      "name": "3 Xẻng Vàng",
+      "desc": "3 Xẻng Vàng"
+    },
+    "TFT_Item_DebugCrit": {
+      "name": "Đòn Chí Mạng!",
+      "desc": "Trao cho tướng 100% tỉ lệ chí mạng và các kỹ năng của tướng đó có thể chí mạng."
+    },
+    "TFT14_Consumable_Salvager": {
+      "name": "Máy Tái Chế",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ChampionDuplicator_I": {
+      "name": "Máy Sao Chép Tướng Tí Hon",
+      "desc": "Dùng lên tướng 1 vàng để nhận bản sao 1 sao của chúng."
+    },
+    "TFT_Assist_RandomComponent": {
+      "name": "Trang Bị Thành Phần Ngẫu Nhiên",
+      "desc": "Trang Bị Thành Phần Ngẫu Nhiên"
+    },
+    "TFT_Assist_Gold_9": {
+      "name": "9 vàng",
+      "desc": "9 vàng"
+    },
+    "TFT_Assist_Gold_8": {
+      "name": "8 vàng",
+      "desc": "8 vàng"
+    },
+    "TFT_Assist_Gold_3": {
+      "name": "3 vàng",
+      "desc": "3 vàng"
+    },
+    "TFT_Assist_Gold_2": {
+      "name": "2 vàng",
+      "desc": "2 vàng"
+    },
+    "TFT_Assist_Gold_1": {
+      "name": "1 vàng",
+      "desc": "1 vàng"
+    },
+    "TFT_Assist_Gold_7": {
+      "name": "7 Vàng",
+      "desc": "7 Vàng"
+    },
+    "TFT_Assist_Gold_6": {
+      "name": "6 vàng",
+      "desc": "6 vàng"
+    },
+    "TFT_Assist_Gold_5": {
+      "name": "5 Vàng",
+      "desc": "5 Vàng"
+    },
+    "TFT_Assist_Gold_4": {
+      "name": "4 vàng",
+      "desc": "4 vàng"
+    },
+    "TFT_Assist_ItemArmorySupport": {
+      "name": "Gói Trang Bị Hỗ Trợ",
+      "desc": "Gói Trang Bị Hỗ Trợ"
+    },
+    "TFT_Assist_RandomOrnnItem": {
+      "name": "Trang Bị Tạo Tác",
+      "desc": "Trang Bị Tạo Tác"
+    },
+    "TFT_Assist_LesserDuplicator_3": {
+      "name": "3 Máy Sao Chép Tướng Cỡ Nhỏ",
+      "desc": "3 Máy Sao Chép Tướng Cỡ Nhỏ"
+    },
+    "TFT_Assist_ItemArmoryCompleted": {
+      "name": "Gói Trang Bị Hoàn Chỉnh",
+      "desc": "Gói Trang Bị Hoàn Chỉnh"
+    },
+    "TFT_Assist_Gold_10": {
+      "name": "10 Vàng",
+      "desc": "10 Vàng"
+    },
+    "TFT_Assist_RandomComponent_2": {
+      "name": "2 Trang Bị Thành Phần",
+      "desc": "2 Trang Bị Thành Phần"
+    },
+    "TFT_Assist_RandomRadiantItem": {
+      "name": "Trang Bị Ánh Sáng",
+      "desc": "Trang Bị Ánh Sáng"
+    },
+    "TFT_Assist_ItemArmoryComponent": {
+      "name": "Gói Trang Bị Thành Phần",
+      "desc": "Gói Trang Bị Thành Phần"
+    },
+    "TFT_Assist_RandomCompletedItem": {
+      "name": "Trang Bị Hoàn Chỉnh",
+      "desc": "Trang Bị Hoàn Chỉnh"
+    },
+    "TFT_Assist_ItemArmoryOrnn": {
+      "name": "Gói Trang Bị Tạo Tác",
+      "desc": "Gói Trang Bị Tạo Tác"
+    },
+    "TFT_Item_Shroud": {
+      "name": "Áo Choàng Tĩnh Lặng",
+      "desc": "Bắt đầu giao tranh: Bắn một tia khiến kẻ địch chịu 30% Tăng Năng Lượng.\n\nĐội của bạn nhận được 60 Máu.\n\n[Trang Bị Hỗ Trợ] [Duy Nhất - chỉ 1 mỗi tướng]\nTăng Năng Lượng: Tăng Năng Lượng tối đa cho tới lần tung chiêu tiếp theo\n{TFTUnitProperty.:TFT_BindOnEquipTRA}"
+    },
+    "TFT_Item_BansheesVeil": {
+      "name": "Dây Chuyền Chữ Thập",
+      "desc": "Bắt đầu giao tranh: Trao cho chủ sở hữu và các đồng minh trong phạm vi 1 ô cùng hàng khả năng miễn nhiễm khống chế và 25% Tốc Độ Đánh trong 18 giây.\n\n[Trang Bị Hỗ Trợ] [Duy nhất - chỉ 1 mỗi tướng]"
+    },
+    "TFT_Item_Artifact_ShadowPuppet": {
+      "name": "Bóng Phân Thân",
+      "desc": "Triệu hồi một phân thân sao chép các trang bị của chủ sở hữu. Phân thân sẽ có 60% Máu tối đa và gây 40% sát thương.\n\n[Duy Nhất - chỉ 1 mỗi tướng]"
+    },
+    "TFT_Item_Zephyr": {
+      "name": "Phong Kiếm",
+      "desc": "Bắt đầu giao tranh: Triệu hồi lốc xoáy ở phía bên kia sân đấu, loại bỏ kẻ địch gần nhất khỏi sân đấu trong 5 giây.\n\nĐội của bạn nhận được 2% Tốc Độ Đánh.\n\n[Trang Bị Hỗ Trợ]\n[Bỏ qua khả năng miễn nhiễm khống chế.]\n[Duy Nhất - chỉ 1 mỗi tướng]\n{TFTUnitProperty.:TFT_BindOnEquipTRA}"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft8": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 8 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft9": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 9 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT7_Item_ShimmerscaleHeartOfGold": {
+      "name": "Ngọc Quá Khổ",
+      "desc": "Đội của bạn nhận 5% Khuếch Đại Sát Thương. Mỗi giây tướng mang trang bị còn sống, đội của bạn nhận thêm 1% Khuếch Đại Sát Thương, tối đa 20%.\n\n​​[Trang Bị Hỗ Trợ]"
+    },
+    "TFT7_Item_ShimmerscaleDeterminedInvestor": {
+      "name": "Đầu Tư Kiên Định",
+      "desc": "Sau khi bị hạ gục trong giao tranh 8 lần, trang bị này sẽ bị phá hủy. Khi bị phá hủy, cho một Cánh Tay Kim Cương, 1 Máy Nhân Bản, và  5 vàng."
+    },
+    "TFT7_Item_ShimmerscaleDiamondHands": {
+      "name": "Cánh Tay Kim Cương",
+      "desc": "1 lần mỗi giao tranh: Khi còn 50% Máu, trở nên bất tử trong 1.5 giây và cho  1 vàng."
+    },
+    "TFT9_Item_OrnnTrickstersGlass": {
+      "name": "Gương Lừa Gạt",
+      "desc": "Triệu hồi 1 bản sao với 70% Máu Cơ Bản và +10% Năng Lượng tối đa. Bạn không thể lắp trang bị cho tướng nhân bản.\n\nTướng nhân bản sẽ hưởng lợi từ các tộc hệ được kích hoạt\n\n[Duy Nhất - chỉ 1 mỗi tướng]"
+    },
+    "TFT_Item_ZekesHerald": {
+      "name": "Tụ Bão Zeke",
+      "desc": "Bắt đầu giao tranh: Tăng  30% Tốc Độ Đánh cho chủ sở hữu và đồng minh trong phạm vi 2 ô cùng hàng.\n\n​[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft2": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 2 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft10": {
+      "name": "Búa Rèn <rules>(còn 10 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft3": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 3 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft4": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 4 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft5": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 5 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft6": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 6 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft7": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 7 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemRemover": {
+      "name": "Nam Châm Ma Thuật",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Item_DebugFirstHit": {
+      "name": "Át Chủ Bài",
+      "desc": "Khiến tướng này gây {TFTUnitProperty.:TFT_UnitProperty_Debug}% sát thương ở đòn đánh tiếp theo."
+    },
+    "TFT_Item_SentinelSwarm": {
+      "name": "Người Đá Đổ Bộ",
+      "desc": "Mỗi 3 giây, triệu hồi 1 Người Đá mạnh mẽ mang các trang bị Hoàn Chỉnh, Tạo Tác và Ánh Sáng."
+    },
+    "TFT_Item_DebugShield": {
+      "name": "Pengu Bảo Hộ",
+      "desc": "Cho {TFTUnitProperty.:TFT_UnitProperty_Debug} lá chắn."
+    },
+    "TFT_Item_DebugDamage": {
+      "name": "Niềm Đau Di Động",
+      "desc": "Gây {TFTUnitProperty.:TFT_UnitProperty_Debug} sát thương."
+    },
+    "TFT_Item_Artifact_MirroredPersona": {
+      "name": "Hiện Thân Phản Chiếu",
+      "desc": "Sau mỗi 6 giao tranh người chơi, nhận 1 bản sao cỡ nhỏ của Hiện Thân Phản Chiếu&nbsp;({TFTUnitProperty.trait:TFT_Item_Artifact_MirroredPersona_Combats}/6).\n\nChia sẻ 15% Sức Mạnh Công Kích, Sức Mạnh Phép Thuật, Tốc Độ Đánh, Giáp, Kháng Phép và Máu cộng thêm của chủ sở hữu cho các tướng khác cũng có Hiện Thân Phản Chiếu.\n\nKhông thể Rèn, các bản sao cỡ nhỏ không thể tạo ra bản sao khác.\n\nDuy nhất: 1 mỗi tướng"
+    },
+    "TFT_Item_DebugStun": {
+      "name": "Nện Búa Thẳng Mặt",
+      "desc": "Làm choáng trong {TFTUnitProperty.:TFT_UnitProperty_Debug} giây."
+    },
+    "TFT_Item_DebugBase": {
+      "name": "MissingNo",
+      "desc": "Lỗi 404: Không tìm thấy lệnh xử lý lỗi."
+    },
+    "TFT_Item_Artifact_UnendingDespair": {
+      "name": "Áo Choàng Diệt Vong",
+      "desc": "Mỗi khi Lá Chắn của chủ sở hữu bị phá, gây sát thương phép bằng 150% giá trị ban đầu của Lá Chắn đó lên kẻ địch gần nhất."
+    },
+    "TFT4_Item_OrnnEternalWinter": {
+      "name": "Mùa Đông Vĩnh Cửu",
+      "desc": "Kẻ địch gây sát thương lên chủ sở hữu sẽ chịu 20% Tê Tái trong 1.5 giây. Sau 7 lần Tê Tái từ trang bị này, kẻ tấn công sẽ bị Làm Choáng (Hồi chiêu: 15 giây).\n\n[Duy nhất - chỉ 1 mỗi tướng]\nTê Tái: giảm Tốc Độ Đánh\nLàm Choáng: không thể di chuyển, tấn công hay thi triển Kỹ Năng"
+    },
+    "TFT_Item_Artifact_MendingEchoes": {
+      "name": "Thanh Âm Chữa Lành",
+      "desc": "Tăng hồi máu của chủ sở hữu thêm 25%. Khi chủ sở hữu trao hoặc nhận hiệu ứng hồi máu, đồng thời hồi cho đồng minh thấp máu nhất một lượng bằng 40%."
+    },
+    "TFT4_Item_OrnnObsidianCleaver": {
+      "name": "Rìu Nham Tinh",
+      "desc": "Sát thương gây ra sẽ khiến kẻ địch chịu 30% Cào Xé và 30% Phân Tách trong 15 giây.\n\nĐội của bạn nhận 8% SMCK và 8 SMPT.\n\n​[Trang Bị Hỗ Trợ] [Duy nhất - chỉ 1 mỗi tướng]\nCào Xé: Giảm Kháng Phép\nPhân Tách: Giảm Giáp"
+    },
+    "TFT_Item_RadiantVirtue": {
+      "name": "Quyền Trượng Thánh Quang",
+      "desc": "Mỗi 5 giây, hồi lại cho đội của bạn 7% Máu tối đa. Khi chủ sở hữu bị hạ gục, lượng hồi máu tăng thành 14% Máu tối đa và được hồi thêm 2 lần.\n\nHồi Máu: {TFTUnitProperty.item:TFT_Tracker_Value1}\n\n[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_SupportKnightsVow": {
+      "name": "Lời Thề Hiệp Sĩ",
+      "desc": "Bắt đầu giao tranh: Tăng 200 Máu và 15% Hút Máu Toàn Phần cho chủ sở hữu và đồng minh trong phạm vi 1 ô cùng hàng.\n\n​[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_Artifact_SpectralCutlass": {
+      "name": "Gươm Biến Ảnh",
+      "desc": "Bắt đầu giao tranh: Dịch chuyển chủ sở hữu đến ô đối xứng trên bàn đấu của đối thủ. Sau 8 giây, chủ sở hữu sẽ trở lại vị trí ban đầu."
+    },
+    "TFT_Item_DebugDamageAmp": {
+      "name": "Khuếch Đại Sát Thương",
+      "desc": "Khiến tướng này gây thêm {TFTUnitProperty.:TFT_UnitProperty_Debug}% sát thương. Không cộng dồn. Kéo dài đến khi tướng này bị tiêu diệt."
+    },
+    "TFT9_Item_OrnnHorizonFocus": {
+      "name": "Kính Nhắm Thiện Xạ",
+      "desc": "Nhận 40% Khuếch Đại Sát Thương lên các mục tiêu cách xa từ 4 ô trở lên."
+    },
+    "TFT_Item_UnstableTreasureChest": {
+      "name": "Rương Báu Bất Ổn",
+      "desc": "Khi chủ sở hữu bị hạ gục, 4 đồng minh có phần trăm máu cao nhất nhận 1 trang bị hoàn chỉnh tạm thời.\n\n[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_DebugTaunt": {
+      "name": "Khiêu Khích",
+      "desc": "Khiêu khích tất cả kẻ địch trong tầm để chúng tấn công mục tiêu."
+    },
+    "TFT_Item_DebugMana": {
+      "name": "Nước Mắt Kẻ Địch",
+      "desc": "Cho {TFTUnitProperty.:TFT_UnitProperty_Debug} Năng Lượng."
+    },
+    "TFT_Item_TitanicHydra": {
+      "name": "Thông Đạo Zz'rot",
+      "desc": "Bắt đầu giao tranh: Khiêu Khích.\nKhi bị hạ, sinh ra 1 Bọ Hư Không, Khiêu Khích kẻ địch gần bên. Bọ Hư Không bị giảm mạnh hiệu lực khi được tạo ra bởi 1 đơn vị triệu hồi.\n\nKhiêu Khích: những kẻ địch trong tầm đánh và có thể tấn công bị buộc phải tấn công kẻ khiêu khích"
+    },
+    "TFT_Item_EternalFlame": {
+      "name": "Ngọn Lửa Vĩnh Hằng",
+      "desc": "Khi tướng mang trang bị này sống sót, toàn bộ kẻ địch bị nhiễm 33% Vết Thương Sâu và tất cả đồng minh được tăng 8% Khuếch Đại Sát Thương. Hiệu ứng này tái thiết lập sau mỗi 5 giây.\n\n[Trang Bị Hỗ Trợ]\nVết Thương Sâu: Giảm hồi máu nhận được"
+    },
+    "TFT4_Item_OrnnDeathsDefiance": {
+      "name": "Vũ Khúc Tử Thần",
+      "desc": "50% lượng sát thương chủ sở hữu nhận vào sẽ được gây ra theo dạng sát thương theo thời gian trong 4 giây.\n\n[Duy nhất - chỉ 1 mỗi tướng]"
+    },
+    "TFT9_Item_OrnnPrototypeForge": {
+      "name": "Găng Tay Thợ Rèn",
+      "desc": "Mỗi vòng: Mang 2 Tạo Tác của Ornn ngẫu nhiên.\n\n[Tốn 3 ô trang bị.]\n{TFTUnitProperty.:TFT_BindOnEquipTRA}"
+    },
+    "TFT_Item_LocketOfTheIronSolari": {
+      "name": "Dây Chuyền Iron Solari",
+      "desc": "Bắt đầu giao tranh: Chủ sở hữu và đồng minh trong phạm vi 2 ô cùng hàng nhận 250 Lá Chắn, 20 Giáp và 20 Kháng Phép trong 20 giây.\n\n​[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_Artifact_SuspiciousTrenchCoat": {
+      "name": "Áo Choàng Mờ Ám",
+      "desc": "Một lần mỗi giao tranh, khi còn 60% Máu, chủ sở hữu phân thân thành 3 bản sao với 33% Máu tối đa.\n\n[Duy nhất - chỉ 1 mỗi tướng]"
+    },
+    "TFT_Consumable_TrainingDummy": {
+      "name": "Hình Nhân",
+      "desc": "Sử dụng lên một tướng để tạo một Hình Nhân có thể di chuyển được cạnh bên.\n\n [Không thể sử dụng trong giao tranh.\nTiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ShopReroller": {
+      "name": "Xúc Xắc Ma Thuật",
+      "desc": "Sử dụng lên tướng để đổi lại một Cửa Hàng đặc biệt chỉ chứa toàn những tướng có sở hữu Tộc/Hệ của tướng ban đầu.\n\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT9_Item_OrnnDeathfireGrasp": {
+      "name": "Bùa Đầu Lâu",
+      "desc": "Bắt đầu giao tranh: Phóng lửa vào mục tiêu hiện tại, gây sát thương phép tương đương 40% Máu tối đa của kẻ đó. Lặp lại hiệu ứng này mỗi 13 giây."
+    },
+    "TFT_Consumable_ItemRemover_UsesLeft10": {
+      "name": "Nam Châm Ma Thuật <rules>(còn 10 lượt dùng!)</rules>",
+      "desc": "Sử dụng lên một tướng để gỡ tất cả trang bị trên tướng đó.\n\n [Không thể sử dụng lên tướng đang giao tranh.]\n[Tiêu Thụ - Trang bị này sẽ mất đi sau khi sử dụng.]"
+    },
+    "TFT_Item_Artifact_CursedVampiricScepter": {
+      "name": "Huyết Trượng Tha Hóa",
+      "desc": "Đòn đánh gây thêm sát thương vật lý bằng 60% Sức Mạnh Công Kích  và hồi máu cho chủ sở hữu theo sát thương gây ra.\n\nChủ sở hữu không thể thi triển Kỹ Năng hoặc tăng Năng Lượng."
+    },
+    "TFT_Item_DebugUnitID": {
+      "name": "Biết Ta Là Ai Không?",
+      "desc": "In UnitID lên thanh chat."
+    },
+    "TFT4_Item_OrnnRanduinsSanctum": {
+      "name": "Khiên Băng Randuin",
+      "desc": "Bắt đầu giao tranh: Cho chủ sở hữu và tất cả đồng minh liền kề  30 Giáp và  30 Kháng Phép.\n\n[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_Artifact_ProwlersClaw": {
+      "name": "Móng Vuốt Ám Muội",
+      "desc": "Sau khi hạ gục mục tiêu, loại bỏ hiệu ứng bất lợi và lướt tới mục tiêu xa nhất trong vòng 4 ô. 2 đòn đánh chí mạng tiếp theo gây thêm 50% Sát Thương Chí Mạng."
+    },
+    "TFT_Item_Moonstone": {
+      "name": "Bùa Nguyệt Thạch",
+      "desc": "Mỗi 4 giây, ban 55-325 Lá Chắn (dựa theo Giai Đoạn) cho 2 đồng minh có phần trăm máu thấp nhất bằng trong vòng 4 giây.\n\n[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_ForceOfNature": {
+      "name": "Vương Miện Chiến Thuật ",
+      "desc": "Đội của bạn được +1 giới hạn tướng tối đa.\n\n10% cơ hội rớt ra 1 vàng khi chiến thắng giao tranh.\n\n\"...trái tim của một anh hùng...\""
+    },
+    "TFT_Item_AegisOfTheLegion": {
+      "name": "Lá Chắn Quân Đoàn",
+      "desc": "Bắt đầu giao tranh: Ban 25% Tốc Độ Đánh cũng như 15 Giáp và Kháng Phép cho chủ sở hữu, các đồng minh liền kề cùng hàng và tất cả đồng minh phía sau họ trong 12 giây.\n\n​[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_Chalice": {
+      "name": "Cốc Sức Mạnh",
+      "desc": "Bắt đầu giao tranh: Tăng 25 Sức Mạnh Phép Thuật và 10 Năng Lượng cho chủ sở hữu và đồng minh trong phạm vi 2 ô cùng hàng.\n\n​[Trang Bị Hỗ Trợ]"
+    },
+    "TFT_Item_TacticiansScepter": {
+      "name": "Lá Chắn Chiến Thuật",
+      "desc": "Đội của bạn được +1 giới hạn tướng tối đa.\n\n10% cơ hội rớt ra 1 vàng khi chủ sở hữu tử trận.\n\n\"Chứa đầy tri thức của một Hiền Triết...\""
+    },
+    "TFT11_Item_ThiefsGlovesSupport": {
+      "name": "Găng Tay Đồng Phạm",
+      "desc": "Mỗi vòng: Mang 2 trang bị Hỗ Trợ ngẫu nhiên.\n\n[Tốn 3 ô trang bị.]\n{TFTUnitProperty.:TFT_BindOnEquipTRA}"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft5": {
+      "name": "Búa Rèn <rules>(còn 5 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft4": {
+      "name": "Búa Rèn <rules>(còn 4 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft7": {
+      "name": "Búa Rèn <rules>(còn 7 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft6": {
+      "name": "Búa Rèn <rules>(còn 6 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft3": {
+      "name": "Búa Rèn <rules>(còn 3 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft2": {
+      "name": "Búa Rèn <rules>(còn 2 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Item_Artifact_CappaJuice": {
+      "name": "Nước Cappa",
+      "desc": "Chủ sở hữu đội thêm 1 Mũ mỗi lần tham gia hạ gục. Chủ sở hữu nhận 1% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật với mỗi Mũ. Mất 20% tổng số Mũ khi bị hạ gục.&nbsp;(Mũ:&nbsp;{TFTUnitProperty.trait:TFT_Item_Artifact_CappaJuice_NumHats})"
+    },
+    "TFT_Item_UnusableSlot": {
+      "name": "Ô Đồ Vô Hiệu",
+      "desc": "Vị trí này không thể giữ 1 vật phẩm."
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft9": {
+      "name": "Búa Rèn <rules>(còn 9 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "TFT_Consumable_ItemReroller_UsesLeft8": {
+      "name": "Búa Rèn <rules>(còn 8 lượt dùng!)</rules>",
+      "desc": "Gỡ tất cả trang bị và chuyển đổi ngẫu nhiên chúng thành những trang bị khác có cùng chủng loại và chất lượng.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]"
+    },
+    "DA_MoonlightRitual18": {
+      "name": "Nghi Thức Ánh Trăng",
+      "desc": "Tướng 1 vàng hoặc 2 vàng có cấp sao thấp nhất của bạn sẽ được nâng sao trong giao tranh."
+    },
+    "DA_18_YordleSpirit": {
+      "name": "Linh Hồn Yordle",
+      "desc": "Đồng minh có 99% cơ hội né đòn trong 4 giây."
+    },
+    "DA_Hireling18": {
+      "name": "Tay Sai",
+      "desc": "1 tướng 5 vàng {StarLevel} sao tạm thời với {NumRecommendedItems} trang bị khuyên dùng sẽ gia nhập đội của bạn."
+    },
+    "DA_ThingamajigSack18": {
+      "name": "Túi Đồ Linh Tinh",
+      "desc": "Nhận {Boost3_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Phép Thuật hoặc Hồi Năng Lượng."
+    },
+    "DA_18_BackrowStar": {
+      "name": "Ngôi Sao Hàng Sau",
+      "desc": "Một tướng ngẫu nhiên ở hàng sau nhận 100% Tốc Độ Đánh trong 7 giây."
+    },
+    "DA_18_Mitosis": {
+      "name": "Nguyên Phân",
+      "desc": "Nhận 1 Máy Sao Chép Tướng Tí Hon."
+    },
+    "DA_PhantomSplash18": {
+      "name": "Kết Hợp Linh Hoạt",
+      "desc": "Bắt đầu giao tranh: Tối đa {NumTraitsActivated} tộc/hệ chưa kích hoạt sẽ được kích hoạt ở mốc thấp nhất."
+    },
+    "DA_18_BarkArmor": {
+      "name": "Giáp Vỏ Cây",
+      "desc": "Các tướng của bạn nhận 150 lá chắn trong 10 giây."
+    },
+    "DA_Lucky718": {
+      "name": "Số 7 May Mắn",
+      "desc": "Nhận 7 lượt đổi cửa hàng."
+    },
+    "DA_18_Preppers": {
+      "name": "Dự Phòng",
+      "desc": "Các trang bị tích số của bạn được tích sẵn một phần khi bắt đầu giao tranh tiếp theo."
+    },
+    "DA_PottedStonebark18": {
+      "name": "Chậu Cây Vỏ Đá",
+      "desc": "Nhận 1 Cây Vỏ Đá tạm thời."
+    },
+    "DA_Hugify18": {
+      "name": "Khổng Lồ Hóa",
+      "desc": "Tướng có lượng Máu cao nhất của bạn sẽ tăng trưởng, nhận thêm 350 Máu."
+    },
+    "DA_Journeyman18": {
+      "name": "Lính Lành Nghề",
+      "desc": "Nhận 1 tướng 2 vàng 2 sao ngẫu nhiên."
+    },
+    "DA_Barrier18": {
+      "name": "Lá Chắn",
+      "desc": "Đồng minh nhận được 1250 Lá Chắn, giảm dần trong 6 giây."
+    },
+    "DA_RefreshingLight18": {
+      "name": "Ánh Sáng Tươi Mới",
+      "desc": "Nhận 1 lượt đổi miễn phí cho mỗi cấp sao của mỗi tướng Mặt Trời độc nhất."
+    },
+    "DA_18_Supercritical": {
+      "name": "Siêu Chí Mạng",
+      "desc": "Các đồng minh có Chuẩn Xác nhận 25% Sát Thương Chí Mạng."
+    },
+    "DA_SlowStudy18": {
+      "name": "Học Chậm Rãi",
+      "desc": "Với mỗi tướng đồng minh còn sống sau {WaitTime} giây, nhận {XPAdded} XP."
+    },
+    "DA_BearsVisit18": {
+      "name": "Gấu Ghé Thăm",
+      "desc": "Nhận bùa lợi Gấu Nguyên Sinh trong giao tranh này."
+    },
+    "DA_18_Fellowship": {
+      "name": "Tình Bằng Hữu",
+      "desc": "Tướng nhận Lá Chắn bằng 4% Máu Tối Đa và 4% Khuếch Đại Sát Thương với mỗi đồng minh liền kề."
+    },
+    "DA_Grandmaster18": {
+      "name": "Đại Cao Thủ",
+      "desc": "Nhận 1 tướng 5 vàng 2 sao ngẫu nhiên."
+    },
+    "DA_Jungling18": {
+      "name": "Đi Rừng",
+      "desc": "Lấp đầy cửa hàng với tướng Quái Rừng."
+    },
+    "DA_AbandonShip18": {
+      "name": "Rời Tàu",
+      "desc": "Bán toàn bộ bàn đấu và hàng chờ của bạn, nhận 6 vàng và 8 lượt đổi."
+    },
+    "DA_BigGuns18": {
+      "name": "Súng Cỡ Lớn",
+      "desc": "Nhận 2 tướng 4 vàng 1 sao ngẫu nhiên."
+    },
+    "DA_Terraforming18": {
+      "name": "Tái Tạo Địa Hình",
+      "desc": "Nhận {Seeds} hạt giống khi bắt đầu giao tranh."
+    },
+    "DA_18_Moonrise": {
+      "name": "Trăng Lên",
+      "desc": "Sau 8 giây, tăng hiệu ứng của Mặt Trăng thêm {IncreaseRatio}%."
+    },
+    "DA_BorrowedGear18": {
+      "name": "Trang Bị Vay Mượn",
+      "desc": "Khi bắt đầu giao tranh, 1 tướng nhận 1 trang bị khuyên dùng tạm thời."
+    },
+    "DA_18_Drizzle": {
+      "name": "Rả Rích",
+      "desc": "Sau 8 giây giao tranh, đội của bạn nhận {ManaToGain} Năng Lượng."
+    },
+    "DA_MarksmensGale18": {
+      "name": "Bão Xạ Thủ",
+      "desc": "Đòn đánh của Xạ Thủ tăng 3% Tốc Độ Đánh cộng dồn."
+    },
+    "DA_BigBoom18": {
+      "name": "Chưởng Lực Cỡ Đại",
+      "desc": "Đồng minh đầu tiên hy sinh sẽ phát nổ, gây sát thương phép bằng {maxHealthExplosionDamage}% Máu Tối Đa."
+    },
+    "DA_18_LightningStrike": {
+      "name": "Sét Đánh",
+      "desc": "Gây sát thương chuẩn bằng 10% Máu Tối Đa lên tất cả kẻ địch."
+    },
+    "DA_SolarGift18": {
+      "name": "Món Quà Mặt Trời",
+      "desc": "Nhận 1 Leona, 1 Sejuani và 1 Kayle"
+    },
+    "DA_PlatedShields18": {
+      "name": "Lá Chắn Bọc Thép",
+      "desc": "Lá Chắn sẽ mạnh hơn 15%. Đồng minh nhận 150 lá chắn trong 10 giây."
+    },
+    "DA_18_MinorPolymorph": {
+      "name": "Biến Hóa Cỡ Nhỏ",
+      "desc": "Một tướng 1 vàng ngẫu nhiên mà bạn sở hữu sẽ vĩnh viễn biến thành tướng 2 vàng."
+    },
+    "DA_18_Tremors": {
+      "name": "Động Đất",
+      "desc": "Mỗi {StunInterval} giây, Làm Choáng kẻ địch trong 1 giây."
+    },
+    "DA_HomingFireflies18": {
+      "name": "Đom Đóm Dẫn Đường",
+      "desc": "Tướng Thuật Sư của bạn sinh ra 1 đom đóm với mỗi {ManaPerFirefly} Năng Lượng đã tiêu hao. Mỗi đom đóm gây {FireflyDamage} sát thương phép."
+    },
+    "DA_18_Payday": {
+      "name": "Hoàn Tất Phi Vụ",
+      "desc": "Với mỗi tướng đồng minh sống sót sau giao tranh, nhận {GoldPerSurvivor} Vàng."
+    },
+    "DA_KnickKnackSack18": {
+      "name": "Túi Đồ Lỉnh Kỉnh",
+      "desc": "Nhận {Boost3_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh."
+    },
+    "DA_18_Propagate": {
+      "name": "Nhân Giống",
+      "desc": "Nhận 1 bản sao của tướng đồng minh đầu tiên hy sinh."
+    },
+    "DA_18_HeatedRivalry": {
+      "name": "Kình Địch Nảy Lửa",
+      "desc": "Nhận 1 Rengar hoặc 1 Kha'Zix. Tướng này nhận {NumStacks} điểm hạ gục."
+    },
+    "DA_ThingamajigBag18": {
+      "name": "Gói Đồ Vặt Vãnh",
+      "desc": "Nhận {Boost2_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Phép Thuật hoặc Hồi Năng Lượng."
+    },
+    "DA_Artifactinate18": {
+      "name": "Hóa Tạo Tác",
+      "desc": "Mất 3 trang bị thành phần, bao gồm cả những trang bị đã được ghép thành trang bị hoàn chỉnh. Nhận 1 gói Trang Bị Tạo Tác."
+    },
+    "DA_18_Hummingbird": {
+      "name": "Chim Ruồi",
+      "desc": "Tướng có Tốc Độ Đánh cao nhất của bạn sẽ bị thu nhỏ, nhận thêm 20% Tốc Độ Đánh."
+    },
+    "DA_18_BronzeSpoon": {
+      "name": "Thìa Đồng",
+      "desc": "Nhận 4 XP."
+    },
+    "DA_18_AllFives": {
+      "name": "Chỉ 5 Vàng",
+      "desc": "Làm mới cửa hàng với toàn tướng 5 vàng."
+    },
+    "DA_18_KillingFrenzy": {
+      "name": "Cuồng Nộ Sát Nhân",
+      "desc": "Các Tướng Đấu Sĩ hành quyết mục tiêu khi mục tiêu còn dưới 12% Máu. Họ nhận {OnKillAtkSpdAmount}% Tốc Độ Đánh khi hạ gục."
+    },
+    "DA_Revenge18": {
+      "name": "Báo Thù",
+      "desc": "Mỗi khi một đồng minh hy sinh, các tướng của bạn nhận 4% Khuếch Đại Sát Thương cộng dồn."
+    },
+    "DA_PottedLifebloom18": {
+      "name": "Chậu Hoa Sinh Mệnh",
+      "desc": "Nhận 1 Hoa Sinh Mệnh tạm thời."
+    },
+    "DA_ImprovedReach18": {
+      "name": "Tăng Tầm Với",
+      "desc": "Các Tướng Đấu Sĩ của bạn được tăng 1 tầm đánh."
+    },
+    "DA_HerosEntrance18": {
+      "name": "Siêu Hùng Giáng Thế",
+      "desc": "Sau {UnitJoinDelay} giây, tướng ngoài cùng bên trái trên hàng chờ tham gia giao tranh và nhận {NumRecItems} trang bị khuyên dùng."
+    },
+    "DA_Potioncraft18": {
+      "name": "Chế Tạo Thuốc",
+      "desc": "Nhận ba Bình Thuốc tạm thời có thể trang bị."
+    },
+    "DA_Quicken18": {
+      "name": "Nhanh Lẹ",
+      "desc": "Khi thi triển, các tướng của bạn nhận 30% Tốc Độ Đánh trong 4 giây."
+    },
+    "DA_ManaRichSoil18": {
+      "name": "Đất Giàu Năng Lượng",
+      "desc": "Tướng Thuật Sư của bạn được giảm {MaxManaMultiplier}% Năng Lượng Tối Đa."
+    },
+    "DA_18_LightningStorm": {
+      "name": "Bão Sét",
+      "desc": "Mỗi 1 giây, gây sát thương chuẩn bằng 5% Máu Tối Đa lên 1 kẻ địch."
+    },
+    "DA_18_LostTravelers": {
+      "name": "Lữ Khách Lạc Lối",
+      "desc": "Nhận các tướng ngẫu nhiên có tổng giá là 3 vàng."
+    },
+    "DA_18_ForestMage": {
+      "name": "Pháp Sư Rừng Già",
+      "desc": "Lấp đầy cửa hàng của bạn với các Tinh Linh. Bạn chỉ có thể mua 1 Tinh Linh."
+    },
+    "DA_PhantomArmor18": {
+      "name": "Giáp Bóng Ma",
+      "desc": "Nhận 1 Giáp Máu Warmog tạm thời."
+    },
+    "DA_18_TatteredArmor": {
+      "name": "Giáp Tả Tơi",
+      "desc": "Gây Cào Xé và Phân Tách {ShredSunderPercent}% lên kẻ địch trong 10 giây."
+    },
+    "DA_DoodadSack18": {
+      "name": "Bao Bảo Bối",
+      "desc": "Nhận {Boost3_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu."
+    },
+    "DA_NaturesWrath18": {
+      "name": "Thịnh Nộ Thiên Nhiên",
+      "desc": "Tiêu diệt TẤT CẢ ĐƠN VỊ không có trang bị sau {KillDelay} giây."
+    },
+    "DA_SearchParty18": {
+      "name": "Tổ Đội Tìm Kiếm",
+      "desc": "Mỗi cửa hàng của bạn sẽ có 1 tướng 4 vàng trong vòng này cho đến khi bạn mua 1 tướng 4 vàng."
+    },
+    "DA_KillersRegret18": {
+      "name": "Ác Giả Ác Báo",
+      "desc": "3 tướng đầu tiên của bạn bị hạ gục sẽ làm choáng kẻ đã hạ gục họ trong 1.5 giây."
+    },
+    "DA_KnickKnackJar18": {
+      "name": "Hũ Đồ Lỉnh Kỉnh",
+      "desc": "Nhận {Boost1_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh."
+    },
+    "DA_18_Counterspell": {
+      "name": "Phản Phép",
+      "desc": "Tăng Năng Lượng Tối Đa của tất cả kẻ địch thêm 15 cho đến lần tung chiêu tiếp theo của chúng."
+    },
+    "DA_ManaPotion18_Upgrade_Charm": {
+      "name": "Bình Năng Lượng",
+      "desc": "Nhận 1 Bình Năng Lượng Ánh Sáng tạm thời có thể trang bị."
+    },
+    "DA_PhantomGloves18": {
+      "name": "Găng Ma Mị",
+      "desc": "Nhận 1 Găng Đạo Tặc tạm thời."
+    },
+    "DA_18_EarlyFix": {
+      "name": "Sửa Lỗi Sớm",
+      "desc": "Nhận 1 Búa Rèn Trang Bị."
+    },
+    "DA_BloodAndIron18": {
+      "name": "Máu và Sắt",
+      "desc": "Sau {NumDeathsToProc} lần tướng tử trận, nhận 1 gói trang bị thành phần."
+    },
+    "DA_DieRoll18": {
+      "name": "Đổ Xúc Xắc",
+      "desc": "Đổ 1 xúc xắc sáu mặt. Nhận lượng vàng bằng với kết quả đổ xúc xắc."
+    },
+    "DA_Bulwark18": {
+      "name": "Chiến Lũy",
+      "desc": "Tướng Đỡ Đòn của bạn nhận lá chắn bằng 20% Máu Tối Đa khi còn dưới 50% Máu."
+    },
+    "DA_ForestTwins18": {
+      "name": "Song Sinh Rừng Già",
+      "desc": "Nhận 2 bản sao của 1 tướng 2 vàng mà bạn chưa sở hữu."
+    },
+    "DA_Apprentice18": {
+      "name": "Tập Sự",
+      "desc": "Nhận 1 tướng 1 vàng 2 sao ngẫu nhiên."
+    },
+    "DA_ForestGuide18": {
+      "name": "Dẫn Lối Rừng Già",
+      "desc": "Nhận 1 tướng 4 vàng ngẫu nhiên."
+    },
+    "DA_Peddler18": {
+      "name": "Gánh Hàng Rong",
+      "desc": "Mở cửa hàng trang bị ngẫu nhiên. Trang bị ngẫu nhiên có giá từ 0 đến {TooltipMaxCostOfItem} vàng."
+    },
+    "DA_18_SunfireSorcery": {
+      "name": "Dương Hỏa Thuật",
+      "desc": "Gây Thiêu Đốt và Vết Thương Sâu lên kẻ địch trong 10 giây."
+    },
+    "DA_GoldenGoose18": {
+      "name": "Con Ngỗng Vàng",
+      "desc": "Nhận {GoldEarned} vàng cho mỗi {EarnGoldForEveryNDamage} sát thương mà tướng có sát thương cao nhất của bạn gây ra."
+    },
+    "DA_IdleCraftsman18": {
+      "name": "Thợ Thủ Công Nhàn Rỗi",
+      "desc": "Một trang bị thành phần trên hàng chờ của bạn sẽ biến thành trang bị hoàn chỉnh được ghép từ nó."
+    },
+    "DA_LesserChaos18": {
+      "name": "Hỗn Loạn Nhỏ",
+      "desc": "Thi triển 1 Tinh Linh ngẫu nhiên."
+    },
+    "DA_18_Radiantize": {
+      "name": "Ánh Sáng Hóa",
+      "desc": "Sau 8 giây, 1 trang bị ngẫu nhiên đang được trang bị sẽ tạm thời trở thành dạng Ánh Sáng."
+    },
+    "DA_BearsVisit18_Upgrade": {
+      "name": "Hổ Ghé Thăm",
+      "desc": "Nhận bùa lợi Hổ Nguyên Sinh trong giao tranh này."
+    },
+    "DA_18_ProlificPower": {
+      "name": "Sức Mạnh Dồi Dào",
+      "desc": "Các tướng của bạn nhận 4% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật."
+    },
+    "DA_WrappedInThorns18": {
+      "name": "Bao Phủ Bởi Gai",
+      "desc": "Tướng Chống Chịu của bạn phản lại {DamageReflectionMult}% sát thương nhận vào lên những kẻ địch liền kề mỗi {ReflectFrequency} giây."
+    },
+    "DA_DoodadBag18": {
+      "name": "Túi Bảo Bối",
+      "desc": "Nhận {Boost2_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu."
+    },
+    "DA_RideTheWave18": {
+      "name": "Đón Sóng",
+      "desc": "2 lượt đổi tiếp theo trong vòng này sẽ có {NumUnitsPerShop}+ tướng đã triển khai ở giao tranh trước."
+    },
+    "DA_Ironwood18": {
+      "name": "Thiết Mộc",
+      "desc": "Kẻ địch tấn công tướng có lượng máu cao nhất của bạn sẽ bị giảm 14% sát thương gây ra."
+    },
+    "DA_HeroOfProphecy18": {
+      "name": "Anh Hùng Tiên Tri",
+      "desc": "Nhận 1 tướng 5 vàng. VĨNH VIỄN nhận lại tướng đó mỗi vòng."
+    },
+    "DA_Scrappy18": {
+      "name": "Nhặt Nhạnh",
+      "desc": "Bắt đầu giao tranh: 2 tướng không có trang bị nhận 1 trang bị khuyên dùng tạm thời."
+    },
+    "DA_ThreeMe18": {
+      "name": "Ba Chúng Tôi",
+      "desc": "Nhận 1 tướng 3 vàng 2 sao ngẫu nhiên."
+    },
+    "DA_ThingamajigJar18": {
+      "name": "Hũ Đồ Vặt Vãnh",
+      "desc": "Nhận {Boost1_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Phép Thuật hoặc Hồi Năng Lượng."
+    },
+    "DA_FlashFire18": {
+      "name": "Châm Lửa",
+      "desc": "Làm mới cửa hàng của bạn. Tướng Hỏa Ngục thắp lửa {FireSlots} ô cửa hàng, nâng cấp chúng."
+    },
+    "DA_18_AllThrees": {
+      "name": "Chỉ 3 Vàng",
+      "desc": "Làm mới cửa hàng với toàn tướng 3 vàng."
+    },
+    "DA_LateBloomer18": {
+      "name": "Lớn Muộn",
+      "desc": "1 tướng 1 vàng {StarLevel} sao sẽ tạm thời gia nhập đội của bạn."
+    },
+    "DA_AnimateShop18": {
+      "name": "Cửa Hàng Động",
+      "desc": "Trong 18 giây, cửa hàng của bạn sẽ làm mới miễn phí sau mỗi 2 giây."
+    },
+    "DA_PhantomEmblem18": {
+      "name": "Ấn Ma Mị",
+      "desc": "Nhận 1 ấn tạm thời cho tộc/hệ kích hoạt cao nhất của bạn."
+    },
+    "DA_18_Starfall": {
+      "name": "Vẫn Tinh",
+      "desc": "{ShopLimit} lần đầu bạn làm mới cửa hàng trong vòng này, tướng có giá thấp nhất sẽ trở thành 2 sao."
+    },
+    "DA_CoinFlip18": {
+      "name": "Tung Đồng Xu",
+      "desc": "Tung đồng xu, nhận {GoldIfHeads} vàng nếu ra mặt ngửa."
+    },
+    "DA_RollingBones18": {
+      "name": "Đổ Xúc Xắc",
+      "desc": "Bạn có {RerollChanceOnKill}% cơ hội nhận được 1 lượt đổi miễn phí với mỗi mạng hạ gục."
+    },
+    "DA_FlipFrenzy18": {
+      "name": "Tung Xu Liên Hoàn",
+      "desc": "Tung đồng xu, nhận {GoldIfHeads} vàng nếu ra mặt ngửa. Tiếp tục cho đến khi bạn lật ra mặt ngửa."
+    },
+    "DA_GrowUp18": {
+      "name": "Phát Triển",
+      "desc": "Nhận 10 XP."
+    },
+    "DA_MiddlePath18": {
+      "name": "Chơi Đường Giữa",
+      "desc": "Làm mới cửa hàng với toàn tướng 3 vàng 2 sao."
+    },
+    "DA_18_UltraAscension": {
+      "name": "Siêu Thăng Hoa",
+      "desc": "Sau 25 giây, đồng minh nhận được 300% Khuếch Đại Sát Thương."
+    },
+    "DA_TrophyHunter18": {
+      "name": "Thợ Săn Chiến Lợi Phẩm",
+      "desc": "Trong giao tranh người chơi tiếp theo, số lần tham gia hạ gục của tướng Khắc Tinh của bạn được tính gấp đôi."
+    },
+    "DA_GreaterChaos18": {
+      "name": "Hỗn Loạn Lớn",
+      "desc": "Thi triển {NumCharms} Tinh Linh ngẫu nhiên."
+    },
+    "DA_18_AllTwos": {
+      "name": "Chỉ 2 Vàng",
+      "desc": "Làm mới cửa hàng với toàn tướng 2 vàng."
+    },
+    "DA_KnickKnackBag18": {
+      "name": "Bị Đồ Lỉnh Kỉnh",
+      "desc": "Nhận {Boost2_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh."
+    },
+    "DA_BoosterShot18": {
+      "name": "Cơ Hội Tăng Cường",
+      "desc": "Tối đa {NumChampsToStarUp} tướng 1 sao sẽ tạm thời được nâng sao trong giao tranh."
+    },
+    "DA_StartingTown18": {
+      "name": "Thị Trấn Khởi Động",
+      "desc": "Làm mới cửa hàng với toàn tướng 1 vàng 2 sao."
+    },
+    "DA_Blaze18": {
+      "name": "Bỏng",
+      "desc": "Lửa lan rộng khắp bàn đấu, gây sát thương chuẩn lên kẻ địch."
+    },
+    "DA_BlastPotion18_Upgrade_Charm": {
+      "name": "Lọ Thuốc Phát Nổ",
+      "desc": "Nhận 1 Lọ Thuốc Phát Nổ Ánh Sáng tạm thời có thể trang bị."
+    },
+    "DA_18_LifeDebt": {
+      "name": "Món Nợ Sinh Mệnh",
+      "desc": "Nhận {GoldPerMissingHealth} vàng cho mỗi {MissingHealthAmount} Máu người chơi đã mất."
+    },
+    "DA_SolitudesCloak18": {
+      "name": "Áo Choàng Cô Độc",
+      "desc": "Các tướng không có đồng minh liền kề nhận {MaxHPBuff}% Máu Tối Đa và 10% Khuếch Đại Sát Thương."
+    },
+    "DA_Salvager18": {
+      "name": "Máy Tái Chế",
+      "desc": "Tất cả trang bị trên tướng bạn chuyển về hàng chờ sẽ bị gỡ bỏ và phân tách."
+    },
+    "DA_18_GiantGrowth": {
+      "name": "Tăng Trưởng Khổng Lồ",
+      "desc": "Đơn vị có lượng Máu cao nhất của bạn sẽ lớn lên, nhận thêm {HPGain} Máu."
+    },
+    "DA_CloneCompanion18": {
+      "name": "Bản Sao Đồng Hành",
+      "desc": "Nhân bản tướng gây sát thương cao nhất của bạn. Bản sao gây 20% sát thương."
+    },
+    "DA_StandAlone18": {
+      "name": "Đứng Một Mình",
+      "desc": "Tướng đứng một mình một hàng nhận được 15% Máu và 15% Khuếch Đại Sát Thương."
+    },
+    "DA_Cutpurse18": {
+      "name": "Móc Túi",
+      "desc": "Mỗi 5 giây, các tướng của bạn có {PercentChance}% xác suất rơi ra {GoldDrop} Vàng."
+    },
+    "DA_BeggarsWisp18": {
+      "name": "Tinh Linh Nghèo Khó",
+      "desc": "Đại ngàn không tìm được tinh linh nào cho bạn trong lượt này. Nhận 2 vàng."
+    },
+    "DA_DoodadJar18": {
+      "name": "Hũ Bảo Bối",
+      "desc": "Nhận {Boost1_Num} vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu."
+    },
+    "DA_Combust18": {
+      "name": "Bốc Cháy",
+      "desc": "Tướng của bạn phát nổ khi bị hạ gục, gây sát thương phép bằng {maxHealthExplosionDamage}% Máu Tối Đa."
+    },
+    "DA_LivingSoil18": {
+      "name": "Đất Hiện Thế",
+      "desc": "Mỗi {RootFrequency} giây, rễ cây trói chân làm choáng 1 kẻ địch trong 1 giây."
+    },
+    "DA_18_AllOnes": {
+      "name": "Chỉ 1 Vàng",
+      "desc": "Làm mới cửa hàng với toàn tướng 1 vàng."
+    },
+    "DA_HealthPotion18_Upgrade_Charm": {
+      "name": "Bình Máu",
+      "desc": "Nhận 1 Bình Máu Ánh Sáng tạm thời có thể trang bị."
+    },
+    "DA_18_Resistant": {
+      "name": "Chống Chịu",
+      "desc": "Tướng Đỡ Đòn được giảm {FlatDmgBlock} sát thương nhận vào mỗi lần nhận sát thương."
+    },
+    "DA_Flow18": {
+      "name": "Nhịp",
+      "desc": "Các tướng của bạn trở nên không thể cản phá và nhận thêm 15% Tốc Độ Đánh trong 10 giây."
+    },
+    "DA_18_HeroicSacrifice": {
+      "name": "Hy Sinh Anh Dũng",
+      "desc": "3 tướng mạnh nhất nhận SỨC MẠNH ANH HÙNG, các đồng minh khác bị hiến tế."
+    },
+    "DA_PetrifiedDummy18": {
+      "name": "Bù Nhìn Hóa Đá",
+      "desc": "Tướng đầu tiên bị hạ gục của bạn sẽ biến thành hình nhân {StatueHealth} Máu với các chỉ số phòng thủ của tướng đó."
+    },
+    "DA_TrainingYard18": {
+      "name": "Sân Huấn Luyện",
+      "desc": "Nhận 2 Hình Nhân, mỗi Hình Nhân mang 1 trang bị đỡ đòn ngẫu nhiên."
+    },
+    "DA_HealthPotion18_Charm": {
+      "name": "Bình Máu",
+      "desc": "Nhận 1 Bình Máu tạm thời có thể trang bị."
+    },
+    "DA_MarksmensMarks18": {
+      "name": "Dấu Ấn Xạ Thủ",
+      "desc": "Tướng Xạ Thủ của bạn có 30% cơ hội tung đòn đánh đôi."
+    },
+    "DA_NaturesAlly18": {
+      "name": "Gần Gũi Thiên Nhiên",
+      "desc": "Mỗi {ChampionDeathsPerSummon} lần đồng minh bị hạ gục, triệu hồi một Quái Rừng ngẫu nhiên."
+    },
+    "DA_Diversified18": {
+      "name": "Đa Dạng Hóa",
+      "desc": "Đội của bạn nhận {AddedHealth} Máu cho mỗi tộc/hệ không phải duy nhất đang kích hoạt."
+    },
+    "DA_TreetopArchers": {
+      "name": "Cung Thủ Ngọn Cây",
+      "desc": "Cung thủ bắn tên từ những tán cây, gây {PhysicalDamagePerVolley} sát thương vật lý mỗi {VolleyFrequencyInSeconds} giây."
+    },
+    "DA_Rain18": {
+      "name": "Mưa",
+      "desc": "Đội của bạn nhận 1 Hồi Năng Lượng."
+    },
+    "DA_18_AfterShock": {
+      "name": "Dư Chấn",
+      "desc": "Sau 8 giây, làm choáng tất cả kẻ địch trong 1.5 giây."
+    },
+    "DA_Snacktime18": {
+      "name": "Đến Giờ Ăn Nhẹ Rồi!",
+      "desc": "LXKL nuốt sống những kẻ địch còn dưới 16% Máu Tối Đa mà nó gây sát thương lên."
+    },
+    "DA_18_Freeroller": {
+      "name": "Quay Miễn Phí",
+      "desc": "Nhận 2 lượt đổi."
+    },
+    "DA_18_Experienced": {
+      "name": "Lên Kinh Nghiệm",
+      "desc": "Nhận 2 XP."
+    },
+    "DA_HandOfBaron18": {
+      "name": "Baron Chi Viện",
+      "desc": "Đội của bạn nhận Bùa Baron, tăng chỉ số cho họ."
+    },
+    "DA_18_MajorPolymorph": {
+      "name": "Biến Hóa Để Đời",
+      "desc": "Một tướng 4 vàng ngẫu nhiên mà bạn sở hữu sẽ vĩnh viễn biến thành tướng 5 vàng."
+    },
+    "DA_Regeneration18": {
+      "name": "Hồi Phục",
+      "desc": "Đội của bạn hồi 1% Máu tối đa mỗi giây."
+    },
+    "DA_RoomForAShroom": {
+      "name": "Luôn Còn Chỗ Cho Nấm",
+      "desc": "Nhận {ShroomsToGrant} nấm ngẫu nhiên."
+    },
+    "DA_PhantomVest18": {
+      "name": "Giáp Ma Mị",
+      "desc": "Nhận 1 Áo Choàng Gai tạm thời."
+    },
+    "DA_RolyPolys18": {
+      "name": "Càng Đông Càng Vui",
+      "desc": "Với mỗi tướng đồng minh còn sống sau {WaitTime} giây, nhận 1 lượt đổi."
+    },
+    "DA_18_MercenaryForce": {
+      "name": "Ngoại Binh",
+      "desc": "Nhận 3% Khuếch Đại Sát Thương với mỗi {PerXGold} vàng bạn có."
+    },
+    "DA_Stealthy18": {
+      "name": "Ẩn Náu",
+      "desc": "3 tướng Đấu Sĩ hoặc Sát Thủ mạnh nhất của bạn trở nên không thể chỉ định trong 8 giây."
+    },
+    "DA_18_Infliction": {
+      "name": "Trừng Trị",
+      "desc": "Gây Làm Chậm, Thiêu Đốt, Cào Xé và Phân Tách lên kẻ địch trong 8 giây."
+    },
+    "DA_BorderVillage18": {
+      "name": "Ngôi Làng Vùng Biên",
+      "desc": "Làm mới cửa hàng với toàn tướng 2 vàng 2 sao."
+    },
+    "DA_BunchOBelts18": {
+      "name": "Mưa Đai Lưng",
+      "desc": "Đồng minh của bạn nhận {NumBeltsToGrant} Đai Khổng Lồ tạm thời, không thể gỡ bỏ."
+    },
+    "DA_Barter18": {
+      "name": "Mặc Cả",
+      "desc": "Tướng tiếp theo được bán trong vòng này sẽ cho {SellMultiplier}% vàng."
+    },
+    "DA_BlastPotion18_Charm": {
+      "name": "Lọ Thuốc Phát Nổ",
+      "desc": "Nhận 1 Lọ Thuốc Phát Nổ tạm thời có thể trang bị."
+    },
+    "DA_GiantsAura18": {
+      "name": "Hào Quang Khổng Lồ",
+      "desc": "Đồng minh nhiều Máu nhất của bạn gây sát thương bằng 2% Máu tối đa mỗi giây trong một khu vực."
+    },
+    "DA_PetrifyShields18": {
+      "name": "Khiên Hóa Đá",
+      "desc": "Làm chậm kẻ địch {ChillAmount}% và giảm 20% lá chắn của chúng trong 10 giây."
+    },
+    "DA_ReturningFriend": {
+      "name": "Bạn Bè Trở Lại",
+      "desc": "Nhận tạm thời 1 Hình Nhân mang 2 Đai Khổng Lồ."
+    },
+    "DA_18_VerdantVitality": {
+      "name": "Sức Sống Xanh Tươi",
+      "desc": "Các tướng của bạn nhận 50 Máu."
+    },
+    "DA_18_BloodMoney": {
+      "name": "Tài Lộc Từ Máu",
+      "desc": "Nhận {GoldOnDeath} vàng cho mỗi tướng bạn hạ gục."
+    },
+    "DA_18_CircleofElders": {
+      "name": "Hội Đồng Trưởng Lão",
+      "desc": "Nhận một bản sao của mỗi tướng 5 vàng."
+    },
+    "DA_18_Polymorph": {
+      "name": "Biến Hóa",
+      "desc": "Một tướng 2 vàng ngẫu nhiên mà bạn sở hữu sẽ vĩnh viễn biến thành tướng 3 vàng."
+    },
+    "DA_18_PocketChange": {
+      "name": "Tiền Lẻ",
+      "desc": "Tướng 1 sao của bạn sẽ rơi ra {GoldOnDeath} vàng khi bị hạ gục."
+    },
+    "DA_ManaPotion18_Charm": {
+      "name": "Bình Năng Lượng",
+      "desc": "Nhận 1 Bình Năng Lượng tạm thời có thể trang bị."
+    },
+    "DA_Smurfing18": {
+      "name": "Smurf",
+      "desc": "Nhận 1 tướng 5 vàng ngẫu nhiên."
+    },
+    "DA_CurioCart18": {
+      "name": "Xe Đồ Lạ",
+      "desc": "Mở cửa hàng trang bị. Trang bị có giá từ 0 đến {TooltipMaxCostOfItem} vàng."
+    },
+    "DA_EssenceTheft18": {
+      "name": "Hút Hồn",
+      "desc": "Nhận thêm 50% Tinh Hoa Tiên Hắc Ám trong giao tranh này."
+    },
+    "DA_FoundFriend18": {
+      "name": "Tìm Được Bạn Nè",
+      "desc": "Nhận tạm thời 1 Hình Nhân mang Đai Khổng Lồ."
+    },
+    "DA_IronCore18": {
+      "name": "Trụ Cột Sắt Đá",
+      "desc": "Tướng ở vị trí trung tâm hàng trước của bạn nhận {MaxHealthPerFrontRowUnit}% Máu tối đa cho mỗi đơn vị ở hàng trước."
+    },
+    "DA_TurtlesVisit18": {
+      "name": "Rùa Ghé Thăm",
+      "desc": "Nhận bùa lợi Rùa Nguyên Sinh trong giao tranh này."
+    },
+    "DA_18_GroveArmor": {
+      "name": "Giáp Cây",
+      "desc": "Tướng nhiều Máu nhất của bạn nhận được 15 Giáp và 15 Kháng Phép."
+    },
+    "DA_Downpour18": {
+      "name": "Mưa Như Trút",
+      "desc": "Đội của bạn nhận 2 Hồi Năng Lượng."
+    },
+    "DA_18_Fertilize": {
+      "name": "Phân Bón",
+      "desc": "Nhận {XPonDeath} XP cho mỗi kẻ địch bị hạ gục."
+    },
+    "DA_18_AllFours": {
+      "name": "Chỉ 4 Vàng",
+      "desc": "Làm mới cửa hàng với toàn tướng 4 vàng."
+    },
+    "DA_RedBuff": {
+      "name": "Bùa Đỏ",
+      "desc": ""
+    },
+    "DA_Evenshroud": {
+      "name": "Giáp Vai Nguyệt Thần",
+      "desc": ""
+    },
+    "DA_DragonsClawRadiant": {
+      "name": "Vuốt Rồng Ánh Sáng",
+      "desc": ""
+    },
+    "DA_SpearOfShojin": {
+      "name": "Ngọn Giáo Shojin",
+      "desc": ""
+    },
+    "DA_Component_NegatronCloak": {
+      "name": "Áo Choàng Bạc",
+      "desc": ""
+    },
+    "DA_Quicksilver": {
+      "name": "Áo Choàng Thủy Ngân",
+      "desc": ""
+    },
+    "DA_Artifact_WitsEnd": {
+      "name": "Đao Tím",
+      "desc": ""
+    },
+    "DA_VoidStaffRadiant": {
+      "name": "Trượng Hư Vô Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Artifact_Mittens": {
+      "name": "Găng Đấu Sĩ",
+      "desc": ""
+    },
+    "DA_Artifact_TitanicHydra": {
+      "name": "Rìu Đại Mãng Xà",
+      "desc": ""
+    },
+    "DA_CrownguardRadiant": {
+      "name": "Vương Miện Hoàng Gia Ánh Sáng",
+      "desc": ""
+    },
+    "DA_18_EmblemVanguard": {
+      "name": "Ấn Tiên Phong",
+      "desc": ""
+    },
+    "DA_Artifact_ZhonyasParadox": {
+      "name": "Lưỡng Cực Zhonya",
+      "desc": ""
+    },
+    "DA_GargoyleStoneplate": {
+      "name": "Thú Tượng Thạch Giáp",
+      "desc": ""
+    },
+    "DA_18_EmblemBlackthorn": {
+      "name": "Ấn Gai Đen",
+      "desc": ""
+    },
+    "DA_SpiritVisage_Radiant": {
+      "name": "Giáp Tâm Linh Ánh Sáng",
+      "desc": ""
+    },
+    "DA_KrakensFury_Radiant": {
+      "name": "Thịnh Nộ Thủy Quái Ánh Sáng",
+      "desc": ""
+    },
+    "DA_JeweledGauntletRadiant": {
+      "name": "Găng Bảo Thạch Ánh Sáng",
+      "desc": ""
+    },
+    "DA_NashorsTooth": {
+      "name": "Nanh Nashor",
+      "desc": ""
+    },
+    "DA_Artifact_VoidGauntlet": {
+      "name": "Găng Hư Không",
+      "desc": ""
+    },
+    "DA_LastWhisperRadiant": {
+      "name": "Cung Xanh Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Component_TearOfTheGoddess": {
+      "name": "Nước Mắt Nữ Thần",
+      "desc": ""
+    },
+    "DA_InfinityEdgeRadiant": {
+      "name": "Vô Cực Kiếm Ánh Sáng",
+      "desc": ""
+    },
+    "DA_AttackBooster18": {
+      "name": "Gia Tăng Sức Mạnh Công Kích",
+      "desc": ""
+    },
+    "DA_18_EmblemHunter": {
+      "name": "Ấn Thợ Săn",
+      "desc": ""
+    },
+    "DA_Artifact_LightshieldCrest": {
+      "name": "Huy Hiệu Thánh Khiên",
+      "desc": ""
+    },
+    "DA_ThiefsGloves": {
+      "name": "Găng Đạo Tặc",
+      "desc": ""
+    },
+    "DA_InfinityEdge": {
+      "name": "Vô Cực Kiếm",
+      "desc": ""
+    },
+    "DA_Artifact_LudensTempest": {
+      "name": "Bão Tố Luden",
+      "desc": ""
+    },
+    "DA_Consumable_ItemRemover": {
+      "name": "Nam Châm Ma Thuật",
+      "desc": ""
+    },
+    "DA_Morellonomicon": {
+      "name": "Quỷ Thư Morello",
+      "desc": ""
+    },
+    "DA_18_EmblemPrimal": {
+      "name": "Ấn Nguyên Sinh",
+      "desc": ""
+    },
+    "DA_ProtectorsVow": {
+      "name": "Lời Thề Hộ Vệ",
+      "desc": ""
+    },
+    "DA_Artifact_RapidFireCannon": {
+      "name": "Đại Bác Liên Thanh",
+      "desc": ""
+    },
+    "DA_ProtectorsVowRadiant": {
+      "name": "Lời Thề Hộ Vệ Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Component_BFSword": {
+      "name": "Kiếm B.F.",
+      "desc": ""
+    },
+    "DA_WarmogsArmor": {
+      "name": "Giáp Máu Warmog",
+      "desc": ""
+    },
+    "DA_18_EmblemSlayer": {
+      "name": "Ấn Tàn Phá",
+      "desc": ""
+    },
+    "DA_MorellonomiconRadiant": {
+      "name": "Quỷ Thư Morello Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Artifact_HellfireHatchet": {
+      "name": "Rìu Hỏa Ngục",
+      "desc": ""
+    },
+    "DA_BlastPotion18": {
+      "name": "Lọ Thuốc Phát Nổ",
+      "desc": ""
+    },
+    "DA_HealthPotion18_Radiant": {
+      "name": "Bình Máu Ánh Sáng",
+      "desc": ""
+    },
+    "DA_BlastPotion18_Radiant": {
+      "name": "Lọ Thuốc Phát Nổ Ánh Sáng",
+      "desc": ""
+    },
+    "DA_SteraksGageRadiant": {
+      "name": "Móng Vuốt Sterak Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Artifact_LichBane": {
+      "name": "Kiếm Tai Ương",
+      "desc": ""
+    },
+    "DA_VoidStaff": {
+      "name": "Trượng Hư Vô",
+      "desc": ""
+    },
+    "DA_Artifact_ForbiddenIdol": {
+      "name": "Dị Vật Tai Ương",
+      "desc": ""
+    },
+    "DA_18_EmblemDefender": {
+      "name": "Ấn Vệ Quân",
+      "desc": ""
+    },
+    "DA_DragonsClaw": {
+      "name": "Vuốt Rồng",
+      "desc": ""
+    },
+    "DA_18_EmblemFloraFatalis": {
+      "name": "Ấn Thực Vật",
+      "desc": ""
+    },
+    "DA_18_EmblemFae": {
+      "name": "Ấn Tiên Linh",
+      "desc": ""
+    },
+    "DA_SpiritVisage": {
+      "name": "Giáp Tâm Linh",
+      "desc": ""
+    },
+    "DA_Artifact_Fishbones": {
+      "name": "Pháo Xương Cá",
+      "desc": ""
+    },
+    "DA_EdgeOfNight": {
+      "name": "Áo Choàng Bóng Tối",
+      "desc": ""
+    },
+    "DA_Artifact_AegisOfDusk": {
+      "name": "Khiên Hoàng Hôn",
+      "desc": ""
+    },
+    "DA_Artifact_GoldCollector": {
+      "name": "Đại Bác Hải Tặc",
+      "desc": ""
+    },
+    "DA_Component_RecurveBow": {
+      "name": "Cung Gỗ",
+      "desc": ""
+    },
+    "DA_ManaPotion18_Radiant": {
+      "name": "Bình Năng Lượng Ánh Sáng",
+      "desc": ""
+    },
+    "DA_18_EmblemSprykin": {
+      "name": "Ấn Tinh Nghịch",
+      "desc": ""
+    },
+    "DA_TitansResolve": {
+      "name": "Quyền Năng Khổng Lồ",
+      "desc": ""
+    },
+    "DA_Artifact_StatikkShiv": {
+      "name": "Dao Điện Statikk",
+      "desc": ""
+    },
+    "DA_SpeedBooster18": {
+      "name": "Gia Tăng Tốc Độ Đánh",
+      "desc": ""
+    },
+    "DA_Artifact_HorizonFocus": {
+      "name": "Kính Nhắm Ma Pháp",
+      "desc": ""
+    },
+    "DA_18_EmblemInvoker": {
+      "name": "Ấn Thuật Sĩ",
+      "desc": ""
+    },
+    "DA_EdgeOfNightRadiant": {
+      "name": "Áo Choàng Bóng Tối Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Component_GiantsBelt": {
+      "name": "Đai Khổng Lồ",
+      "desc": ""
+    },
+    "DA_Artifact_Dawncore": {
+      "name": "Lõi Bình Minh",
+      "desc": ""
+    },
+    "DA_Artifact_TheIndomitable": {
+      "name": "Bất Khuất",
+      "desc": ""
+    },
+    "DA_RabadonsDeathcap_Radiant": {
+      "name": "Mũ Phù Thủy Rabadon Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Consumable_LesserChampionDuplicator": {
+      "name": "Máy Sao Chép Tướng Cỡ Nhỏ",
+      "desc": ""
+    },
+    "DA_EvenshroudRadiant": {
+      "name": "Giáp Vai Nguyệt Thần Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Artifact_AegisOfDawn": {
+      "name": "Khiên Hừng Đông",
+      "desc": ""
+    },
+    "DA_Artifact_SeekersArmguard": {
+      "name": "Giáp Tay Seeker",
+      "desc": ""
+    },
+    "DA_18_EmblemBrawler": {
+      "name": "Ấn Đấu Sĩ",
+      "desc": ""
+    },
+    "DA_Artifact_EternalPact": {
+      "name": "Khế Ước Vĩnh Hằng",
+      "desc": ""
+    },
+    "DA_BloodthirsterRadiant": {
+      "name": "Huyết Kiếm Ánh Sáng",
+      "desc": ""
+    },
+    "DA_HealthBooster18": {
+      "name": "Gia Tăng Máu",
+      "desc": ""
+    },
+    "DA_Artifact_SilvermereDawn": {
+      "name": "Chùy Bạch Ngân",
+      "desc": ""
+    },
+    "DA_Component_SparringGloves": {
+      "name": "Găng Đấu Tập",
+      "desc": ""
+    },
+    "DA_Component_NeedlesslyLargeRod": {
+      "name": "Gậy Quá Khổ",
+      "desc": ""
+    },
+    "DA_ArchangelsStaffRadiant": {
+      "name": "Quyền Trượng Thiên Thần Ánh Sáng",
+      "desc": ""
+    },
+    "DA_DeathbladeRadiant": {
+      "name": "Kiếm Tử Thần Ánh Sáng",
+      "desc": ""
+    },
+    "DA_TacticiansCape": {
+      "name": "Áo Choàng Chiến Thuật",
+      "desc": ""
+    },
+    "DA_HextechGunblade": {
+      "name": "Kiếm Súng Hextech",
+      "desc": ""
+    },
+    "DA_Artifact_Hullcrusher": {
+      "name": "Thần Búa Tiến Công",
+      "desc": ""
+    },
+    "DA_SpearOfShojinRadiant": {
+      "name": "Ngọn Giáo Shojin Ánh Sáng",
+      "desc": ""
+    },
+    "DA_HandOfJustice": {
+      "name": "Bàn Tay Công Lý",
+      "desc": ""
+    },
+    "DA_Artifact_Manazane": {
+      "name": "Thánh Kiếm Manazane",
+      "desc": ""
+    },
+    "DA_RadiantLuckyItemChest": {
+      "name": "Rương Trang Bị Ánh Sáng May Mắn",
+      "desc": ""
+    },
+    "DA_AbilityBooster18": {
+      "name": "Gia Tăng Sức Mạnh Phép Thuật",
+      "desc": ""
+    },
+    "DA_GiantSlayer_Radiant": {
+      "name": "Diệt Khổng Lồ Ánh Sáng",
+      "desc": ""
+    },
+    "DA_HealthPotion18": {
+      "name": "Bình Máu",
+      "desc": ""
+    },
+    "DA_Artifact_GamblersBlade": {
+      "name": "Kiếm Của Tay Bạc",
+      "desc": ""
+    },
+    "DA_TitansResolve_Radiant": {
+      "name": "Quyền Năng Khổng Lồ Ánh Sáng",
+      "desc": ""
+    },
+    "DA_18_EmblemExecutioner": {
+      "name": "Ấn Đao Phủ",
+      "desc": ""
+    },
+    "DA_StrikersFlail": {
+      "name": "Chùy Đoản Côn",
+      "desc": ""
+    },
+    "DA_HandOfJusticeRadiant": {
+      "name": "Bàn Tay Công Lý Ánh Sáng",
+      "desc": ""
+    },
+    "DA_18_EmblemLunar": {
+      "name": "Ấn Mặt Trăng",
+      "desc": ""
+    },
+    "DA_SteadfastHeart": {
+      "name": "Trái Tim Kiên Định",
+      "desc": ""
+    },
+    "DA_MasterworkUpgrade": {
+      "name": "Nâng Cấp Tuyệt Phẩm",
+      "desc": ""
+    },
+    "DA_GuinsoosRageblade": {
+      "name": "Cuồng Đao Guinsoo",
+      "desc": ""
+    },
+    "DA_LuckyItemChest": {
+      "name": "Rương Trang Bị May Mắn",
+      "desc": ""
+    },
+    "DA_Artifact_InfinityForce": {
+      "name": "Tam Luyện Kiếm",
+      "desc": ""
+    },
+    "DA_GuinsoosRagebladeRadiant": {
+      "name": "Cuồng Đao Guinsoo Ánh Sáng",
+      "desc": ""
+    },
+    "DA_18_EmblemRapidfire": {
+      "name": "Ấn Liên Kích",
+      "desc": ""
+    },
+    "DA_HextechGunbladeRadiant": {
+      "name": "Kiếm Súng Hextech Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Artifact_NavoriFlickerblade": {
+      "name": "Đao Chớp",
+      "desc": ""
+    },
+    "DA_IonicSparkRadiant": {
+      "name": "Nỏ Sét Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Bloodthirster": {
+      "name": "Huyết Kiếm",
+      "desc": ""
+    },
+    "DA_StrikersFlailRadiant": {
+      "name": "Chùy Đoản Côn Ánh Sáng",
+      "desc": ""
+    },
+    "DA_IonicSpark": {
+      "name": "Nỏ Sét",
+      "desc": ""
+    },
+    "DA_RabadonsDeathcap": {
+      "name": "Mũ Phù Thủy Rabadon",
+      "desc": ""
+    },
+    "DA_18_EmblemElderwood": {
+      "name": "Ấn Thần Rừng",
+      "desc": ""
+    },
+    "DA_TacticiansCrown": {
+      "name": "Vương Miện Chiến Thuật",
+      "desc": ""
+    },
+    "DA_Artifact_MogulsMail": {
+      "name": "Giáp Đại Hãn",
+      "desc": ""
+    },
+    "DA_BlueBuffRadiant": {
+      "name": "Bùa Xanh Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Consumable_ChampionDuplicator": {
+      "name": "Máy Sao Chép Tướng",
+      "desc": ""
+    },
+    "DA_LastWhisper": {
+      "name": "Cung Xanh",
+      "desc": ""
+    },
+    "DA_ThiefsGlovesRadiant": {
+      "name": "Găng Đạo Tặc Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Crownguard": {
+      "name": "Vương Miện Hoàng Gia",
+      "desc": ""
+    },
+    "DA_18_EmblemSpellweaver": {
+      "name": "Ấn Thuật Sư",
+      "desc": ""
+    },
+    "DA_Reforger": {
+      "name": "Búa Rèn",
+      "desc": ""
+    },
+    "DA_QuicksilverRadiant": {
+      "name": "Áo Choàng Thủy Ngân Ánh Sáng",
+      "desc": ""
+    },
+    "DA_SunfireCape_Radiant": {
+      "name": "Áo Choàng Lửa Ánh Sáng",
+      "desc": ""
+    },
+    "DA_RedBuffRadiant": {
+      "name": "Bùa Đỏ Ánh Sáng",
+      "desc": ""
+    },
+    "DA_18_EmblemCoven": {
+      "name": "Ấn Tiên Hắc Ám",
+      "desc": ""
+    },
+    "DA_Component_Spatula": {
+      "name": "Xẻng Vàng",
+      "desc": ""
+    },
+    "DA_ManaRegenBooster18": {
+      "name": "Cường Hóa Hồi Năng Lượng",
+      "desc": ""
+    },
+    "DA_SteraksGage": {
+      "name": "Móng Vuốt Sterak",
+      "desc": ""
+    },
+    "DA_AdaptiveHelm_Radiant": {
+      "name": "Mũ Thích Nghi Ánh Sáng",
+      "desc": ""
+    },
+    "DA_SunfireCape": {
+      "name": "Áo Choàng Lửa",
+      "desc": ""
+    },
+    "DA_ArchangelsStaff": {
+      "name": "Quyền Trượng Thiên Thần",
+      "desc": ""
+    },
+    "DA_AdaptiveHelm": {
+      "name": "Mũ Thích Nghi",
+      "desc": ""
+    },
+    "DA_ArmorMRBooster18": {
+      "name": "Gia Tăng Giáp và Kháng Phép",
+      "desc": ""
+    },
+    "DA_BrambleVest": {
+      "name": "Áo Choàng Gai",
+      "desc": ""
+    },
+    "DA_Consumable_GoldenItemRemover": {
+      "name": "Nam Châm Hoàng Kim",
+      "desc": ""
+    },
+    "DA_Artifact_BlightingJewel": {
+      "name": "Đá Hắc Hóa",
+      "desc": ""
+    },
+    "DA_WarmogsArmorRadiant": {
+      "name": "Giáp Máu Warmog Ánh Sáng",
+      "desc": ""
+    },
+    "DA_JeweledGauntlet": {
+      "name": "Găng Bảo Thạch",
+      "desc": ""
+    },
+    "DA_ManaPotion18": {
+      "name": "Bình Năng Lượng",
+      "desc": ""
+    },
+    "DA_SteadfastHeartRadiant": {
+      "name": "Trái Tim Kiên Định Ánh Sáng",
+      "desc": ""
+    },
+    "DA_Component_ChainVest": {
+      "name": "Giáp Lưới",
+      "desc": ""
+    },
+    "DA_TacticiansShield": {
+      "name": "Lá Chắn Chiến Thuật",
+      "desc": ""
+    },
+    "DA_Component_FryingPan": {
+      "name": "Chảo Vàng",
+      "desc": ""
+    },
+    "DA_BrambleVestRadiant": {
+      "name": "Áo Choàng Gai Ánh Sáng",
+      "desc": ""
+    },
+    "DA_BlueBuff": {
+      "name": "Bùa Xanh",
+      "desc": ""
+    },
+    "DA_KrakensFury": {
+      "name": "Thịnh Nộ Thủy Quái",
+      "desc": ""
+    },
+    "DA_GargoyleStoneplate_Radiant": {
+      "name": "Thú Tượng Thạch Giáp Ánh Sáng",
+      "desc": ""
+    },
+    "DA_GiantSlayer": {
+      "name": "Diệt Khổng Lồ",
+      "desc": ""
+    },
+    "DA_Item_Artifact_TalismanOfAscension": {
+      "name": "Bùa Thăng Hoa",
+      "desc": ""
+    },
+    "DA_18_EmblemBlossom": {
+      "name": "Ấn Hoa Linh",
+      "desc": ""
+    },
+    "DA_Deathblade": {
+      "name": "Kiếm Tử Thần",
+      "desc": ""
+    },
+    "DA_18_EmblemInferno": {
+      "name": "Ấn Hỏa Ngục",
+      "desc": ""
+    },
+    "DA_NashorsToothRadiant": {
+      "name": "Nanh Nashor Ánh Sáng",
+      "desc": ""
+    },
+    "DA_18_EmblemJuggernaut": {
+      "name": "Ấn Dũng Sĩ",
+      "desc": ""
+    }
+  },
+  "champions": {
+    "DA_Gromp18_AP": {
+      "name": "Cóc Thành Tinh"
+    },
+    "DA_Murkwolf18": {
+      "name": "Sói Hắc Ám"
+    },
+    "DA_18_Sentry": {
+      "name": "Sỏi"
+    },
+    "DA_Cinderling18": {
+      "name": "Mầm Non"
+    },
+    "DA_Scuttlecrab18": {
+      "name": "Cua Kỳ Cục"
+    },
+    "DA_Krug18": {
+      "name": "Quái Đá Krug"
+    },
+    "DA_Sentinel18": {
+      "name": "Người Đá"
+    },
+    "DA_Brambleback18": {
+      "name": "Bụi Gai Đỏ"
+    },
+    "DA_18_Xayah": {
+      "name": "Xayah"
+    },
+    "DA_18_Ornn": {
+      "name": "Ornn"
+    },
+    "DA_Nidalee18_AP": {
+      "name": "Nidalee"
+    },
+    "DA_18_Hecarim": {
+      "name": "Hecarim"
+    },
+    "DA_18_Ezreal": {
+      "name": "Ezreal"
+    },
+    "DA_18_Azir": {
+      "name": "Azir"
+    },
+    "DA_18_RekSai": {
+      "name": "Rek'Sai"
+    },
+    "DA_18_Veigar": {
+      "name": "Veigar"
+    },
+    "DA_18_Maokai": {
+      "name": "Maokai"
+    },
+    "DA_18_Malphite": {
+      "name": "Malphite"
+    },
+    "DA_18_Yorick": {
+      "name": "Yorick"
+    },
+    "DA_18_Yunara": {
+      "name": "Yunara"
+    },
+    "DA_18_Sett": {
+      "name": "Sett"
+    },
+    "DA_18_Ahri": {
+      "name": "Ahri"
+    },
+    "DA_18_Ashe": {
+      "name": "Ashe"
+    },
+    "DA_18_Elise": {
+      "name": "Elise"
+    },
+    "DA_18_Caitlyn": {
+      "name": "Caitlyn"
+    },
+    "DA_18_Cassiopeia": {
+      "name": "Cassiopeia"
+    },
+    "DA_18_Morgana": {
+      "name": "Morgana"
+    },
+    "DA_18_Rakan": {
+      "name": "Rakan"
+    },
+    "DA_18_Lillia": {
+      "name": "Lillia"
+    },
+    "DA_18_Kobuko": {
+      "name": "Kobuko"
+    },
+    "DA_18_Teemo": {
+      "name": "Teemo"
+    },
+    "DA_18_Rammus": {
+      "name": "Rammus"
+    },
+    "DA_18_GnarSmall": {
+      "name": "Gnar"
+    },
+    "DA_18_Tristana": {
+      "name": "Tristana"
+    },
+    "DA_18_Sivir": {
+      "name": "Sivir"
+    },
+    "DA_Vi18": {
+      "name": "Vi"
+    },
+    "DA_18_Akali_AD": {
+      "name": "Akali"
+    },
+    "DA_18_Varus": {
+      "name": "Varus"
+    },
+    "DA_Amumu18": {
+      "name": "Amumu"
+    },
+    "DA_18_Kennen": {
+      "name": "Kennen"
+    },
+    "DA_18_Aphelios": {
+      "name": "Aphelios"
+    },
+    "DA_18_Diana": {
+      "name": "Diana"
+    },
+    "DA_18_Alune": {
+      "name": "Alune"
+    },
+    "DA_18_Leona": {
+      "name": "Leona"
+    },
+    "DA_18_Kayle": {
+      "name": "Kayle"
+    },
+    "DA_18_Sejuani": {
+      "name": "Sejuani"
+    },
+    "DA_18_KhaZix": {
+      "name": "Kha'Zix"
+    },
+    "DA_18_Rengar": {
+      "name": "Rengar"
+    },
+    "DA_KogMaw18_AD": {
+      "name": "Kog'Maw"
+    },
+    "DA_18_Zyra": {
+      "name": "Zyra"
+    },
+    "DA_Fiddlesticks18": {
+      "name": "Fiddlesticks"
+    },
+    "DA_18_Soraka": {
+      "name": "Soraka"
+    },
+    "DA_Taric18": {
+      "name": "Taric"
+    },
+    "DA_18_Ivern": {
+      "name": "Ivern"
+    },
+    "DA_Lux18_Base": {
+      "name": "Lux"
+    },
+    "DA_18_Alistar": {
+      "name": "Alistar"
+    },
+    "DA_Draven18": {
+      "name": "Draven"
+    },
+    "DA_18_ElderDragon": {
+      "name": "Rồng Ngàn Tuổi"
+    },
+    "DA_Karma18": {
+      "name": "Karma"
+    },
+    "DA_18_LeBlanc": {
+      "name": "LeBlanc"
+    },
+    "DA_18_MasterYi_AD": {
+      "name": "Master Yi"
+    },
+    "DA_18_Shen": {
+      "name": "Shen"
+    },
+    "DA_18_Warwick": {
+      "name": "Warwick"
+    },
+    "DA_18_Camille": {
+      "name": "Camille"
+    },
+    "DA_Lux18_Blackthorn": {
+      "name": "Lux (Gai Đen)"
+    },
+    "DA_Lux18_Blossom": {
+      "name": "Lux (Hoa Linh)"
+    },
+    "DA_18_Lux_Coven": {
+      "name": "Lux (Tiên Hắc Ám)"
+    },
+    "DA_18_Lux_Elderwood": {
+      "name": "Lux (Thần Rừng)"
+    },
+    "DA_18_Lux_Fae": {
+      "name": "Lux (Tiên Linh)"
+    },
+    "DA_18_Lux_Inferno": {
+      "name": "Lux (Hỏa Ngục)"
+    },
+    "DA_18_Lux_Moonbeam": {
+      "name": "Lux (Mặt Trăng)"
+    },
+    "DA_18_Lux_Primal": {
+      "name": "Lux (Nguyên Sinh)"
+    },
+    "DA_18_Lux_Sunbeam": {
+      "name": "Lux (Mặt Trời)"
+    },
+    "DA_CrimsonRaptor18": {
+      "name": "Chim Mẹ"
+    }
+  },
+  "traits": {
+    "DA_18_Elderwood": {
+      "name": "Thần Rừng",
+      "desc": "Nhận các cây Thần Rừng có thể đặt được.\n({MinUnits}) 1 Cây Vỏ Đá và 1 Hoa Sinh Mệnh\n\n({MinUnits}) Cây Vỏ Đá thứ hai & các Cây Vỏ Đá được tăng {StonebarkTreeBonusHealth} Máu\n\n({MinUnits}) và Hộ Vệ Rừng\n\n({MinUnits}) Các cây trở thành 2 sao\n\n({MinUnits}) Các cây trở thành 3 sao và khu rừng được hình thành"
+    },
+    "DA_18_LuxUniqueTrait": {
+      "name": "Thế Thần",
+      "desc": "Sở hữu một tướng Thế Thần sẽ biến mọi tướng Thế Thần khác trong cửa hàng của bạn về Tộc/Hệ của tướng Thế Thần đó.\n\nTộc/Hệ được chọn của tướng Thế Thần sẽ được tính gấp đôi cho các mốc thưởng Tộc/Hệ."
+    },
+    "DA_18_Slayer": {
+      "name": "Tàn Phá",
+      "desc": "Tướng Tàn Phá nhận {Omnivamp}% Hút Máu Toàn Phần. Ngoài ra, tướng Tàn Phá sẽ gây thêm sát thương, tăng gấp đôi khi tấn công kẻ địch còn dưới {EnemyHealthThreshold}% Máu.\n({MinUnits}) {BonusDamagePercentBase}% Sát Thương Cộng Thêm\n\n({MinUnits}) {BonusDamagePercentBase}% Sát Thương Cộng Thêm\n\n({MinUnits}) {BonusDamagePercentBase}% Sát Thương Cộng Thêm"
+    },
+    "DA_DravenUniqueTrait18": {
+      "name": "Săn Thưởng",
+      "desc": "Chọn một nhiệm vụ. Draven mạnh nhất của bạn có thể hoàn thành nhiệm vụ săn thưởng để nhận phần thưởng tương ứng. Sau khi hoàn thành một nhiệm vụ săn thưởng, hãy chọn nhiệm vụ tiếp theo."
+    },
+    "DA_18_Solar": {
+      "name": "Mặt Trời",
+      "desc": "({MinUnits}) Tướng của bạn nhận lá chắn bằng {ShieldRatio}% Máu tối đa và gây {BonusMagicDamage}% sát thương phép cộng thêm. Nhận thêm hiệu ứng bổ sung với mỗi tướng 3 sao độc nhất:\n\n1: Tăng lá chắn và sát thương phép thêm {PercentIncreasePer3Star}% với mỗi tướng 3 sao.\n{NumThreeStarThreshold1}: {Threshold1AttackSpeed}%  và {Threshold1ArmorMagicResist}\n{NumThreeStarThreshold2}: Chuyển đổi {Threshold2TrueDamageConversion}% sát thương phép cộng thêm thành sát thương chuẩn.\n{NumThreeStarThreshold3}: Mỗi {Threshold3StarUpPeriod} giây giao tranh, 1 tướng 3 sao thăng hoa lên 4 sao."
+    },
+    "DA_18_Sprykin": {
+      "name": "Tinh Nghịch",
+      "desc": "Nhận Lông Xù Khổng Lồ. Thả một tướng Tinh Nghịch lên LXKL để chọn làm Kỵ Sĩ.\n({MinUnits}) Kỵ Sĩ nhận được\n{HealthIncrease}%  và {AttackSpeedIncrease}%\n\n({MinUnits}) {HealthIncrease}%  {AttackSpeedIncrease}% , và {TeamwideRatio}% Kỹ năng của LXKL sẽ áp dụng cho các tướng Tinh Nghịch của bạn.\n\n({MinUnits}) {HealthIncrease}%  {AttackSpeedIncrease}% , và {TeamwideRatio}% Kỹ năng của LXKL sẽ áp dụng cho các tướng Tinh Nghịch của bạn."
+    },
+    "DA_18_Adaptor": {
+      "name": "Thích Ứng",
+      "desc": "Thiên Phú: Kỹ năng của tướng Thích Ứng sẽ thay đổi tùy theo việc Sức Mạnh Công Kích hay Sức Mạnh Phép Thuật của họ cao hơn.\n\nTướng Thích Ứng nhận thêm Sức Mạnh Phép Thuật hoặc Sức Mạnh Công Kích, tùy vào chỉ số nào cao hơn.\n({MinUnits}) {ADAPGain}% HOẶC\n\n({MinUnits}) {ADAPGain}% HOẶC\n\n({MinUnits}) {ADAPGain}% HOẶC"
+    },
+    "DA_18_Coven": {
+      "name": "Tiên Hắc Ám",
+      "desc": "Nhận Tinh Hoa khi hạ gục tướng, và nhận thêm khi thua giao tranh người chơi.\n\nBắt đầu từ mốc {EssenceForRitualTooltip} Tinh Hoa, bạn có thể chọn chuyển đổi Tinh Hoa thành phần thưởng hoặc tiếp tục tích lũy. Mỗi phần thưởng yêu cầu lượng Tinh Hoa tăng dần.\n({MinUnits}) {EssencePerDeath} Tinh Hoa mỗi mạng hạ gục, {EssencePerLoss} Tinh Hoa mỗi lần thua\n\n({MinUnits}) {EssencePerDeath} mỗi mạng hạ gục, {EssencePerLoss} mỗi lần thua\n\n({MinUnits}) {EssencePerDeath} mỗi mạng hạ gục, {EssencePerLoss} mỗi lần thua\n\n({MinUnits}) {EssencePerDeath} mỗi mạng hạ gục, {EssencePerLoss} mỗi lần thua"
+    },
+    "DA_18_Eclipse": {
+      "name": "Thiên Thực",
+      "desc": "Sau {DelaySeconds} giây giao tranh, tướng Thiên Thực sẽ hạ gục kẻ địch có lượng Máu thấp nhất, lặp lại sau mỗi {EclipseBeamPeriod} giây."
+    },
+    "DA_18_Hunter": {
+      "name": "Thợ Săn",
+      "desc": "Tướng Thợ Săn nhận Sức Mạnh Công Kích. Nếu tướng Thợ Săn không đổi mục tiêu trong {HunterDuration} giây, họ nhận thêm {DamageAmp}% Khuếch Đại Sát Thương.\n({MinUnits}) {HunterAD}%\n\n({MinUnits}) {HunterAD}%\n\n({MinUnits}) {HunterAD}%\n\n({MinUnits}) {HunterAD}%"
+    },
+    "DA_18_Maokai_UniqueTrait": {
+      "name": "Cổ Thụ",
+      "desc": "Mỗi khi một kẻ địch trong {UniqueTraitHexRange} ô bị hạ gục, tướng Cổ Thụ mạnh nhất của bạn nhận {UniqueTraitHealthPerStack} Máu tối đa vĩnh viễn.\n\nHiện tại: 0"
+    },
+    "DA_18_Battlemage": {
+      "name": "Cự Thạch",
+      "desc": "Tướng Cự Thạch tăng {Resists} Giáp và Kháng Phép với mỗi kẻ địch đang nhắm vào họ."
+    },
+    "DA_Primal18": {
+      "name": "Nguyên Sinh",
+      "desc": "Chọn 1 trong 4 Phước Lành Nguyên Sinh.\n({MinUnits})\n\n({MinUnits})"
+    },
+    "DA_18_Greenfather": {
+      "name": "Thụ Thần",
+      "desc": "Nhận {SeedsPerCast} hạt giống khi Ivern mạnh nhất của bạn thi triển, cộng thêm {CombatStartSeeds} mỗi giao tranh. Ivern dùng {SeedsToGrowHex} hạt giống để nuôi lớn 1 ô trên bàn đấu của bạn, trao hiệu ứng cộng thêm cho đơn vị đứng trên ô đó.\n\nHạt Giống: 0 / {SeedsToGrowHex}\n\nHệ Sinh Thái Hiện Tại:"
+    },
+    "DA_18_Invoker": {
+      "name": "Thuật Sĩ",
+      "desc": "Đội của bạn được tăng Hồi Năng Lượng, tướng Thuật Sĩ nhận được nhiều hơn.\n({MinUnits}) {TeamManaRegen}  | {InvokerManaBonus}\n\n({MinUnits}) {TeamManaRegen}  | {InvokerManaBonus}\n\n({MinUnits}) {TeamManaRegen}  | {InvokerManaBonus}\n\n({MinUnits}) {TeamManaRegen}  | {InvokerManaBonus}"
+    },
+    "DA_18_Rapidfire": {
+      "name": "Liên Kích",
+      "desc": "Đội của bạn nhận {TeamAS}% Tốc Độ Đánh. Các tướng Liên Kích nhận thêm sau mỗi đòn đánh, tối đa {MaxStacks} cộng dồn.\n({MinUnits}) +{ASPerAttack}%  mỗi Đòn Đánh\n\n({MinUnits}) +{ASPerAttack}%  mỗi Đòn Đánh\n\n({MinUnits}) +{ASPerAttack}%  mỗi Đòn Đánh\n\n({MinUnits}) +{ASPerAttack}%  mỗi Đòn Đánh"
+    },
+    "DA_Juggernaut18": {
+      "name": "Dũng Sĩ",
+      "desc": "Đội của bạn nhận Chống Chịu. Tướng Dũng Sĩ nhận được nhiều hơn.\n({MinUnits}) {TeamDurability}%  hoặc {JuggernautDurability}%\n\n({MinUnits}) {TeamDurability}%  hoặc {JuggernautDurability}%\n\n({MinUnits}) {TeamDurability}%  hoặc {JuggernautDurability}%"
+    },
+    "DA_18_Inferno": {
+      "name": "Hỏa Ngục",
+      "desc": "Sát thương từ tướng Hỏa Ngục sẽ gây Thiêu Đốt và Vết Thương Sâu lên kẻ địch trong {Duration} giây. Thiêu Đốt từ Hỏa Ngục cộng dồn với các hiệu ứng Thiêu Đốt khác.\n({MinUnits}) Thiêu Đốt {HPBurnPerSecond}%, Vết Thương Sâu {WoundPercent}%\n\n({MinUnits}) Sau giao tranh, {LuckySlotCount} ô cửa hàng không chứa tướng Hỏa Ngục của bạn sẽ bốc cháy, hiện ra tướng cao hơn 1 bậc\n\n({MinUnits}) {LuckySlotCount} ô cửa hàng Bốc Cháy, Thiêu Đốt {HPBurnPerSecond}%\n\n({MinUnits}) {LuckySlotCount} ô cửa hàng Bốc Cháy, Thiêu Đốt {HPBurnPerSecond}%"
+    },
+    "DA_AluneUniqueTrait18": {
+      "name": "Hòa Hợp",
+      "desc": "Alune mạnh nhất của bạn sẽ chuyển sang một pha trăng mới sau mỗi lần thi triển. Khi mặt trăng ở pha bán nguyệt hoặc khuyết hơn, đội của bạn nhận {Durability}% Chống Chịu. Khi ở những pha còn lại, đội của bạn nhận {DamageAmp}% Khuếch Đại Sát Thương."
+    },
+    "DA_18_Rival": {
+      "name": "Khắc Tinh",
+      "desc": "({MinUnits}) Chỉ kích hoạt khi triển khai 1 tướng Khắc Tinh.\n\nTướng Khắc Tinh thu thập điểm tham gia hạ gục, nhận 3 điểm nếu tham gia hạ gục một tướng Khắc Tinh khác.\n\n({MinUnits}) Tướng Khắc Tinh thu thập điểm tham gia hạ gục, nhận 3 điểm nếu tham gia hạ gục một tướng Khắc Tinh khác.\n\nTham gia hạ gục sẽ tiến hóa Kha'Zix, vĩnh viễn ban cho hắn lựa chọn tùy ý: Đao Phủ, Liên Kích, Tàn Phá hoặc Thuật Sư.\n\nRengar trao {RengarGold}/{RengarGold_2}/{RengarGold_3} vàng mỗi {RengarStackReq} lần tham gia hạ gục. Sau {RengarADStackReq} lần tham gia hạ gục, đội của bạn nhận {RengarThresholdAD}% Sức Mạnh Công Kích + {RengarADPerStack}%  cho mỗi lần tham gia hạ gục tiếp theo.\n\nSố Lần Kha'Zix Tham Gia Hạ Gục: 0 / 0\nSố Lần Rengar Tham Gia Hạ Gục: 0\nVàng Kiếm Được: 0\n\n({MinUnits}) tướng Khắc Tinh được triển khai cùng nhau, và kỹ năng của họ sẽ trao hiệu ứng thưởng cho nhau."
+    },
+    "DA_18_Vanguard": {
+      "name": "Tiên Phong",
+      "desc": "Khi Bắt Đầu Giao Rranh và khi xuống dưới {HealthThreshold}% Máu, tướng Tiên Phong nhận Lá Chắn theo Máu tối đa trong {ShieldDuration} giây.\n({MinUnits}) {MaxHealthShield}% Máu tối đa\n\n({MinUnits}) {MaxHealthShield}% Máu tối đa\n\n({MinUnits}) {MaxHealthShield}% Máu tối đa. Tăng {DurabilityIncrease}% Chống Chịu khi có Lá Chắn."
+    },
+    "DA_18_Brawler": {
+      "name": "Đấu Sĩ",
+      "desc": "Đội của bạn nhận thêm {BrawlerTeamHealth} Máu tối đa. Tướng Đấu Sĩ nhận được nhiều hơn.\n({MinUnits}) {BrawlerHealthPercent}%\n\n({MinUnits}) {BrawlerHealthPercent}%\n\n({MinUnits}) {BrawlerHealthPercent}%"
+    },
+    "DA_18_Blackthorn": {
+      "name": "Gai Đen",
+      "desc": "Đồng minh trên ô Gai Đen sẽ bị hiến tế trước khi giao tranh, tăng Máu cho các tướng của bạn.\n\nTướng Gai Đen nhận thêm chỉ số dựa trên Vai Trò, Cấp Sao và Giá của vật tế.\n({MinUnits}) {Health}\n\n({MinUnits}) {Health} ; Hiệu ứng cộng thêm mạnh hơn {StatMultiplier}%\n\n({MinUnits}) {Health} ; Hiệu ứng cộng thêm mạnh hơn {StatMultiplier}%"
+    },
+    "DA_18_Executioner": {
+      "name": "Đao Phủ",
+      "desc": "({MinUnits}) Tướng Đao Phủ nhận được Chuẩn Xác và {CritChance}% Tỉ Lệ Chí Mạng.\n\n({MinUnits}) Ngoài ra, kẻ địch sẽ bị chảy máu, chịu thêm {BonusBleedPercent}% sát thương chuẩn trong {BleedDuration} giây.\n\n({MinUnits}) Sát thương chảy máu tăng thành {BonusBleedPercent}%."
+    },
+    "DA_18_ApexPredator": {
+      "name": "Bá Chủ",
+      "desc": "Rồng Ngàn Tuổi chiếm 2 vị trí đội hình và tăng thêm 2 mốc vào tộc/hệ Quái Rừng."
+    },
+    "DA_Riftbeast18": {
+      "name": "Quái Rừng",
+      "desc": "({MinUnits}) Sử dụng Dấu Ấn Đầu Đàn để trao Bùa Lợi độc nhất cho một tướng Quái Rừng\n\n({MinUnits}) Mỗi {OverrunCombats} giao tranh, cửa hàng tiếp theo của bạn sẽ tràn ngập tướng Quái Rừng.\n\n({MinUnits}) Khi bắt đầu giao tranh và cứ mỗi 5 giây, tướng Quái Rừng tăng trưởng và nhận\n{CapstoneAD}%  {CapstoneAP}%  {CapstoneAspd}%\n+{CapstoneArmor}  +{CapstoneMR}  +{CapstoneHealth}  +{CapstoneManaRegen}\n\n({MinUnits}) +{TeamSize} số lượng tướng tối đa"
+    },
+    "DA_18_Caustic": {
+      "name": "Ăn Mòn",
+      "desc": "Sát thương Ăn Mòn sẽ Cào Xé và Phân Tách kẻ địch {ShredPercent}% trong {ShredDuration} giây.\n\nCào Xé: giảm Kháng Phép\n\nPhân Tách: giảm Giáp"
+    },
+    "DA_18_Fae": {
+      "name": "Tiên Linh",
+      "desc": "Sát thương, hồi máu và tạo lá chắn của đội bạn sẽ thu hút các Pix.\n\nMỗi Pix sẽ tăng Sức Mạnh Công Kích và Sức Mạnh Phép Thuật cho các tướng Tiên Linh, và sau khi họ tụt xuống dưới {HealThreshold}% Máu, họ sẽ hồi máu với mỗi Pix.\n({MinUnits}) {ADAP}% và {Heal}% Hồi Máu.\n\n({MinUnits}) {ADAP}% và {Heal}% Hồi Máu. Sau khi thu hút 7 Pix, bạn sẽ bắt đầu thu hút Pix Hoàng Kim, những Pix Hoàng Kim này sẽ cho vàng."
+    },
+    "DA_18_Lunar": {
+      "name": "Mặt Trăng",
+      "desc": "Các tướng Mặt Trăng và đồng minh liền kề nhận Tốc Độ Đánh và Sức Mạnh Phép Thuật. Các tướng Mặt Trăng nhận thêm {LunarMultiplier}%.\n({MinUnits}) {AttackSpeed}% , {AbilityPower}%\n\n({MinUnits}) {AttackSpeed}% , {AbilityPower}%\n\n({MinUnits}) {AttackSpeed}% , {AbilityPower}%\n\n({MinUnits}) {AttackSpeed}% , {AbilityPower}%"
+    },
+    "DA_18_Defender": {
+      "name": "Vệ Quân",
+      "desc": "Đội của bạn nhận {NonDefenderDefenseGain} Giáp và Kháng Phép. Tướng Vệ Quân nhận được nhiều hơn.\n({MinUnits}) {DefenderDefenseGain}\n\n({MinUnits}) {DefenderDefenseGain}\n\n({MinUnits}) {DefenderDefenseGain}"
+    },
+    "DA_18_Spellweaver": {
+      "name": "Thuật Sư",
+      "desc": "Đội của bạn nhận {TeamwideAP}% Sức Mạnh Phép Thuật. Các tướng Thuật Sư nhận được nhiều hơn, và nhận thêm Sức Mạnh Phép Thuật mỗi khi một tướng Thuật Sư thi triển Kỹ Năng.\n({MinUnits}) {SpellweaverAP}% , +{APPerCast}%  mỗi lần thi triển\n\n({MinUnits}) {SpellweaverAP}% , +{APPerCast}%  mỗi lần thi triển\n\n({MinUnits}) {SpellweaverAP}% , +{APPerCast}%  mỗi lần thi triển"
+    },
+    "DA_18_ZyraUniqueTrait": {
+      "name": "Vườn Gai",
+      "desc": "Đội của bạn nhận {BaseDurability}% Chống Chịu, tăng lên thành {IncreasedDurability}% nếu có tối thiểu {PlantNumThreshold} cây của Zyra đang còn sống."
+    },
+    "DA_FloraFatalis18": {
+      "name": "Thực Vật",
+      "desc": "Các tướng Thực Vật thu hoạch kẻ địch khi tham gia hạ gục, nhận:\n({MinUnits}) {Mana} Năng Lượng\n\n({MinUnits}), đồng thời hồi lại {PercentHeal}% Máu tối đa cho đồng minh có lượng Máu thấp nhất."
+    },
+    "DA_18_Summoner": {
+      "name": "Triệu Hồi",
+      "desc": "Tướng Triệu Hồi cường hóa các đơn vị triệu hồi của mình theo nhiều cách khác nhau.\n\nYorick: +{HealthMult}% Máu\nAzir: +{AzirDamageMult}% Sát Thương\nChim Mẹ: +{DamageMult}% Sát Thương\nZyra: +{NumExtraAttacks} Đòn Đánh Từ Cây\n({MinUnits}) Cường Hóa Đơn Vị Triệu Hồi\n\n({MinUnits}) Tăng mỗi hiệu ứng thêm 50%"
+    },
+    "DA_18_Blossom": {
+      "name": "Hoa Linh",
+      "desc": "Sau giao tranh, các Tinh Linh của bạn được cường hóa.\n\nTướng Hoa Linh nhận thêm Sức Mạnh Công Kích, Sức Mạnh Phép Thuật và {BonusHealth}% Máu tối đa.\n({MinUnits}) Tinh Linh được nâng cấp, {ADAP}%\n\n({MinUnits}) Tinh Linh xuất hiện trong mọi cửa hàng, {ADAP}%\n\n({MinUnits}) Nhận {GoldPerCharmPurchased} vàng sau khi mua 1 Tinh Linh, {ADAP}%\n\n({MinUnits}) Bạn có thể mua 2 Tinh Linh mỗi vòng, {ADAP}%\n\n({MinUnits}) Tinh Linh tràn đầy sức mạnh, {ADAP}%"
+    },
+    "DA_Emerald18": {
+      "name": "Lục Bảo",
+      "desc": "Kéo một đồng minh vào Taric mạnh nhất của bạn để ghép đôi họ, ban cho đồng minh các hiệu ứng mạnh mẽ từ Kỹ Năng của Taric."
+    }
+  }
+}

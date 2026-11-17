@@ -1,0 +1,2384 @@
+{
+  "setNumber": 18,
+  "patch": "16.22",
+  "syncedAt": "2026-11-17T15:57:51.547Z",
+  "source": "communitydragon/vi_vn",
+  "entries": {
+    "TFT16_Augment_UltraRapidFire": {
+      "name": "U.R.F.",
+      "desc": "Nhận 1 Xẻng Vàng. Các tướng mang Xẻng Vàng hoặc Chảo Vàng nhận thêm 20% Tốc Độ Đánh và 3 Hồi Năng Lượng."
+    },
+    "TFT11_Augment_Calltochaos": {
+      "name": "Triệu Gọi Hỗn Mang",
+      "desc": "Nhận 1 phần thưởng mạnh mẽ ngẫu nhiên.\n\nPhần Thưởng: {TFTUnitProperty.item:TFT11_Augment_CallToChaos}"
+    },
+    "TFT11_Augment_AtWhatCost": {
+      "name": "Cái Giá Phải Trả",
+      "desc": "Lập tức tăng lên cấp 6 và nhận 8 XP. Bạn sẽ không còn được chọn những nâng cấp sắp tới."
+    },
+    "TFT_Augment_AllThatShimmersPlus": {
+      "name": "Kim Long Lấp Lánh+",
+      "desc": "Chọn 1 Tạo Tác sinh vàng. Nhận 1 Nam Châm Ma Thuật và 4 vàng."
+    },
+    "TFT_Augment_ItemCollector2": {
+      "name": "Nhà Sưu Tầm Trang Bị II",
+      "desc": "Đội của bạn được tăng 20 Máu. Với mỗi trang bị khác biệt đang mang, đội của bạn được tăng thêm 5 Máu, 1% Sức Mạnh Công Kích và 1% Sức Mạnh Phép Thuật."
+    },
+    "TFT_Augment_ItemCollector1": {
+      "name": "Nhà Sưu Tầm Trang Bị I",
+      "desc": "Với mỗi trang bị khác biệt đang mang, đội của bạn được tăng 1% Sức Mạnh Công Kích và 1% Sức Mạnh Phép Thuật."
+    },
+    "TFT9_Augment_AllThatShimmers": {
+      "name": "Kim Long Lấp Lánh",
+      "desc": "Chọn 1 trang bị Tạo Tác sinh vàng và nhận 1 Nam Châm Ma Thuật."
+    },
+    "TFT6_Augment_TheGoldenEgg": {
+      "name": "Rồng Đẻ Trứng Vàng",
+      "desc": "Nhận một trứng vàng nở ra sau 11 vòng đấu, cho lượng lớn báu vật. Chiến thắng vòng giao tranh người chơi sẽ đẩy nhanh thời gian nở trứng thêm một vòng."
+    },
+    "TFT6_Augment_SalvageBinHR": {
+      "name": "Nhà Máy Tái Chế",
+      "desc": "Nhận ngay 1 trang bị hoàn chỉnh ngẫu nhiên, và 1 thành phần sau 3 vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn)."
+    },
+    "TFT_Augment_Retribution": {
+      "name": "Báo Oán",
+      "desc": "Nhận 2 Bàn Tay Công Lý. Đồng minh được trang bị Bàn Tay Công Lý nhận Chuẩn Xác và 25% Tỉ Lệ Chí Mạng.\n\n[Precision]"
+    },
+    "TFT_Augment_MinMaxer": {
+      "name": "Tối Đa Hóa",
+      "desc": "Nhận 1 Nam Châm Hoàng Kim và 4 trang bị thành phần ngẫu nhiên.\n\nNam Châm Hoàng Kim là 1 Nam Châm Ma Thuật với lượt sử dụng vô hạn."
+    },
+    "TFT_Augment_ArcaneViktory": {
+      "name": "Arcane Viktor-y",
+      "desc": "Sau 8 giây giao tranh, làm choáng đội địch trong 1.5 giây. Lặp lại hiệu ứng này sau 18 giây giao tranh.\n\nĐTCL Macao Open, 2024"
+    },
+    "TFT_Augment_WaterLotus1": {
+      "name": "Liên Hoa Thủy I",
+      "desc": "Đội của bạn nhận 5% Tỉ Lệ Chí Mạng và các Kỹ Năng của họ có thể chí mạng. Nếu 1 Kỹ Năng chí mạng, hồi lại 9% Năng Lượng trong 3 giây."
+    },
+    "TFT_Augment_EpicRolldown": {
+      "name": "Xúc Xắc Hoành Tráng",
+      "desc": "Khi đạt Cấp 8, nhận 20 Lượt Đổi Cửa Hàng.\n\nQuán Quân Runeterra Tái Hợp, 2023"
+    },
+    "TFT_Augment_MaxBuild": {
+      "name": "Đội Hình Tối Ưu",
+      "desc": "Nhận 1 Máy Sao Chép Tướng, 4 vàng, và cửa hàng tiếp theo của bạn sẽ có 5 tướng 4 vàng khác nhau.\n\nGiải Vô Địch Thiên Hà, 2020"
+    },
+    "TFT_Augment_FiresalePlus": {
+      "name": "Thanh Lý Toàn Bộ",
+      "desc": "Mỗi vòng đấu, đánh cắp 1 tướng ngẫu nhiên giá 3 vàng hoặc thấp hơn từ cửa hàng. Nhận 1 vàng."
+    },
+    "TFT_Augment_SpreadingRoots": {
+      "name": "Cắm Rễ Phân Tán",
+      "desc": "Nhận 2 Ấn ngẫu nhiên và 1 vàng."
+    },
+    "TFT6_Augment_TinyTitans": {
+      "name": "Khổng Lồ Hóa",
+      "desc": "Tăng máu hiện tại và máu tối đa của người chơi thêm {heal}."
+    },
+    "TFT_Augment_Survivor": {
+      "name": "Kẻ Sống Sót",
+      "desc": "Nhận 4 vàng. Sau khi 3 người chơi bị loại, nhận thêm 100 vàng."
+    },
+    "TFT_Augment_SmallGrabBag": {
+      "name": "Túi Đồ Cỡ Nhỏ",
+      "desc": "Nhận 2 trang bị thành phần ngẫu nhiên."
+    },
+    "TFT_Augment_Unforgotten": {
+      "name": "Chiến Tướng Khải Hoàn",
+      "desc": "Mỗi vòng đấu, đội của bạn nhận 5% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật. Các tướng khởi đầu với 1 cộng dồn hiệu ứng này, có thể cộng dồn tối đa 4 lần."
+    },
+    "TFT9_Augment_ArmyBuilding": {
+      "name": "Xây Dựng Đội Hình",
+      "desc": "Nhận 1 Máy Sao Chép Tướng Cỡ Nhỏ. Nhận thêm 1 Máy Sao Chép Tướng Cỡ Nhỏ nữa sau 5 vòng giao tranh người chơi.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống."
+    },
+    "TFT9_Augment_YoungAndWildAndFree": {
+      "name": "Trẻ, Khỏe & Tự Do",
+      "desc": "Bạn sẽ luôn được di chuyển tự do trong Vòng Đi Chợ. Nhận 5 vàng."
+    },
+    "TFT_Augment_TacticiansKitchen": {
+      "name": "Linh Thú Vào Bếp",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Sau 3 vòng đấu, nhận 1 Áo Choàng Chiến Thuật."
+    },
+    "TFT6_Augment_HyperRoll": {
+      "name": "Sống Vội",
+      "desc": "Bạn không còn lợi tức, nhưng sẽ nhận 3 vàng khi bắt đầu mỗi vòng giao tranh người chơi. Nhận ngay 3 vàng.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại."
+    },
+    "TFT6_Augment_BandOfThieves2Plus": {
+      "name": "Băng Trộm II+",
+      "desc": "Nhận 2 Găng Đạo Tặc. Sau 5 giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc."
+    },
+    "TFT_Augment_GiantAndMighty": {
+      "name": "To Lớn & Mạnh Mẽ",
+      "desc": "Đội của bạn hóa lớn, được tăng 200 Máu và 10% Máu tối đa."
+    },
+    "TFT6_Augment_CyberneticImplants2": {
+      "name": "Cấy Ghép Siêu Công Nghệ",
+      "desc": "Đồng minh nhận 100 Máu và 15% Sức Mạnh Công Kích. Nhận 1 Kiếm B.F."
+    },
+    "TFT_Augment_Replication": {
+      "name": "Nhân Bản",
+      "desc": "Chọn 1 trong 3 trang bị thành phần. Trong {RoundsOfBonusItems} vòng đấu tiếp theo, nhận 1 bản sao của thành phần đó."
+    },
+    "TFT10_Augment_CrashTestDummies": {
+      "name": "Hình Nộm Va Chạm",
+      "desc": "Nhận {Numdummies} Hình Nhân. Bắt đầu giao tranh: Hình Nhân sẽ lao thẳng vào giữa đội hình địch và Làm Choáng chúng trong {stun} giây."
+    },
+    "TFT7_Augment_LuckyGlovesPlus": {
+      "name": "Đo Ni Đóng Giày+",
+      "desc": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị khuyên dùng. Nhận ngay 2 Găng Đấu Tập, nhận thêm 1 găng sau 4 giao tranh người chơi."
+    },
+    "TFT_Augment_Dummify": {
+      "name": "Hình Nhân Hóa",
+      "desc": "Mất đi tất cả tướng trên bàn đấu và trên hàng dự bị của bạn. Nhận 1 Hình Nhân mang 60% tổng Máu của tất cả các tướng đó. Hình Nhân nhận thêm 1000 Máu mỗi giai đoạn. Nhận 1 tướng 2 vàng 2 sao không phải Đỡ Đòn."
+    },
+    "TFT_Augment_PatienceIsAVirtue": {
+      "name": "Kiên Nhẫn Là Một Đức Tính",
+      "desc": "Nhận ngay 4 lượt đổi lại. Mỗi vòng đấu, nhận 1 lượt đổi miễn phí nếu bạn không mua tướng ở vòng đấu trước."
+    },
+    "TFT_Augment_DeadlierCaps": {
+      "name": "Mũ Tử Thần",
+      "desc": "Nhận 1 Mũ Phù Thủy Rabadon. Mũ Phù Thủy Rabadon cho 1 Hồi Năng Lượng và vĩnh viễn tăng thêm {AP}% Sức Mạnh Phép Thuật mỗi khi chủ sở hữu tham gia hạ gục."
+    },
+    "TFT11_Augment_TinyButDeadly": {
+      "name": "Nhỏ Mà Có Võ",
+      "desc": "Đội của bạn hóa nhỏ, nhận thêm 33% Tốc Độ Đánh và Tốc Độ Di Chuyển."
+    },
+    "TFT_Augment_PowerUp": {
+      "name": "Nâng Tầm Uy Lực",
+      "desc": "Nâng Cấp tiếp theo của bạn được tăng một bậc."
+    },
+    "TFT7_Augment_UrfsGrabBag2": {
+      "name": "Túi Đồ Urf",
+      "desc": "Nhận 1 Xẻng Vàng, 3 trang bị thành phần ngẫu nhiên và 5 vàng."
+    },
+    "TFT10_Augment_Scapegoat": {
+      "name": "Tốt Thí",
+      "desc": "Nhận 1 Hình Nhân và 4 vàng. Nếu hình nhân này là đơn vị hy sinh đầu tiên mỗi khi giao tranh với người chơi, nhận 1 vàng."
+    },
+    "TFT_Augment_FoodfightTactics": {
+      "name": "Sảnh Đông Đúc",
+      "desc": "Sau 10 giây giao tranh, các tướng của bạn nhận thêm 8% Tốc Độ Đánh và các đòn đánh đồng thời phóng ra 2 viên đạn ngon lành gây 25 () sát thương phép."
+    },
+    "TFT_Augment_TheBaronsLair": {
+      "name": "Hang Ổ Baron",
+      "desc": "Nhận 1 trang bị Đỡ Đòn ngẫu nhiên. Sau 8 giây giao tranh, đội của bạn nhận thêm 5% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây cho đến hết giao tranh.\n\nTFT Paris Open, 2025"
+    },
+    "TFT9_Augment_MissedConnections": {
+      "name": "Kết Nối Gián Đoạn",
+      "desc": "Nhận 1 bản sao của mỗi tướng Bậc 1."
+    },
+    "TFT_Augment_WinOut": {
+      "name": "Toàn Thắng",
+      "desc": "Khi đạt cấp 9, ngay lập tức lên cấp 10 và nhận 8 lượt đổi Cửa Hàng miễn phí. Nhận ngay 10 XP."
+    },
+    "TFT11_Augment_ScoreboardScrapper": {
+      "name": "Quét Sạch Bảng Điểm",
+      "desc": "Mỗi vòng, nếu bạn nằm trong nhóm 4 người cuối bảng, đội của bạn nhận thêm vĩnh viễn 1.5% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật. Nếu bạn nằm trong nhóm 4 người đầu bảng, đội của bạn nhận thêm 10% Máu."
+    },
+    "TFT_Augment_RerollTransfer": {
+      "name": "Tận Dụng Lượt Đổi",
+      "desc": "Với mỗi 1 Lượt Đổi Nâng Cấp chưa sử dụng, nhận 3 lượt đổi cửa hàng miễn phí. Nhận 1 vàng.\n\nKhông tính vòng đấu mà nâng cấp này được lựa chọn."
+    },
+    "TFT_Augment_BronzeForLife2": {
+      "name": "Tất Tay Bậc Đồng II",
+      "desc": "Đội của bạn nhận 2% Khuếch Đại Sát Thương và 4 Giáp & Kháng Phép cho mỗi tộc/hệ bậc Đồng.\n\nKhuếch Đại Sát Thương: {TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDamageAmp}%\nGiáp & Kháng Phép: {TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDurability}"
+    },
+    "TFT_Augment_FrontlineFoundation": {
+      "name": "Củng Cố Tuyến Trước",
+      "desc": "Nhận 1 tướng Đỡ Đòn 1 vàng 2 sao và 1 Ấn phù hợp với tộc/hệ cuối cùng của tướng đó."
+    },
+    "TFT_Augment_CrownguardSpirit": {
+      "name": "Ý Chí Vương Miện",
+      "desc": "Nhận 1 Gậy Quá Khổ và 1 Giáp Lưới. Đội của bạn nhận 8 Sức Mạnh Phép Thuật và 6 Giáp."
+    },
+    "TFT_Augment_Trifecta1": {
+      "name": "Bộ Ba Hoàn Hảo I",
+      "desc": "Nhận {numunits} tướng 3 vàng.\nBắt Đầu Giao Tranh: 3 tướng 3 vàng ngẫu nhiên nhận 220 Máu và 20% Tốc Độ Đánh."
+    },
+    "TFT_Augment_EarlyLearning": {
+      "name": "Bài Học Sơ Khai",
+      "desc": "Đội của bạn nhận 5% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Lượng này sẽ tăng thêm 1% sau mỗi giao tranh người chơi. Các tướng 1 vàng nhận gấp đôi.\n{TFTUnitProperty.item:TFT_Augment_EarlyLearning_TRAKey}\nĐTCL Vegas Open, 2023"
+    },
+    "TFT_Augment_TombRaider2": {
+      "name": "Kẻ Trộm Mộ II",
+      "desc": "Nhận 1 gói trang bị hoàn chỉnh. Mỗi khi một người chơi bị loại, chọn 1 trong các trang bị hoàn chỉnh của họ để giữ lại."
+    },
+    "TFT6_Augment_ThriftShop": {
+      "name": "Tiêu Dùng Thông Minh",
+      "desc": "Bạn không thể mua XP nữa. Với mỗi lần bạn dùng vàng để làm mới Cửa Hàng, nhận 2 XP. Nhận ngay 1 vàng."
+    },
+    "TFT_Augment_BacklineBlueprint": {
+      "name": "Sơ Đồ Tuyến Sau",
+      "desc": "Nhận 1 tướng 3 vàng không phải Đỡ Đòn và 1 Ấn phù hợp với tộc/hệ cuối cùng của tướng đó."
+    },
+    "TFT10_Augment_FullyAdapted": {
+      "name": "Thích Nghi Hoàn Hảo",
+      "desc": "Nhận 1 Mũ Thích Nghi. Tướng mang trang bị này nhận cả hai hiệu ứng."
+    },
+    "TFT6_Augment_ForceOfNaturePlus": {
+      "name": "Tuyển Nhân Sự+",
+      "desc": "Nhận thêm +1 số lượng tướng tối đa và 2 tướng 4 vàng."
+    },
+    "TFT_Augment_Trifecta2": {
+      "name": "Bộ Ba Hoàn Hảo II",
+      "desc": "Nhận {numunits} tướng 3 vàng. Các đồng minh được tăng 5% Tốc Độ Đánh.\nBắt Đầu Giao Tranh: 3 tướng 3 vàng ngẫu nhiên nhận thêm 300 Máu và 25% Tốc Độ Đánh."
+    },
+    "TFT_Augment_ChaosEvolution": {
+      "name": "Tiến Hóa Bất Định",
+      "desc": "Nâng sao một tướng sẽ cho tướng đó một trong những hiệu ứng sau: 100 Máu, 6% Chống Chịu, 10% Sức Mạnh Phép Thuật, 10% Sức Mạnh Công Kích, 10% Tốc Độ Đánh. Chỉ số tăng thêm có thể cộng dồn."
+    },
+    "TFT_Augment_CognitiveTax": {
+      "name": "Thuế Nhận Thức",
+      "desc": "Nhận 8 vàng và 1 XP."
+    },
+    "TFT9_Augment_YouHaveMyBow": {
+      "name": "Cây Cung Thần Tốc",
+      "desc": "Nhận 1 Cung Gỗ. Đội của bạn nhận 12% Tốc Độ Đánh."
+    },
+    "TFT_Augment_TombRaider1": {
+      "name": "Kẻ Trộm Mộ I",
+      "desc": "Với 3 người chơi kế tiếp bị loại, chọn 1 trong các trang bị hoàn chỉnh của họ để giữ lại."
+    },
+    "TFT_Augment_OneBuffTwoBuff": {
+      "name": "Một Bùa, Hai Bùa",
+      "desc": "Nhận 1 Bùa Đỏ, 1 Bùa Xanh và 1 Máy Sao Chép Tướng."
+    },
+    "TFT_Augment_GlassCannonI": {
+      "name": "Lấy Công Bù Thủ I",
+      "desc": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với 80% Máu nhưng nhận thêm 16% Khuếch Đại Sát Thương."
+    },
+    "TFT7_Augment_PandorasBench": {
+      "name": "Hàng Chờ Pandora",
+      "desc": "Ở đầu mỗi vòng đấu, các tướng ở 3 ô ngoài cùng bên phải hàng chờ sẽ được chuyển đổi thành tướng ngẫu nhiên cùng giá tiền. Nhận 6 vàng."
+    },
+    "TFT_Augment_Crossfire2": {
+      "name": "Ánh Nhìn Xuyên Thấu",
+      "desc": "Kẻ địch chịu 1% sát thương dưới dạng sát thương chuẩn cộng thêm, tăng thêm 1%, tối đa 20% mỗi lần chúng nhận sát thương."
+    },
+    "TFT6_Augment_MakeshiftArmor1": {
+      "name": "Giáp Tự Chế I",
+      "desc": "Các đồng minh không mang trang bị nhận 30 Giáp và Kháng Phép."
+    },
+    "TFT_Augment_CognitiveTaxPlus": {
+      "name": "Thuế Nhận Thức+",
+      "desc": "Nhận 12 vàng và 3 XP."
+    },
+    "TFT6_Augment_MakeshiftArmor2": {
+      "name": "Giáp Tự Chế II",
+      "desc": "Các đồng minh không mang trang bị nhận 50 Giáp và Kháng Phép."
+    },
+    "TFT_Augment_UpwardMobility": {
+      "name": "Đẩy Nhanh Tiến Độ",
+      "desc": "Giảm 1 vàng khi mua XP. Nhận 2 Máu và 1 lượt đổi miễn phí mỗi khi bạn thăng cấp."
+    },
+    "TFT_Augment_AnotherOne": {
+      "name": "Bội Phẩm!",
+      "desc": "Trang bị hoàn chỉnh tiếp theo bạn tạo ra sẽ cho thêm 1 bản sao nữa. Nhận ngay 5 vàng."
+    },
+    "TFT7_Augment_BigFriend": {
+      "name": "Dựa Hơi I",
+      "desc": "Các đồng minh bắt đầu giao tranh bên cạnh một đồng minh có trên 1750 Máu nhận 10% Chống Chịu. Nhận 1 Đai Khổng Lồ."
+    },
+    "TFT_Augment_ExplosiveGrowthPlus": {
+      "name": "Tăng Trưởng Bùng Nổ+",
+      "desc": "Nhận 10 XP ngay bây giờ và khi bắt đầu {Rounds} vòng đấu tiếp theo."
+    },
+    "TFT_Augment_AimForTheTop": {
+      "name": "Nhắm Tới Đỉnh Cao!",
+      "desc": "Bạn có khả năng cao sẽ đấu với những người chơi mạnh hơn, và bạn sẽ biết trước đối thủ mà mình sắp đối đầu. Khi bạn thua, nhận 2 XP. Sau vòng thắng đầu tiên và mỗi 3 vòng thắng sau đó, nhận 1 trang bị thành phần.\n\nKẻ địch đã đánh bại: {TFTUnitProperty.item:TFT15_AimForTheTop_EnemiesBeaten}"
+    },
+    "TFT_Augment_RiggedShopPlus": {
+      "name": "Cửa Hàng Gian Lận+",
+      "desc": "Lượt làm mới cửa hàng tiếp theo và mỗi {NumRolls} lượt làm mới cửa hàng sẽ cho ra toàn tướng 3 vàng. Nhận 5 lượt đổi."
+    },
+    "TFT_Augment_SilverDestiny": {
+      "name": "Vận Mệnh Bạc",
+      "desc": "Nhận 1 Nâng Cấp Bạc và 2 vàng."
+    },
+    "TFT_Augment_ExplosiveGrowth": {
+      "name": "Tăng Trưởng Bùng Nổ",
+      "desc": "Nhận 7 XP ngay bây giờ và khi bắt đầu {Rounds} vòng đấu tiếp theo."
+    },
+    "TFT9_Augment_PumpingUp": {
+      "name": "Tiếp Sức I",
+      "desc": "Đội của bạn nhận 6% Tốc Độ Đánh. Sau mỗi vòng đấu, nhận thêm 0.5% nữa. (Tốc Độ Đánh hiện tại: {TFTUnitProperty.item:TFT9_PumpingUpRounds}%)"
+    },
+    "TFT_Augment_PsychicForge": {
+      "name": "Lò Rèn Siêu Linh",
+      "desc": "Khi bắt đầu vòng đấu, Trang Bị Hoàn Chỉnh trên tướng ở hàng dự bị sẽ biến thành trang bị đề xuất cho tướng đó. Nhận 1 trang bị hoàn chỉnh ngẫu nhiên."
+    },
+    "TFT7_Augment_BestFriends2": {
+      "name": "Bạn Thân II",
+      "desc": "Các đồng minh được xếp cặp cách biệt với các đơn vị khác nhận 15% Tốc Độ Đánh và 14 Giáp & Kháng Phép khi bắt đầu giao tranh."
+    },
+    "TFT7_Augment_ClutteredMind": {
+      "name": "Bừa Bộn",
+      "desc": "Lập tức nhận 4 tướng 1-vàng ngẫu nhiên. Nếu hàng chờ của bạn đầy khi kết thúc một vòng giao chiến với người chơi, nhận 3 XP."
+    },
+    "TFT7_Augment_BestFriends1": {
+      "name": "Bạn Thân I",
+      "desc": "Các đồng minh được xếp cặp cách biệt với các đơn vị khác nhận 10% Tốc Độ Đánh và 9 Giáp & Kháng Phép khi bắt đầu giao tranh."
+    },
+    "TFT_Augment_SilverDestinyPlus": {
+      "name": "Vận Mệnh Bạc+",
+      "desc": "Nhận 1 Nâng Cấp Bạc và 4 vàng."
+    },
+    "TFT_Augment_HeavyIsTheCrown": {
+      "name": "Vương Miện Nặng Trĩu",
+      "desc": "Nhận 1 Vương Miện Demacia, tăng mạnh các chỉ số cộng thêm cho tướng mang nó. Nếu tướng mang trang bị này hy sinh, thua vòng đấu."
+    },
+    "TFT_Augment_HardCommit": {
+      "name": "Chỉ Một Con Đường",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Ngay lập tức và khi bắt đầu mỗi Giai Đoạn, nhận 1 tướng 1 sao cùng tộc/hệ, có giá bằng với Giai Đoạn hiện tại (tối đa 5) và 3 vàng."
+    },
+    "TFT_Augment_SeraphimsStaff": {
+      "name": "Trượng Đại Thiên Sứ",
+      "desc": "Nhận 1 Quyền Trượng Thiên Thần. Quyền Trượng Thiên Thần tăng thêm 2 Hồi Phục Năng Lượng nếu chủ sở hữu có 90% Sức Mạnh Phép Thuật trở lên."
+    },
+    "TFT_Augment_GroupHug2": {
+      "name": "Ôm Tập Thể II",
+      "desc": "Bắt đầu giao tranh: Đồng minh sẽ tăng cho các đồng minh liền kề khác 9 Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn."
+    },
+    "TFT9_Augment_BuildingACollectionPlusPlus": {
+      "name": "Kho Báu Chôn Giấu",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên ngay bây giờ và khi bắt đầu 5 vòng tiếp theo."
+    },
+    "TFT_Augment_LastSecondSave": {
+      "name": "Cứu Trong Gang Tấc",
+      "desc": "Lần đầu tiên mỗi tướng đồng minh xuống dưới 35% Máu, họ hồi lại 20% Máu tối đa."
+    },
+    "TFT_Augment_StoryOfSeven": {
+      "name": "Bảy Viên Ngọc Rồng",
+      "desc": "Thu thập Ngọc Rồng bằng cách đánh bại người chơi trong giao tranh. Thu thập tất cả 7 để nhận phần thưởng, sau đó nhiệm vụ sẽ được khởi động lại với phần thưởng mạnh hơn.\n\nNhận 1 tướng 1 vàng 2 sao để bắt đầu hành trình."
+    },
+    "TFT_Augment_HowlingGale": {
+      "name": "Gió Lốc",
+      "desc": "Với mỗi 550 Năng Lượng đội của bạn đã tiêu hao, triệu hồi 1 lốc xoáy hất tung kẻ địch."
+    },
+    "TFT_Augment_GroupHug1": {
+      "name": "Ôm Tập Thể I",
+      "desc": "Bắt đầu giao tranh: Đồng minh sẽ tăng cho các đồng minh liền kề khác 6 Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn."
+    },
+    "TFT_Augment_TheVidalion": {
+      "name": "Ma Thuật Đan Kết",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên. Mỗi 2200 Năng Lượng đội của bạn tiêu hao sẽ trao thêm 1 trang bị thành phần (tối đa {TFTUnitProperty.trait:TFT_Augment_TheVidalion_NumComponents}/3).\n\nNăng lượng đã tiêu hao: {TFTUnitProperty.trait:TFT_Augment_TheVidalion_TrackedMana}/2200"
+    },
+    "TFT_Augment_Expedition": {
+      "name": "Cuộc Viễn Chinh",
+      "desc": "Khi bắt đầu giao tranh, mất đi vị tướng ở ô ngoài cùng bên phải hàng dự bị. Sau khi tổng giá tướng mất đi theo cách này là 33 vàng, nhận một phần thưởng mạnh mẽ. Nhận ngay 1 tướng 3 vàng. {TFTUnitProperty.item:TFT_Augment_Expedition_Tooltip}"
+    },
+    "TFT9_Augment_HealingOrbsI": {
+      "name": "Cầu Hồi Phục I",
+      "desc": "Khi một kẻ địch bị hạ gục, tướng đồng minh gần nhất được hồi lại 250 máu."
+    },
+    "TFT_Augment_TraitTreePlus": {
+      "name": "Cây Tộc Hệ+",
+      "desc": "Nhận 3 Ấn ngẫu nhiên, 1 Búa Rèn và 4 vàng."
+    },
+    "TFT_Augment_TableScraps": {
+      "name": "Thu Gom Đồ Thừa",
+      "desc": "Khi kết thúc 2 Vòng Đi Chợ tiếp theo, nhận 1 tướng không được chọn cùng trang bị đi kèm. Nhận 1 vàng."
+    },
+    "TFT_Augment_ClimbTheLadder2": {
+      "name": "Leo Hạng II",
+      "desc": "Mỗi khi một đồng minh tử trận, các đồng minh có chung ít nhất 1 tộc/hệ với họ sẽ nhận thêm 7% Sức Mạnh Phép Thuật, 7% Sức Mạnh Công Kích, 6 Giáp và 6 Kháng Phép."
+    },
+    "TFT_Augment_GoldenQuest": {
+      "name": "Nhiệm Vụ Tích Vàng",
+      "desc": "Lần đầu tiên bạn sở hữu {GoldRequired} vàng hoặc nhiều hơn, nhận 1 tướng 5 vàng 2 sao và 2 trang bị phù hợp cho tướng đó."
+    },
+    "TFT_Augment_ClimbTheLadder1": {
+      "name": "Leo Hạng I",
+      "desc": "Mỗi khi một đồng minh tử trận, các đồng minh có chung ít nhất 1 tộc/hệ với họ sẽ nhận thêm 3.5% Sức Mạnh Phép Thuật, 3.5% Sức Mạnh Công Kích, 3.5 Giáp và 3.5 Kháng Phép."
+    },
+    "TFT7_Augment_LuckyGloves": {
+      "name": "Đo Ni Đóng Giày",
+      "desc": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị lý tưởng. Nhận 2 Găng Đấu Tập và 4 vàng."
+    },
+    "TFT_Augment_GoldDestiny": {
+      "name": "Vận Mệnh Vàng",
+      "desc": "Nhận 1 Nâng Cấp Vàng ngẫu nhiên và 3 vàng."
+    },
+    "TFT_Augment_Coronation": {
+      "name": "Lên Ngôi Vương",
+      "desc": "Nhận 1 Vương Miện Chiến Thuật. Lá Chắn, Áo Choàng và Vương Miện Chiến Thuật sẽ cho chủ sở hữu thêm 20% Tốc Độ Đánh, 25% Sức Mạnh Công Kích và 30% Sức Mạnh Phép Thuật."
+    },
+    "TFT9_Augment_Commander_TeamingUp1": {
+      "name": "Lập Đội",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên và 2 tướng 3 vàng ngẫu nhiên."
+    },
+    "TFT_Augment_GildedSteel": {
+      "name": "Thép Mạ Vàng",
+      "desc": "Nhận 2 tướng 5 vàng không phải Đỡ Đòn. Nếu bạn triển khai ít nhất 1 tướng 5 vàng, các tướng từ 1 đến 4 vàng của bạn nhận được 8% Chống Chịu.\n\nTactician's Crown K.O. Đại Chiến Anh Hùng, 2025"
+    },
+    "TFT6_Augment_Electrocharge2": {
+      "name": "Tụ Điện II",
+      "desc": "Mỗi khi đồng minh nhận 4 đòn đánh, họ sẽ gây 50 - 140 (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (1 giây hồi chiêu)."
+    },
+    "TFT11_Augment_BloodBank": {
+      "name": "Tiền Ăn Trưa",
+      "desc": "Bạn sẽ nhận được 2 vàng cho mỗi 8 sát thương bạn gây lên linh thú của đối thủ.\nTổng thu nhập: {TFTUnitProperty.item:TFT11_BloodBankPayoutTotal} Vàng"
+    },
+    "TFT6_Augment_Electrocharge1": {
+      "name": "Tụ Điện I",
+      "desc": "Mỗi khi đồng minh nhận 4 đòn đánh, họ sẽ gây 30 - 90 (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (1 giây hồi chiêu)."
+    },
+    "TFT_Augment_NineLives": {
+      "name": "Cửu Sinh",
+      "desc": "Đặt Máu người chơi hiện tại và tối đa của bạn thành 9. Khi thua giao tranh, bạn sẽ chỉ mất 1 máu và nhận báu vật. Bạn không thể tăng máu."
+    },
+    "TFT9_Augment_DravenSpoilsOfWar": {
+      "name": "Chiến Lợi Phẩm I",
+      "desc": "Kẻ địch có 25% tỉ lệ rớt ra báu vật khi bị tiêu diệt."
+    },
+    "TFT_Augment_WorthTheWaitGold": {
+      "name": "Chờ Đợi Xứng Đáng",
+      "desc": "Nhận 1 tướng 1 vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận.\n\nTướng: {TFTUnitProperty.item:TFT_Augment_WorthTheWait}"
+    },
+    "TFT_Augment_BranchingOutPlus": {
+      "name": "Phân Nhánh+",
+      "desc": "Nhận 1 Ấn ngẫu nhiên và 1 Búa Rèn.\n\nBúa Rèn cho phép bạn tái tạo bất kỳ trang bị nào."
+    },
+    "TFT6_Augment_ItemGrabBag1": {
+      "name": "Tiếp Tế Trang Bị",
+      "desc": "Nhận 1 trang bị hoàn chỉnh ngẫu nhiên."
+    },
+    "TFT10_Augment_GoingLong": {
+      "name": "Thích Mở Rộng",
+      "desc": "Bạn sẽ không còn nhận được lợi tức. Nhận ngay 16 vàng. Bắt Đầu Vòng Đấu: nhận 4 ĐKN.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại."
+    },
+    "TFT_Augment_ForgeRod": {
+      "name": "Thợ Rèn Gậy",
+      "desc": "Nhận 2 trang bị hoàn chỉnh ngẫu nhiên được ghép từ Gậy Quá Khổ."
+    },
+    "TFT_Augment_ExpectedUnexpectedness": {
+      "name": "Kỳ Vọng Bất Ngờ",
+      "desc": "Ngay bây giờ và khi bắt đầu 2 giai đoạn tiếp theo, đổ 3 xúc xắc. Nhận nhiều loại phần thưởng dựa trên tổng số đã đổ được."
+    },
+    "TFT_Augment_PlaceboPlus": {
+      "name": "Giả Dược+",
+      "desc": "Đội của bạn được tăng 1% Tốc Độ Đánh. Nhận 14 vàng."
+    },
+    "TFT_Augment_QuietQuitting": {
+      "name": "Âm Thầm Thoái Lui",
+      "desc": "Trong 3 giao tranh người chơi tiếp theo, bạn không thể sử dụng cửa hàng. Sau đó, nhận 24 vàng và 1 Gói Trang Bị Hoàn Chỉnh."
+    },
+    "TFT_Augment_HoldTheLine": {
+      "name": "Giữ Vững Hàng Ngũ",
+      "desc": "Các đồng minh ở 2 hàng sau nhận 9% Sức Mạnh Phép Thuật và 8% Sức Mạnh Công Kích với mỗi đồng minh bắt đầu giao tranh ở hàng trên."
+    },
+    "TFT_Augment_SpiritLink1": {
+      "name": "Liên Kết Tâm Linh",
+      "desc": "Các vị Tướng được hồi lại 5% Máu tối đa mỗi 4 giây. Tăng lượng hồi máu thêm 0.5% với mỗi 10 Máu người chơi đã mất."
+    },
+    "TFT6_Augment_SunfireBoard": {
+      "name": "Phóng Hỏa",
+      "desc": "Bắt Đầu Giao Tranh: Thiêu đốt mọi kẻ địch gây sát thương bằng 18% Máu tối đa của chúng trong 18 giây và giảm lượng hồi máu chúng nhận được đi 33%."
+    },
+    "TFT9_Augment_IronAssets": {
+      "name": "Kho Báu Sắt",
+      "desc": "Nhận 1 gói trang bị thành phần và 3 vàng."
+    },
+    "TFT_Augment_HeftyRolls": {
+      "name": "Ván Cờ May Rủi",
+      "desc": "Đội của bạn tăng {Health} Máu và kích cỡ mỗi lần bạn dùng lượt đổi trong trận này. Nhận 5 vàng.\n\nLượt đổi: {TFTUnitProperty.Item:TFT_Augment_HeftyRolls_NumRolls} Máu: {TFTUnitProperty.Item:TFT_Augment_HeftyRolls_HealthBonus}"
+    },
+    "TFT_Augment_FeedTheFlames": {
+      "name": "Nếm Mùi Lửa",
+      "desc": "Nhận 1 Áo Choàng Lửa. Đội của bạn nhận 12% Hút Máu Toàn Phần khi tấn công các kẻ địch đang chịu Thiêu Đốt."
+    },
+    "TFT_Augment_BlazingSoul2": {
+      "name": "Linh Hồn Rực Cháy II",
+      "desc": "Bắt đầu giao tranh: Tướng có Tốc Độ Đánh cao nhất của bạn nhận thêm 35% Sức Mạnh Phép Thuật và 35% Tốc Độ Đánh. Cứ thế lặp lại trên một đồng minh khác sau mỗi 3 giây."
+    },
+    "TFT9_Augment_HedgeFundPlus": {
+      "name": "Quỹ Phòng Hộ+",
+      "desc": "Nhận 30 vàng. Lợi tức tối đa được tăng lên 10.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại."
+    },
+    "TFT_Augment_GoldDestinyPlus": {
+      "name": "Vận Mệnh Vàng+",
+      "desc": "Nhận 1 Nâng Cấp Vàng ngẫu nhiên và 6 vàng."
+    },
+    "TFT_Augment_CloningFacility": {
+      "name": "Nhà Máy Nhân Bản",
+      "desc": "Cường hóa ô ở chính giữa hàng thứ ba. Triệu hồi 1 bản sao của tướng đứng trên đó với 80% Máu Cơ Bản và 10% Năng Lượng tối đa tăng thêm."
+    },
+    "TFT_Augment_HardBargain": {
+      "name": "Thương Vụ Khó Xơi",
+      "desc": "Bạn không thể chọn phần thưởng trong Vòng Đi Chợ. Nhận thêm 6 Máu người chơi và 8 Vàng mỗi vòng đi chợ.\nKhi bạn không chọn Phần Thưởng Ở Vòng Đi Chợ, bạn sẽ được trao 1 tướng chưa có người chọn cùng trang bị đi kèm"
+    },
+    "TFT_Augment_GoldenGamble": {
+      "name": "Ván Cược Hoàng Kim",
+      "desc": "Nhận {gold} vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh.\n\n{TFTUnitProperty.item:TFT_Augment_GoldenGamble_Tooltip}"
+    },
+    "TFT7_Augment_AFK": {
+      "name": "AFK",
+      "desc": "Bạn không thể hành động trong 3 vòng đấu tới. Sau đó, nhận 17 vàng."
+    },
+    "TFT9_Augment_HedgeFund": {
+      "name": "Quỹ Phòng Hộ",
+      "desc": "Nhận 22 vàng. Lợi tức tối đa được tăng lên 10.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại."
+    },
+    "TFT_Augment_BackupDancers": {
+      "name": "Vũ Công Phụ Họa",
+      "desc": "Bắt đầu giao tranh:  Mỗi 3 giây, các tướng nằm ở 3 ô dự bị ngoài cùng bên phải sẽ cho đội của bạn 3% Tốc Độ Đánh với mỗi tướng."
+    },
+    "TFT_Augment_TwoMuchValue": {
+      "name": "2 Vàng Là Nhất",
+      "desc": "Nhận 1 lượt đổi với mỗi 2 tướng 2 vàng khác nhau được triển khai ở giao tranh người chơi gần nhất. Nhận 1 tướng 2 vàng."
+    },
+    "TFT_Augment_HeroicGrabBagPlus": {
+      "name": "Túi Đồ Siêu Hùng+",
+      "desc": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ và 8 vàng.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống."
+    },
+    "TFT_Augment_ComponentQuestBow": {
+      "name": "Cung Dự Phòng",
+      "desc": "Nhận 1 Cung Gỗ. Sau khi đội của bạn tấn công 1000 lần, nhận thêm 2.\n\nĐòn Đánh: {TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker}"
+    },
+    "TFT_Augment_PlotArmor": {
+      "name": "Hào Quang Nhân Vật Chính",
+      "desc": "Đội của bạn nhận 8 Giáp và Kháng Phép. Sau khi còn dưới 50% Máu, tăng hiệu ứng này lên thành 40 cho đến hết giao tranh."
+    },
+    "TFT_Augment_PocketRecombobulator": {
+      "name": "Máy Xoay Bài Tự Động Bỏ Túi",
+      "desc": "Nhận 2 Máy Xoay Bài Tự Động Bỏ Túi, 1 vật phẩm tiêu thụ có thể biến đổi tướng 1 hoặc 2 vàng thành tướng bậc cao hơn. Tướng được giữ nguyên cấp Sao của mình. Đồng thời nhận 2 Búa Rèn."
+    },
+    "TFT_Augment_WarmogsBuckle": {
+      "name": "Trái Tim Sắt Đá",
+      "desc": "Nhận 1 Trái Tim Kiên Định. Mỗi 10 giây mà chủ sở hữu sống sót trong giao tranh, Trái Tim Kiên Định nhận thêm vĩnh viễn {Health} Máu tối đa."
+    },
+    "TFT_Augment_ChargeTransfer1": {
+      "name": "Chuyển Đổi Năng Lượng I",
+      "desc": "Đội của bạn nhận thêm 7% Khuếch Đại Sát Thương. 50% sát thương vượt mức sẽ được gây lên kẻ địch gần nhất dưới dạng sát thương phép."
+    },
+    "TFT_Augment_HeroicGrabBagPlusPlus": {
+      "name": "Túi Đồ Siêu Hùng++",
+      "desc": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ và 14 vàng.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống."
+    },
+    "TFT_Augment_WaterLotus2": {
+      "name": "Liên Hoa Thủy II",
+      "desc": "Đội của bạn nhận 20% Tỉ Lệ Chí Mạng và các Kỹ Năng của họ có thể chí mạng. Nếu 1 Kỹ Năng chí mạng, hồi lại 15% Năng Lượng trong 3 giây."
+    },
+    "TFT6_Augment_SalvageBin": {
+      "name": "Nhà Máy Tái Chế",
+      "desc": "Nhận ngay 1 trang bị hoàn chỉnh ngẫu nhiên, và 1 thành phần sau 8 vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn)."
+    },
+    "TFT_Augment_ChargeTransfer2": {
+      "name": "Chuyển Đổi Năng Lượng II",
+      "desc": "Đội của bạn nhận thêm 10% Khuếch Đại Sát Thương. 80% sát thương vượt mức sẽ được gây lên kẻ địch gần nhất dưới dạng sát thương phép."
+    },
+    "TFT11_Augment_RadiantRefactor": {
+      "name": "Tái Hiện Thánh Quang",
+      "desc": "Nhận 1 Nâng Cấp Tuyệt Phẩm và 1 gói trang bị thành phần.\n\nNâng Cấp Tuyệt Phẩm nâng cấp một trang bị lên dạng Ánh Sáng!"
+    },
+    "TFT9_Augment_LearningFromExperience2": {
+      "name": "Kiên Nhẫn Học Tập",
+      "desc": "Sau khi giao chiến với người chơi, nhận thêm 2 XP nếu bạn thắng hoặc 3 XP nếu bạn thua."
+    },
+    "TFT_Augment_UrfsGambit": {
+      "name": "Ván Cược URF",
+      "desc": "Nếu bạn thắng vòng giao tranh người chơi tiếp theo, nhận 1 Xẻng Vàng. Nếu thua, nhận 1 Chảo Vàng. Nhận ngay 1 gói trang bị thành phần và 3 vàng."
+    },
+    "TFT11_Augment_Slammin": {
+      "name": "Hạ Đo Ván",
+      "desc": "Nhận 3 vàng. Sau mỗi vòng giao tranh với người chơi, nếu không có trang bị nào của bạn nằm ở hàng dự bị (ngoài các trang bị tiêu thụ), nhận 2 XP."
+    },
+    "TFT_Augment_InvestmentStrategy2": {
+      "name": "Chiến Thuật Đầu Tư II",
+      "desc": "Tướng của bạn nhận thêm vĩnh viễn 8 Máu tối đa với mỗi vàng lợi tức bạn kiếm được. Lợi tức tối đa của bạn tăng lên thành 7. Nhận 3 vàng."
+    },
+    "TFT_Augment_BronzeForLifeI": {
+      "name": "Tất Tay Bậc Đồng I",
+      "desc": "Đội của bạn nhận 2% Khuếch Đại Sát Thương cho mỗi tộc/hệ bậc Đồng.\n\nThưởng Khuếch Đại Sát Thương: {TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDamageAmp}%"
+    },
+    "TFT_Augment_InvestmentStrategy1": {
+      "name": "Chiến Thuật Đầu Tư I",
+      "desc": "Tướng của bạn nhận thêm vĩnh viễn 8 Máu tối đa với mỗi vàng lợi tức bạn kiếm được."
+    },
+    "TFT_Augment_CosmicRestart": {
+      "name": "Tái Lập Vũ Trụ",
+      "desc": "Cầu gọi các Vị Thần để bán toàn bộ bàn đấu và hàng dự bị của bạn. Nhận 2 Ấn ngẫu nhiên và 15 lượt đổi Cửa Hàng miễn phí."
+    },
+    "TFT_Augment_HighVoltage": {
+      "name": "Sét Cao Thế",
+      "desc": "Nhận 1 Nỏ Sét. Nỏ Sét của bạn được +3 ô bán kính tác dụng và gây thêm 25% sát thương."
+    },
+    "TFT_Augment_SoloLeveling": {
+      "name": "Tôi Thăng Cấp Một Mình",
+      "desc": "Trong 5 giao tranh tiếp theo, bạn chỉ được triển khai 1 tướng, nhưng tướng đó sẽ được tăng mạnh chỉ số. Nhận 1 XP với mỗi mạng hạ gục tướng đó đạt được. Sau đó, nhận 2 trang bị thành phần."
+    },
+    "TFT6_Augment_Distancing": {
+      "name": "Độc Hành I",
+      "desc": "Những tướng không đứng liền kề với bất kì đồng minh nào khác khi bắt đầu giao tranh nhận lá chắn tương đương 20% Máu tối đa trong 10 giây."
+    },
+    "TFT_Augment_TreasureHunt": {
+      "name": "Săn Kho Báu",
+      "desc": "Nhận 1 rương bị khóa mỗi Giai Đoạn từ bây giờ cho đến Giai Đoạn {MaxNumChests}. Mở khóa từng rương khi bạn tiêu {GoldNeededPerChest} vàng cho các lượt đổi trong Cửa Hàng. Những rương này sẽ tồn tại cho đến khi được mở."
+    },
+    "TFT_Augment_MagicRollMinus": {
+      "name": "Quay Trúng Thưởng",
+      "desc": "Đổ 1 con xúc xắc. Nhận thưởng dựa trên số xúc xắc đổ ra.\n\nPhần Thưởng: {TFTUnitProperty.item:TFT_Augment_MagicRoll}"
+    },
+    "TFT_Augment_TwoTrick": {
+      "name": "Số 2 May Mắn",
+      "desc": "Nhận 1 tướng 2 vàng 2 sao và 2 tướng 1 vàng 2 sao ngẫu nhiên."
+    },
+    "TFT_Augment_BlazingSoul": {
+      "name": "Linh Hồn Rực Cháy I",
+      "desc": "Bắt đầu giao tranh: Tướng có Tốc Độ Đánh cao nhất của bạn nhận thêm 20% Sức Mạnh Phép Thuật và 20% Tốc Độ Đánh. Cứ thế lặp lại trên một đồng minh khác sau mỗi 3 giây."
+    },
+    "TFT_Augment_FindYourCenter": {
+      "name": "Tiền Vệ Trung Tâm",
+      "desc": "Tướng bắt đầu giao tranh ở chính giữa hàng trên sẽ được nhận 15% Khuếch Đại Sát Thương và 25% Máu tối đa."
+    },
+    "TFT10_Augment_GoodForSomethingSilver": {
+      "name": "Được Này Mất Kia I",
+      "desc": "Tướng không mang trang bị có {dropchance}% xác suất rơi ra 1 vàng khi hy sinh."
+    },
+    "TFT8_Augment_SalvageBinPlus": {
+      "name": "Nhà Máy Tái Chế+",
+      "desc": "Nhận ngay 1 trang bị hoàn chỉnh ngẫu nhiên, và 1 thành phần sau 4 vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn)."
+    },
+    "TFT6_Augment_Keepers1": {
+      "name": "Hộ Pháp I",
+      "desc": "Bắt đầu giao tranh: Ban cho các tướng đứng liền kề với đồng minh một Lá Chắn bằng 130 Máu trong 8 giây. Lá Chắn có thể cộng dồn."
+    },
+    "TFT_Augment_ItemSpiritVisage": {
+      "name": "Linh Hồn Chuộc Tội",
+      "desc": "Nhận 1 Giáp Tâm Linh. Mỗi 5 giây, Giáp Tâm Linh hồi lại cho các đồng minh trong phạm vi 1 ô {MissingHealth}% Máu đã mất của họ."
+    },
+    "TFT_Augment_SpeedyDoubleKill": {
+      "name": "Song Sát Tốc Hành",
+      "desc": "Nhận 1 Cuồng Đao Guinsoo. Khi 2 người chơi đã bị loại, nhận 40 vàng.\n\nGiải Vô Địch Định Mệnh, 2021"
+    },
+    "TFT_Augment_ForwardThinking": {
+      "name": "Nghĩ Về Tương Lai",
+      "desc": "Mất đi toàn bộ vàng. Sau {Rounds} giao tranh người chơi, nhận lại lượng vàng ban đầu và thêm 62 vàng nữa.\n\nVàng Sắp Nhận Được: {TFTUnitProperty.item:TFT_Augment_ForwardThinkingGold}"
+    },
+    "TFT_Augment_Dhampyr1": {
+      "name": "Hút Sinh Lực I",
+      "desc": "Bạn hồi máu bằng 12% sát thương bạn gây lên Linh Thú của đối thủ. Đội của bạn nhận 10% Hút Máu Toàn Phần."
+    },
+    "TFT6_Augment_Keepers2": {
+      "name": "Hộ Pháp II",
+      "desc": "Bắt đầu giao tranh: Ban cho các tướng đứng liền kề với đồng minh một Lá Chắn bằng 210 Máu trong 8 giây. Lá Chắn có thể cộng dồn."
+    },
+    "TFT_Augment_Flexible": {
+      "name": "Linh Hoạt",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Khi bắt đầu mỗi Giai Đoạn, nhận 1 Ấn ngẫu nhiên. Đội của bạn nhận 30 Máu với mỗi Ấn mà họ đang mang."
+    },
+    "TFT_Augment_RestartMission": {
+      "name": "Tái Khởi Động Nhiệm Vụ",
+      "desc": "Loại bỏ tất cả tướng trên bàn đấu và trên hàng dự bị của bạn. Nhận 2 tướng 3 vàng 2 sao, 2 tướng 2 vàng 2 sao và 1 tướng 1 vàng 2 sao ngẫu nhiên."
+    },
+    "TFT_Augment_DuoQueue": {
+      "name": "Hàng Chờ Đấu Đôi",
+      "desc": "Nhận 2 tướng 5 vàng ngẫu nhiên và 2 bản sao của 1 trang bị thành phần ngẫu nhiên."
+    },
+    "TFT7_Augment_Preparation2": {
+      "name": "Làm Nóng II",
+      "desc": "Tướng trên hàng chờ nhận vĩnh viễn 50 Máu, 5% Sức Mạnh Công Kích và 5% Sức Mạnh Phép Thuật mỗi vòng đấu. Các tướng khởi đầu với 1 cộng dồn hiệu ứng này, có thể cộng dồn tối đa 4 lần."
+    },
+    "TFT_Augment_BloodRage": {
+      "name": "Cuồng Huyết",
+      "desc": "Đồng minh của bạn nhận 12 - 25% Khuếch Đại Sát Thương dựa theo Máu đã mất. Nhận Khuếch Đại Sát Thương Tối Đa ở 30% Máu."
+    },
+    "TFT11_Augment_Slammin_Plus": {
+      "name": "Hạ Đo Ván+",
+      "desc": "Nhận ngay 4 vàng và 10 XP. Sau mỗi vòng giao tranh với người chơi, nếu không có trang bị nào của bạn nằm ở hàng dự bị (ngoài các trang bị tiêu thụ), nhận 2 XP."
+    },
+    "TFT6_Augment_MaxLevel10": {
+      "name": "Khuyến Mãi Kinh Nghiệm",
+      "desc": "Khi bạn mua XP, nhận thêm 2 XP. Ngay lập tức nhận 6 XP."
+    },
+    "TFT6_Augment_SecondWind2": {
+      "name": "Sức Sống Mới II",
+      "desc": "Sau 10 giây giao tranh, đội của bạn hồi lại 60% Máu đã mất."
+    },
+    "TFT_Augment_TwinGuardians": {
+      "name": "Song Vệ",
+      "desc": "Nếu bạn có đúng 2 đồng minh ở hàng đầu, tăng cho họ 100 Máu cộng thêm, 35 Giáp và 35 Kháng Phép."
+    },
+    "TFT6_Augment_SecondWind1": {
+      "name": "Ngọn Gió Thứ Hai",
+      "desc": "Sau 10 giây giao tranh, đội của bạn hồi lại 40% Máu đã mất."
+    },
+    "TFT_Augment_GoldenGamblePlus": {
+      "name": "Ván Cược Hoàng Kim+",
+      "desc": "Nhận {gold} vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh.\n\n{TFTUnitProperty.item:TFT_Augment_GoldenGamble_Tooltip}"
+    },
+    "TFT_Augment_AnExaltedAdventure": {
+      "name": "Cuộc Phiêu Lưu Tôn Quý",
+      "desc": "Nhận 3 tướng 2 vàng. Nếu bạn nâng 2 tướng trong số đó lên 3 sao, nhận 1 hộp báu vật. Nhận 1 Máy Sao Chép Tướng Cỡ Nhỏ khi khởi đầu 2 giai đoạn tiếp theo.\n\nTướng: {TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs}, {TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs2}, {TFTUnitProperty.item:TFT_Augment_ExaltedAdventure_Champs3}"
+    },
+    "TFT6_Augment_Diversify1": {
+      "name": "Nhất Thống",
+      "desc": "Nhận 1.5% Sức Mạnh Công Kích và 1.5% Sức Mạnh Phép Thuật với mỗi Tộc/Hệ không phải duy nhất được kích hoạt trong đội hình.\n\nThưởng Hiện Tại: {TFTUnitProperty.item:TFT_Augment_Diversify_ADCounter}%  {TFTUnitProperty.item:TFT_Augment_Diversify_APCounter}%"
+    },
+    "TFT9_Augment_StarsAreBorn": {
+      "name": "Toàn Sao Là Sao",
+      "desc": "Tướng 1-vàng và 2-vàng đầu tiên bạn mua sẽ lập tức được nâng lên 2-sao. Nhận 7 vàng."
+    },
+    "TFT_Augment_FeelingLucky": {
+      "name": "Cảm Thấy May Mắn",
+      "desc": "Nhận 12 vàng, sau đó tung đồng xu. Nếu ra mặt ngửa, nhận thêm 4 vàng.\n\n{TFTUnitProperty.item:TFT_Augment_FeelingLucky_Tooltip}"
+    },
+    "TFT_Augment_AdvancedLoan": {
+      "name": "Vay Tạm Ứng",
+      "desc": "Nhận 20 Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc."
+    },
+    "TFT_Augment_TheGoldenDragon": {
+      "name": "Kim Long",
+      "desc": "Nhận 1 Giáp Đại Hãn. Các tướng mang Giáp Đại Hãn chiếm 2 vị trí trong đội hình nhưng nhận thêm 700 Máu và 20% Chống Chịu.\n\nGiáp Đại Hãn này mang lại vàng và tăng sức mạnh chiến đấu.\nGiải Vô Địch Thế Giới Rồng, 2022"
+    },
+    "TFT_Augment_ComponentQuestRod": {
+      "name": "Triệu Hồi Bất Tận",
+      "desc": "Nhận 1 Gậy Quá Khổ. Sau khi đội của bạn gây 42000 sát thương phép, nhận thêm 2.\n\nSát thương gây ra: {TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker}"
+    },
+    "TFT6_Augment_OneTwoFive": {
+      "name": "Một, Hai, Năm!",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên, 2 vàng và 1 tướng 5-vàng ngẫu nhiên."
+    },
+    "TFT9_Augment_SilverSpoon": {
+      "name": "Đặc Quyền Phú Gia",
+      "desc": "Nhận 10 XP."
+    },
+    "TFT_Augment_InfinityProtection": {
+      "name": "Bảo Hộ Vô Tận",
+      "desc": "Nhận ngay 3 vàng. Ở Giai Đoạn 3-7, nhận 1 Tam Luyện Kiếm. Tam Luyện Kiếm trao cho các đồng minh cùng hàng một lá chắn bằng 12% Máu.\n\nGiải Vô Địch Quái Vật Tấn Công, 2023"
+    },
+    "TFT_Augment_ForgeAFriend": {
+      "name": "Chế Tạo Bằng Hữu",
+      "desc": "Tướng 1 vàng tiếp theo bạn mua được nâng lên 3 sao. Nhận 5 vàng."
+    },
+    "TFT_Augment_HomeCooking": {
+      "name": "Gói Bảo Hộ",
+      "desc": "Ngay bây giờ và khi bắt đầu 2 Giai Đoạn tiếp theo, nhận 1 gói bảo hộ chứa báu vật và 1 vàng."
+    },
+    "TFT_Augment_ForgeSword": {
+      "name": "Thợ Rèn Kiếm",
+      "desc": "Nhận 2 trang bị hoàn chỉnh ngẫu nhiên được ghép từ Kiếm B.F."
+    },
+    "TFT11_Augment_EpochPlus": {
+      "name": "Kỷ Nguyên+",
+      "desc": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận 8 XP và 2 lượt đổi miễn phí."
+    },
+    "TFT_Augment_FuriousBlows": {
+      "name": "Kamekameha",
+      "desc": "Mỗi đòn đánh thứ 5 gây thêm sát thương chuẩn tương đương 100% Sức Mạnh Công Kích Cơ Bản."
+    },
+    "TFT_Augment_MuseumHeist": {
+      "name": "Phi Vụ Trang Bị",
+      "desc": "Sau {NumberOfCombats} giao tranh người chơi, nhận tất cả trang bị thành phần. Nhận ngay 1 trang bị thành phần ngẫu nhiên.\n\n{TFTUnitProperty.item:TFT_Augment_MuseumHeist_TooltipTRAKey} {TFTUnitProperty.item:TFT_Augment_MuseumHeist_CompleteTRAKey}"
+    },
+    "TFT_Augment_AuraFarming": {
+      "name": "Aura Farming",
+      "desc": "Nhận 1 tướng 5 vàng {StarLevel} sao mang 1 trang bị đề xuất. Bạn không thể triển khai tướng này cho tới Vòng 4-3."
+    },
+    "TFT_Augment_BeltOverflow": {
+      "name": "Đam Mê Đai Lưng",
+      "desc": "Nhận 4 Đai Khổng Lồ. Đai Khổng Lồ của bạn cho thêm +85 Máu."
+    },
+    "TFT_Augment_ForgedInStrength": {
+      "name": "Tôi Luyện Sức Mạnh",
+      "desc": "Nhận 1 Tạo Tác ngẫu nhiên. Khi bạn xuống dưới 30 Máu, nhận thêm 3 Tạo Tác ngẫu nhiên.\n\nGiải Vô Địch Remix Rumble, 2023"
+    },
+    "TFT9_Augment_OneTwosThree": {
+      "name": "Một Hai Ba",
+      "desc": "Nhận 2 tướng 1 vàng, {numchamps} tướng 2 vàng và 1 tướng 3 vàng."
+    },
+    "TFT_Augment_EyeForAnEye": {
+      "name": "Ăn Miếng Trả Miếng",
+      "desc": "Với mỗi 15 tướng đồng minh tử trận, nhận 1 trang bị thành phần ngẫu nhiên (tối đa 3).\n\nSố Lần Tử Trận Còn Lại: {TFTUnitProperty.item:TFT_Augment_EyeForAnEyeDeaths}"
+    },
+    "TFT_Augment_TeslaCoil": {
+      "name": "Lõi Tesla",
+      "desc": "Mỗi đồng minh mang 3 trang bị sẽ phóng ra 2 tia sét mỗi 5 giây, gây 240 - 270 sát thương phép dựa theo giai đoạn."
+    },
+    "TFT_Augment_TraitTree": {
+      "name": "Cây Tộc Hệ",
+      "desc": "Nhận 3 Ấn ngẫu nhiên, 1 Búa Rèn và 2 vàng."
+    },
+    "TFT9_Augment_HighEndSector": {
+      "name": "Tín Đồ Mua Sắm",
+      "desc": "Khi bạn thăng cấp, nhận số lượt làm mới cửa hàng miễn phí tương đương với cấp của bạn +1. Nhận 2 vàng."
+    },
+    "TFT_Augment_SavingsAccount": {
+      "name": "Tài Khoản Tiết Kiệm",
+      "desc": "Sau khi bạn nhận được {GoldRequired} vàng lợi tức, nhận 25 vàng. Lợi tức tối đa của bạn tăng lên thành 7. Nhận ngay 2 vàng.\n\nVàng kiếm được: {TFTUnitProperty.item:TFT_Augment_SavingsAccount_Tracker}"
+    },
+    "TFT_Augment_CraftedCrafting": {
+      "name": "Khéo Tay Hay Làm",
+      "desc": "Mỗi khi bạn chế tạo 1 trang bị hoàn chỉnh, nhận 2 lượt đổi."
+    },
+    "TFT9_Augment_JeweledLotus": {
+      "name": "Khảm Bảo Thạch I",
+      "desc": "Đội của bạn nhận 10% Tỉ Lệ Chí Mạng và Chuẩn Xác.\n\n[Precision]"
+    },
+    "TFT_Augment_Incoming": {
+      "name": "Châm Ngòi",
+      "desc": "Các đồng minh khởi đầu giao tranh ở 2 hàng sau sẽ chia nhau 60 Năng Lượng sau 6 giây giao tranh."
+    },
+    "TFT_Augment_BirthdayReunion": {
+      "name": "Sinh Nhật Đoàn Tụ",
+      "desc": "Nhận 1 vàng. Ở Cấp 5, nhận 1 tướng 2 vàng 2 sao ngẫu nhiên. Ở Cấp 7, nhận 1 Găng Đạo Tặc. Ở Cấp 9, nhận 1 tướng 5 vàng 2 sao ngẫu nhiên.\n\nTactician's Crown Họa Thế Chi Linh, 2024"
+    },
+    "TFT7_Augment_CursedCrown": {
+      "name": "Vương Miện Hắc Hóa",
+      "desc": "Tăng +2 số lượng tướng tối đa và đội của bạn nhận 4% Chống Chịu, nhưng bạn sẽ nhận gấp đôi sát thương lên Linh Thú khi thua giao tranh người chơi."
+    },
+    "TFT11_Augment_RainingGoldPlus": {
+      "name": "Cơn Mưa Vàng+",
+      "desc": "Lập tức nhận 18 vàng và 1 vàng mỗi&nbsp;vòng đấu."
+    },
+    "TFT_Augment_ExclusiveCustomization2": {
+      "name": "Lựa Chọn Độc Quyền II",
+      "desc": "Nhận 2 Rương Trang Bị May Mắn, 1 Nam Châm Ma Thuật và 7 vàng.\n\nSử dụng 1 Rương Trang Bị May Mắn lên 1 tướng để chọn một trong số các trang bị gợi ý!"
+    },
+    "TFT9_Augment_CustomerIsAlwaysRight": {
+      "name": "Đại Tiệc Trang Bị",
+      "desc": "Mỗi khi nhận 1 trang bị thành phần, nó biến đổi thành gói trang bị thành phần. Nhận ngay 1 trang bị thành phần ngẫu nhiên.\n\nGói trang bị này sẽ đưa ra 4 lựa chọn."
+    },
+    "TFT11_Augment_Prizefighter": {
+      "name": "Võ Sĩ Giác Đấu",
+      "desc": "Nhận 2 trang bị thành phần. Bạn sẽ nhận được 1 trang bị&nbsp;thành phần sau mỗi 5 lần thắng giao tranh."
+    },
+    "TFT10_Augment_HeroicGrabBag": {
+      "name": "Túi Đồ Siêu Hùng",
+      "desc": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ và 5 vàng.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống."
+    },
+    "TFT_Augment_ExclusiveCustomization": {
+      "name": "Lựa Chọn Độc Quyền",
+      "desc": "Nhận 1 Rương Trang Bị May Mắn, 1 Nam Châm Ma Thuật và 7 vàng.\n\nSử dụng 1 Rương Trang Bị May Mắn lên 1 tướng để chọn một trong số các trang bị gợi ý!"
+    },
+    "TFT7_Augment_Preparation": {
+      "name": "Làm Nóng I",
+      "desc": "Tướng trên hàng chờ nhận vĩnh viễn 30 Máu, 3% Sức Mạnh Công Kích và 3% Sức Mạnh Phép Thuật mỗi vòng đấu. Các tướng khởi đầu với 1 cộng dồn hiệu ứng này, có thể cộng dồn tối đa 4 lần."
+    },
+    "TFT_Augment_InvestedPlusPlus": {
+      "name": "Đầu Tư++",
+      "desc": "Nhận 40 vàng. Sau mỗi giao tranh, nhận 1 lượt làm mới Cửa Hàng với mỗi 10 vàng vượt hơn 50 (tối đa 80 vàng)."
+    },
+    "TFT_Augment_WandOverflow": {
+      "name": "Đam Mê Gậy",
+      "desc": "Nhận 4 Gậy Quá Khổ. Gậy Quá Khổ của bạn sẽ cho +5% Tốc Độ Đánh."
+    },
+    "TFT9_Augment_RollTheDice": {
+      "name": "Quang Lân Tiểu Yêu",
+      "desc": "Nhận 1 Găng Tinh Xảo. Trang bị này sẽ tạo thêm 2 trang bị Ánh Sáng ngẫu nhiên mỗi vòng đấu.\n\nTrang Bị Ánh Sáng là phiên bản mạnh mẽ hơn của những trang bị hoàn chỉnh."
+    },
+    "TFT_Augment_SpreadingRootsPlus": {
+      "name": "Cắm Rễ Phân Tán+",
+      "desc": "Nhận 2 Ấn ngẫu nhiên, 1 Búa Rèn và 2 vàng."
+    },
+    "TFT9_Augment_Commander_Ascension": {
+      "name": "Thăng Hoa",
+      "desc": "Sau 12 giây giao tranh, đội của bạn nhận thêm 35% Khuếch Đại Sát Thương."
+    },
+    "TFT_Augment_Lineup": {
+      "name": "Tiền Tuyến Vững Chãi",
+      "desc": "Đội của bạn nhận 2 Giáp và Kháng Phép với mỗi đồng minh bắt đầu giao tranh ở 2 hàng đầu."
+    },
+    "TFT9_Augment_PandorasItems2": {
+      "name": "Hộp Pandora II",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng dự bị được đánh tráo ngẫu nhiên.\n\nNhận 2 trang bị thành phần ngẫu nhiên."
+    },
+    "TFT_Augment_LuxurySubscription": {
+      "name": "Gói Đăng Ký Hạng Sang",
+      "desc": "Nhận một gói quà chứa 1 tướng 5 vàng, 1 tướng 1 vàng 2 sao và 7 vàng.\n\nKhi bắt đầu 2 giai đoạn tiếp theo, nhận gói quà một lần nữa."
+    },
+    "TFT_Augment_BoosterPack": {
+      "name": "Gói Tăng Cường",
+      "desc": "Nhận các tướng ngẫu nhiên có tổng giá là 12 vàng. (Đảm bảo có ít nhất một tướng 3 vàng!)\n\n(Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)"
+    },
+    "TFT_Augment_GoldenGamblePlusPlus": {
+      "name": "Ván Cược Hoàng Kim++",
+      "desc": "Nhận {gold} vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh.\n\n{TFTUnitProperty.item:TFT_Augment_GoldenGamble_Tooltip}"
+    },
+    "TFT_Augment_GlassCannonII": {
+      "name": "Lấy Công Bù Thủ II",
+      "desc": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với 80% Máu nhưng nhận thêm 25% Khuếch Đại Sát Thương."
+    },
+    "TFT6_Augment_Recombobulator": {
+      "name": "Xoay Bài Tự Động",
+      "desc": "Tất cả tướng trên sân đấu của bạn sẽ vĩnh viễn chuyển thành tướng ngẫu nhiên với giá cao hơn 1 bậc (tối đa 5). Nhận 2 Nam Châm Ma Thuật và 3 lượt đổi."
+    },
+    "TFT11_Augment_OverEncumbered": {
+      "name": "Quá Sức Gánh Vác",
+      "desc": "Trong giai đoạn tiếp theo, bạn chỉ có 2 ô dự bị. Sau đó, nhận {Components} trang bị&nbsp;thành phần."
+    },
+    "TFT10_Augment_LittleBuddies": {
+      "name": "Những Người Bạn Nhỏ",
+      "desc": "Tướng 4 vàng và 5 vàng của bạn nhận {health} Máu và 7% Tốc Độ Đánh với mỗi tướng 1 vàng và 2 vàng trên bàn đấu của bạn.\n\n{TFTUnitProperty.item:TFT_Augment_LittleBuddies_Tooltip}"
+    },
+    "TFT_Augment_EfficientShopper": {
+      "name": "Thương Gia Khôn Ngoan",
+      "desc": "Trong 4 vòng đi chợ tiếp theo, nhận 1 bản sao thứ hai của tướng được chọn. Nhận ngay 4 vàng."
+    },
+    "TFT_Augment_Overheal": {
+      "name": "Hồi Máu Vượt Trội",
+      "desc": "Mỗi đòn đánh thứ ba gây 110% sát thương và hồi máu tương đương 60% lượng sát thương đó. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa 400 Máu."
+    },
+    "TFT_Augment_ThornPlatedArmor": {
+      "name": "Giáp Gai Thép",
+      "desc": "Nhận 1 Áo Choàng Gai. Áo Choàng Gai của bạn gây thêm {damageamp1} - {damageamp4}% sát thương (tùy vào Giai Đoạn)."
+    },
+    "TFT_Augment_TimeSkip": {
+      "name": "Vượt Thời Gian",
+      "desc": "Vô hiệu hóa Cửa Hàng của bạn trong 3 vòng tiếp theo. Sau đó nhận 32 XP."
+    },
+    "TFT_Augment_AdvancedLoanPlus": {
+      "name": "Vay Tạm Ứng+",
+      "desc": "Nhận 33 Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc."
+    },
+    "TFT9_Augment_PumpingUp3": {
+      "name": "Tiếp Sức III",
+      "desc": "Đội của bạn nhận 16% Tốc Độ Đánh. Sau mỗi vòng đấu, nhận thêm 2% nữa. (Tốc Độ Đánh hiện tại: {TFTUnitProperty.item:TFT9_PumpingUp3Rounds}%)"
+    },
+    "TFT9_Augment_PumpingUp2": {
+      "name": "Tiếp Sức II",
+      "desc": "Đội của bạn nhận 10% Tốc Độ Đánh. Sau mỗi vòng đấu, nhận thêm 1% nữa. (Tốc Độ Đánh hiện tại: {TFTUnitProperty.item:TFT9_PumpingUp2Rounds}%)"
+    },
+    "TFT_Augment_CalledShot": {
+      "name": "Đòn Quyết Định",
+      "desc": "Đặt chuỗi thắng của bạn thành 4. Nhận 4 vàng."
+    },
+    "TFT6_Augment_TradeSector2": {
+      "name": "Trung Tâm Thương Mại",
+      "desc": "Nhận 16 lượt đổi cửa hàng miễn phí ngay và 3 lượt đổi mỗi vòng đấu cho đến hết trận."
+    },
+    "TFT_Augment_EyeForAnEyePlus": {
+      "name": "Ăn Miếng Trả Miếng+",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên. Với mỗi 18 tướng đồng minh tử trận, nhận thêm 1 trang bị thành phần nữa (tối đa 2).\n\nSố Lần Tử Trận Còn Lại: {TFTUnitProperty.item:TFT_Augment_EyeForAnEyeDeaths}"
+    },
+    "TFT_Augment_MarksMan": {
+      "name": "Tập Trung Hỏa Lực",
+      "desc": "Đội của bạn nhận 10% Sức Mạnh Công Kích. Mỗi 5 giây, nhận thêm 5%."
+    },
+    "TFT_Augment_SideEffects": {
+      "name": "Phản Ứng Phụ",
+      "desc": "Khi một đồng minh được hồi máu, họ gây 50% sát thương phép tương đương lượng hồi máu lên mục tiêu của mình. Mỗi 5 giây, đồng minh hồi lại 4% Máu tối đa của họ."
+    },
+    "TFT_Augment_InvestedPlus": {
+      "name": "Đầu Tư+",
+      "desc": "Nhận 26 vàng. Sau mỗi giao tranh, nhận 1 lượt làm mới Cửa Hàng với mỗi 10 vàng vượt hơn 50 (tối đa 80 vàng)."
+    },
+    "TFT_Augment_BodyguardTraining": {
+      "name": "Huấn Luyện Cận Vệ",
+      "desc": "Các đồng minh nhận 15 Giáp và Kháng Phép, tăng thêm 2 với mỗi cấp người chơi.\n\nChung Kết Thế Giới Thời Đại Công Nghệ, 2022"
+    },
+    "TFT11_Augment_RainingGold": {
+      "name": "Cơn Mưa Vàng",
+      "desc": "Lập tức nhận 7 vàng và 1 vàng mỗi&nbsp;vòng đấu."
+    },
+    "TFT_Augment_CryMeARiver": {
+      "name": "Giọt Lệ Bi Ai",
+      "desc": "Nhận 1 Nước Mắt Nữ Thần. Đội của bạn nhận 1 Hồi Năng Lượng. Sau 12 giây giao tranh, tăng hiệu ứng này lên thành 4."
+    },
+    "TFT_Augment_MagicRoll": {
+      "name": "Xúc Xắc Ma Pháp",
+      "desc": "Đổ 3 xúc xắc. Nhận nhiều loại phần thưởng dựa trên tổng số đã đổ được.\n\nPhần Thưởng: {TFTUnitProperty.item:TFT_Augment_MagicRoll}"
+    },
+    "TFT_Augment_SwordOverflow": {
+      "name": "Đam Mê Kiếm",
+      "desc": "Nhận 4 Kiếm B.F. Kiếm B.F. của bạn sẽ cho +4% Tốc Độ Đánh."
+    },
+    "TFT_Augment_TheTower": {
+      "name": "Tòa Tháp",
+      "desc": "Nhận 1 Hình Nhân khổng lồ với lượng Máu tăng thêm (tăng theo Giai đoạn). Cứ mỗi 4 giây, nó phóng điện vào 3 kẻ địch gần nhất, gây sát thương chuẩn tương đương 5% Máu tối đa."
+    },
+    "TFT_Augment_WeStickTogether": {
+      "name": "Kề Vai Sát Cánh",
+      "desc": "Nhận 1 Ấn ngẫu nhiên và 1 gói trang bị hoàn chỉnh. Các đồng minh có chung tộc/hệ với Ấn đó nhận thêm 30% Tốc Độ Đánh. {TFTUnitProperty.item:TFT_Augment_WeStickTogether_Tooltip}\n\nTactician's Crown Bước Vào Arcane, 2025"
+    },
+    "TFT_Augment_SilverDestinyPlusPlus": {
+      "name": "Vận Mệnh Bạc++",
+      "desc": "Nhận 1 Nâng Cấp Bạc và 7 vàng."
+    },
+    "TFT6_Augment_ClearMind": {
+      "name": "Thông Thoáng",
+      "desc": "Nếu không có tướng trong hàng dự bị khi kết thúc giao tranh với người chơi, nhận 3 ĐKN."
+    },
+    "TFT_Augment_WorthTheWaitPrismatic": {
+      "name": "Chờ Đợi Xứng Đáng II",
+      "desc": "Nhận 2 bản sao của một tướng {unittier} vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận.\n\nTướng: {TFTUnitProperty.item:TFT_Augment_WorthTheWait}"
+    },
+    "TFT_Augment_TitanicTitan": {
+      "name": "Khổng Lồ Ngoại Cỡ",
+      "desc": "Tăng Máu hiện tại và Máu tối đa của người chơi thêm 25. Ở các vòng đi chợ, bạn được thả ra sớm hơn nhưng di chuyển sẽ chậm hơn."
+    },
+    "TFT_Augment_Misfits": {
+      "name": "Lệch Chuẩn",
+      "desc": "Đội của bạn nhận 55 Máu cho mỗi tộc/hệ độc nhất đang kích hoạt. Nhận 1 Rhaast và 1 Miss Fortune.\n{TFTUnitProperty.item:TFT_Augment_Misfits_TotalHealthTooltip}\n\nTộc/hệ độc nhất thuộc về 1 tướng và được hiển thị bằng màu cam."
+    },
+    "TFT_Augment_HeadStart": {
+      "name": "Khởi Đầu Chậm Trễ",
+      "desc": "Bán toàn bộ bàn đấu và hàng dự bị của bạn. Nhận 4 tướng {tier} vàng 2 sao ngẫu nhiên. Vô hiệu hóa cửa hàng của bạn trong {roundstoskip} vòng tiếp theo."
+    },
+    "TFT9_Augment_Commander_RollingForDays": {
+      "name": "Xúc Xắc Vô Tận I",
+      "desc": "Nhận 10 lượt đổi Cửa Hàng miễn phí."
+    },
+    "TFT_Augment_ClockworkAccelerator": {
+      "name": "Động Cơ Tăng Tốc",
+      "desc": "Đội của bạn được tăng {attackspeed}% Tốc Độ Đánh sau mỗi {frequency} giây giao tranh."
+    },
+    "TFT_Augment_Protagonist": {
+      "name": "Nhân Vật Chính",
+      "desc": "Nhận 1 Nâng Cấp Tướng 1 vàng ngẫu nhiên. Sau 3 lượt, nhận 1 bản sao của tướng đó vào đầu mỗi lượt."
+    },
+    "TFT6_Augment_BandOfThieves2": {
+      "name": "Băng Trộm II",
+      "desc": "Nhận 2 Găng Đạo Tặc. Sau 6 giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc."
+    },
+    "TFT11_Augment_Buildabud": {
+      "name": "Tự Lập Đội",
+      "desc": "Nhận 1 tướng 1 vàng 3 sao ngẫu nhiên. Nhận 10 vàng."
+    },
+    "TFT_Augment_TwoTanky": {
+      "name": "Cặp Đôi Siêu Cứng",
+      "desc": "Khi triển khai đúng 2 bản sao của một tướng, cả hai nhận thêm 375 Máu. Khi một bản sao tử trận, bản sao còn lại nhận Lá Chắn bằng 35% Máu tối đa trong 12 giây. Khi ghép tướng 3 sao, nhận 1 bản sao 2 sao."
+    },
+    "TFT9_Augment_Commander_FinalAscension": {
+      "name": "Thăng Hoa Tột Đỉnh",
+      "desc": "Đội của bạn nhận {damageamp}% Khuếch Đại Sát Thương. Sau {delay} giây, hiệu ứng này tăng thành 60% Khuếch Đại Sát Thương."
+    },
+    "TFT_Augment_NobleSacrifice": {
+      "name": "Hy Sinh Cao Cả",
+      "desc": "Khi đồng minh đầu tiên của bạn hy sinh trong mỗi giao tranh, trao cho đội của bạn 25 + 10% Giáp và Kháng Phép của đồng minh đó."
+    },
+    "TFT_Augment_Corrosion": {
+      "name": "Ăn Mòn",
+      "desc": "Tướng địch đứng ở 2 hàng trên sẽ bị mất 4 Giáp và Kháng Phép sau mỗi 2 giây."
+    },
+    "TFT_Augment_BoxingLessons": {
+      "name": "Tập Chịu Đòn",
+      "desc": "Đội của bạn nhận 30 Máu với mỗi đồng minh bắt đầu giao tranh ở 2 hàng đầu."
+    },
+    "TFT9_Augment_StarterKit": {
+      "name": "Bộ Khởi Đầu",
+      "desc": "Nhận 1 tướng 4-vàng, 1 tướng 1-vàng 2-sao cùng chung tộc hệ và 8 vàng.\n\nVào thời điểm bắt đầu của 2 giai đoạn tiếp theo, nhận tướng 4-vàng đó một lần nữa."
+    },
+    "TFT7_Augment_LategameSpecialist": {
+      "name": "Hướng Đến Hồi Kết",
+      "desc": "Khi đạt cấp 9, nhận 27 vàng."
+    },
+    "TFT_Augment_Golemify": {
+      "name": "Người Đá Càn Quét",
+      "desc": "Mất đi tất cả tướng trên bàn đấu và trên hàng dự bị của bạn. Nhận 1 Người Đá mang 60% tổng Máu và 33% tổng Sức Mạnh Công Kích của tất cả các tướng đó. Người Đá nhận thêm 1200 Máu mỗi giai đoạn. Nhận 1 tướng 2 vàng 2 sao không phải Đỡ Đòn."
+    },
+    "TFT7_Augment_BirthdayPresents": {
+      "name": "Quà Sinh Nhật",
+      "desc": "Nhận một tướng 2 sao và 1 vàng mỗi khi bạn lên cấp. Bậc của tướng sẽ là cấp của bạn trừ 4 (tối đa: 5 vàng)."
+    },
+    "TFT_Augment_Pyromaniac": {
+      "name": "Hỏa Cuồng Nhân",
+      "desc": "Nhận 1 Bùa Đỏ. Thiêu Đốt của bạn gây thêm 50% sát thương."
+    },
+    "TFT_Augment_JustSlayer": {
+      "name": "Sát Thủ Khát Máu",
+      "desc": "Nhận 1 Diệt Khổng Lồ. Diệt Khổng Lồ tăng Khuếch Đại Sát Thương lên mọi kẻ địch thay vì chỉ áp dụng với các tướng Đỡ Đòn."
+    },
+    "TFT_Augment_ShimmerscaleEssence": {
+      "name": "Tinh Túy Kim Long",
+      "desc": "Nhận 1 Giáp Đại Hãn. Sau {combatnum} vòng đấu, nhận 1 Kiếm Của Tay Bạc.\n\nNhững trang bị này mang lại vàng và tăng sức mạnh chiến đấu."
+    },
+    "TFT_Augment_ComponentQuestTear": {
+      "name": "Lệ Lưu Ly",
+      "desc": "Nhận 1 Nước Mắt Nữ Thần. Sau khi đội của bạn tiêu hao 6500 Năng Lượng, nhận thêm 2.\n\nNăng lượng đã tiêu hao: {TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker}"
+    },
+    "TFT_Augment_BranchingOut": {
+      "name": "Phân Nhánh",
+      "desc": "Nhận 1 Ấn ngẫu nhiên."
+    },
+    "TFT_Augment_ItemGargoyleStoneplate": {
+      "name": "Khiên Đơn Đấu",
+      "desc": "Nhận 1 Thú Tượng Thạch Giáp. Bắt đầu giao tranh: Các đồng minh mang Thú Tượng Thạch Giáp nhận 17% Máu tối đa nếu họ đứng một mình một hàng."
+    },
+    "TFT_Augment_SweetTreats": {
+      "name": "Món Quà Ngọt Ngào",
+      "desc": "Nhận 1 gói Trang Bị Tạo Tác. Đội của bạn nhận 16 Máu với mỗi trang bị đang mang trên tướng.\n\nMáu Nhận Thêm: {TFTUnitProperty.item:TFT_Augment_SweetTreats_TeamHealth}\n\nTactician's Crown Hỗn Loạn Huyền Diệu, 2024"
+    },
+    "TFT9_Augment_DravenSpoilsOfWar3": {
+      "name": "Chiến Lợi Phẩm III",
+      "desc": "Kẻ địch có 40% tỉ lệ rớt ra báu vật khi bị tiêu diệt."
+    },
+    "TFT9_Augment_DravenSpoilsOfWar2": {
+      "name": "Chiến Lợi Phẩm II",
+      "desc": "Kẻ địch có 30% tỉ lệ rớt ra báu vật khi bị tiêu diệt."
+    },
+    "TFT_Augment_SubscriptionService": {
+      "name": "Dịch Vụ Gói Đăng Ký",
+      "desc": "Ngay bây giờ và vào thời điểm bắt đầu mỗi Giai Đoạn, mở 1 Cửa Hàng bao gồm 4 tướng 4 vàng khác nhau và nhận 6 vàng."
+    },
+    "TFT_Augment_PrismaticDestiny": {
+      "name": "Vận Mệnh Kim Cương",
+      "desc": "Nhận 1 Nâng Cấp Kim Cương ngẫu nhiên và 3 vàng."
+    },
+    "TFT6_Augment_Distancing2": {
+      "name": "Độc Hành II",
+      "desc": "Những tướng không đứng liền kề với bất kì đồng minh nào khác khi bắt đầu giao tranh nhận lá chắn tương đương 30% Máu tối đa trong 10 giây."
+    },
+    "TFT6_Augment_BandOfThieves2PlusPlus": {
+      "name": "Băng Trộm II++",
+      "desc": "Nhận 2 Găng Đạo Tặc. Sau 3 giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc."
+    },
+    "TFT_Augment_ShojinSpirit": {
+      "name": "Ý Chỉ Ngọn Giáo",
+      "desc": "Đội của bạn nhận thêm 8% Sức Mạnh Công Kích và 5 Năng Lượng. Nhận 1 Kiếm B.F. và 1 Nước Mắt Nữ Thần."
+    },
+    "TFT11_Augment_Reinfourcement": {
+      "name": "Tứ Phương Tiếp Viện",
+      "desc": "Tướng 4 vàng tiếp theo bạn mua bằng vàng sẽ lập tức được nâng lên 2 sao. Nhận 7 vàng."
+    },
+    "TFT_Augment_NoScoutNoPivot": {
+      "name": "NHẮM MẮT CHƠI BỪA",
+      "desc": "Các tướng tham gia giao tranh người chơi không thể được đưa về hàng dự bị hoặc bán. Đội của bạn nhận 1% Máu, 1% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật sau giao tranh người chơi.\n\n{TFTUnitProperty.item:TFT_Augment_NoScoutNoPivot_TrackerTRAKEY_Holder}"
+    },
+    "TFT_Augment_GoldForDummies": {
+      "name": "Hình Nhân Sinh Vàng",
+      "desc": "Nhận 1 Hình Nhân. Sau mỗi 10 giây, tất cả Hình Nhân cho bạn 1 vàng."
+    },
+    "TFT_Augment_LateGameScaling": {
+      "name": "Thăng Tiến Cuối Trận",
+      "desc": "Nhận 2 XP khi bắt đầu vòng giao tranh người chơi. Tướng 5 vàng của bạn nhận 12% Máu và 12% Tốc Độ Đánh.\n\nTactician's Crown Thành Phố Công Nghệ, 2025"
+    },
+    "TFT_Augment_QualityOverQuantity": {
+      "name": "Chất Lượng Hơn Số Lượng",
+      "desc": "Các Tướng mang đúng 1 trang bị sẽ được nâng cấp trang bị đó lên dạng Ánh Sáng. Các Tướng mang trang bị Ánh Sáng nhận 7% Máu. Nhận 2 Nam Châm Ma Thuật.\n\nGăng Đạo Tặc được tính là nhiều trang bị."
+    },
+    "TFT_Augment_MoneyHungry": {
+      "name": "Cơn Khát Vàng",
+      "desc": "Nhận 7 vàng ngay lập tức, sau đó nhận thêm 7 vàng vào khởi đầu mỗi giai đoạn. Nhặt vàng sẽ khiến Linh Thú của bạn to hơn."
+    },
+    "TFT_Augment_Waverider": {
+      "name": "Trên Đà Phát Triển",
+      "desc": "Mỗi khi bạn nâng sao cho tướng mà bạn đã triển khai trong giao tranh trước, nhận {NumRolls} lượt đổi Cửa Hàng miễn phí. Nhận 6 vàng."
+    },
+    "TFT_Augment_Placebo": {
+      "name": "Giả Dược",
+      "desc": "Đội của bạn được tăng 1% Tốc Độ Đánh. Nhận 8 vàng."
+    },
+    "TFT_Augment_MirroredMonetization": {
+      "name": "Dòng Tiền Mờ Ám",
+      "desc": "Nhận 4 vàng. Trong {Rounds} vòng tiếp theo, tướng địch sẽ rớt ra 2 vàng khi bị tiêu diệt.\n\n{TFTUnitProperty.item:TFT_Augment_MirroredMonetization_TotalGoldTooltip}"
+    },
+    "TFT_Augment_UnlimitedPower": {
+      "name": "Quyền Năng Vô Hạn",
+      "desc": "Nhận 1 Nanh Nashor, 1 Găng Bảo Thạch, 1 Gậy Quá Khổ và 1 Nam Châm Ma Thuật.\n\nPhù hợp với tướng Chủ Lực Phép!"
+    },
+    "TFT_Augment_CookingPot": {
+      "name": "Nồi Nấu Ăn",
+      "desc": "Khi bắt đầu mỗi lượt, tất cả các đồng minh đang mang trang bị Xẻng Vàng hoặc Chảo Vàng sẽ vĩnh viễn cho tướng ở gần nhất 60 Máu. Nhận 1 Chảo Vàng."
+    },
+    "TFT9_Augment_PandorasRadiantBox": {
+      "name": "Hộp Pandora III",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng dự bị được đánh tráo ngẫu nhiên.\n\nNhận 1 Trang Bị Ánh Sáng ngẫu nhiên."
+    },
+    "TFT6_Augment_TradeSector": {
+      "name": "Khu Giao Dịch",
+      "desc": "Nhận 1 lượt đổi miễn phí mỗi vòng đấu. Nhận 2 vàng."
+    },
+    "TFT_Augment_Pilfer": {
+      "name": "Ăn Trộm",
+      "desc": "Mỗi vòng đấu, nhận 1 bản sao 1 sao của tướng đầu tiên bạn tiêu diệt ở vòng giao tranh trước. Lần đầu tiên bạn nhận được số lượng tướng trị giá {GoldRequired} vàng theo cách này, nhận 1 Găng Đạo Tặc. {TFTUnitProperty.item:TFT_Augment_Pilfer_Tooltip}"
+    },
+    "TFT9_Augment_BigGrabBag": {
+      "name": "Túi Đồ Cỡ Đại",
+      "desc": "Nhận 3 trang bị thành phần ngẫu nhiên, 2 vàng và 1 Búa Rèn.\n\nBúa Rèn cho phép bạn tái tạo bất kỳ trang bị nào."
+    },
+    "TFT9_Augment_BardPlaybook2": {
+      "name": "Chúc Phúc Của Bụt",
+      "desc": "Nhận một gói trang bị thành phần khi bạn đạt cấp 5, 6, 7 và 8.\n\nGói trang bị cho bạn 4 lựa chọn."
+    },
+    "TFT9_Augment_BardPlaybook3": {
+      "name": "Ân Chủ Của Bụt",
+      "desc": "Khi bạn tăng cấp, nhận các trang bị mạnh mẽ hơn.\nCấp 4: Gói trang bị thành phần\nCấp 6: Gói trang bị hoàn chỉnh\nCấp 8: Chọn 1 trong 5 Trang Bị Ánh Sáng"
+    },
+    "TFT6_Augment_GachaAddict": {
+      "name": "Vé Kim Cương",
+      "desc": "Mỗi khi Cửa Hàng được đổi lại, bạn có 45% tỉ lệ nhận được thêm 1 lượt đổi miễn phí."
+    },
+    "TFT_Augment_ComponentQuestSword": {
+      "name": "Mở Lối",
+      "desc": "Nhận 1 Kiếm B.F. Sau khi đội của bạn gây 65000 sát thương vật lý, nhận thêm 2.\n\nSát thương gây ra: {TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker}"
+    },
+    "TFT9_Augment_BardPlaybook1": {
+      "name": "Đồng Minh Của Bụt",
+      "desc": "Lập tức nhận một tướng 2-vàng ngẫu nhiên. Mỗi lần thăng cấp, nhận được tướng này một lần nữa.\n\nTướng: {TFTUnitProperty.item:TFT_Augment_WorthTheWait}"
+    },
+    "TFT_Augment_ConstructACompanion": {
+      "name": "Người Bạn Vàng",
+      "desc": "Tướng 1 vàng tiếp theo bạn mua được nâng lên 3 sao. Nhận 2 vàng."
+    },
+    "TFT6_Augment_CalculatedLoss": {
+      "name": "Thua Có Tính Toán",
+      "desc": "Sau khi thua trận, nhận 2 vàng và 1 lượt đổi Cửa Hàng miễn phí."
+    },
+    "TFT9_Augment_RiskyMoves": {
+      "name": "Nước Đi Liều Lĩnh",
+      "desc": "Linh Thú của bạn mất 20 Máu, nhưng sau 7 vòng giao chiến với người chơi, nhận 26 vàng."
+    },
+    "TFT6_Augment_ForceOfNature": {
+      "name": "Tuyển Nhân Sự",
+      "desc": "Nhận thêm +1 số lượng tướng tối đa và 1 tướng 4 vàng."
+    },
+    "TFT_Augment_Moonlight": {
+      "name": "Ánh Trăng",
+      "desc": "Bắt đầu giao tranh: 1 tướng 1 vàng ngẫu nhiên được nâng cấp lên 3 sao trong 1 vòng và nhận thêm 40% Sức Mạnh Công Kích & {APBONUS}% Sức Mạnh Phép Thuật."
+    },
+    "TFT_Augment_EvilBeyondMeasure": {
+      "name": "Tà Ác Vô Lường",
+      "desc": "Tướng của bạn gây 4.5% sát thương dưới dạng Sát Thương Chuẩn với mỗi cấp Sao."
+    },
+    "TFT_Augment_AwakenedSoul": {
+      "name": "Thức Tỉnh Linh Hồn",
+      "desc": "Bắt đầu giao tranh: Đội của bạn nhận 1.5% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây trong 10 giây. Khi đạt cộng dồn tối đa, gây thêm 12% sát thương chuẩn."
+    },
+    "TFT7_Augment_BandOfThieves1": {
+      "name": "Băng Trộm",
+      "desc": "Nhận 1 Găng Đạo Tặc"
+    },
+    "TFT_Augment_SliceOfLife": {
+      "name": "Chuyện Đời Thường",
+      "desc": "Hai lần mỗi giai đoạn, nhận 1 tướng ngẫu nhiên. Giá của tướng tăng theo Giai Đoạn. Hiệu ứng này kết thúc sau khi nhận được 1 tướng 5 vàng."
+    },
+    "TFT9_Augment_GreaterJeweledLotus": {
+      "name": "Khảm Bảo Thạch II",
+      "desc": "Đội của bạn nhận 25% Tỉ Lệ Chí Mạng, 10% Sát Thương Chí Mạng và Chuẩn Xác.\n\n[Precision]"
+    },
+    "TFT_Augment_MoneyMonsoon": {
+      "name": "Bão Vàng",
+      "desc": "Nhận 7 vàng ngay bây giờ và mỗi vòng đấu cho đến hết trận."
+    },
+    "TFT7_Augment_LivingForge": {
+      "name": "Chế Tạo Tại Chỗ",
+      "desc": "Nhận ngay 1 Gói Trang Bị Tạo Tác và sau mỗi {NumberOfCombats} vòng giao chiến với người chơi.\n\nTạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt."
+    },
+    "TFT_Augment_Warpath": {
+      "name": "Đường Ra Trận",
+      "desc": "Nhận 1 tướng 2 vàng 2 sao. Sau khi gây 80 sát thương lên người chơi, nhận 1 rương chứa các tướng bậc cao và trang bị.\n(Hiện tại: {TFTUnitProperty.item:TFT_Augment_Warpath_DamageCount})"
+    },
+    "TFT_Augment_TheDarkinBlade": {
+      "name": "Huyết Tế",
+      "desc": "Nhận 1 Huyết Kiếm. Bắt đầu giao tranh: Các đồng minh mang Huyết Kiếm mất đi 15% Máu nhưng nhận lá chắn bằng 20% Máu và 12% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật."
+    },
+    "TFT6_Augment_RadiantRelics": {
+      "name": "Kho Thần Tích",
+      "desc": "Chọn 1 trong 5 Trang Bị Ánh Sáng. Nhận 1 Nam Châm Ma Thuật.\n\nTrang Bị Ánh Sáng là phiên bản mạnh mẽ hơn của những trang bị hoàn chỉnh."
+    },
+    "TFT_Augment_AnotherOnePlus": {
+      "name": "Bội Phẩm!+",
+      "desc": "Trang bị hoàn chỉnh tiếp theo bạn tạo ra sẽ cho thêm 1 bản sao nữa. Nhận 1 gói trang bị thành phần."
+    },
+    "TFT7_Augment_BigFriend2": {
+      "name": "Dựa Hơi II",
+      "desc": "Các đồng minh bắt đầu giao tranh bên cạnh một đồng minh có trên 1750 Máu nhận 13% Chống Chịu. Nhận 1 Đai Khổng Lồ."
+    },
+    "TFT_Augment_GuardbreakerSpirit": {
+      "name": "Ý Chỉ Xích Chùy",
+      "desc": "Nhận 1 Găng Đấu Tập. Đội của bạn nhận 25% Tỉ Lệ Chí Mạng."
+    },
+    "TFT9_Augment_KnowYourEnemy": {
+      "name": "Nắm Rõ Đối Thủ",
+      "desc": "Bạn có thể biết được đối thủ tiếp theo của mình. Đội của bạn nhận 8% Khuếch Đại Sát Thương, tăng lên thành 15% nếu bạn và đối thủ kích hoạt trùng tộc/hệ bất kỳ."
+    },
+    "TFT_Augment_LegionOfThrees": {
+      "name": "Quân Đoàn 3 Sao",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Các tướng 3 vàng của bạn và mọi đồng minh được trang bị Ấn nhận 150 Máu và 12% Tốc Độ Đánh.\n\nGiải Vô Địch Ngày Phán Quyết, 2021"
+    },
+    "TFT_Augment_GainGold": {
+      "name": "Nhận @Gold@ Vàng",
+      "desc": "Nhận 21 vàng."
+    },
+    "TFT6_Augment_Twins2": {
+      "name": "Cặp Đôi Hoàn Cảnh",
+      "desc": "Khi triển khai đúng 2 bản sao của một tướng, cả 2 tướng đó được tăng 30% SMCK, 30% SMPT, Giáp và Kháng Phép. Khi ghép tướng 3 sao, nhận 1 bản sao 2 sao."
+    },
+    "TFT_Augment_SizeMatters": {
+      "name": "Kích Cỡ Là Quan Trọng",
+      "desc": "Nhận 1 Đai Khổng Lồ. Sau khi một tướng bắt đầu giao tranh với hơn {HealthRequired} Máu tối đa, nhận một Giáp Máu Warmog."
+    },
+    "TFT9_Augment_TonsOfStats": {
+      "name": "Cộng Mệt Nghỉ!",
+      "desc": "Đội của bạn nhận thêm 44 Máu, 4% Sức Mạnh Công Kích, 4% Sức Mạnh Phép Thuật, 4 Giáp, 4 Kháng Phép, 4% Tốc Độ Đánh và 4 Năng Lượng."
+    },
+    "TFT_Augment_BoosterPackPlusPlus": {
+      "name": "Gói Tăng Cường++",
+      "desc": "Nhận các tướng ngẫu nhiên có tổng giá là 26 vàng. (Đảm bảo có ít nhất một tướng 5 vàng!)\n\n(Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)"
+    },
+    "TFT9_Augment_TiniestTitanPlus": {
+      "name": "Khổng Lồ Tí Hon",
+      "desc": "Nhận 2 Máu người chơi và 2 vàng sau mỗi giao tranh người chơi. Linh Thú của bạn cũng sẽ di chuyển nhanh hơn. Nhận ngay 10 vàng."
+    },
+    "TFT_Augment_BoosterPackPlus": {
+      "name": "Gói Tăng Cường+",
+      "desc": "Nhận các tướng ngẫu nhiên có tổng giá là 18 vàng. (Đảm bảo có ít nhất một tướng 4 vàng!)\n\n(Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)"
+    },
+    "TFT9_Augment_Commander_PartialAscension": {
+      "name": "Bán Thăng Hoa",
+      "desc": "Sau 12 giây giao tranh, đội của bạn nhận thêm 20% Khuếch Đại Sát Thương."
+    },
+    "TFT11_Augment_Epoch": {
+      "name": "Kỷ Nguyên",
+      "desc": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận 4 XP và 2 lượt đổi miễn phí."
+    },
+    "TFT9_Augment_HealingOrbsII": {
+      "name": "Cầu Hồi Phục II",
+      "desc": "Khi một kẻ địch bị hạ gục, tướng đồng minh gần nhất được hồi lại 575 máu."
+    },
+    "TFT6_Augment_PandorasItems": {
+      "name": "Hộp Pandora",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng dự bị được đánh tráo ngẫu nhiên.\n\nNhận 1 trang bị thành phần ngẫu nhiên."
+    },
+    "TFT6_Augment_PortableForge": {
+      "name": "Lò Rèn Thần Thoại",
+      "desc": "Chọn 1 trong 4 Tạo Tác.\n\nTạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt."
+    },
+    "TFT_Augment_CognitiveOverload": {
+      "name": "Quá Tải Tư Duy",
+      "desc": "Nhận 7 vàng, 1 tướng 1 vàng 2 sao, 1 tướng 2 vàng, 2 tướng 3 vàng, 1 XP, và 1 lượt đổi Cửa Hàng."
+    },
+    "TFT_Augment_KickStart": {
+      "name": "Khởi Động Nhanh",
+      "desc": "Nhận 1 vàng và 1 tướng 2 vàng 2 sao ngẫu nhiên."
+    },
+    "TFT9_Augment_LongTimeCrafting": {
+      "name": "Lò Rèn Tiềm Ẩn",
+      "desc": "Sau {NumberOfCombats} giao tranh với người chơi, nhận 1 Gói Trang Bị Tạo Tác.\n\nGói này sẽ đưa ra 4 lựa chọn. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt."
+    },
+    "TFT_Augment_ComebackStory": {
+      "name": "Cố Gắng Lật Kèo",
+      "desc": "Đội của bạn nhận 4 Máu và 0.4% Tốc Độ Đánh với mỗi Máu người chơi đã mất.\n\n{TFTUnitProperty.item:TFT_Augment_ComebackStory_Tooltip}"
+    },
+    "TFT6_Augment_CyberneticUplink2": {
+      "name": "Trí Tuệ Siêu Công Nghệ",
+      "desc": "Đồng minh mang trang bị nhận 100 Máu và 2 Hồi Năng Lượng. Nhận 1 Nước Mắt Nữ Thần."
+    },
+    "TFT6_Augment_CyberneticUplink3": {
+      "name": "Trí Tuệ Siêu Công Nghệ I",
+      "desc": "Đồng minh mang trang bị nhận 275 Máu và 3 Hồi Năng Lượng. Nhận 1 Nước Mắt Nữ Thần."
+    },
+    "TFT_Augment_TragicalBlade": {
+      "name": "Kiếm Tử Thần",
+      "desc": "Nhận 1 Kiếm Tử Thần. Kiếm Tử Thần vĩnh viễn tăng thêm {AD}% Sức Mạnh Công Kích mỗi khi chủ sở hữu tham gia hạ gục."
+    },
+    "DA_FocusedFire": {
+      "name": "Tập Trung Hỏa Lực",
+      "desc": "Đội của bạn nhận 10% Sức Mạnh Công Kích. Mỗi 5 giây, nhận thêm {StackAD}%."
+    },
+    "DA_Kingslayer": {
+      "name": "Đồ Vương",
+      "desc": "Sau khi thắng giao tranh người chơi, nhận {BaseGoldAfterCombat} vàng. Nếu đối thủ có nhiều máu hơn bạn, thay vào đó nhận {ModifiedGoldAfterCombat} Vàng. Nhận 1 vàng."
+    },
+    "DA_18_RiftbeastTraitAugment": {
+      "name": "Quái Rừng Omega",
+      "desc": "Giờ đây bạn có thể chọn thêm một Quái Rừng Đầu Đàn thứ hai. Quái Rừng Đầu Đàn nhận thêm 8% Máu tối đa và 8% Tốc Độ Đánh. Nhận 1 Cua Kỳ Cục, 1 Mầm Non và 1 Sỏi."
+    },
+    "DA_Min_Max": {
+      "name": "Tối Đa Hóa",
+      "desc": "Nhận 1 Nam Châm Hoàng Kim, 4 trang bị thành phần ngẫu nhiên và 4 vàng."
+    },
+    "DA_BoosterPack": {
+      "name": "Gói Tăng Cường",
+      "desc": "Nhận các tướng ngẫu nhiên có tổng giá là {CombinedChampsValueNormal} vàng. (Đảm bảo có ít nhất một tướng {GuaranteedChampValueNormal} vàng!)"
+    },
+    "DA_MakeshiftArmorI": {
+      "name": "Giáp Tự Chế I",
+      "desc": "Các tướng không mang trang bị nhận {Armor_Silver} Giáp và Kháng Phép."
+    },
+    "DA_PartialAscension": {
+      "name": "Bán Thăng Hoa",
+      "desc": "Sau 12 giây giao tranh, các tướng của bạn nhận thêm 20% Khuếch Đại Sát Thương."
+    },
+    "DA_Coronation": {
+      "name": "Lên Ngôi Vương",
+      "desc": "Nhận 1 Vương Miện Chiến Thuật. Vương Miện, Áo Choàng và Lá Chắn Chiến Thuật sẽ cho chủ sở hữu 20% Tốc Độ Đánh, 25% Sức Mạnh Công Kích và 30% Sức Mạnh Phép Thuật."
+    },
+    "DA_ShoppingSpree": {
+      "name": "Tín Đồ Mua Sắm",
+      "desc": "Khi bạn thăng cấp, nhận số lượt đổi Cửa Hàng tương đương với cấp của bạn +1. Nhận 6 vàng."
+    },
+    "DA_18_ElderwoodTraitAugment": {
+      "name": "Thiên Nhiên Che Chở",
+      "desc": "Các tướng bắt đầu giao tranh ở ô liền kề cây Thần Rừng nhận 15% Tốc Độ Đánh và hồi {heal}% Máu tối đa mỗi 2 giây. Nhận 1 Alistar, 1 Ornn và 1 Xayah."
+    },
+    "DA_HoldTheLine": {
+      "name": "Giữ Vững Hàng Ngũ",
+      "desc": "Các tướng ở 2 hàng sau nhận {AbilityPowerPcntPerFrontLiner}% Sức Mạnh Phép Thuật và {AttackDamagePcntPerFrontLiner}% Sức Mạnh Công Kích với mỗi tướng bắt đầu giao tranh ở hàng trên."
+    },
+    "DA_GroupHugI": {
+      "name": "Ôm Tập Thể I",
+      "desc": "Bắt đầu giao tranh: Các tướng sẽ tăng cho các tướng liền kề khác {Armor_Silver} Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn."
+    },
+    "DA_TradeSector": {
+      "name": "Khu Giao Dịch",
+      "desc": "Nhận 1 lượt đổi Cửa Hàng mỗi vòng đấu. Nhận 2 vàng."
+    },
+    "DA_WovenMagic": {
+      "name": "Ma Thuật Đan Kết",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên. Mỗi 2200 Năng Lượng tướng của bạn tiêu hao sẽ trao thêm 1 trang bị thành phần (tối đa: 0/{NumberOfComponents})."
+    },
+    "DA_MagicRoll": {
+      "name": "Xúc Xắc Ma Pháp",
+      "desc": "Đổ 3 xúc xắc. Nhận phần thưởng dựa trên tổng số đã đổ được."
+    },
+    "DA_HedgeFund": {
+      "name": "Quỹ Phòng Hộ",
+      "desc": "Nhận 22 vàng. Lợi tức tối đa của bạn tăng lên thành 10."
+    },
+    "DA_SpeedyDoubleKill": {
+      "name": "Song Sát Tốc Hành",
+      "desc": "Nhận 1 Cuồng Đao Guinsoo. Sau khi {NumEliminationsRequired} người chơi đã bị loại, nhận 40 vàng.\n\nGiải Vô Địch Định Mệnh, 2021"
+    },
+    "DA_BuildABud": {
+      "name": "Tự Lập Đội",
+      "desc": "Nhận 1 tướng 1 vàng {ActorLevel} sao ngẫu nhiên. Nhận 9 vàng."
+    },
+    "DA_EarlyLearnings": {
+      "name": "Bài Học Sơ Khai",
+      "desc": "Đội của bạn nhận {InitialStacks}% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Lượng này sẽ tăng thêm {StacksPerCombat}% sau mỗi giao tranh người chơi. Tướng 1 vàng nhận gấp đôi."
+    },
+    "DA_18_CaretakersAlly": {
+      "name": "Đồng Minh Của Bụt",
+      "desc": "Nhận ngay 1 tướng 2 vàng ngẫu nhiên. Mỗi lần thăng cấp, nhận được tướng này một lần nữa.\n\nTướng: 0"
+    },
+    "DA_WeStickTogether": {
+      "name": "Kề Vai Sát Cánh",
+      "desc": "Nhận 1 Ấn tộc/hệ ngẫu nhiên và một gói trang bị hoàn chỉnh. Các đồng minh mang tộc/hệ đó nhận 30% Tốc Độ Đánh.\n0 0\n\nTactician's Crown Bước Vào Arcane, 2025"
+    },
+    "DA_Ascension": {
+      "name": "Thăng Hoa",
+      "desc": "Sau 12 giây giao tranh, các tướng của bạn nhận thêm 35% Khuếch Đại Sát Thương."
+    },
+    "DA_LevelUp": {
+      "name": "Thăng Cấp!",
+      "desc": "Khi bạn mua XP, nhận thêm {AdditionalXP} XP. Ngay lập tức nhận 10 XP."
+    },
+    "DA_18_SolarTraitAugment": {
+      "name": "Sự Lựa Chọn của Mặt Trời",
+      "desc": "Nhận 1 Leona, 1 Kayle và 1 Sejuani. Leona nhận được 70 Máu tối đa vĩnh viễn mỗi vòng, tăng thêm {HealthPerThreeStar} với mỗi tướng 3 sao khác nhau được triển khai."
+    },
+    "DA_ChampDeliveryPlusPlus": {
+      "name": "Phân Phối Tướng++",
+      "desc": "Nhận {NumInitialChamps} tướng 4 vàng. Sau 6 vòng, nhận thêm {NumDelayedChamps} tướng cùng bậc."
+    },
+    "DA_GoingLong": {
+      "name": "Thích Mở Rộng",
+      "desc": "Bạn sẽ không còn nhận được lợi tức. Nhận ngay {GoldInstant} vàng. Nhận {RoundStartBonusXp} XP sau mỗi giao tranh người chơi.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi {OldInterestThreshold}\n vàng bạn giữ lại."
+    },
+    "DA_GoldDestinyPlus": {
+      "name": "Vận Mệnh Vàng+",
+      "desc": "Nhận 1 Nâng Cấp Vàng ngẫu nhiên và 5 vàng."
+    },
+    "DA_ComponentBuffet": {
+      "name": "Đại Tiệc Trang Bị",
+      "desc": "Mỗi khi nhận 1 trang bị thành phần, nó biến đổi thành gói trang bị thành phần. Nhận 1 trang bị thành phần ngẫu nhiên. Gói trang bị cho bạn 4 lựa chọn."
+    },
+    "DA_BuriedTreasuresIII": {
+      "name": "Kho Báu Chôn Giấu III",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên ngay bây giờ và khi bắt đầu {RoundsDuration} vòng tiếp theo."
+    },
+    "DA_CyberneticUplink_Gold": {
+      "name": "Trí Tuệ Siêu Công Nghệ",
+      "desc": "Tướng có sở hữu trang bị nhận {HPFromGold} Máu và {ManaRegenFromGold} Hồi Phục Năng Lượng. Nhận 1 Nước Mắt Nữ Thần."
+    },
+    "DA_SalvageBin": {
+      "name": "Nhà Máy Tái Chế",
+      "desc": "Nhận 1 trang bị hoàn chỉnh ngẫu nhiên ngay lập tức, và 1 trang bị thành phần sau {Rounds} vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn)."
+    },
+    "DA_ConstructACompanion": {
+      "name": "Người Bạn Vàng",
+      "desc": "Tướng 1 vàng tiếp theo bạn mua được nâng lên {ActorLevel} sao. Nhận 2 vàng."
+    },
+    "DA_SpreadingRootsPlus": {
+      "name": "Cắm Rễ Phân Tán+",
+      "desc": "Nhận {EmblemAmountPlus} Ấn ngẫu nhiên và {GoldAmountPlus} vàng."
+    },
+    "DA_BoosterPackPlus": {
+      "name": "Gói Tăng Cường+",
+      "desc": "Nhận các tướng ngẫu nhiên có tổng giá là {CombinedChampsValuePlus} vàng. (Đảm bảo có ít nhất một tướng {GuaranteedChampValuePlus} vàng!)"
+    },
+    "DA_Retribution": {
+      "name": "Báo Oán",
+      "desc": "Nhận {NumItemsToGrant} Bàn Tay Công Lý. Đồng minh được trang bị Bàn Tay Công Lý nhận Chuẩn Xác và 15% Tỉ Lệ Chí Mạng.\n\nChuẩn Xác: Sát thương kỹ năng có thể chí mạng. Chỉ số Chuẩn Xác cộng thêm tăng 10% Sát Thương Chí Mạng."
+    },
+    "DA_BonusGiftPlus": {
+      "name": "Quà Tặng Thêm+",
+      "desc": "Bất cứ khi nào bạn mở hộp vật phẩm, bạn có 25% cơ hội nhận được 1 hộp vật phẩm xám. Nhận {StartingOrbs} hộp vật phẩm xám."
+    },
+    "DA_18_LunarTraitAugmentPlus": {
+      "name": "Mặt Trời và Mặt Trăng+",
+      "desc": "Các tướng Mặt Trăng của bạn nhận được 100 Máu và 8% Khuếch Đại Sát Thương với mỗi tướng Mặt Trời khác biệt được triển khai. Nhận 1 Leona, 1 Kayle và 1 Aphelios."
+    },
+    "DA_SwordOverflow": {
+      "name": "Đam Mê Kiếm",
+      "desc": "Nhận {NumBFSwords} Kiếm BF. Kiếm BF của bạn sẽ cho +{AttackSpeedPerSword}% Tốc Độ Đánh."
+    },
+    "DA_AdvancedLoanPlus": {
+      "name": "Vay Tạm Ứng+",
+      "desc": "Nhận {GoldInstantPlus} Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc."
+    },
+    "DA_BronzeForLifeII": {
+      "name": "Tất Tay Bậc Đồng II",
+      "desc": "Đội của bạn nhận 2.5% Khuếch Đại Sát Thương và 2.5 Giáp & Kháng Phép cho mỗi tộc/hệ bậc Đồng."
+    },
+    "DA_InvestmentStrategy": {
+      "name": "Chiến Thuật Đầu Tư II",
+      "desc": "Tướng của bạn nhận thêm vĩnh viễn {MaxHealthPerInterest} máu tối đa với mỗi vàng lợi tức bạn kiếm được. Lợi tức tối đa của bạn tăng thêm {MaxInterestInc}. Nhận ngay 6 vàng."
+    },
+    "DA_BeltOverflow": {
+      "name": "Đam Mê Đai Lưng",
+      "desc": "Nhận {NumBelts} Đai Khổng Lồ. Đai Khổng Lồ của bạn cho thêm +{BonusHealthPerBelt} Máu."
+    },
+    "DA_LuckyGloves": {
+      "name": "Đo Ni Đóng Giày",
+      "desc": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị lý tưởng. Nhận {StartSparringGlovesAmount} Găng Đấu Tập và {gold} vàng."
+    },
+    "DA_TimeSkip": {
+      "name": "Vượt Thời Gian",
+      "desc": "Vô hiệu hóa cửa hàng của bạn trong {RoundsSkipped} vòng tiếp theo. Sau đó nhận {ExperienceToAdd} XP."
+    },
+    "DA_EpicRolldown": {
+      "name": "Xúc Xắc Hoành Tráng",
+      "desc": "Khi đạt Cấp 8, nhận 20 lượt đổi Cửa Hàng.\n\nGiải Vô Địch Runeterra Tái Hợp, 2023"
+    },
+    "DA_UrfsGrabBag": {
+      "name": "Túi Đồ Urf",
+      "desc": "Nhận {NumSpats} Xẻng Vàng, 3 trang bị thành phần ngẫu nhiên và 5 vàng."
+    },
+    "DA_18_WispRebatePlus": {
+      "name": "Tinh Linh Hoàn Tiền",
+      "desc": "Mỗi lần bạn mua 1 Tinh Linh, nhận 2 vàng. Nhận ngay {StartingGold} vàng."
+    },
+    "DA_TeamBuilding": {
+      "name": "Xây Dựng Đội Hình",
+      "desc": "Nhận 1 Máy Sao Chép Tướng Cỡ Nhỏ. Nhận thêm 1 Máy Sao Chép Tướng Cỡ Nhỏ nữa sau {PlayerRounds} vòng giao tranh người chơi.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống."
+    },
+    "DA_KnowYourEnemy": {
+      "name": "Nắm Rõ Đối Thủ",
+      "desc": "Bạn có thể biết được đối thủ tiếp theo của mình. Đội của bạn nhận {DefaultDamageAmp}% Khuếch Đại Sát Thương, tăng lên thành {SharedTraitDamageAmp}% nếu bạn và đối thủ kích hoạt trùng tộc/hệ bất kỳ."
+    },
+    "DA_GlassCannon_Gold": {
+      "name": "Lấy Công Bù Thủ II",
+      "desc": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với {StartingHP_Gold}% Máu nhưng nhận thêm {DamageAmp_Gold}% Khuếch Đại Sát Thương."
+    },
+    "DA_InvestedPlus": {
+      "name": "Đầu Tư+",
+      "desc": "Nhận 26 vàng. Khi bắt đầu mỗi vòng đấu, nhận 1 lượt làm mới Cửa Hàng với mỗi 10 vàng vượt hơn 50 (tối đa 80 vàng)."
+    },
+    "DA_18_BigGrabBag": {
+      "name": "Túi Đồ Cỡ Đại",
+      "desc": "Nhận 3 trang bị thành phần ngẫu nhiên, 2 vàng và 1 Búa Rèn."
+    },
+    "DA_CapitalGainsII": {
+      "name": "Tăng Vốn II",
+      "desc": "Tích trữ vàng bằng với lượng lợi tức bạn kiếm được. Ở vòng 3-3, nhận lượng vàng bằng {InterestRatio}% số vàng đã tích trữ. Nhận ngay {StartingGold} vàng."
+    },
+    "DA_UpwardMobility": {
+      "name": "Đẩy Nhanh Tiến Độ",
+      "desc": "Giảm {ReducedXPCost} vàng khi mua XP. Nhận {HealthOnLevelUp} Máu và {RerollsOnLevelUp} lượt đổi Cửa Hàng mỗi khi bạn thăng cấp."
+    },
+    "DA_Corrosion": {
+      "name": "Ăn Mòn",
+      "desc": "Tướng địch đứng ở 2 hàng trên sẽ bị mất 4 Giáp và Kháng Phép sau mỗi 2 giây."
+    },
+    "DA_LoadedDice": {
+      "name": "Gian Lận",
+      "desc": "Xúc xắc và xu của bạn còn may mắn hơn.\n\nĐổ một xúc xắc và nhận số vàng bằng với số điểm đổ được. Sau đó tung đồng xu và nhận 1 vàng nếu tung ra mặt ngửa."
+    },
+    "DA_BonusGift": {
+      "name": "Quà Tặng Thêm",
+      "desc": "Bất cứ khi nào bạn mở hộp vật phẩm, bạn có 25% cơ hội nhận được 1 hộp vật phẩm xám. Nhận {StartingOrbs} hộp vật phẩm xám."
+    },
+    "DA_SoloPlate": {
+      "name": "Khiên Đơn Đấu",
+      "desc": "Nhận 1 Thú Tượng Thạch Giáp. Các đồng minh mang Thú Tượng Thạch Giáp nhận 17% Máu tối đa nếu họ đứng một mình một hàng khi bắt đầu giao tranh."
+    },
+    "DA_Swordsmith": {
+      "name": "Thợ Rèn Kiếm",
+      "desc": "Nhận {ItemQuantity} trang bị hoàn chỉnh ngẫu nhiên được ghép từ Kiếm B.F."
+    },
+    "DA_BlackthornTraitAugment": {
+      "name": "Chiết Xuất Trang Bị",
+      "desc": "Trong 3 lần đầu tiên bạn hiến tế tướng trên ô Gai Đen, nhận 1 bản sao của một trang bị thành phần ngẫu nhiên mà tướng đó đang mang. Nhận 1 Azir và 1 Rek'Sai."
+    },
+    "DA_Pilfer": {
+      "name": "Ăn Trộm",
+      "desc": "Mỗi vòng đấu, nhận 1 bản sao 1 sao của tướng đầu tiên bạn tiêu diệt ở giao tranh trước. Lần đầu tiên bạn nhận được số lượng tướng trị giá {GoldForGloves} vàng theo cách này, nhận 1 Găng Đạo Tặc."
+    },
+    "DA_18_FOURcing": {
+      "name": "Ép Bốn",
+      "desc": "Nhận 1 tướng 4 vàng ngẫu nhiên. Với mỗi trang bị được gắn trên tướng đó, đội của bạn nhận 100 máu."
+    },
+    "DA_MissedConnections": {
+      "name": "Kết Nối Gián Đoạn",
+      "desc": "Nhận 1 bản sao của mỗi tướng 1 vàng."
+    },
+    "DA_PrismaticTicket": {
+      "name": "Vé Kim Cương",
+      "desc": "Mỗi khi cửa hàng được đổi lại, bạn có {PrismaticChance}% tỉ lệ nhận được thêm 1 lượt đổi miễn phí."
+    },
+    "DA_18_PrimalAugment_Sivir": {
+      "name": "Quái Thú Bên Trong",
+      "desc": "Tướng Nguyên Sinh cho thêm một Phước Lành nữa.  Nhận 1 Vi ngay bây giờ và 1 Sivir sau {AugmentRoundDelay} vòng đấu."
+    },
+    "DA_VerticalityI": {
+      "name": "Chỉ Một Con Đường I",
+      "desc": "Các Tướng nhận được 1.5% Sức Mạnh Công Kích, 1.5% Sức Mạnh Phép Thuật, {resists} Giáp và {resists} Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ."
+    },
+    "DA_WorththeWaitII": {
+      "name": "Chờ Đợi Xứng Đáng II",
+      "desc": "Nhận 2 bản sao của một tướng 2 vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận."
+    },
+    "DA_RollingForDays": {
+      "name": "Xúc Xắc Vô Tận",
+      "desc": "Nhận {NumFreeRerolls} lượt đổi Cửa Hàng miễn phí."
+    },
+    "DA_BoxingLessons": {
+      "name": "Tập Chịu Đòn",
+      "desc": "Đội của bạn nhận {HealthIncreasePerFrontLiner} Máu với mỗi tướng bắt đầu giao tranh ở hàng đầu."
+    },
+    "DA_ElectrochargeI": {
+      "name": "Tụ Điện I",
+      "desc": "Mỗi khi đồng minh nhận {ProcAttackCount} đòn đánh, họ sẽ gây {DamageI} - {DamageI_2} (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (1 giây hồi chiêu)."
+    },
+    "DA_PandorasItemsIIPlusPlus": {
+      "name": "Trang Bị Pandora II++",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng chờ được đánh tráo ngẫu nhiên.\n\nNhận {NumberOfComponentsII} trang bị thành phần ngẫu nhiên và {GoldAmountIIPlusPlus} vàng."
+    },
+    "DA_TheTraitTreePlus": {
+      "name": "Cây Tộc/Hệ+",
+      "desc": "Nhận {EmblemAmountPlus} Ấn ngẫu nhiên, 1 Búa Rèn và {GoldAmountPlus} vàng."
+    },
+    "DA_CalculatedLoss": {
+      "name": "Thua Có Tính Toán",
+      "desc": "Sau khi thua giao tranh, nhận 2 vàng và 1 lượt đổi Cửa Hàng miễn phí."
+    },
+    "DA_SoloLeveling": {
+      "name": "Tôi Thăng Cấp Một Mình",
+      "desc": "Trong 5 giao tranh tiếp theo, bạn chỉ được triển khai {MaxTeamSize} tướng, nhưng tướng đó sẽ được tăng mạnh chỉ số. Nhận 1 XP với mỗi mạng hạ gục tướng đó đạt được. Sau đó, nhận 2 trang bị thành phần."
+    },
+    "DA_LatentForge": {
+      "name": "Lò Rèn Tiềm Ẩn",
+      "desc": "Sau {WaitRounds} giao tranh người chơi, nhận 1 Gói Trang Bị Tạo Tác."
+    },
+    "DA_SlightlyMagicRoll": {
+      "name": "Quay Trúng Thưởng",
+      "desc": "Đổ 1 con xúc xắc. Nhận thưởng dựa trên số xúc xắc đổ ra."
+    },
+    "DA_ClearMind": {
+      "name": "Thông Thoáng",
+      "desc": "Nếu không có tướng trong hàng chờ khi kết thúc giao tranh người chơi, nhận 3 XP."
+    },
+    "DA_Slammin": {
+      "name": "Hạ Đo Ván",
+      "desc": "Nhận 3 vàng. Sau mỗi giao tranh người chơi, nếu không có trang bị nào của bạn nằm ở hàng chờ (ngoài các trang bị tiêu thụ), nhận {NoItemsXP} XP."
+    },
+    "DA_LivingForge": {
+      "name": "Chế Tạo Tại Chỗ",
+      "desc": "Nhận 1 Gói Trang Bị Tạo Tác ngay lập tức và sau mỗi {RoundCounter} giao tranh người chơi."
+    },
+    "DA_CognitiveOverload": {
+      "name": "Quá Tải Tư Duy",
+      "desc": "Nhận 7 vàng, {NumChamp} tướng 1 vàng {ChampLevel} sao, {NumChamp2} tướng {ChampCost2} vàng, {NumChamp3} tướng {ChampCost3} vàng, {NumXP} XP và 1 lượt đổi Cửa Hàng."
+    },
+    "DA_TheTraitTree": {
+      "name": "Cây Tộc/Hệ",
+      "desc": "Nhận {EmblemAmount} Ấn ngẫu nhiên và 2 vàng."
+    },
+    "DA_18_FloraFatalisAugment": {
+      "name": "Thực Vật Hấp Thụ",
+      "desc": "Nhận 1 ấn Thực Vật. Tướng mang ấn sẽ được tăng {ExtraEffectiveness}% hiệu ứng từ tộc/hệ Thực Vật. Nhận 3 vàng."
+    },
+    "DA_GoldenGamblePlus": {
+      "name": "Ván Cược Hoàng Kim+",
+      "desc": "Nhận 3 vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh."
+    },
+    "DA_18_OneTwoFive": {
+      "name": "Một, Hai, Năm!",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên, 2 vàng và 1 tướng 5 vàng ngẫu nhiên."
+    },
+    "DA_MaliciousMonetization": {
+      "name": "Dòng Tiền Mờ Ám",
+      "desc": "Nhận 6 vàng. Trong 2 vòng tiếp theo, tướng địch sẽ rớt ra {GoldPerEnemy} vàng khi bị tiêu diệt."
+    },
+    "DA_18_CovenTraitAugment": {
+      "name": "Tín Đồ Tiên Hắc Ám",
+      "desc": "Khi bạn chọn tiếp tục thu thập tinh hoa Tiên Hắc Ám, hồi 2 máu Linh Thú. Nhận 1 Camille, 1 Elise và 1 Caitlyn."
+    },
+    "DA_HeroicGrabBagPlus": {
+      "name": "Túi Đồ Siêu Hùng+",
+      "desc": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ. Nhận 8 vàng."
+    },
+    "DA_ClutteredMind": {
+      "name": "Bừa Bộn",
+      "desc": "Nhận 4 tướng {CostChamps} vàng ngay lập tức. Nếu hàng chờ của bạn đầy khi kết thúc giao tranh người chơi, nhận 3 XP."
+    },
+    "DA_18_PrimalAugment_Nidalee": {
+      "name": "Quái Thú Bên Trong",
+      "desc": "Tướng Nguyên Sinh cho thêm một Phước Lành nữa. Nhận 1 Vi ngay bây giờ và 1 Nidalee sau {AugmentRoundDelay} vòng đấu."
+    },
+    "DA_JeweledLotus_I": {
+      "name": "Khảm Bảo Thạch I",
+      "desc": "Đội của bạn nhận {CritChance_I}% Tỉ Lệ Chí Mạng và Chuẩn Xác.\n\nChuẩn Xác: Sát thương kỹ năng có thể chí mạng. Chỉ số Chuẩn Xác cộng thêm tăng 10% Sát Thương Chí Mạng."
+    },
+    "DA_18_LunarTraitAugment": {
+      "name": "Mặt Trời và Mặt Trăng",
+      "desc": "Các tướng Mặt Trăng của bạn nhận được 100 Máu và 8% Khuếch Đại Sát Thương với mỗi tướng Mặt Trời khác biệt được triển khai. Nhận 1 Leona, 1 Kayle và 1 Diana."
+    },
+    "DA_ForgeAFriend": {
+      "name": "Chế Tạo Bằng Hữu",
+      "desc": "Tướng 1 vàng tiếp theo bạn mua được nâng lên {ActorLevel} sao. Nhận 5 vàng."
+    },
+    "DA_SweetTreats": {
+      "name": "Món Quà Ngọt Ngào",
+      "desc": "Nhận 1 gói Trang Bị Tạo Tác. Đội của bạn nhận 16 Máu với mỗi trang bị đang mang trên tướng."
+    },
+    "DA_PatientStudy": {
+      "name": "Kiên Nhẫn Học Tập",
+      "desc": "Sau giao tranh người chơi, nhận thêm {XPBonusWin} XP nếu bạn thắng hoặc {XPBonusLose} XP nếu bạn thua."
+    },
+    "DA_18_RivalsAugment": {
+      "name": "Không Đối Thủ",
+      "desc": "Bạn có thể đưa Rengar và Kha'Zix ra sân cùng nhau mà không bị hạn chế và chúng sẽ nhận thêm sức mạnh khi tướng kia tung chiêu. Nhận 1 Rengar và 1 Kha'Zix."
+    },
+    "DA_HeroicGrabBag": {
+      "name": "Túi Đồ Siêu Hùng",
+      "desc": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ. Nhận 6 vàng."
+    },
+    "DA_CognitiveTaxPlus": {
+      "name": "Thuế Nhận Thức+",
+      "desc": "Nhận {NumGoldPlus} vàng và {NumXpPlus} XP."
+    },
+    "DA_ExpectedUnexpectedness": {
+      "name": "Kỳ Vọng Bất Ngờ",
+      "desc": "Ngay bây giờ và khi bắt đầu 2 giai đoạn tiếp theo, đổ 3 xúc xắc. Nhận nhiều loại phần thưởng dựa trên tổng số đổ được."
+    },
+    "DA_BandOfThieves": {
+      "name": "Băng Trộm",
+      "desc": "Nhận {AmountOfGlovesAtStart} Găng Đạo Tặc."
+    },
+    "DA_ExtraBuckles": {
+      "name": "Khóa Dự Phòng",
+      "desc": "Nhận 1 Đai Khổng Lồ. Sau khi các tướng của bạn chịu {DamageTakenReq} sát thương, nhận thêm {NumCashoutLoot} Đai Khổng Lồ."
+    },
+    "DA_TonsOfStatsI": {
+      "name": "Cộng Mệt Nghỉ!",
+      "desc": "Đội của bạn nhận thêm 44 Máu, 4% Sức Mạnh Công Kích, 4% Sức Mạnh Phép Thuật, 4 Giáp, 4 Kháng Phép, 4% Tốc Độ Đánh và 4 Năng Lượng."
+    },
+    "DA_ExplosiveGrowthPlus": {
+      "name": "Tăng Trưởng Bùng Nổ+",
+      "desc": "Nhận {XPPerRound_Plus} XP ngay bây giờ và khi bắt đầu {Rounds} vòng đấu tiếp theo."
+    },
+    "DA_LateGameScaling": {
+      "name": "Thăng Tiến Cuối Trận",
+      "desc": "Nhận 2 XP khi bắt đầu vòng giao tranh người chơi. Tướng 5 vàng của bạn nhận {ChampBuff}% Máu và {ChampBuff}% Tốc Độ Đánh.\n\nTactician's Crown Thành Phố Công Nghệ, 2025"
+    },
+    "DA_18_PrimalAugmentPlus_Nidalee": {
+      "name": "Quái Thú Bên Trong+",
+      "desc": "Tướng Nguyên Sinh cho thêm một Phước Lành nữa. Nhận 1 Vi và 1 Nidalee."
+    },
+    "DA_PlotArmor": {
+      "name": "Hào Quang Nhân Vật Chính",
+      "desc": "Đội của bạn nhận {ArmorInstant} Giáp và Kháng Phép. Sau khi còn dưới {HealthDropThreshold}% Máu, tăng hiệu ứng này lên thành {ThresholdArmorBoostCombined} cho đến hết giao tranh."
+    },
+    "DA_ShimmerscaleEssence": {
+      "name": "Tinh Túy Kim Long",
+      "desc": "Nhận 1 Kiếm Của Tay Bạc. Sau {NumberOfRoundsToWait} giao tranh người chơi, nhận 1 Giáp Đại Hãn."
+    },
+    "DA_HealingOrbsI": {
+      "name": "Cầu Hồi Phục I",
+      "desc": "Khi 1 kẻ địch bị hạ gục, 1 đồng minh gần đó sẽ được hồi {HealthFromHealingOrbSilver} Máu."
+    },
+    "DA_18_DuoQueue": {
+      "name": "Hàng Chờ Đấu Đôi",
+      "desc": "Nhận 2 tướng 5 vàng ngẫu nhiên và 2 bản sao của một trang bị thành phần ngẫu nhiên."
+    },
+    "DA_PortableForge": {
+      "name": "Lò Rèn Thần Thoại",
+      "desc": "Chọn 1 trong 4 Tạo Tác. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt."
+    },
+    "DA_CallToChaos": {
+      "name": "Triệu Gọi Hỗn Mang",
+      "desc": "Nhận 1 phần thưởng mạnh mẽ và ngẫu nhiên."
+    },
+    "DA_TraitLadder": {
+      "name": "Thứ Hạng Tộc Hệ",
+      "desc": "Nhận 1 ấn ngẫu nhiên. Sau khi triển khai {LowestTraitBreakpoint} tộc/hệ không độc nhất trong giao tranh người chơi, nhận 1 phần thưởng. Sau đó tăng số tộc/hệ cần thiết và giá trị của phần thưởng."
+    },
+    "DA_LateGameSpecialist": {
+      "name": "Hướng Đến Hồi Kết",
+      "desc": "Khi bạn đạt Cấp 9, nhận 27 vàng."
+    },
+    "DA_ChallengersGrace": {
+      "name": "Ân Huệ Thách Đấu",
+      "desc": "Ở đầu giao tranh, đồng minh tăng {AttackSpeedMultiplier}% Tốc Độ Đánh trong 4 giây. Khi tham gia hạ gục, đồng minh lướt tới mục tiêu tiếp theo và nhận lại hiệu ứng này."
+    },
+    "DA_18_FaeTraitAugment": {
+      "name": "Hóa Lớn",
+      "desc": "Các Pix Tiên Linh giờ trở nên lớn hơn và trao thêm 50% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Các tướng Tiên Linh nhận {UpfrontADAP}% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật ngay lập tức. Nhận 1 Xayah và 1 Rakan."
+    },
+    "DA_ChampDelivery": {
+      "name": "Phân Phối Tướng",
+      "desc": "Nhận {NumInitialChamps} tướng 2 vàng. Sau 6 vòng, nhận thêm {NumDelayedChamps} tướng cùng bậc."
+    },
+    "DA_BandOfThievesII": {
+      "name": "Băng Trộm II",
+      "desc": "Nhận {AmountOfGlovesAtStartII} Găng Đạo Tặc. Sau {CombatsUntilNextRewardII} giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc."
+    },
+    "DA_VerticalityII": {
+      "name": "Chỉ Một Con Đường II",
+      "desc": "Các Tướng nhận được 2.5% Sức Mạnh Công Kích, 2.5% Sức Mạnh Phép Thuật, {resists} Giáp và {resists} Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ."
+    },
+    "DA_Epoch": {
+      "name": "Kỷ Nguyên",
+      "desc": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận {EpochXP} XP và {EpochRerolls} lượt đổi miễn phí."
+    },
+    "DA_CapitalGainsI": {
+      "name": "Tăng Vốn I",
+      "desc": "Tích trữ vàng bằng với lượng lợi tức bạn kiếm được. Ở vòng 3-3, nhận lượng vàng bằng {InterestRatio}% số vàng đã tích trữ. Nhận ngay {StartingGold} vàng."
+    },
+    "DA_Replication": {
+      "name": "Nhân Bản",
+      "desc": "Chọn 1 trong 3 trang bị thành phần. Trong {NumberOfRoundsToGrantLoot} vòng đấu tiếp theo, nhận 1 bản sao của trang bị thành phần đó."
+    },
+    "DA_FeelingLucky": {
+      "name": "Cảm Thấy May Mắn",
+      "desc": "Nhận {GoldUpFront} vàng, sau đó tung đồng xu. Nếu ra mặt ngửa, nhận thêm {GoldIfHeads} vàng."
+    },
+    "DA_Hustler": {
+      "name": "Sống Vội",
+      "desc": "Bạn không còn lợi tức, nhưng sẽ nhận {RoundStartBonusGold} vàng khi bắt đầu mỗi vòng giao tranh người chơi. Nhận ngay {GoldInstant} vàng.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi {OldInterestThreshold}\n vàng bạn giữ lại."
+    },
+    "DA_CryMeARiver": {
+      "name": "Giọt Lệ Bi Ai",
+      "desc": "Nhận 1 Nước Mắt Nữ Thần. Đội của bạn nhận 1 Hồi Năng Lượng. Sau {UpgradeDelay} giây giao tranh, tăng hiệu ứng này lên thành 3."
+    },
+    "DA_AugmentedPower": {
+      "name": "Nâng Tầm Uy Lực",
+      "desc": "Nâng Cấp tiếp theo của bạn được tăng một bậc."
+    },
+    "DA_CyberneticImplants_Gold": {
+      "name": "Cấy Ghép Siêu Công Nghệ",
+      "desc": "Tướng sở hữu trang bị của bạn nhận {HPFromGold} Máu và {ADFromGold}% Sức Mạnh Công Kích. Nhận 1 Kiếm B.F."
+    },
+    "DA_ItsMeBaby": {
+      "name": "Là Ta Đây",
+      "desc": "Nhận 1 ô vô địch ở góc dưới bên phải. Tướng bên trong nhận thêm 15% Khuếch Đại Sát Thương và 15% Tốc Độ Đánh, đồng thời rơi ra 1 vàng mỗi {TakedownsPerGold} lần tham gia hạ gục.\n\nTactician's Crown Truyền Thuyết & Huyền Thoại, 2026"
+    },
+    "DA_QuickStreaks": {
+      "name": "Tích Chuỗi Nhanh",
+      "desc": "Bạn nhận được gấp đôi tiến trình chuỗi thắng và chuỗi thua. Nhận 2 vàng."
+    },
+    "DA_NestingAnvils": {
+      "name": "Gói Trang Bị Bất Ngờ",
+      "desc": "Nhận 1 Gói Trang Bị Tạo Tác. Sau khi bạn mở nó, nhận 1 Gói Trang Bị Thành Phần. Sau khi bạn mở nó, nhận 6 vàng."
+    },
+    "DA_18_BranchingOutPlus": {
+      "name": "Phân Nhánh+",
+      "desc": "Nhận 1 Ấn ngẫu nhiên và 1 Búa Rèn."
+    },
+    "DA_GainGold": {
+      "name": "Nhận 21 Vàng",
+      "desc": "Nhận 21 vàng."
+    },
+    "DA_Recombobulator": {
+      "name": "Xoay Bài Tự Động",
+      "desc": "Tất cả tướng trên sân đấu của bạn sẽ vĩnh viễn chuyển thành tướng ngẫu nhiên với giá cao hơn 1 bậc (tối đa 5). Nhận 2 Nam Châm Ma Thuật và {NumRolls} lượt đổi miễn phí."
+    },
+    "DA_TonsOfStatsII": {
+      "name": "Cộng Mệt Nghỉ!",
+      "desc": "Đội của bạn nhận thêm 88 Máu, 8% Sức Mạnh Công Kích, 8% Sức Mạnh Phép Thuật, 8 Giáp, 8 Kháng Phép, 8% Tốc Độ Đánh và 8 Năng Lượng."
+    },
+    "DA_18_OnesTwosThree": {
+      "name": "Một, Hai, Ba",
+      "desc": "Nhận {OneCosts} tướng 1 vàng, {TwoCosts} tướng 2 vàng và {ThreeCosts} tướng 3 vàng."
+    },
+    "DA_MaxBuild": {
+      "name": "Đội Hình Tối Ưu",
+      "desc": "Nhận 10 lượt đổi Cửa Hàng miễn phí. Khi bạn đạt cấp 9, nhận {RewardRolls} lượt đổi Cửa Hàng miễn phí và 1 Máy Sao Chép Tướng.\n\nGiải Vô Địch Thiên Hà, 2020"
+    },
+    "DA_SlamminPlus": {
+      "name": "Hạ Đo Ván+",
+      "desc": "Nhận ngay {NumGoldPlus} vàng và {InstantXPPlus} XP. Sau mỗi giao tranh người chơi, nếu không có trang bị nào của bạn nằm ở hàng chờ (ngoài các trang bị tiêu thụ), nhận {NoItemsXPPlus} XP."
+    },
+    "DA_SilverSpoon": {
+      "name": "Đặc Quyền Phú Gia",
+      "desc": "Nhận 10 XP."
+    },
+    "DA_TacticiansKitchen": {
+      "name": "Linh Thú Vào Bếp",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Sau {Rounds} vòng đấu, nhận 1 Áo Choàng Chiến Thuật."
+    },
+    "DA_DeadlierCaps": {
+      "name": "Mũ Tử Thần",
+      "desc": "Nhận 1 Mũ Phù Thủy Rabadon. Mũ Phù Thủy Rabadon cho 1 Hồi Năng Lượng và vĩnh viễn tăng thêm {AbilityPowerPercent}% Sức Mạnh Phép Thuật mỗi khi chủ sở hữu tham gia hạ gục."
+    },
+    "DA_MoneyHungryPlus": {
+      "name": "Cơn Khát Vàng+",
+      "desc": "Nhận {InitialGoldPlus} vàng ngay lập tức, sau đó nhận thêm {GoldPerStagePlus} vàng vào khởi đầu mỗi giai đoạn. Nhặt vàng sẽ khiến Linh Thú của bạn to hơn."
+    },
+    "DA_Dummify": {
+      "name": "Hình Nhân Hóa",
+      "desc": "Mất đi tất cả tướng trên bàn đấu và trên hàng dự bị của bạn. Nhận 1 Hình Nhân mang {CombinedHealthPercentage}% tổng Máu của tất cả các tướng đó. Hình Nhân nhận thêm {HealthGainPerStage} Máu mỗi giai đoạn. Nhận ngẫu nhiên 1 tướng 2 vàng 2 sao không phải đỡ đòn."
+    },
+    "DA_NestingAnvilsPlus": {
+      "name": "Gói Trang Bị Bất Ngờ+",
+      "desc": "Nhận 1 Gói Trang Bị Tạo Tác. Sau khi bạn mở nó, nhận 1 Gói Trang Bị Thành Phần. Sau khi bạn mở nó, nhận 8 vàng."
+    },
+    "DA_PandorasItemsI": {
+      "name": "Hộp Pandora I",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng chờ được đánh tráo ngẫu nhiên.\n\nNhận {NumberOfComponentsI} trang bị thành phần ngẫu nhiên."
+    },
+    "DA_GoldenGamble": {
+      "name": "Ván Cược Hoàng Kim",
+      "desc": "Nhận 2 vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh."
+    },
+    "DA_YoungAndWildAndFree": {
+      "name": "Trẻ, Khỏe & Tự Do",
+      "desc": "Bạn sẽ luôn được di chuyển tự do trong Vòng Đi Chợ. Nhận 5 vàng."
+    },
+    "DA_MoneyMonsoon": {
+      "name": "Bão Vàng",
+      "desc": "Nhận {GoldPerRoundMonsoon} vàng ngay bây giờ và mỗi vòng đấu cho đến hết trận."
+    },
+    "DA_BacklineBlueprint": {
+      "name": "Sơ Đồ Tuyến Sau",
+      "desc": "Nhận 1 tướng 3 vàng không phải Đỡ Đòn và 1 Ấn phù hợp với hệ của tướng đó."
+    },
+    "DA_BirthdayReunion": {
+      "name": "Sinh Nhật Đoàn Tụ",
+      "desc": "Nhận 1 tướng {FirstRewardShopTier} vàng {ChampLevel} sao ngẫu nhiên. Ở Cấp {MiddleRewardLevel}, nhận 1 trang bị thành phần ngẫu nhiên. Ở Cấp {LastRewardLevel}, nhận 1 tướng {LastRewardShopTier} vàng {ChampLevel} sao ngẫu nhiên.\n\nTactician's Crown Họa Thế Chi Linh, 2024"
+    },
+    "DA_18_LuxAugmentII": {
+      "name": "Tinh Thông Mọi Tộc",
+      "desc": "Mở kho vũ khí và chọn một trong {ArmoryChoices} tộc/hệ. Nhận 1 Lux mang tộc/hệ đó và 1 Ngọn Giáo Shojin.\n\nCác tộc/hệ trên sân của bạn sẽ có khả năng xuất hiện trong kho vũ khí cao hơn. Lux tăng +2 cho tộc/hệ được chọn"
+    },
+    "DA_Warpath": {
+      "name": "Đường Ra Trận",
+      "desc": "Nhận 1 tướng 2 vàng 2 sao. Sau khi gây 80 sát thương lên người chơi, nhận 1 rương chứa các trang bị và tướng bậc cao."
+    },
+    "DA_GoldDestiny": {
+      "name": "Vận Mệnh Vàng",
+      "desc": "Nhận 1 Nâng Cấp Vàng ngẫu nhiên và 3 vàng."
+    },
+    "DA_LegionOfThrees": {
+      "name": "Quân Đoàn 3 Sao",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Các tướng 3 vàng của bạn và mọi đồng minh được trang bị Ấn nhận {HealthMaxAdd} Máu và 12% Tốc Độ Đánh.\n\nGiải Vô Địch Ngày Phán Quyết, 2021"
+    },
+    "DA_MakeshiftArmorII": {
+      "name": "Giáp Tự Chế II",
+      "desc": "Các tướng không mang trang bị nhận {Armor_Gold} Giáp và Kháng Phép."
+    },
+    "DA_SilverDestinyPlus": {
+      "name": "Vận Mệnh Bạc+",
+      "desc": "Nhận 1 Nâng Cấp Bạc và 4 vàng."
+    },
+    "DA_PatienceIsAVirtue": {
+      "name": "Kiên Nhẫn Là Một Đức Tính",
+      "desc": "Nhận ngay {RerollsUpfront} lượt đổi lại. Mỗi vòng đấu, nhận 1 lượt đổi miễn phí nếu bạn không mua tướng ở vòng đấu trước."
+    },
+    "DA_HardCommit": {
+      "name": "Chỉ Một Con Đường",
+      "desc": "Nhận 1 ấn ngẫu nhiên. Ngay lập tức và khi bắt đầu mỗi giai đoạn, nhận 1 tướng 1 sao cùng tộc/hệ, có giá bằng với Giai Đoạn hiện tại (tối đa 5) và 3 vàng."
+    },
+    "DA_StandUnited": {
+      "name": "Nhất Thống",
+      "desc": "Tướng của bạn nhận {AttackDamagePercentagePerTrait}% Sức Mạnh Công Kích và {AbilityPowerPerTrait}% Sức Mạnh Phép Thuật với mỗi Tộc/Hệ không phải duy nhất được kích hoạt trong đội hình."
+    },
+    "DA_TheGoldenDragon": {
+      "name": "Kim Long",
+      "desc": "Nhận 1 Giáp Đại Hãn. Tướng mang Giáp Đại Hãn chiếm +{IncreasedTeamSizeContribution} vị trí trong đội hình nhưng nhận thêm 600 Máu và 15% Chống Chịu.\n\nGiáp Đại Hãn này mang lại vàng và tăng sức mạnh chiến đấu.\n\nGiải Vô Địch Thế Giới Rồng, 2022"
+    },
+    "DA_IronAssets": {
+      "name": "Kho Báu Sắt",
+      "desc": "Nhận 1 gói trang bị thành phần và {NumCoins} vàng."
+    },
+    "DA_GildedSteel": {
+      "name": "Thép Mạ Vàng",
+      "desc": "Nhận 2 tướng 5 vàng. Nếu bạn triển khai ít nhất 1 tướng 5 vàng, các tướng từ 1 đến 4 vàng của bạn nhận được 8% Chống Chịu.\n\nTactician's Crown K.O. Đại Chiến Anh Hùng, 2025"
+    },
+    "DA_InvestmentStrategyI": {
+      "name": "Chiến Thuật Đầu Tư I",
+      "desc": "Tướng của bạn nhận thêm vĩnh viễn {MaxHealthPerInterest} máu tối đa với mỗi vàng lợi tức bạn kiếm được. Nhận ngay 3 vàng."
+    },
+    "DA_RadiantRelic": {
+      "name": "Kho Thần Tích",
+      "desc": "Chọn 1 trong 5 Trang Bị Ánh Sáng. Nhận 1 Nam Châm Ma Thuật."
+    },
+    "DA_EpochPlus": {
+      "name": "Kỷ Nguyên+",
+      "desc": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận {EpochPlusXP} XP và {EpochPlusRerolls} lượt đổi miễn phí."
+    },
+    "DA_URF": {
+      "name": "U.R.F.",
+      "desc": "Nhận 1 Xẻng Vàng. Các tướng mang Xẻng Vàng hoặc Chảo Vàng nhận thêm 20% Tốc Độ Đánh và 3 Hồi Năng Lượng."
+    },
+    "DA_LuxurySubscription": {
+      "name": "Gói Đăng Ký Hạng Sang",
+      "desc": "Nhận một gói quà chứa 1 tướng {1StarCost} vàng, 1 tướng {2StarCost} vàng 2 sao và 5 vàng.\n\nKhi bắt đầu {Stages} giai đoạn tiếp theo, nhận gói quà một lần nữa."
+    },
+    "DA_PromisedProtection": {
+      "name": "Thệ Ước Bảo Hộ",
+      "desc": "Nhận 1 Lời Thề Hộ Vệ. Lời Thề Hộ Vệ cho chủ sở hữu thêm {IncomingManaIncreasePercentage}% Năng Lượng từ mọi nguồn và {FlatHP} Máu tối đa."
+    },
+    "DA_JeweledLotus_II": {
+      "name": "Khảm Bảo Thạch II",
+      "desc": "Đội của bạn nhận {CritChance_II}% Tỉ Lệ Chí Mạng, {CritDamage_II}% Sát Thương Chí Mạng và Chuẩn Xác.\n\nChuẩn Xác: Sát thương kỹ năng có thể chí mạng. Chỉ số Chuẩn Xác cộng thêm tăng 10% Sát Thương Chí Mạng."
+    },
+    "DA_TwinGuardians": {
+      "name": "Song Vệ",
+      "desc": "Nếu bạn có đúng {NumMultiples} đồng minh ở hàng đầu, tăng cho họ 100 Máu, {ArmorInstant} Giáp và {MagicResistInstant} Kháng Phép."
+    },
+    "DA_ExplosiveGrowth": {
+      "name": "Tăng Trưởng Bùng Nổ",
+      "desc": "Nhận 7 XP ngay bây giờ và khi bắt đầu {Rounds} vòng đấu tiếp theo."
+    },
+    "DA_ForgedInStrength": {
+      "name": "Tôi Luyện Sức Mạnh",
+      "desc": "Nhận {InitialArtifacts} Tạo Tác ngẫu nhiên. Khi bạn xuống dưới 35 Máu, nhận thêm {MoreArtifacts} Tạo Tác ngẫu nhiên, {MoreCompletedItems} trang bị hoàn chỉnh ngẫu nhiên, và {MoreComponents} trang bị thành phần ngẫu nhiên.\n\nGiải Vô Địch Remix Rumble, 2023"
+    },
+    "DA_AdvancedLoan": {
+      "name": "Vay Tạm Ứng",
+      "desc": "Nhận {GoldInstantBasic} Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc."
+    },
+    "DA_ElectrochargeII": {
+      "name": "Tụ Điện II",
+      "desc": "Mỗi khi đồng minh nhận {ProcAttackCount} đòn đánh, họ sẽ gây {DamageII} - {DamageII_4} (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (1 giây hồi chiêu)."
+    },
+    "DA_LuckyGlovesPlus": {
+      "name": "Đo Ni Đóng Giày+",
+      "desc": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị lý tưởng. Nhận ngay {StartSparringGlovesAmount} Găng Đấu Tập, nhận thêm 1 găng sau {CombatsUntilNextRewardPlus} giao tranh người chơi."
+    },
+    "DA_TradeSectorPlus": {
+      "name": "Khu Giao Dịch+",
+      "desc": "Nhận 1 lượt đổi Cửa Hàng mỗi vòng đấu. Nhận {NumGoldPlus} vàng."
+    },
+    "DA_ArcaneViktory": {
+      "name": "Arcane Viktor-y",
+      "desc": "Sau {InitialStunDelayInSeconds} giây giao tranh, làm choáng đội địch trong 1.5 giây. Lặp lại hiệu ứng này sau {RepeatStunDelayInSeconds} giây giao tranh.\n\nĐTCL Macao Open, 2024"
+    },
+    "DA_GlassCannon_Silver": {
+      "name": "Lấy Công Bù Thủ I",
+      "desc": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với {StartingHP}% Máu nhưng nhận thêm 16% Khuếch Đại Sát Thương."
+    },
+    "DA_BackupBows": {
+      "name": "Cung Dự Phòng",
+      "desc": "Nhận 1 Cung Gỗ. Sau khi các tướng của bạn tấn công 1000 lần, nhận thêm {NumBows} Cung Gỗ."
+    },
+    "DA_VerticalityIII": {
+      "name": "Chỉ Một Con Đường III",
+      "desc": "Các Tướng nhận được 4% Sức Mạnh Công Kích, 4% Sức Mạnh Phép Thuật, {resists} Giáp và {resists} Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ."
+    },
+    "DA_18_CovenTraitAugment_LootToAP": {
+      "name": "Tà Thuật",
+      "desc": "Chuyển đổi Tinh Hoa Tiên Hắc Ám thành phần thưởng sẽ cho các tướng Tiên Hắc Ám Sức Mạnh Phép Thuật thay vì báu vật. Nhận 1 Camille, 1 Elise và 1 Caitlyn."
+    },
+    "DA_CraftedCrafting": {
+      "name": "Khéo Tay Hay Làm",
+      "desc": "Mỗi khi bạn chế tạo 1 trang bị hoàn chỉnh, nhận {NumFreeRerolls} lượt đổi."
+    },
+    "DA_ChampDeliveryPlus": {
+      "name": "Phân Phối Tướng+",
+      "desc": "Nhận {NumInitialChamps} tướng 3 vàng. Sau 6 vòng, nhận thêm {NumDelayedChamps} tướng cùng bậc."
+    },
+    "DA_SpreadingRoots": {
+      "name": "Cắm Rễ Phân Tán",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Sau 3 giao tranh, nhận thêm 1 Ấn nữa."
+    },
+    "DA_SliceOfLife": {
+      "name": "Chuyện Đời Thường",
+      "desc": "Hai lần mỗi giai đoạn, nhận 1 tướng ngẫu nhiên. Giá của tướng tăng theo Giai Đoạn. Hiệu ứng này kết thúc sau khi nhận được tướng {NumOfMaxCosts} - {MaxChampCost} vàng."
+    },
+    "DA_SilverDestiny": {
+      "name": "Vận Mệnh Bạc",
+      "desc": "Nhận 1 Nâng Cấp Bạc và 2 vàng."
+    },
+    "DA_ClockworkAccelerator": {
+      "name": "Động Cơ Tăng Tốc",
+      "desc": "Đội của bạn được tăng 10% Tốc Độ Đánh sau mỗi {FrequencySeconds} giây giao tranh."
+    },
+    "DA_SmallGrabBag": {
+      "name": "Túi Đồ Cỡ Nhỏ",
+      "desc": "Nhận {NumberOfComponents} trang bị thành phần ngẫu nhiên."
+    },
+    "DA_BandOfThievesIIPlusPlus": {
+      "name": "Băng Trộm II++",
+      "desc": "Nhận {AmountOfGlovesAtStartIIPlusPlus} Găng Đạo Tặc. Sau {CombatsUntilNextRewardIIPlusPlus} giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc."
+    },
+    "DA_18_BlossomTraitAugment": {
+      "name": "Tiếng Gọi Hoa Linh",
+      "desc": "Khi bạn mua 1 Tinh Linh, nhận 1 tướng Hoa Linh ngẫu nhiên dựa trên giá của Tinh Linh. Nhận 1 Yunara, 1 Yorick và 1 Karma."
+    },
+    "DA_FrontlineFoundation": {
+      "name": "Củng Cố Tuyến Trước",
+      "desc": "Nhận 1 tướng Đỡ Đòn 1 vàng 2 sao và 1 Ấn phù hợp với hệ của tướng đó."
+    },
+    "DA_WandOverflow": {
+      "name": "Đam Mê Gậy",
+      "desc": "Nhận {NumRods} Gậy Quá Khổ. Gậy Quá Khổ của bạn sẽ cho +{AttackSpeedPerRod}% Tốc Độ Đánh."
+    },
+    "DA_SoulAwakening": {
+      "name": "Thức Tỉnh Linh Hồn",
+      "desc": "Bắt đầu giao tranh: Đội của bạn nhận {CombatStartAdBoost}% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây trong {NumRepeatsAfterInitialApplication} giây. Khi đạt cộng dồn tối đa, gây thêm 12% sát thương chuẩn."
+    },
+    "DA_Expedition": {
+      "name": "Cuộc Viễn Chinh",
+      "desc": "Khi bắt đầu giao tranh, mất đi vị tướng ở ô ngoài cùng bên phải hàng dự bị. Sau khi tổng giá tướng mất đi theo cách này là 33 vàng, nhận một phần thưởng mạnh mẽ. Nhận ngay 1 tướng 3 vàng."
+    },
+    "DA_18_PrimalAugmentPlus_Sivir": {
+      "name": "Quái Thú Bên Trong+",
+      "desc": "Tướng Nguyên Sinh cho thêm một Phước Lành nữa. Nhận 1 Vi và 1 Sivir."
+    },
+    "DA_18_InfernoTraitAugment": {
+      "name": "Bùng Cháy",
+      "desc": "Các tướng Hỏa Ngục 1 và 2 vàng của bạn nhận 0.2 Sức Mạnh Công Kích và Sức Mạnh Phép Thuật. Tướng gây sát thương nhiều nhất trong giao tranh trước đó sẽ nhận gấp đôi. Nhận 1 Varus và 1 Akali."
+    },
+    "DA_ComponentQuest": {
+      "name": "Nhiệm Vụ Trang Bị",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên và 1 vàng. Trong 7 lần tiếp theo bạn thắng giao tranh người chơi, nhận 1 trang bị thành phần ngẫu nhiên khác nhau. Sau đó, nhận {CompletionGold} vàng."
+    },
+    "DA_PandorasItemsIII": {
+      "name": "Hộp Pandora III",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng chờ được đánh tráo ngẫu nhiên.\n\nNhận {NumberOfRadiantItemsIII} Trang Bị Ánh Sáng."
+    },
+    "DA_MoneyHungry_NotBroken": {
+      "name": "Cơn Khát Vàng",
+      "desc": "Nhận 7 vàng ngay lập tức, sau đó nhận thêm 7 vàng vào khởi đầu mỗi giai đoạn. Nhặt vàng sẽ khiến Linh Thú của bạn to hơn."
+    },
+    "DA_KickStart": {
+      "name": "Khởi Động Nhanh",
+      "desc": "Nhận 1 tướng 2 vàng {StarLevel} sao ngẫu nhiên và 1 vàng."
+    },
+    "DA_CaretakersFavor": {
+      "name": "Chúc Phúc Của Bụt",
+      "desc": "Nhận một gói trang bị thành phần khi bạn đạt cấp 5, 6, 7 và 8.\n\nGói trang bị thành phần sẽ đưa ra 4 lựa chọn."
+    },
+    "DA_18_WispRebatePlusPlus": {
+      "name": "Tinh Linh Hoàn Tiền+",
+      "desc": "Mỗi lần bạn mua 1 Tinh Linh, nhận 2 vàng. Nhận ngay {StartingGold} vàng."
+    },
+    "DA_SeraphimsStaff": {
+      "name": "Trượng Đại Thiên Sứ",
+      "desc": "Nhận 1 Quyền Trượng Thiên Thần. Quyền Trượng Thiên Thần tăng thêm 2 Hồi Phục Năng Lượng nếu chủ sở hữu có 110% Sức Mạnh Phép Thuật trở lên."
+    },
+    "DA_Staffsmith": {
+      "name": "Thợ Rèn Gậy",
+      "desc": "Nhận {ItemQuantity} trang bị hoàn chỉnh ngẫu nhiên được ghép từ Gậy Quá Khổ."
+    },
+    "DA_PandorasItemsIIMinus": {
+      "name": "Trang Bị Pandora II",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng chờ được đánh tráo ngẫu nhiên.\n\nNhận {NumberOfComponentsII} trang bị thành phần ngẫu nhiên và {GoldAmountII} vàng."
+    },
+    "DA_18_ResidualMagic": {
+      "name": "Dư Âm Ma Thuật",
+      "desc": "Đội của bạn được tăng 60 Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm {HealthPerSprite}."
+    },
+    "DA_CelestialBlessingII": {
+      "name": "Phước Lành Vũ Trụ II",
+      "desc": "Đội của bạn nhận {OmnivampII}% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa {ShieldMaxII} Máu."
+    },
+    "DA_RadiantRascal": {
+      "name": "Quang Lân Tiểu Yêu",
+      "desc": "Nhận 1 trang bị Găng Đạo Tặc Ánh Sáng. Vật phẩm này sẽ lắp 2 trang bị Ánh Sáng ngẫu nhiên mỗi vòng đấu."
+    },
+    "DA_CelestialBlessingIII": {
+      "name": "Phước Lành Vũ Trụ III",
+      "desc": "Đội của bạn nhận {OmnivampIII}% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa {ShieldMaxIII} Máu."
+    },
+    "DA_ExclusiveCustomization": {
+      "name": "Lựa Chọn Độc Quyền",
+      "desc": "Nhận 1 Rương Trang Bị May Mắn, 1 Nam Châm Ma Thuật và 7 vàng."
+    },
+    "DA_DeadlierBlades": {
+      "name": "Kiếm Tử Thần",
+      "desc": "Nhận 1 Kiếm Tử Thần. Kiếm Tử Thần vĩnh viễn tăng thêm 1% Sức Mạnh Công Kích mỗi khi chủ sở hữu tham gia hạ gục."
+    },
+    "DA_18_ResidualMagicPlus": {
+      "name": "Dư Âm Ma Thuật +",
+      "desc": "Đội của bạn được tăng 75 Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm {HealthPerSprite}."
+    },
+    "DA_Flexible": {
+      "name": "Linh Hoạt",
+      "desc": "Nhận 1 Ấn ngẫu nhiên. Khi bắt đầu mỗi Giai Đoạn, nhận 1 Ấn ngẫu nhiên. Đội của bạn nhận 30 Máu với mỗi Ấn mà họ đang mang."
+    },
+    "DA_FlowingTears": {
+      "name": "Lệ Lưu Ly",
+      "desc": "Nhận 1 Nước Mắt Nữ Thần. Sau khi các tướng của bạn tiêu tốn {CompletionManaRequired} Năng Lượng, nhận thêm {CompletionNumRewards} Nước Mắt Nữ Thần."
+    },
+    "DA_BodyguardTraining": {
+      "name": "Huấn Luyện Cận Vệ",
+      "desc": "Các đồng minh nhận 15 Giáp và Kháng Phép, tăng thêm {PlayerLevelBonus} với mỗi cấp người chơi.\n\nChung Kết Thế Giới Thời Đại Công Nghệ, 2022"
+    },
+    "DA_CelestialBlessingI": {
+      "name": "Phước Lành Vũ Trụ I",
+      "desc": "Đội của bạn nhận {OmnivampI}% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa {ShieldMaxI} Máu."
+    },
+    "DA_SalvageBinPlus": {
+      "name": "Nhà Máy Tái Chế+",
+      "desc": "Nhận 1 trang bị hoàn chỉnh ngẫu nhiên ngay lập tức, và 1 trang bị thành phần sau {RoundsPlus} vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn)."
+    },
+    "DA_GoldenEgg": {
+      "name": "Rồng Đẻ Trứng Vàng",
+      "desc": "Nhận một trứng vàng nở ra sau {Rounds} vòng đấu, cho lượng lớn báu vật. Chiến thắng vòng giao tranh người chơi sẽ đẩy nhanh thời gian nở trứng thêm một vòng."
+    },
+    "DA_ComebackStory": {
+      "name": "Cố Gắng Lật Kèo",
+      "desc": "Đội của bạn nhận 4 Máu và {ASMultiplyPerMissingHP}% Tốc Độ Đánh với mỗi Máu người chơi đã mất."
+    },
+    "DA_InvestedPlusPlus": {
+      "name": "Đầu Tư++",
+      "desc": "Nhận 45 vàng. Khi bắt đầu mỗi vòng đấu, nhận 1 lượt làm mới Cửa Hàng với mỗi 10 vàng vượt hơn 50 (tối đa 80 vàng)."
+    },
+    "DA_PrismaticDestiny": {
+      "name": "Vận Mệnh Kim Cương",
+      "desc": "Nhận 1 Nâng Cấp Kim Cương ngẫu nhiên và 2 vàng."
+    },
+    "DA_CookingPot": {
+      "name": "Nồi Nấu Ăn",
+      "desc": "Khi bắt đầu mỗi lượt, tất cả các đồng minh đang mang trang bị Xẻng Vàng hoặc Chảo Vàng sẽ vĩnh viễn tăng cho tướng gần nhất 70 Máu. Nhận 1 Chảo Vàng."
+    },
+    "DA_PandorasBench": {
+      "name": "Hàng Chờ Pandora",
+      "desc": "Ở đầu mỗi vòng đấu, các tướng ở 3 ô ngoài cùng bên phải hàng chờ sẽ được chuyển đổi thành tướng ngẫu nhiên cùng giá tiền. Nhận 1 vàng."
+    },
+    "DA_HeroicGrabBagPlusPlus": {
+      "name": "Túi Đồ Siêu Hùng++",
+      "desc": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ. Nhận 14 vàng."
+    },
+    "DA_18_WeightTheWorth": {
+      "name": "Xứng Đáng Chờ Đợi",
+      "desc": "Lần đầu tiên bạn nâng một tướng lên 3 sao, nhận 1 bản sao của tướng đó mỗi vòng đấu cho đến hết trận. Nâng tướng đó lên 3 sao lần nữa sẽ nhận thêm bản sao. Nhận 1 Máy Sao Chép Tướng Cỡ Nhỏ."
+    },
+    "DA_BoosterPackPlusPlus": {
+      "name": "Gói Tăng Cường++",
+      "desc": "Nhận các tướng ngẫu nhiên có tổng giá là {CombinedChampsValuePlusPlus} vàng. (Đảm bảo có ít nhất một tướng {GuaranteedChampValuePlusPlus} vàng!)"
+    },
+    "DA_CommerceCore": {
+      "name": "Trung Tâm Thương Mại",
+      "desc": "Nhận {InitRerolls} lượt đổi cửa hàng miễn phí ngay lập tức và {PerTurnRerolls} lượt đổi mỗi vòng đấu cho đến hết trận."
+    },
+    "DA_CarveAPath": {
+      "name": "Mở Lối",
+      "desc": "Nhận 1 Kiếm B.F. Sau khi các tướng của bạn gây {PhysicalDamageUntilCompletion} sát thương vật lý, nhận thêm {NumCompletionRewards} Kiếm B.F."
+    },
+    "DA_CognitiveTax": {
+      "name": "Thuế Nhận Thức",
+      "desc": "Nhận 8 vàng và {NumXp} XP."
+    },
+    "DA_GroupHugII": {
+      "name": "Ôm Tập Thể II",
+      "desc": "Bắt đầu giao tranh: Các tướng sẽ tăng cho các tướng liền kề khác {Armor_Gold} Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn."
+    },
+    "DA_InfinityProtection": {
+      "name": "Bảo Hộ Vô Tận",
+      "desc": "Nhận ngay 3 vàng. Tại Vòng 3-7, nhận 1 Tam Luyện Kiếm. Tam Luyện Kiếm trao cho các đồng minh cùng hàng một lá chắn bằng 12% Máu.\n\nGiải Vô Địch Quái Vật Tấn Công, 2023"
+    },
+    "DA_SilverDestinyPlusPlus": {
+      "name": "Vận Mệnh Bạc++",
+      "desc": "Nhận 1 Nâng Cấp Bạc và 7 vàng."
+    },
+    "DA_OneBuffTwoBuff": {
+      "name": "Một Bùa, Hai Bùa",
+      "desc": "Nhận 1 Bùa Đỏ, 1 Bùa Xanh và 1 Máy Sao Chép Tướng."
+    },
+    "DA_18_BranchingOut": {
+      "name": "Phân Nhánh",
+      "desc": "Nhận 1 Ấn ngẫu nhiên."
+    },
+    "DA_CalledShot": {
+      "name": "Đòn Quyết Định",
+      "desc": "Đặt chuỗi thắng của bạn thành +{WinStreakCount}. Nhận 4 vàng."
+    },
+    "DA_BandOfThievesIIPlus": {
+      "name": "Băng Trộm II+",
+      "desc": "Nhận {AmountOfGlovesAtStartIIPlus} Găng Đạo Tặc. Sau {CombatsUntilNextRewardIIPlus} giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc."
+    },
+    "DA_TheTower": {
+      "name": "Tòa Tháp",
+      "desc": "Nhận 1 Hình Nhân khổng lồ. Cứ mỗi {TowerAttackInterval} giây, nó phóng điện vào {TowerNumTargets} kẻ địch gần nhất, gây sát thương chuẩn tương đương {MaxHealthDamageMultiplier}% Máu tối đa."
+    },
+    "DA_BirthdayPresent": {
+      "name": "Quà Sinh Nhật",
+      "desc": "Nhận một tướng 2 sao và 1 vàng mỗi lần bạn lên cấp. Bậc của tướng sẽ là cấp của bạn trừ {LevelDiff} (tối đa: {MaxTier} vàng)."
+    },
+    "DA_FindYourCenter": {
+      "name": "Tiền Vệ Trung Tâm",
+      "desc": "Tướng bắt đầu giao tranh ở chính giữa hàng trên sẽ được nhận 15% Khuếch Đại Sát Thương và 25% Máu tối đa."
+    },
+    "DA_18_SprykinAugment": {
+      "name": "Lông Xù Bé Nhỏ",
+      "desc": "Khi tộc/hệ Tinh Nghịch được kích hoạt, triệu hồi LXKL thứ hai mạnh bằng {Effectiveness_DoesntIncludeSummonSpell}% LXKL đầu tiên. Nhận 1 Teemo, 1 Veigar và 1 Kobuko."
+    },
+    "DA_HealingOrbsII": {
+      "name": "Cầu Hồi Phục II",
+      "desc": "Khi 1 kẻ địch bị hạ gục, 1 đồng minh gần đó sẽ được hồi {HealthFromHealingOrbGold} Máu."
+    },
+    "DA_NoScoutNoPivot": {
+      "name": "NHẮM MẮT CHƠI BỪA",
+      "desc": "Các tướng tham gia giao tranh người chơi không thể được đưa về hàng dự bị hoặc bán. Đội của bạn nhận {PostCombatHealthBoost}% Máu, {PostCombatApBoost}% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật sau giao tranh người chơi."
+    },
+    "DA_GoldenGamblePlusPlus": {
+      "name": "Ván Cược Hoàng Kim++",
+      "desc": "Nhận 6 vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh."
+    },
+    "DA_HardBargain": {
+      "name": "Thương Vụ Khó Xơi",
+      "desc": "Bạn không thể chọn phần thưởng trong Vòng Đi Chợ. Nhận thêm 6 máu người chơi và 8 vàng mỗi vòng đi chợ.\n\nKhi bạn không chọn Phần Thưởng Ở Vòng Đi Chợ, bạn sẽ được trao 1 tướng chưa có người chọn cùng trang bị đi kèm."
+    },
+    "DA_PandorasItemsIIPlus": {
+      "name": "Trang Bị Pandora II+",
+      "desc": "Bắt đầu vòng đấu: Các trang bị trên hàng chờ được đánh tráo ngẫu nhiên.\n\nNhận {NumberOfComponentsII} trang bị thành phần ngẫu nhiên và {GoldAmountIIPlus} vàng."
+    },
+    "DA_BronzeForLifeI": {
+      "name": "Tất Tay Bậc Đồng I",
+      "desc": "Đội của bạn nhận 2.5% Khuếch Đại Sát Thương cho mỗi tộc/hệ bậc Đồng."
+    },
+    "DA_GiantAndMighty": {
+      "name": "To Lớn & Mạnh Mẽ",
+      "desc": "Đội của bạn hóa lớn, được tăng 225 Máu và {HealthMultiplier}% Máu tối đa."
+    },
+    "DA_18_ResidualMagicPlusPlus": {
+      "name": "Dư Âm Ma Thuật ++",
+      "desc": "Đội của bạn được tăng 90 Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm {HealthPerSprite}."
+    },
+    "DA_ItemGrabBag": {
+      "name": "Tiếp Tế Trang Bị I",
+      "desc": "Nhận 1 trang bị hoàn chỉnh ngẫu nhiên."
+    },
+    "DA_FutureFocused": {
+      "name": "Định Hướng Tương Lai",
+      "desc": "Linh Thú của bạn mất 20 Máu, nhưng sau 5 giao tranh người chơi, nhận 3 tướng 4 vàng và {RewardGold} vàng."
+    },
+    "DA_BaronsLair": {
+      "name": "Hang Ổ Baron",
+      "desc": "Nhận 1 trang bị Đỡ Đòn ngẫu nhiên. Sau 8 giây giao tranh, đội của bạn nhận thêm 4% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây cho đến hết giao tranh.\n\nTFT Paris Open, 2025"
+    },
+    "DA_18_GoodForSomethingI": {
+      "name": "Được Cái Này Mất Cái Kia I",
+      "desc": "Tướng không mang trang bị có {ChangeDrop}% xác suất rơi ra 1 vàng khi hy sinh."
+    },
+    "DA_SpiritOfRedemption": {
+      "name": "Linh Hồn Chuộc Tội",
+      "desc": "Nhận 1 Giáp Tâm Linh. Mỗi {TimeIntervalSeconds} giây, Giáp Tâm Linh hồi lại cho các đồng minh trong phạm vi 1 ô 9% Máu đã mất của họ."
+    },
+    "DA_WorththeWait": {
+      "name": "Chờ Đợi Xứng Đáng",
+      "desc": "Nhận 1 tướng 1 vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận."
+    },
+    "DA_PrismaticDestinyPlus": {
+      "name": "Vận Mệnh Kim Cương+",
+      "desc": "Nhận 1 Nâng Cấp Kim Cương ngẫu nhiên và 7 vàng."
+    },
+    "TFT9_Augment_Legend_HighEndSector": {
+      "name": "Tín Đồ Mua Sắm",
+      "desc": "Khi bạn thăng cấp, nhận số lượt làm mới cửa hàng miễn phí tương đương với cấp của bạn +1. Nhận 2 vàng."
+    },
+    "TFT_Augment_Underdogs": {
+      "name": "Giành Lại Thế Trận",
+      "desc": "Nếu đội của bạn đang có ít tướng sống sót hơn kẻ địch, hồi lại 4% Máu đã mất mỗi giây (Tối đa: 150)."
+    }
+  }
+}
