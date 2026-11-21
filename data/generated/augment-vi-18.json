@@ -1,7 +1,7 @@
 {
   "setNumber": 18,
-  "patch": "16.22",
-  "syncedAt": "2026-11-18T00:57:55.621Z",
+  "patch": "16.23",
+  "syncedAt": "2026-11-21T07:02:58.348Z",
   "source": "communitydragon/vi_vn",
   "entries": {
     "TFT16_Augment_UltraRapidFire": {
@@ -1398,7 +1398,7 @@
     },
     "DA_ShoppingSpree": {
       "name": "Tín Đồ Mua Sắm",
-      "desc": "Khi bạn thăng cấp, nhận số lượt đổi Cửa Hàng tương đương với cấp của bạn +1. Nhận 6 vàng."
+      "desc": "Khi bạn thăng cấp, nhận số lượt đổi Cửa Hàng tương đương với cấp của bạn +1. Nhận 7 vàng."
     },
     "DA_18_ElderwoodTraitAugment": {
       "name": "Thiên Nhiên Che Chở",
@@ -1524,6 +1524,10 @@
       "name": "Tất Tay Bậc Đồng II",
       "desc": "Đội của bạn nhận 2.5% Khuếch Đại Sát Thương và 2.5 Giáp & Kháng Phép cho mỗi tộc/hệ bậc Đồng."
     },
+    "DA_BranchingOut": {
+      "name": "Phân Nhánh",
+      "desc": "Nhận 1 Ấn ngẫu nhiên."
+    },
     "DA_InvestmentStrategy": {
       "name": "Chiến Thuật Đầu Tư II",
       "desc": "Tướng của bạn nhận thêm vĩnh viễn {MaxHealthPerInterest} máu tối đa với mỗi vàng lợi tức bạn kiếm được. Lợi tức tối đa của bạn tăng thêm {MaxInterestInc}. Nhận ngay 6 vàng."
@@ -1567,10 +1571,6 @@
     "DA_InvestedPlus": {
       "name": "Đầu Tư+",
       "desc": "Nhận 26 vàng. Khi bắt đầu mỗi vòng đấu, nhận 1 lượt làm mới Cửa Hàng với mỗi 10 vàng vượt hơn 50 (tối đa 80 vàng)."
-    },
-    "DA_18_BigGrabBag": {
-      "name": "Túi Đồ Cỡ Đại",
-      "desc": "Nhận 3 trang bị thành phần ngẫu nhiên, 2 vàng và 1 Búa Rèn."
     },
     "DA_CapitalGainsII": {
       "name": "Tăng Vốn II",
@@ -1696,10 +1696,6 @@
       "name": "Ván Cược Hoàng Kim+",
       "desc": "Nhận 3 vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh."
     },
-    "DA_18_OneTwoFive": {
-      "name": "Một, Hai, Năm!",
-      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên, 2 vàng và 1 tướng 5 vàng ngẫu nhiên."
-    },
     "DA_MaliciousMonetization": {
       "name": "Dòng Tiền Mờ Ám",
       "desc": "Nhận 6 vàng. Trong 2 vòng tiếp theo, tướng địch sẽ rớt ra {GoldPerEnemy} vàng khi bị tiêu diệt."
@@ -1784,6 +1780,10 @@
       "name": "Hào Quang Nhân Vật Chính",
       "desc": "Đội của bạn nhận {ArmorInstant} Giáp và Kháng Phép. Sau khi còn dưới {HealthDropThreshold}% Máu, tăng hiệu ứng này lên thành {ThresholdArmorBoostCombined} cho đến hết giao tranh."
     },
+    "DA_GoodForSomethingI": {
+      "name": "Được Cái Này Mất Cái Kia I",
+      "desc": "Tướng không mang trang bị có {ChangeDrop}% xác suất rơi ra 1 vàng khi hy sinh."
+    },
     "DA_ShimmerscaleEssence": {
       "name": "Tinh Túy Kim Long",
       "desc": "Nhận 1 Kiếm Của Tay Bạc. Sau {NumberOfRoundsToWait} giao tranh người chơi, nhận 1 Giáp Đại Hãn."
@@ -1816,9 +1816,13 @@
       "name": "Ân Huệ Thách Đấu",
       "desc": "Ở đầu giao tranh, đồng minh tăng {AttackSpeedMultiplier}% Tốc Độ Đánh trong 4 giây. Khi tham gia hạ gục, đồng minh lướt tới mục tiêu tiếp theo và nhận lại hiệu ứng này."
     },
+    "DA_OneTwoFive": {
+      "name": "Một, Hai, Năm!",
+      "desc": "Nhận 1 trang bị thành phần ngẫu nhiên, 2 vàng và 1 tướng 5 vàng ngẫu nhiên"
+    },
     "DA_18_FaeTraitAugment": {
       "name": "Hóa Lớn",
-      "desc": "Các Pix Tiên Linh giờ trở nên lớn hơn và trao thêm 50% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Các tướng Tiên Linh nhận {UpfrontADAP}% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật ngay lập tức. Nhận 1 Xayah và 1 Rakan."
+      "desc": "Các Pix Tiên Linh giờ trở nên lớn hơn và trao thêm 35% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Các tướng Tiên Linh nhận {UpfrontADAP}% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật ngay lập tức. Nhận 1 Xayah và 1 Rakan."
     },
     "DA_ChampDelivery": {
       "name": "Phân Phối Tướng",
@@ -1876,9 +1880,9 @@
       "name": "Gói Trang Bị Bất Ngờ",
       "desc": "Nhận 1 Gói Trang Bị Tạo Tác. Sau khi bạn mở nó, nhận 1 Gói Trang Bị Thành Phần. Sau khi bạn mở nó, nhận 6 vàng."
     },
-    "DA_18_BranchingOutPlus": {
-      "name": "Phân Nhánh+",
-      "desc": "Nhận 1 Ấn ngẫu nhiên và 1 Búa Rèn."
+    "DA_BigGrabBag": {
+      "name": "Túi Đồ Cỡ Đại",
+      "desc": "Nhận 3 trang bị thành phần ngẫu nhiên, 2 vàng và 1 Búa Rèn."
     },
     "DA_GainGold": {
       "name": "Nhận 21 Vàng",
@@ -2098,7 +2102,7 @@
     },
     "DA_ClockworkAccelerator": {
       "name": "Động Cơ Tăng Tốc",
-      "desc": "Đội của bạn được tăng 10% Tốc Độ Đánh sau mỗi {FrequencySeconds} giây giao tranh."
+      "desc": "Đội của bạn được tăng 12% Tốc Độ Đánh sau mỗi {FrequencySeconds} giây giao tranh."
     },
     "DA_SmallGrabBag": {
       "name": "Túi Đồ Cỡ Nhỏ",
@@ -2123,6 +2127,10 @@
     "DA_SoulAwakening": {
       "name": "Thức Tỉnh Linh Hồn",
       "desc": "Bắt đầu giao tranh: Đội của bạn nhận {CombatStartAdBoost}% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây trong {NumRepeatsAfterInitialApplication} giây. Khi đạt cộng dồn tối đa, gây thêm 12% sát thương chuẩn."
+    },
+    "DA_BranchingOutPlus": {
+      "name": "Phân Nhánh+",
+      "desc": "Nhận 1 Ấn ngẫu nhiên và 1 Búa Rèn."
     },
     "DA_Expedition": {
       "name": "Cuộc Viễn Chinh",
@@ -2284,10 +2292,6 @@
       "name": "Một Bùa, Hai Bùa",
       "desc": "Nhận 1 Bùa Đỏ, 1 Bùa Xanh và 1 Máy Sao Chép Tướng."
     },
-    "DA_18_BranchingOut": {
-      "name": "Phân Nhánh",
-      "desc": "Nhận 1 Ấn ngẫu nhiên."
-    },
     "DA_CalledShot": {
       "name": "Đòn Quyết Định",
       "desc": "Đặt chuỗi thắng của bạn thành +{WinStreakCount}. Nhận 4 vàng."
@@ -2355,10 +2359,6 @@
     "DA_BaronsLair": {
       "name": "Hang Ổ Baron",
       "desc": "Nhận 1 trang bị Đỡ Đòn ngẫu nhiên. Sau 8 giây giao tranh, đội của bạn nhận thêm 4% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây cho đến hết giao tranh.\n\nTFT Paris Open, 2025"
-    },
-    "DA_18_GoodForSomethingI": {
-      "name": "Được Cái Này Mất Cái Kia I",
-      "desc": "Tướng không mang trang bị có {ChangeDrop}% xác suất rơi ra 1 vàng khi hy sinh."
     },
     "DA_SpiritOfRedemption": {
       "name": "Linh Hồn Chuộc Tội",
